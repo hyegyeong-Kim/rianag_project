@@ -1,0 +1,232 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <link rel="stylesheet" href="../resource/css/dh_contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <dl class="ongoing">
+                        <dt>개발진행중...</dt>
+                        <dd>
+                            <span class="size">80%</span><!-- 입력값으로 bar 길이 조정 -->
+                        </dd>
+                    </dl>
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">개요</a>
+                    </li>
+                    <li>
+                        <a href="#none">기본 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">앱 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">약관 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none" class="act2">계별약관 목록</a></li>
+                            <li><a href="#none">계별약관 History</a></li>
+                            <li><a href="#none">그룹 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">멤버 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">테스트 계정 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">통계</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>약관 기능 사용하기</h2>
+                <span class="switch_btn">
+                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
+                </span>
+                <div class="tit_right">
+                    <a href="#none" class="btn black large">신규 약관 등록</a>
+                </div>
+            </div>
+
+            <div class="page_contents">
+                <div class="page_contents">
+                    <!-- T아이디 약관관리 -->
+                    <div class="h3_wrap">
+                        <h3>T아이디 약관 관리</h3>
+                    </div>
+                    <div class="text_area">
+                        <p>
+                            약관 관리 기능을 이용하면 가입 시점의 약관 동의 뿐만 아니라,<br>
+                            추후 추가되거나 변경되는 약관들을 호출(그룹 약관 기능)하여 사용자에게 동의를 받을 수 있습니다.
+                        </p>
+                        <p>
+                            약관 관리는 아래와 같은 기능을 지원합니다.<br>
+                            약관(개별 약관)이 중대한 내용 변경등의 이유로 재동의가 필요한 경우,<br>
+                            설정을 통해 재동의를 받을 수 있습니다.<br>
+                            영문 약관을 등록할 수 있습니다.<br>
+                            불가피한 경우 해당 약관의 노출을 비활성화 시킬 수도 있습니다.<br>
+                            14세 미만 사용자의 약관 동의에 필요한 보호자 동의를 얻을 수 있습니다.
+                        </p>
+                    </div>
+                    <!--// T아이디 약관관리 -->
+                    <!-- 약관 등록 및 배포 절차 -->
+                    <div class="h3_wrap">
+                        <h3>약관 등록 및 배포 절차</h3>
+                    </div>
+                    <div>
+                        <ul class="terms_procedure">
+                            <li>
+                                <div>
+                                    <p class="mark">개별약관 업로드</p>
+                                    <p class="stxt">테스트 적용</p>
+                                    <span class="num">1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="mark">그룹약관 생성</p>
+                                    <p class="stxt">테스트 적용</p>
+                                    <span class="num">2</span>
+                                </div>
+                                <p class="tip">
+                                    기존에 설정된<br>
+                                    그룹이 있으면 <em>생략 가능</em>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="mark">
+                                        그룹약관에<br>
+                                        개별약관 등록
+                                    </p>
+                                    <p class="stxt">테스트 적용</p>
+                                    <span class="num">3</span>
+                                </div>
+                                <p class="tip">
+                                    기존에 설정된<br>
+                                    그룹이 있으면 <em>생략 가능</em>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="mark">그룹약관 배포</p>
+                                    <p class="stxt">상용 적용</p>
+                                    <span class="num">4</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="mark">개별약관 배포</p>
+                                    <p class="stxt">상용 적용</p>
+                                    <span class="num">5</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //약관 등록 및 배포 절차 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+    
+</div>
+</body>
+</html>
+
+

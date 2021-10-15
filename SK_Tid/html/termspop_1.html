@@ -1,0 +1,261 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <style>
+        /* popup 공통 */
+        .popup {display:block; width:100%; height:100%; position:fixed; top:0; left:0;}
+        .popup .inner_pop {width:760px; height:auto; position:relative; top:50%; left:50%; transform:translate(-50%, -50%); z-index:99999;}
+        .popup .inner_pop .popup_title {background:#000000; text-align:center; padding:24px 0; border-top-left-radius:12px; border-top-right-radius:12px;}
+        .popup .inner_pop .popup_title p {display:inline-block; color:#ffffff; font-size:22px; line-height:33px;}
+        .popup .inner_pop .pop_con {padding:48px 40px; background:#ffffff; border-bottom-left-radius:12px; border-bottom-right-radius:12px;}
+        .popup .pop_con .btn {min-width:148px;}
+        .btn_cover {text-align:center; margin-top:49px;}
+        .btn.gray {background:#aaaaaa; color:#ffffff;}
+        /* pop1 */
+        .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
+        .separate {margin-bottom:48px;}
+        .separate dl:nth-child(2) {margin-top:16px;}
+        .separate dl dt {display:inline-block; margin-right:68px; font-size:16px; line-height:24px; color:#222222; font-weight:600;}
+        .separate dl dd {display:inline-block; font-size:16px; line-height:24px; color:#666666; }
+        .group_check::after {display:block; content:''; clear:both;}
+        .group_check .group_srch {float:left; margin-right:20px; width:330px; border:1px solid #cfcfcf; border-radius:5px; }
+        .group_check .group_srch .gsrch {display:block; position:relative;}
+        .group_check .group_srch .gsrch input {border:none; font-size:14px; width:100%; padding:14px 60px 14px 16px; background:none;}
+        .group_check .group_srch .gsrch .btn_sch {width:24px; height:24px; text-indent:-9999px; background:url('../resource/images/terms/ic_search.png')no-repeat; position:absolute; top:10px; right:16px;}
+        .group_check .group_srch ul {border-top:1px solid #cfcfcf; height:244px; overflow:hidden; overflow-x:hidden; overflow-y:auto; padding:24px;}
+        .group_check .group_srch ul li {margin-top:20px;}
+        .group_check .group_srch ul li:first-child {margin-top:0;}
+        .group_check .group_choice {float:right; width:330px;}
+        .group_check .group_choice ul {height:240px; overflow:hidden; overflow-x:hidden; overflow-y:scroll;/*  padding:10px 0; */}
+        .group_check .group_choice ul li {position:relative; display:inline-block; max-width:310px; margin-top:8px; background:#000000; padding:6px 48px 6px 16px; border-radius:20px;}
+        .group_check .group_choice ul li span {display:inline-block; max-width:250px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#ffffff; font-size:14px; line-height:20px;}
+        .group_check .group_choice ul li:first-child {margin-top:0;}
+        .group_check .group_choice ul li .btn_del {display:block; position:absolute; top:8px; right:16px; width:20px; height:20px; background:url('../resource/images/terms/ic_delete.png')no-repeat; text-indent:-9999px; border:none;}
+        .desc {font-size:14px; line-height:22px; color:#666666; border-top:1px solid #cfcfcf; padding-top:8px;}
+        
+        </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+        <div class="h_gnb">
+            <ul class="menu">
+                <li><a href="#none">T아이디 소개</a></li>
+                <li><a href="#none">문서</a></li>
+                <li><a href="#none" class="act">지원</a></li>
+                <li><a href="#none">내 애플리케이션</a></li>
+            </ul>
+            <a href="#none" class="myemail">sungkung@sk.com</a>
+            <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+        </div>
+    </div>
+    
+    <!-- S: utility -->
+    <div id="utility">
+        <div class="inner">
+            <div class="location">
+                <span>내앱</span>
+                <strong>테스트 계정 설정</strong>
+            </div>
+            <div class="userinfo">
+                <div class="infotit">
+                    <span class="it1">NUGU</span>
+                    <span class="it2">ALDN</span>
+                </div>
+                <dl class="ongoing">
+                    <dt>개발진행중...</dt>
+                    <dd>
+                        <span class="size">80%</span>
+                    </dd>
+                </dl>
+                <ul class="device">
+                    <li><a href="#none" class="ic ic_web">web</a></li>
+                    <li><a href="#none" class="ic ic_ios">ios</a></li>
+                    <li><a href="#none" class="ic ic_and">android</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- E: utility -->
+
+    <div id="container" class="inner">
+        <div class="lnb">
+            <div class="lnb_ti">NUGU</div>
+            <ul class="lnb_menu">
+                <li>
+                    <a href="#none">개요</a>
+                </li>
+                <li>
+                    <a href="#none">기본 설정</a>
+                </li>
+                <li>
+                    <a href="#none">앱 설정</a>
+                </li>
+                <li>
+                    <a href="#none" class="act">약관 관리</a>
+                    <ul class="depth2">
+                        <li><a href="#none" class="act2">계별약관 목록</a></li>
+                        <li><a href="#none">계별약관 History</a></li>
+                        <li><a href="#none">그룹 설정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#none">멤버 관리</a>
+                </li>
+                <li>
+                    <a href="#none">테스트 계정 설정</a>
+                </li>
+                <li>
+                    <a href="#none">통계</a>
+                </li>
+            </ul>
+        </div>
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>약관 상세 보기</h2>
+                <div class="tit_right">
+                    <button class="btn black large">신규 약관 등록</button>
+                </div>
+            </div>
+
+            <div class="page_contents">
+            </div>
+        </div>
+    </div>
+
+    <!-- 팝업1 약관 그룹 설정 -->
+    <div class="popup" id="popup_group">
+        <div class="inner_pop">
+            <div class="popup_title">
+                <p>약관의 그룹 설정</p>
+            </div>
+            <div class="pop_con">
+                <p class="popsub_tl">개별 약관</p>
+                <div class="separate">
+                    <dl>
+                        <dt>약관 코드</dt>
+                        <dd>SELLERBRIDGE</dd>
+                    </dl>
+                    <dl>
+                        <dt>약관 제목</dt>
+                        <dd>판매중개서비스 약관</dd>
+                    </dl>
+                </div>
+                <p class="popsub_tl">그룹 선택</p>
+                <div class="group_check">
+                    <div class="group_srch">
+                        <span class="gsrch">
+                            <input type="text" placeholder="그룹 약관 검색">
+                            <a href="#none" class="btn_sch">search</a>
+                        </span>
+                        <ul>
+                            <li>
+                                <div class="sorting check">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>BBQ 주문을 위한 이용 약관</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sorting check">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>BBQ 주문을 위한 이용 약관</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sorting check">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>BBQ 주문을 위한 이용 약관</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sorting check">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>BBQ 주문을 위한 이용 약관</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sorting check">
+                                    <label>
+                                        <input type="checkbox" checked>
+                                        <span>BBQ 주문을 위한 이용 약관</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group_choice">
+                        <ul>
+                            <li>
+                                <span>BBQ 주문을 위한 이용 약관</span>
+                                <button class="btn_del">삭제</button>
+                            </li>
+                            <li>
+                                <span>NUGU 셀럽 서비스 이용을 위한 줄바뀜 약관을 줄바뀜 약관을 줄바뀜 약관을</span>
+                                <button class="btn_del">닫기</button>
+                            </li>
+                            <li>
+                                <span>영한동 서비스 이용을 위한 약관</span>
+                                <button class="btn_del">닫기</button>
+                            </li>
+                            <li>
+                                <span>BBQ 주문을 위한 이용 약관</span>
+                                <button class="btn_del">삭제</button>
+                            </li>
+                            <li>
+                                <span>NUGU 셀럽 서비스 이용을 위한 줄바뀜 약관을 줄바뀜 약관을 줄바뀜 약관을</span>
+                                <button class="btn_del">닫기</button>
+                            </li>
+                            <li>
+                                <span>영한동 서비스 이용을 위한 약관</span>
+                                <button class="btn_del">닫기</button>
+                            </li>
+                        </ul>
+                        <p class="desc">
+                            참고 : 새로운 그룹의 추가가 필요한 경우, 그룹 설정에서 신규 그룹을 먼저 생성하고 돌아와 그룹을 선택해주세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large gray pop_close">취소</a>
+                    <a href="#none" class="btn large black ">저장</a>
+                </div>
+            </div>
+        </div>
+        <div class="dim"></div>
+    </div>
+    <!-- // 팝업1 약관 그룹 설정 -->
+
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".size").css("width", $(".size").text());
+
+        $(".pop_close").click(function(){
+            $(".popup").css("display","none")
+        })
+
+    });
+    </script>
+</body>
+</html>
+
+
