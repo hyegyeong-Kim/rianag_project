@@ -1,0 +1,212 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <dl class="ongoing">
+                        <dt>개발진행중...</dt>
+                        <dd>
+                            <span class="size">80%</span><!-- 입력값으로 bar 길이 조정 -->
+                        </dd>
+                    </dl>
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">개요</a>
+                    </li>
+                    <li>
+                        <a href="#none">기본 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">앱 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">약관 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none" class="act2">계별약관 목록</a></li>
+                            <li><a href="#none">계별약관 History</a></li>
+                            <li><a href="#none">그룹 설정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">멤버 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">테스트 계정 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">통계</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>페이지 타이틀</h2>
+                <span class="switch_btn">
+                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
+                </span>
+                <div class="tit_right">
+                    <a href="#none" class="btn black large">신규 약관 등록</a>
+                </div>
+            </div>
+
+            <div class="page_contents">
+                <!-- 컨텐츠입력 -->
+                <div class="h3_wrap">
+                    <h3>h3 타이틀</h3>
+                    <span>
+                        span
+                    </span>
+                </div>
+                <div class="text_area">
+                    <p>
+                        text_area영역
+                    </p>
+                    <p>
+                        text_area영역
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+
+
+
+<!--  팝업2 미리보기 모바일 -->
+<div class="popup">
+    <div class="inner_pop">
+        <div class="popup_title">
+            <p>T아이디 서비스 이용약관</p>
+        </div>
+        <div class="pop_con">
+            <div class="pop_tbox">
+                <div>
+                    제1장 총칙<br>
+                    제 1 조 (목적)<br>
+                    본 약관은 회원이 개별 서비스의 아이디(ID)를 통합하여 하나의 ID로 사용할 수 있도록 에스케이텔레콤 주식회사(이하 “회사”)가 제공하는 “T아이디” 서비스를 이용하는 데 필요한 회원과 회사 간의 권리, 의무 및 책임사항, 이용조건 및 절차 등 기본적인 사항을 규정함을 목적으로 합니다.<br>
+                    <br>
+                    제 2 조 (용어의 정의)<br>
+                    ① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+                    1. T아이디 : 회사 또는 관계사가 제공하는 개별 서비스를 통합된 하나의 ID 계정으로 회원 인증, 회원정보 변경, 회원 가입 및 탈퇴 등을 관리할 수 있도록 회사가 제공하는 서비스를 말합니다.<br>
+                    2. 회원: T아이디가 적용된 개별 서비스 또는 T아이디 사이트에서 본 약관에 동의하고, ID와 Password(비밀번호)를 발급 받은 고객을 말합니다. 회원의 자격 및 권한 등은 본 약관에서 정한 바에 따라 일부 제한될 수 있습니다.<br>
+                    3. 관계사: 회사와 제휴 관계를 맺고 T아이디를 공동 제공하기로 합의한 법인을 말합니다. 개별 관계사는 추후 추가/변동될 수 있으며 관계사가 추가/변동될 때에는 본 약관에서 정한 방식으로 회원에게 공지합니다.<br>
+                    4. 개별 서비스: T아이디를 이용하여 접속 가능한 서비스를 말합니다. 개별 서비스는 추후 추가/변동될 수 있으며 서비스가 추가/변동될 때에는 본 약관<br>
+                    <br>
+                    제 3 조 (용어의 정의)<br>
+                    ① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+                    1. T아이디 : 회사 또는 관계사가 제공하는 개별 서비스를 통합된 하나의 ID 계정으로 회원 인증, 회원정보 변경, 회원 가입 및 탈퇴 등을 관리할 수 있도록 회사가 제공하는 서비스를 말합니다.<br>
+                    2. 회원: T아이디가 적용된 개별 서비스 또는 T아이디 사이트에서 본 약관에 동의하고, ID와 Password(비밀번호)를 발급 받은 고객을 말합니다. 회원의 자격 및 권한 등은 본 약관에서 정한 바에 따라 일부 제한될 수 있습니다.<br>
+                    3. 관계사: 회사와 제휴 관계를 맺고 T아이디를 공동 제공하기로 합의한 법인을 말합니다. 개별 관계사는 추후 추가/변동될 수 있으며 관계사가 추가/변동될 때에는 본 약관에서 정한 방식으로 회원에게 공지합니다.<br>
+                    4. 개별 서비스: T아이디를 이용하여 접속 가능한 서비스를 말합니다. 개별 서비스는 추후 추가/변동될 수 있으며 서비스가 추가/변동될 때에는 본 약관<br>
+                </div>
+            </div>
+            <div class="con_bottom">
+                <a href="#none" class="htmldown">HTML 다운로드</a>
+            </div>
+            <div class="btn_wrap cover2">
+                <a href="#none" class="btn black large pop_close">닫기</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- // 팝업2 미리보기 모바일 -->
+
+</body>
+</html>
+
+

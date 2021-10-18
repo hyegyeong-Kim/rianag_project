@@ -1,0 +1,458 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="../resource/js/dh.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <dl class="ongoing">
+                        <dt>개발진행중...</dt>
+                        <dd>
+                            <span class="size">80%</span><!-- 입력값으로 bar 길이 조정 -->
+                        </dd>
+                    </dl>
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">개요</a>
+                    </li>
+                    <li>
+                        <a href="#none">기본 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">앱 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">약관 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">계별약관 목록</a></li>
+                            <li><a href="#none" class="act2">계별약관 History</a></li>
+                            <li><a href="#none">그룹 설정</a></li>
+                            <li><a href="#none">사용자 동의 내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">멤버 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">테스트 계정 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">통계</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>개별약관 History</h2>
+            </div>
+
+            <div class="page_contents">
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="sorting check">
+                            <label><input type="checkbox" checked><span>모두선택</span></label>
+                            <label><input type="checkbox"><span>최신버전 배포 전</span></label>
+                            <label><input type="checkbox"><span>최신버전 노출 중</span></label>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="제목 검색">
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                    </div>
+                    <!-- table -->
+                    <table class="board_tbl">
+                        <caption></caption>
+                        <colgroup><col style="width:85px"><col style="width:20%"><col style="width:auto; min-width:180px;"><col style="width:10%"><col style="width:20%"><col style="width:85px"></colgroup>
+                        <thead>
+                            <tr>
+                                <th class="txtcenter">
+                                    <span>No.</span>
+                                </th>
+                                <th>
+                                    <p><span>약관 코드</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <p><span>약관 제목(Index)</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th class="txtcenter">
+                                    <span>활성화</span>
+                                </th>
+                                <th>
+                                    <p><span>등록 일시(Default) </span><button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <span class="blind">상세리스트 보기</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- s: unit -->
+                            <!-- alist_tit -->
+                            <tr class="alist_tit">
+                                <td class="txtcenter">01</td>
+                                <td>SELLERBRIDGE</td>
+                                <td>판매중개서비스 약관 (17)</td>
+                                <td class="txtcenter">OFF</td>
+                                <td>2021/08/14 16:37</td>
+                                <td class="txtcenter">
+                                    <button class="btn_accordion">내역 보기</button>
+                                </td>
+                            </tr>
+                            <!-- // alist_tit -->
+                            <!-- alist_contents -->
+                            <tr class="alist_contents">
+                                <td colspan="6">
+                                    <!-- inbox -->
+                                    <div class="board inbox">
+                                        <table class="tb_simple">
+                                            <colgroup><col style="width:10%; min-width:85px;"><col style="width:15%; min-width:90px;"><col style="width:20%; min-width:110px;"><col style="width:20%; min-width:110px;"><col style="width:auto"></colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="txtcenter">
+                                                        <p><span>언어</span> <button class="btn_sort">정렬하기</button></p>
+                                                    </th>
+                                                    <th class="txtcenter">
+                                                        <p><span>상용 ver</span> <button class="btn_sort">정렬하기</button></p>
+                                                    </th>
+                                                    <th>
+                                                        <p><span>상용 배포일</span> <button class="btn_sort">정렬하기</button></p>
+                                                          
+                                                    </th>
+                                                    <th>
+                                                        <span>등록/수정일</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>등록/수정 사유</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">오탈자 수정</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수 필수 필수필필수필필수필</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수 필수 필수필필수필필수필</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- 리스트더보기 -->
+                                        <div class="list_more">
+                                            <a href="#none" class="btn black small">History 열람</a>
+                                        </div>
+                                    </div>
+                                    <!-- inbox -->
+                                </td>
+                            </tr>
+                            <!-- // alist_contents -->
+                            <!-- e: unit -->
+
+                            <!-- s: unit -->
+                            <!-- alist_tit -->
+                            <tr class="alist_tit">
+                                <td class="txtcenter">01</td>
+                                <td>SELLERBRIDGE</td>
+                                <td>판매중개서비스 약관 (17)</td>
+                                <td class="txtcenter">OFF</td>
+                                <td>2021/08/14 16:37</td>
+                                <td class="txtcenter">
+                                    <button class="btn_accordion">내역 보기</button>
+                                </td>
+                            </tr>
+                            <!-- // alist_tit -->
+                            <!-- alist_contents -->
+                            <tr class="alist_contents">
+                                <td colspan="6">
+                                    <!-- inbox -->
+                                    <div class="board inbox">
+                                        <table class="tb_simple">
+                                            <colgroup><col style="width:10%; min-width:85px;"><col style="width:15%; min-width:90px;"><col style="width:20%; min-width:110px;"><col style="width:20%; min-width:110px;"><col style="width:auto"></colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="txtcenter">
+                                                        <p><span>언어</span> <button class="btn_sort">정렬하기</button></p>
+                                                    </th>
+                                                    <th class="txtcenter">
+                                                        <p><span>상용 ver</span> <button class="btn_sort">정렬하기</button></p>
+                                                    </th>
+                                                    <th>
+                                                        <p><span>상용 배포일</span> <button class="btn_sort">정렬하기</button></p>
+                                                          
+                                                    </th>
+                                                    <th>
+                                                        <span>등록/수정일</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>등록/수정 사유</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">오탈자 수정</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수 필수 필수필필수필필수필</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수 필수 필수필필수필필수필</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- 리스트더보기 -->
+                                        <div class="list_more">
+                                            <a href="#none" class="btn black small">History 열람</a>
+                                        </div>
+                                    </div>
+                                    <!-- inbox -->
+                                </td>
+                            </tr>
+                            <!-- // alist_contents -->
+                            <!-- e: unit -->
+                            <!-- s: unit -->
+                            <!-- alist_tit -->
+                            <tr class="alist_tit">
+                                <td class="txtcenter">01</td>
+                                <td>SELLERBRIDGE</td>
+                                <td>판매중개서비스 약관 (17)</td>
+                                <td class="txtcenter">OFF</td>
+                                <td>2021/08/14 16:37</td>
+                                <td class="txtcenter">
+                                    <button class="btn_accordion">내역 보기</button>
+                                </td>
+                            </tr>
+                            <!-- // alist_tit -->
+                            <!-- alist_contents -->
+                            <tr class="alist_contents">
+                                <td colspan="6">
+                                    <!-- inbox -->
+                                    <div class="board inbox">
+                                        <table class="tb_simple">
+                                            <colgroup><col style="width:10%; min-width:85px;"><col style="width:15%; min-width:90px;"><col style="width:20%; min-width:110px;"><col style="width:20%; min-width:110px;"><col style="width:auto"></colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="txtcenter">
+                                                        <p><span>언어</span> <button class="btn_sort">정렬하기</button></p>
+                                                    </th>
+                                                    <th class="txtcenter">
+                                                        <p><span>상용 ver</span> <button class="btn_sort">정렬하기</button></p>
+                                                    </th>
+                                                    <th>
+                                                        <p><span>상용 배포일</span> <button class="btn_sort">정렬하기</button></p>
+                                                          
+                                                    </th>
+                                                    <th>
+                                                        <span>등록/수정일</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>등록/수정 사유</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">오탈자 수정</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수 필수 필수필필수필필수필</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="txtcenter">영문</td>
+                                                    <td class="txtcenter">202</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td>2021/08/14 16:37</td>
+                                                    <td><p class="ellipsis">판매중개 사업자 추가로 재동의 필수 필수 필수필필수필필수필</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- 리스트더보기 -->
+                                        <div class="list_more">
+                                            <a href="#none" class="btn black small">History 열람</a>
+                                        </div>
+                                    </div>
+                                    <!-- inbox -->
+                                </td>
+                            </tr>
+                            <!-- // alist_contents -->
+                            <!-- e: unit -->
+
+                            <!-- list 10개씩 노출 -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none"class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
+                </div>
+                <!-- E: Board Type -->
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+</body>
+</html>
+
+
