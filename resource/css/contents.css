@@ -88,8 +88,7 @@ button {cursor:pointer;}
 .board table thead th span  {display:inline-block; word-break: keep-all; vertical-align:middle;}
 .board table thead th p span { max-width:calc(100% - 30px); }
 .board table thead th p .btn_sort {display:inline-block; width:16px; height:16px; margin-left:5px; background:url('../images/common/ic_sorting.png') no-repeat center center; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
-.board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-word; font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
-.board table tbody td a {font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
+.board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-word;}
 .board table tbody td.empty {padding:50px 0; border:0;}
 .board .paging {margin-top:48px; text-align:center;}
 .board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
@@ -231,14 +230,21 @@ button {cursor:pointer;}
 .mo_logo {padding:12px 0; border-bottom:1px solid #eeeeee;}
 .mo_logo div {text-indent:-9999px; width:106px; height:100%; background:url('../images/terms/nugu_logo.png') no-repeat; margin:0 auto;}
 .mo_inner {padding:40px 20px 24px;}
-.mo_inner .pmo_tl {font-size:24px; line-height:36px; font-weight:600; margin-bottom:20px;}
-.mo_inner .mcontent {font-size:16px; line-height:26px; color:#222222; margin-top:20px;}
+.pmo_tl {font-size:24px; line-height:36px; font-weight:600; margin-bottom:20px;}
+.mcontent {font-size:16px; line-height:26px; color:#222222; margin-top:20px;}
 .mo_inner ul {margin-top:20px; padding-top:20px; border-top:1px solid #cfcfcf;}
 .mo_inner ul li {margin-top:12px;}
 .mo_inner ul li:first-child {margin-top:0;}
 .mo_inner ul li a {display:block; background:url('../images/terms/ic_arrow_s.png') right center no-repeat;}
 .mo_inner .desc {font-size:14px; line-height:22px; color:#666666; margin-top:32px;}
-.btn_next {margin-top:80px; display:block; width:100%; text-align:center; border-radius:12px; padding:12px 0; font-weight:500; font-size:16px;}
+.pop_con {position:relative;}
+.pop_con .btn_next { text-align:center; border-radius:12px; padding:12px 0; font-weight:500; font-size:16px;}
+.pop_con .btn_wrap .btn_next + .btn {margin-left:6px;}
+.pop_con .pop_preview {font-size:16px; position:absolute; bottom:62px; right:40px;}
+.pview_arrow {background:url('../images/common/ic_pvarrow.png') no-repeat; margin-right:4px;}
+.pcprev_box .mo_inner {padding:20px 0 40px 0; border-bottom:1px solid #cfcfcf;}
+.pcprev_box .mo_inner ul {border-bottom:1px solid #cfcfcf; padding:20px 0;}
+.pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
 /* 개별약관편집 */
 .txt_reagree {display:inline-block; margin-left:33px;}
@@ -247,7 +253,6 @@ button {cursor:pointer;}
 .txt_reagree .tooltip_wrap {top:-3px;}
 .regist_table span.input.date {position:relative; padding-right:35px;}
 .btn_date {text-indent:-9999px; background:url('../images/common/ic_sorting.png') no-repeat; position:absolute; top:15px; right:15px;}
-
 /* 그룹목록 상세 */
 .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 .pview {background:url('../images/common/ic_view.png') right center no-repeat; padding-right:26px;}

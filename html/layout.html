@@ -116,13 +116,111 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>개별약관 목록</h2>
+                <h2>페이지 타이틀</h2>
+                <span class="switch_btn">
+                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
+                </span>
                 <div class="tit_right">
                     <a href="#none" class="btn black large">신규 약관 등록</a>
                 </div>
             </div>
 
             <div class="page_contents">
+                <!-- 컨텐츠입력 -->
+                <div class="h3_wrap">
+                    <h3>h3 타이틀</h3>
+                    <span>
+                        span
+                    </span>
+                </div>
+                <div class="text_area">
+                    <p>
+                        text_area영역
+                    </p>
+                    <p>
+                        text_area영역
+                    </p>
+                </div>
+
+                <!-- 타이틀 + 게시판 -->
+                <div class="h3_wrap">
+                    <h3>h3 타이틀</h3>
+                    <span>
+                        span
+                    </span>
+                </div>
+                
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- table -->
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:auto"><col style="width:23%"><col style="width:23%"><col style="width:23%"><col style="width:23%"></colgroup>
+                        <thead>
+                            <tr>
+                                <th class="txtcenter">
+                                    <span>No.</span>
+                                </th>
+                                <th>
+                                    <p><span>약관 코드</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <p><span>약관 제목(Index)</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <p><span>노출 시작 일시</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <p><span>등록 일시(Default) </span><button class="btn_sort">정렬하기</button></p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="txtcenter">01</td>
+                                <td>SELLERBRIDGE</td>
+                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
+                                <td>배포 전</td>
+                                <td class="mfont">2021/08/14 16:37</td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter">10</td>
+                                <td>SELLERBRIDGE</td>
+                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
+                                <td>배포 전</td>
+                                <td class="mfont">2021/08/14 16:37</td>
+                            </tr>
+                            <!-- list 10개씩 노출 -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none"class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
+                </div>
+                <!-- E: Board Type -->
+
+                <!-- 타이틀 + 게시판 -->
+                <div class="h3_wrap">
+                    <h3>h3 타이틀</h3>
+                    <span>
+                        span
+                    </span>
+                </div>
+                
                 <!-- S: Board Type -->
                 <div class="board">
                     <!-- optiongroup -->
@@ -162,14 +260,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="txtcenter">01</td>
+                                <td class="txtcenter mfont">01</td>
                                 <td>SELLERBRIDGE</td>
                                 <td><a href="#none">판매중개서비스 약관 (17)</a></td>
                                 <td>배포 전</td>
-                                <td>2021/08/14 16:37</td>
+                                <td class="mfont">2021/08/14 16:37</td>
                             </tr>
                             <tr>
-                                <td class="txtcenter">10</td>
+                                <td class="txtcenter mfont">10</td>
                                 <td>SELLERBRIDGE</td>
                                 <td><a href="#none">판매중개서비스 약관 (17)</a></td>
                                 <td>배포 전</td>
@@ -197,63 +295,6 @@
                     </div>
                 </div>
                 <!-- E: Board Type -->
-<br><br><br><br>
-                <!-- S: box in Board Type -->
-                <div class="board inboox">
-                    <!-- table -->
-                    <table>
-                        <caption></caption>
-                        <colgroup><col style="width:10%; min-width:85px"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:auto"><col style="width:10%; min-width:80px"><col style="width:5%"></colgroup>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <p><span>언어</span> <button class="btn_sort">정렬하기</button></p>
-                                </th>
-                                <th>
-                                    <p><span>상용 ver</span> <button class="btn_sort">정렬하기</button></p>
-                                </th>
-                                <th>
-                                    <p><span>상용 배포일</span> <button class="btn_sort">정렬하기</button></p>
-                                      
-                                </th>
-                                <th>
-                                    <span>등록/수정일</span>
-                                </th>
-                                <th>
-                                    <span>등록/수정 사유</span>
-                                </th>
-                                <th>
-                                    <span>등록자</span>
-                                </th>
-                                <th>
-                                    <span class="blind">리스트보기</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>영문</td>
-                                <td>202</td>
-                                <td>미배포</td>
-                                <td>2021/08/14 16:37</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td><a href="#none" class="btn_view">상세보기</a></td>
-                            </tr>
-                            <tr>
-                                <td>국문</td>
-                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
-                                <td>배포 전</td>
-                                <td>2021/08/14 16:37</td>
-                                <td>2021/08/14 16:37</td>
-                                <td></td>
-                                <td><a href="#none" class="btn_view">상세보기</a></td>
-                            </tr>
-                            <!-- list 10개씩 노출 -->
-                        </tbody>
-                    </table>
-                </div>
-                <!-- E: box in Board Type -->
             </div>
         </div>
     </div>
@@ -273,9 +314,10 @@
             <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
-
+    
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
+    
 </div>
 </body>
 </html>

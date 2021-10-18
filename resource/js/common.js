@@ -86,7 +86,7 @@ $(function(){
 
     /* switch_btn */
     $(".switch_btn input").click(function(){
-        if($(".switch_btn input").is(":checked")){
+        if($(this).is(":checked")){
             $(this).parent().addClass("on");
         } else {
             $(this).parent().removeClass("on");
