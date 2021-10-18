@@ -279,7 +279,7 @@ button {cursor:pointer;}
 .regist_table .appterm_tbl tbody td .stc .icon.arr {display:block; background:url('../images/common/ic_upper.png') no-repeat; margin:20px auto;}
 .regist_table .appterm_tbl tbody td .moving_wrap li::after {display:block; content:''; clear:both;}
 .regist_table .appterm_tbl tbody td .has_switch .input.txt  {width:364px;}
-.regist_table span.input.txt button.btn {position:absolute; top:8px; right:16px; height:28px; font-size:12px; padding:0 12px; line-height:15px;}
+.regist_table span.input.txt button.btn {position:absolute; top:8px; right:16px; height:28px; font-size:12px; padding:0 12px; line-height:15px; min-width:46px;}
 
 .has_switch {position:relative; padding-left:96px; }
 .has_switch .switch_btn {position:absolute; top:12px; left:0;}
