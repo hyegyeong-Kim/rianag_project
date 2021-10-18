@@ -7,7 +7,6 @@
     <title></title>
     <link rel="stylesheet" href="../resource/css/common.css">
     <link rel="stylesheet" href="../resource/css/contents.css">
-    <link rel="stylesheet" href="../resource/css/dh_contents.css">
     <script src="../resource/js/jquery.min.js"></script>
     <script src="../resource/js/common.js"></script>
 </head>
@@ -136,7 +135,7 @@
                             </th>
                             <td>
                                 <span class="input txt">
-                                    <input type="text" placeholder="">
+                                    <input type="text" placeholder="코드 이름, 숫자만으로는 등록불가">
                                 </span>
                                 <p class="warning">
                                     영문 입력이 필수 입니다.
@@ -161,7 +160,6 @@
                                     <button class="tooltip">?</button>
                                     <div class="tipbox">
                                         <p>활성화 OFF : 즉시 노출 종료 된다.</p>
-                                        <button class="tipclose">X</button>
                                     </div>    
                                 </div>
                             </th>
@@ -182,19 +180,20 @@
                                             노출시간 설정은 상용 배포에 해당합니다. 노출 시간은 30분 단위로 설정할 수 있고,
                                             호출 시점에 노출되고 있는 최신버전을 노출하게 됩니다.
                                         </p>
-                                        <button class="tipclose">X</button>
                                     </div>    
                                 </div>
                             </th>
                             <td>
-                                <span class="input date">
-                                    <input type="text" placeholder="YY.MM.DD">
-                                    <button class="btn_date">날짜</button>
-                                </span>
-                                <span class="input date">
-                                    <input type="text" placeholder="00:00">
-                                    <button class="btn_date">시간</button>
-                                </span>
+                                <div class="dateset">
+                                    <span class="input date">
+                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
+                                        <button class="btn_date">날짜</button>
+                                    </span>
+                                    <span class="input date">
+                                        <input type="text" placeholder="00:00" class="mfont">
+                                        <button class="btn_date">시간</button>
+                                    </span>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -206,7 +205,6 @@
                                         <p>
                                             상용에 배포하려면 호출될수 있게 그룹약관을 설정해야 합니다.
                                         </p>
-                                        <button class="tipclose">X</button>
                                     </div>
                                 </div>
                                 
@@ -264,14 +262,16 @@
                                 <span>노출 시작 일시</span>
                             </th>
                             <td>
-                                <span class="input date">
-                                    <input type="text" placeholder="YY.MM.DD">
-                                    <button class="btn_date">날짜</button>
-                                </span>
-                                <span class="input date">
-                                    <input type="text" placeholder="00:00">
-                                    <button class="btn_date">시간</button>
-                                </span>
+                                <div class="dateset">
+                                    <span class="input date">
+                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
+                                        <button class="btn_date">날짜</button>
+                                    </span>
+                                    <span class="input date">
+                                        <input type="text" placeholder="00:00" class="mfont">
+                                        <button class="btn_date">시간</button>
+                                    </span>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -281,8 +281,8 @@
                             <td>
                                 <span class="input txt">
                                     <input type="text" class="filename" value="HTML파일 업로드" readonly>                                    
-                                    <label for="file1" class="file_btn"></label>
-                                    <input type="file" id="file1">
+                                    <label for="file2" class="file_btn"></label>
+                                    <input type="file" id="file2">
                                 </span>
                             </td>
                         </tr>
@@ -331,7 +331,11 @@
         $(".filename").val(fileName);
         $(".filename").addClass("on");
     });
-
+    $("#file2").on('change',function(){
+        var fileName = $("#file2").val();
+        $(".filename").val(fileName);
+        $(".filename").addClass("on");
+    });
 </script>
 </body>
 </html>

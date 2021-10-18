@@ -91,10 +91,9 @@
                     <li>
                         <a href="#none" class="act">약관 관리</a>
                         <ul class="depth2">
-                            <li><a href="#none">계별약관 목록</a></li>
-                            <li><a href="#none" class="act2">계별약관 History</a></li>
+                            <li><a href="#none" class="act2">계별약관 목록</a></li>
+                            <li><a href="#none">계별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
-                            <li><a href="#none">사용자 동의 내역</a></li>
                         </ul>
                     </li>
                     <li>
@@ -116,92 +115,62 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>약관 History 상세</h2>
+                <h2>그룹 설정</h2>
+                <span class="switch_btn">
+                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
+                </span>
                 <div class="tit_right">
-                    <a href="#none" class="btn black large">약관 상세</a>
+                    <a href="#none" class="btn black large">신규 약관 등록</a>
                 </div>
             </div>
 
             <div class="page_contents">
                 <div class="h3_wrap">
-                    <h3>약관 정보</h3>
+                    <h3>신규 그룹 생성</h3>
                 </div>
 
-                <div class="table_row01 mt_10">
-                    <table class="content_tbl">
-                        <colgroup><col style="width:20%"><col ></colgroup>
-                        <tbody>
-                            <tr>
-                                <th>약관 제목</th>
-                                <td>판매중개서비스 약관</td>
-                            </tr>
-                            <tr>
-                                <th>약관 코드</th>
-                                <td>OSELLERBRIDGE</td>
-                            </tr>
-                            <tr>
-                                <th>Index</th>
-                                <td>17</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- S: Board Type -->
-                <div class="board inbox">
-                    <!-- table -->
+                <div class="regist_table">
                     <table>
                         <caption></caption>
-                        <colgroup><col style="width:9%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:25%"><col style="width:15%"><col style="width:5%"></colgroup>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <p><span>언어</span> <button class="btn_sort">정렬하기</button></p>
-                                </th>
-                                <th class="txtcenter">
-                                    <p><span>상용 ver</span> <button class="btn_sort">정렬하기</button></p>
-                                </th>
-                                <th>
-                                    <p><span>상용 배포일</span>  <button class="btn_sort">정렬하기</button></p>
-                                </th>
-                                <th>
-                                    <span>등록/수정일</span>
-                                </th>
-                                <th>
-                                    <span>등록/수정 사유</span>
-                                </th>
-                                <th>
-                                    <span>등록자</span>
-                                </th>
-                                <th>
-                                    <span class="blind">리스트보기</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="txtcenter">영문</td>
-                                <td class="txtcenter">202</td>
-                                <td>미배포</td>
-                                <td>2021/08/14 16:37</td>
-                                <td>판매중개 사업자 추가로 재동의  필수</td>
-                                <td>홍길동(ne*********************)</td>
-                                <td><a href="#none" class="btn_view">상세보기</a></td>
-                            </tr>
-                            <tr>
-                                <td class="txtcenter">국문</td>
-                                <td class="txtcenter">202<br>(노출중)</td>
-                                <td>2021/08/14 16:37</td>
-                                <td>2021/08/14 16:37</td>
-                                <td>판매중개 사업자 추가로 재동의 필수를 위한 3 사유 케이스 케이스 케이스 케이스 케이스</td>
-                                <td>박소현(ne****)</td>
-                                <td><a href="#none" class="btn_view">상세보기</a></td>
-                            </tr>
-                            <!-- list 10개씩 노출 -->
-                        </tbody>
+                        <colgroup><col style="width:186px"><col></colgroup>
+                        <tr>
+                            <th>
+                                <span>그룹 코드</span>
+                            </th>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="약관 호출에 쓰이는 그룹 코드 이름">
+                                    <span class="bytes">0/40 bytes</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>그룹 제목</span>
+                            </th>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="사용자에게 노출될 약관 제목">
+                                    <span class="bytes">0/40 bytes</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>타 채널 노출 여부</span>
+                            </th>
+                            <td>
+                                <span class="input switch_btn">
+                                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
+                                </span>
+                                <p class="desc">
+                                    그룹이 등록된 서비스 외의 서비스에서도 해당 약관 그룹을 호출할 수 있습니다. 위 기능을<br>
+                                    사용하시려면, 버튼을 ON 하고 운영자와 사전협의를 위해 문의해 주십시오.
+                                </p>
+                            </td>
+                        </tr>
                     </table>
                 </div>
-                <!-- E: Board Type -->
             </div>
         </div>
     </div>
@@ -221,9 +190,10 @@
             <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
-
+    
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
+    
 </div>
 </body>
 </html>

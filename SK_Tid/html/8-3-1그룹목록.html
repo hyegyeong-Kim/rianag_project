@@ -7,10 +7,8 @@
     <title></title>
     <link rel="stylesheet" href="../resource/css/common.css">
     <link rel="stylesheet" href="../resource/css/contents.css">
-    <link rel="stylesheet" href="../resource/css/dh_contents.css">
     <script src="../resource/js/jquery.min.js"></script>
     <script src="../resource/js/common.js"></script>
-    <script src="../resource/js/dh.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -124,24 +122,28 @@
             </div>
 
             <div class="page_contents">
-                <div class="h3_wrap">
-                    <div class="search">
-                        <input type="text" placeholder="제목 검색">
-                        <a href="#none" class="btn_sch">검색하기</a>
-                    </div>
-                </div>
                 <!-- S: Board Type -->
                 <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="search">
+                            <input type="text" placeholder="제목 검색">
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                    </div>
                     <!-- table -->
                     <table class="board_tbl">
                         <caption></caption>
                         <colgroup>
-                            <col style="width:7%"><col style="width:11%"><col style="width:20%"><col style="width:22%"><col style="width:16%"><col style="width:10%"><col style="width:6%"><col style="width:5%">
+                            <col style="width:7%"><col style="min-width:110px"><col style="width:20%"><col style="width:22%"><col style="width:16%"><col style="min-width:120px"><col style="width:6%"><col style="width:5%">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th colspan="2">
-                                    <p><span>No.</span></p>
+                                <th class="txtcenter">
+                                    <span>No.</span>
+                                </th>
+                                <th>
+                                    <span>배포상태</span>
                                 </th>
                                 <th>
                                     <p>
@@ -155,12 +157,15 @@
                                         <button class="btn_sort">정렬하기</button>
                                     </p>
                                 </th>
-                                <th colspan="4">
+                                <th>
                                     <p>
                                         <span>등록 일시(Default)</span>
                                         <button class="btn_sort">정렬하기</button>
                                     </p>
                                 </th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>

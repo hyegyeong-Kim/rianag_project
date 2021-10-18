@@ -94,11 +94,11 @@ $(function(){
     });
 
     /* tooltip */
-    $(".tooltip").click(function(){
+    $(".tooltip").mouseover(function(){
         $(".tipbox").removeClass("open");
         $(this).next(".tipbox").addClass("open");
     });
-    $(".tipclose").click(function(){
+    $(".tooltip").mouseout(function(){
         $(".tipbox").removeClass("open");
     });
 

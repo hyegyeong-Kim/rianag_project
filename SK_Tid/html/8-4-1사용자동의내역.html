@@ -7,10 +7,8 @@
     <title></title>
     <link rel="stylesheet" href="../resource/css/common.css">
     <link rel="stylesheet" href="../resource/css/contents.css">
-    <link rel="stylesheet" href="../resource/css/dh_contents.css">
     <script src="../resource/js/jquery.min.js"></script>
     <script src="../resource/js/common.js"></script>
-    <script src="../resource/js/dh.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -93,10 +91,9 @@
                     <li>
                         <a href="#none" class="act">약관 관리</a>
                         <ul class="depth2">
-                            <li><a href="#none">계별약관 목록</a></li>
+                            <li><a href="#none" class="act2">계별약관 목록</a></li>
                             <li><a href="#none">계별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
-                            <li><a href="#none" class="act2">사용자 동의 내역</a></li>
                         </ul>
                     </li>
                     <li>
@@ -148,7 +145,7 @@
                     </table>
                 </div>
                 <div class="h3_wrap">
-                    <p class="optxt">"동의 이력이 없는 약관은 목록에 표시되지 않습니다."</p>
+                    <p class="optxt">동의 이력이 없는 약관은 목록에 표시되지 않습니다.</p>
                     <div class="search">
                         <input type="text" placeholder="약관 검색">
                         <a href="#none" class="btn_sch">검색하기</a>
@@ -170,24 +167,25 @@
                         <thead>
                             <tr>
                                 <th class="txtcenter">
-                                    <p><span>No.</span></p>
+                                    <span>No.</span>
                                 </th>
                                 <th>
-                                    <p><span> 약관 이름</span></p>
+                                    <span> 약관 이름</span>
                                 </th>
                                 <th>
-                                    <p><span> 최종 철회 일시</span></p>
+                                    <span> 최종 철회 일시</span>
                                 </th>
                                 <th>
-                                    <p><span> 최종 동의 일시</span></p>
+                                    <span> 최종 동의 일시</span>
                                 </th>
-                                <th colspan="2">
-                                    <p><span>최종 동의 여부</span></p>
+                                <th class="txtcenter">
+                                    <span>최종 동의 여부</span>
                                 </th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- s: unit -->
+                            <!-- unit -->
                             <!-- alist_tit -->
                             <tr class="alist_tit">
                                 <td class="txtcenter">01</td>
@@ -251,8 +249,7 @@
                                 </td>
                             </tr>
                             <!-- // alist_contents -->
-                            <!-- e: unit -->
-
+                            <!-- // unit -->
                             <!-- unit -->
                             <!-- alist_tit -->
                             <tr class="alist_tit">
@@ -318,7 +315,6 @@
                             </tr>
                             <!-- // alist_contents -->
                             <!-- // unit -->
-
                             <!-- unit -->
                             <!-- alist_tit -->
                             <tr class="alist_tit">
@@ -384,7 +380,6 @@
                             </tr>
                             <!-- // alist_contents -->
                             <!-- // unit -->
-
                             <!-- list 10개씩 노출 -->
                         </tbody>
                     </table>
