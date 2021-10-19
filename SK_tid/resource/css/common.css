@@ -224,8 +224,6 @@ input, select, button {border:0 none; outline:none;}
     #btn_gotop { right:inherit; left:calc(50% + 820px)}
 }
 
-
-
 /* popup 공통 */
 .popup {display:block; width:100%; height:100%; position:fixed; top:0; left:0; z-index: 100;}
 .popup .inner_pop {width:760px; height:auto; max-height:calc(100% - 40px); position:relative; top:50%; left:50%; transform:translate(-50%, -50%); z-index:99999; overflow: auto;}

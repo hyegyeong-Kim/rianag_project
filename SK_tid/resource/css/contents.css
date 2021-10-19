@@ -137,8 +137,6 @@ button {cursor:pointer;}
 .content_tbl tr td {font-size:16px; line-height:26px; font-weight:400; color:#666666; padding:9px 5px 9px 52px;}
 .content_tbl tr td span .under_txt {margin-left:16px;}
 
-
-
 /* 약관 기능 사용하기 */
 .terms_procedure li {display:inline-block; vertical-align:top; position:relative; margin:0 56px 40px 0;}
 .terms_procedure li::before {position:absolute; top:70px; right:-42px; display:block; content:''; width:24px; height:24px; background:#fff url('../images/terms/ic_term_arrow.png') no-repeat;}
@@ -169,6 +167,9 @@ button {cursor:pointer;}
     .term_info div.bx_basicin .title_box {float:none; width:100%;}
     .term_info div.bx_basicin .cnt_box {float:none; width:100%; margin-top:20px;}
 }
+
+/* 단독 입력페이지 */
+.regist_form {width:645px; margin:0 auto;}
 
 
 /* 등록 테이블 */
