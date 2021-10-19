@@ -137,6 +137,8 @@ button {cursor:pointer;}
 .content_tbl tr td {font-size:16px; line-height:26px; font-weight:400; color:#666666; padding:9px 5px 9px 52px;}
 .content_tbl tr td span .under_txt {margin-left:16px;}
 
+
+
 /* 약관 기능 사용하기 */
 .terms_procedure li {display:inline-block; vertical-align:top; position:relative; margin:0 56px 40px 0;}
 .terms_procedure li::before {position:absolute; top:70px; right:-42px; display:block; content:''; width:24px; height:24px; background:#fff url('../images/terms/ic_term_arrow.png') no-repeat;}
@@ -170,7 +172,6 @@ button {cursor:pointer;}
 
 /* 단독 입력페이지 */
 .regist_form {width:645px; margin:0 auto;}
-
 
 /* 등록 테이블 */
 .regist_table {}
@@ -254,7 +255,6 @@ button {cursor:pointer;}
 .pop_con .pop_preview {font-size:16px; position:absolute; bottom:62px; right:40px;}
 .pview_arrow {background:url('../images/common/ic_pvarrow.png') no-repeat; margin-right:4px;}
 .pcprev_box .mo_inner {padding:20px 0 40px 0; border-bottom:1px solid #cfcfcf;}
-.pcprev_box .mo_inner ul {}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
 /* 개별약관편집 */
@@ -294,7 +294,40 @@ button {cursor:pointer;}
 .has_switch {position:relative; padding-left:96px;}
 .has_switch .switch_btn {position:absolute; top:12px; left:0;}
 
-.myapp_search {display:block; margin:0 auto; width:460px; position:relative; padding-bottom:12px; border-bottom:4px solid #000000;}
+.myapp_search {display:block; margin:0 auto 80px; width:460px; position:relative; padding-bottom:12px; border-bottom:4px solid #000000;}
 .myapp_search .btn_sch {background:url('../images/common/ic_search_L.png') no-repeat; width:28px; height:28px; position:absolute; right:0;}
 .myapp_search input {width:100%; padding-right:35px; font-size:20px;}
 .myapp_search input::placeholder {color:#bfbfbf; font-weight:350;}
+
+/* select 박스 */
+.select_form {display:block; height:24px;}
+.select_form select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.select_form select {display:block; font-size:16px; line-height:24px; background:url('../images/common/ic_sorting_L.png') right center no-repeat; padding-right:28px;}
+
+/* 내앱목록 */
+.app_part {display:inline-block; padding:32px 32px 24px; width:460px; height:192px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); border-radius:8px;}
+.app_part .app_img {display:inline-block; width:60px; height:60px; vertical-align:top; border-radius:8px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); overflow:hidden;}
+.app_part .app_img img {display:block; width:100%;}
+.app_part .app_img.noimg {background:#f1f1f1 url('../images/common/ic_device.png') center center no-repeat; text-indent:-9999px; overflow:hidden; }
+.app_part .app_namebox {display:inline-block; position:relative; width:calc(100% - 80px); vertical-align:top; margin-left:16px;}
+.app_part .app_namebox .app_name {font-size:24px; line-height:30px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.app_part .app_namebox dl {display:inline-block; margin-top:4px; font-size:16px; line-height:26px;}
+.app_part .app_namebox dl dt {position:relative; display:inline-block; padding-right:10px; margin-right:6px;}
+.app_part .app_namebox dl dt::before {position:absolute; top:9px; right:0; display:inline-block; content:''; width:1px; height:10px; background:#aaaaaa;}
+.app_part .app_namebox dl dd {display:inline-block; font-weight:600;}
+.app_part .app_namebox .auth {display:inline-block; font-size:16px; line-height:26px; color:#bfbfbf; font-weight:600; position:absolute; bottom:-2px; right:0;}
+.app_part .app_progress {padding-top:20px; margin-top:30px; border-top:1px solid #cfcfcf;}
+.app_part .app_progress::after {display:block; content:''; clear:both;}
+.app_part .appresi {font-size:14px; color:#bfbfbf; text-align:center; background:url('../images/common/ic_add.png')center center no-repeat; padding-top:50px; transform:translateY(50%); margin-top:-15px;}
+.app_part .device li {margin:0 8px; vertical-align:middle;}
+.progress {display:inline-block; font-size:14px; line-height:24px; padding-left:27px;}
+.progress.pro_dev {color:#bfbfbf; background:url('../images/common/ic_pro_dev.png') left center no-repeat;}
+.progress.pro_use {color:#1485cb; background:url('../images/common/ic_pro_use.png') left center no-repeat;}
+.progress.pro_app {color:#222222; background:url('../images/common/ic_pro_app.png') left center no-repeat;}
+.app_list {padding-top:32px; border-top:2px solid #222222;}
+.app_list ul li {display:inline-block; vertical-align:top; margin:0 5px 20px;}
+
+/* 더보기 */
+.board_more {display:block; text-align:center; margin-top:60px;}
+.board_more a {display:inline-block; font-size:16px; font-weight:500;}
+.icon.more {background:url('../images/common/ic_more.png') no-repeat; margin:-4px 0 0 0;}
