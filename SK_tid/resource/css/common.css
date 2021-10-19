@@ -193,6 +193,7 @@ input, select, button {border:0 none; outline:none;}
 
 .coantents {width:calc(100% - 290px); margin-left:290px; padding:80px 0 0 60px; background:#fff; position:relative;}
 .coantents::after {content:''; display:block; clear:both;}
+.coantents.onlycont {width:100%; margin:0; padding-left:0}
 
 @media screen and (max-width: 1420px) {
     .lnb {width:240px;}
