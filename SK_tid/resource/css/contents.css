@@ -85,6 +85,7 @@ button {cursor:pointer;}
 .page_contents .h3_wrap .optxt {display:inline-block; font-size:18px; font-weight:600;}
 .page_contents .text_area p {margin-top:28px; margin-bottom: 20px; color:#222;}
 .page_contents .text_area p:first-child {margin-top:0;}
+.onlycont .page_tit h2 {display:block; text-align: center;}
 
 /* board */
 .board .optiongroup {min-height:48px;}
