@@ -90,8 +90,10 @@ button {cursor:pointer;}
 .board .optiongroup {min-height:48px;}
 .board .optiongroup::after {content:''; display:block; clear:both;}
 .board .optiongroup .sorting {float:left;transform: translateY(50%);}
+.board .optiongroup .select_form {margin-left:20px;}
 .board .optiongroup .search {float:right;}
 .board .optiongroup + table {margin-top:30px;}
+
 .board table {width:100%; border-top:solid 2px #000; table-layout:fixed;}
 .board table thead th {height:76px; padding:16px; border-bottom:solid 1px #000; font-size:16px; font-weight:600; text-align:left;}
 .board table thead th span  {display:inline-block; word-break: keep-all; vertical-align:middle;}
@@ -239,6 +241,8 @@ button {cursor:pointer;}
 
 /* 미리보기 */
 .mobile_box {width:360px; border:6px solid #b5b5b5; border-radius:10px; margin:0 auto;}
+.mobile_box .btn_wrap {margin-top:40px;}
+.mobile_box .btn_wrap .check {text-align:left; margin-bottom:20px;}
 .mo_logo {padding:12px 0; border-bottom:1px solid #eeeeee;}
 .mo_logo div {text-indent:-9999px; width:106px; height:100%; background:url('../images/terms/nugu_logo.png') no-repeat; margin:0 auto;}
 .mo_inner {padding:40px 20px 24px;}
