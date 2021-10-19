@@ -169,11 +169,6 @@ input, select, button {border:0 none; outline:none;}
 .userinfo .ongoing dd {width:100px; height:4px; border-radius:2px; background:#fff; overflow:hidden;}
 .userinfo .ongoing dd span {display:block; height:4px; background:#ffa640; text-indent:-9999px;}
 .userinfo .device {margin-left:48px; margin-right:-10px;}
-.userinfo .device li {display:inline-block; margin:0 8px; vertical-align:middle;}
-.userinfo .device li .ic {display:inline-block; width:32px; height:32px; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
-.userinfo .device li .ic_web {background:url('../images/common/ic_web.png') no-repeat right center;}
-.userinfo .device li .ic_ios {background:url('../images/common/ic_ios.png') no-repeat right center;}
-.userinfo .device li .ic_and {background:url('../images/common/ic_android.png') no-repeat right center;}
 @media screen and (max-width: 1023px) {
     #utility {top:72px;}
     .location {margin-left:56px;}
@@ -198,7 +193,6 @@ input, select, button {border:0 none; outline:none;}
 
 .coantents {width:calc(100% - 290px); margin-left:290px; padding:80px 0 0 60px; background:#fff; position:relative;}
 .coantents::after {content:''; display:block; clear:both;}
-.coantents.onlycont {width:100%; margin:0; padding-left:0}
 
 @media screen and (max-width: 1420px) {
     .lnb {width:240px;}

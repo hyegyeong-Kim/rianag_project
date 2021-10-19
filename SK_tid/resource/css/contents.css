@@ -23,6 +23,15 @@ button {cursor:pointer;}
 .icon.iorder {background:url('../images/common/ic_order.png') no-repeat; width:20px; height:20px; margin-right:0;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
+/* device 이미지 */
+.device li {display:inline-block; margin:0 8px; vertical-align:middle;}
+.device li .ic {display:inline-block; width:32px; height:32px; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
+.device li .ic_web {background:url('../images/common/ic_web.png') no-repeat center center;}
+.device li .ic_ios {background:url('../images/common/ic_ios.png') no-repeat center center;}
+.device li .ic_and {background:url('../images/common/ic_android.png') no-repeat center center;}
+.device li .ic_web_bk {background:url('../images/common/ic_web_bk.png') no-repeat center center;}
+.device li .ic_ios_bk {background:url('../images/common/ic_ios_bk.png') no-repeat center center;}
+.device li .ic_and_bk {background:url('../images/common/ic_android_bk.png') no-repeat center center;} 
 
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}
@@ -78,7 +87,7 @@ button {cursor:pointer;}
 .page_contents .text_area p:first-child {margin-top:0;}
 
 /* board */
-.board .optiongroup {min-height:25px;}
+.board .optiongroup {min-height:48px;}
 .board .optiongroup::after {content:''; display:block; clear:both;}
 .board .optiongroup .sorting {float:left;transform: translateY(50%);}
 .board .optiongroup .search {float:right;}
@@ -281,5 +290,10 @@ button {cursor:pointer;}
 .regist_table .appterm_tbl tbody td .has_switch .input.txt  {width:364px;}
 .regist_table span.input.txt button.btn {position:absolute; top:8px; right:16px; height:28px; font-size:12px; padding:0 12px; line-height:15px; min-width:46px;}
 
-.has_switch {position:relative; padding-left:96px; }
+.has_switch {position:relative; padding-left:96px;}
 .has_switch .switch_btn {position:absolute; top:12px; left:0;}
+
+.myapp_search {display:block; margin:0 auto; width:460px; position:relative; padding-bottom:12px; border-bottom:4px solid #000000;}
+.myapp_search .btn_sch {background:url('../images/common/ic_search_L.png') no-repeat; width:28px; height:28px; position:absolute; right:0;}
+.myapp_search input {width:100%; padding-right:35px; font-size:20px;}
+.myapp_search input::placeholder {color:#bfbfbf; font-weight:350;}
