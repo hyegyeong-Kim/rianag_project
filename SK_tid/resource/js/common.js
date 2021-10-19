@@ -113,5 +113,13 @@ $(function(){
             $(this).parents(".alist_tit").next(".alist_contents").addClass("on")
         }
     });
-    
+
 });
+
+/* alert 타입 팝업 */
+function showPop(pName){
+    $("#"+ pName).addClass("open");
+};
+function hidePop(pName){
+    $("#"+ pName).removeClass("open");
+};
