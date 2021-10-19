@@ -232,8 +232,8 @@ input, select, button {border:0 none; outline:none;}
 .popup .inner_pop .popup_title p {display:inline-block; color:#ffffff; font-size:22px; line-height:33px;}
 .popup .inner_pop .pop_con {padding:48px 40px; background:#ffffff;  border-radius:0 0 12px 12px;}
 .popup .pop_con .btn {min-width:148px;}
-.btn_wrap {text-align:center; margin-top:49px;}
-.btn_wrap.cover2 {margin-top:8px;}
+.popup .pop_con .btn_wrap {text-align:center; margin-top:49px;}
+.popup .pop_con .btn_wrap.cover2 {margin-top:8px;}
 .btn.gray {background:#aaaaaa; color:#ffffff;}
 
 .popup .alert {width:420px;}
