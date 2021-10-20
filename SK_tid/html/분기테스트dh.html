@@ -1,0 +1,252 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <dl class="ongoing">
+                        <dt>개발진행중...</dt>
+                        <dd>
+                            <span class="size">80%</span><!-- 입력값으로 bar 길이 조정 -->
+                        </dd>
+                    </dl>
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <div class="coantents onlycont">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>내 애플리케이션 목록(4)</h2>
+                <div class="tit_right">
+                    <a href="#none" class="btn black large">애플리케이션 등록</a>
+                </div>
+            </div>
+
+            <div class="page_contents">
+                <div class="myapp_search">
+                    <input type="text" placeholder="앱 이름 또는 앱 ID을(를) 검색해주세요.">
+                    <a href="#none" class="btn_sch">검색하기</a>
+                </div>
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="sorting check">
+                            <label><input type="checkbox" checked><span>개발중</span></label>
+                            <label><input type="checkbox"><span>사용중</span></label>
+                        </div>
+                        <div class="select_form sorting">
+                            <select>
+                                <option>가나다순</option>
+                                <option>가나다순</option>
+                                <option>가나다순</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="app_list">
+                        <ul class="card_type">
+                            <li>
+                                <div class="app_part">
+                                    <span class="app_img ">
+                                        <img src="../resource/images/common/ic_nugu.png" alt="nugu">
+                                    </span>
+                                    <div class="app_namebox">
+                                        <p class="app_name">NUGU</p>
+                                        <dl class="app_id">
+                                            <dt>앱ID</dt>
+                                            <dd class="mfont">ALDN</dd>
+                                        </dl>
+                                        <p class="auth mfont">Member</p>
+                                    </div>
+                                    <div class="app_progress">
+                                        <div class="progress pro_use">
+                                            현재 사용중
+                                        </div>
+                                        <ul class="device float_r">
+                                            <li><span class="ic ic_web_bk">웹</span></li>
+                                            <li><span class="ic ic_ios_bk">ios</span></li>
+                                            <li><span class="ic ic_and_bk">android</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="app_part">
+                                    <span class="app_img noimg">
+                                        이미지 없음
+                                    </span>
+                                    <div class="app_namebox">
+                                        <p class="app_name">NUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGU</p>
+                                        <dl class="app_id">
+                                            <dt>앱ID</dt>
+                                            <dd class="mfont">ALDN</dd>
+                                        </dl>
+                                        <p class="auth mfont">Member</p>
+                                    </div>
+                                    <div class="app_progress">
+                                        <div class="progress pro_dev">
+                                        개발 진행중
+                                        </div>
+                                        <ul class="device float_r">
+                                            <!-- <li><span class="ic ic_web_bk">웹</span></li> -->
+                                            <li><span class="ic ic_ios_bk">ios</span></li>
+                                            <li><span class="ic ic_and_bk">android</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="app_part">
+                                    <span class="app_img ">
+                                        <img src="../resource/images/common/ic_ut.png" alt="ut">
+                                    </span>
+                                    <div class="app_namebox">
+                                        <p class="app_name">UT-Tmap</p>
+                                        <dl class="app_id">
+                                            <dt>앱ID</dt>
+                                            <dd class="mfont">ALDN</dd>
+                                        </dl>
+                                        <p class="auth mfont">Ower</p>
+                                    </div>
+                                    <div class="app_progress">
+                                        <div class="progress pro_app">
+                                            사용 승인중
+                                        </div>
+                                        <ul class="device float_r">
+                                            <li><span class="ic ic_web_bk">웹</span></li>
+                                            <!-- <li><span class="ic ic_ios_bk">ios</span></li> -->
+                                            <!-- <li><span class="ic ic_and_bk">android</span></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="app_part">
+                                    <!-- <span class="app_img ">
+                                        <img src="" alt="">
+                                    </span> -->
+                                    <span class="app_img noimg">
+                                        이미지 없음
+                                    </span>
+                                    <div class="app_namebox">
+                                        <p class="app_name">NUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGUNUGU</p>
+                                        <dl class="app_id">
+                                            <dt>앱ID</dt>
+                                            <dd class="mfont">ALDN</dd>
+                                        </dl>
+                                        <p class="auth mfont">Tester</p>
+                                    </div>
+                                    <div class="app_progress">
+                                        <div class="progress pro_use">
+                                            현재 사용중
+                                        </div>
+                                        <ul class="device float_r">
+                                            <li><span class="ic ic_web_bk">웹</span></li>
+                                            <li><span class="ic ic_ios_bk">ios</span></li>
+                                            <li><span class="ic ic_and_bk">android</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="app_part">
+                                    <p class="appresi">애플리케이션 등록</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="board_more">
+                            <i class="icon more"></i>
+                            <a href="#none">더보기</a>
+                        </div>
+                        <p class="noterms">어플리케이션에 참여 또는 등록해주세요.</p>
+                    </div>
+                </div>
+                <!-- E: Board Type -->
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+    
+</div>
+</body>
+</html>
+
+
