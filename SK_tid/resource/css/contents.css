@@ -184,26 +184,31 @@ button {cursor:pointer;}
 .regist_table table td {padding:12px 0;}
 .regist_table table td .warning {padding:10px 0 0 10px;font-size:12px; color:#fc2a2a;}
 .regist_table span.input {display:block; height:48px; padding:0 16px;}
+.regist_table span.input + .input {margin-top:10px;}
 .regist_table span.input input[type='text'] {width:100%; line-height:46px;}
 .regist_table span.input input::placeholder {color:#999;}
 .regist_table span.input input[type='file'] {display:none;}
+.regist_table span.input select {height:48px; line-height: 46px;}
 .regist_table span.input.txt {width:460px; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
 .regist_table span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%);font-family:'Roboto';}
 .regist_table span.input.txt .filename {color:#999;}
 .regist_table span.input.txt .filename.on {color:#222;}
 .regist_table span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
+.regist_table span.input.sel {width:460px; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
+.regist_table span.input.direct_input {display:none;}
+.regist_table span.input.direct_input.show {display:block;}
 .regist_table .dateset {display:inline-block;}
 .regist_table span.input.date {display:inline-block; width:140px; border:solid 1px #cfcfcf; border-radius:8px;}
 .regist_table span.input.date + .date {margin-left:12px;}
 .regist_table span.input.switch_btn {display:inline-block; padding:0; padding-top: 10px;}
+.regist_table span.input.disabled {background:#e0e0e0;}
+.regist_table span.input.disabled input {color:#bfbfbf;}
+.regist_table span.input.disabled button:disabled {opacity: .3; cursor:default;}
 .tooltip_wrap {display:inline-block; margin-left:5px; vertical-align:middle; position:relative; top:-5px;}
 .tooltip_wrap .tooltip {display:inline-block; font-size:9px; text-align:center; width:16px; height:16px; color:#ffffff; background:#bfbfbf; border-radius:10px;}
 .tooltip_wrap .tipbox {display:none;position:absolute; top:25px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1;}
 .tooltip_wrap .tipbox.open {display:block;}
 .tooltip_wrap .tipbox p {font-size:14px; line-height:24px;}
-.regist_table span.input.disabled {background:#e0e0e0;}
-.regist_table span.input.disabled input {color:#bfbfbf;}
-.regist_table span.input.disabled button:disabled {opacity: .3; cursor:default;}
 
 /* 그룹설정 */
 .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
@@ -215,13 +220,13 @@ button {cursor:pointer;}
 .group_check::after {display:block; content:''; clear:both;}
 .group_check .group_srch {float:left; width:calc(50% - 10px);}
 .group_check .group_choice {float:right; width:calc(50% - 10px); padding-left:10px;}
-.group_check .group_choice ul {border-bottom:1px solid #cfcfcf;}
+.group_check .group_choice ul {padding:10px 0;border-bottom:1px solid #cfcfcf;}
 
 .group_srch {border:1px solid #cfcfcf; border-radius:5px; }
 .group_srch .gsrch {display:block; position:relative;}
 .group_srch .gsrch input {border:none; font-size:14px; width:100%; padding:14px 60px 14px 16px; background:none;}
 .group_srch .gsrch .btn_sch {width:24px; height:24px; text-indent:-9999px; background:url('../images/terms/ic_search.png') no-repeat; position:absolute; top:10px; right:16px;}
-.group_srch ul {border-top:1px solid #cfcfcf; height:244px; overflow:hidden; overflow-x:hidden; overflow-y:auto; padding:24px;}
+.group_srch ul {border-top:1px solid #cfcfcf; height:242px; overflow:hidden; overflow-x:hidden; overflow-y:auto; padding:24px;}
 .group_srch ul li {margin-top:20px;}
 .group_srch ul li:first-child {margin-top:0;}
 
@@ -241,12 +246,14 @@ button {cursor:pointer;}
 .con_bottom .htmldown {display:block; float:right; font-size:16px; font-weight:500; padding-left:32px; background:url('../images/terms/ic_download.png') left center no-repeat;}
 
 /* 미리보기 */
-.mobile_box {width:360px; border:6px solid #b5b5b5; border-radius:10px; margin:0 auto;}
+.mobile_box {width:360px; height:640px; border:6px solid #b5b5b5; border-radius:10px; margin:0 auto;}
 .mobile_box .btn_wrap {margin-top:40px;}
 .mobile_box .btn_wrap .check {text-align:left; margin-bottom:20px;}
 .mo_logo {padding:12px 0; border-bottom:1px solid #eeeeee;}
 .mo_logo div {text-indent:-9999px; width:106px; height:100%; background:url('../images/terms/nugu_logo.png') no-repeat; margin:0 auto;}
-.mo_inner {padding:40px 20px 24px;}
+.mo_inner {width:346px; height:calc(100% - 50px); padding:40px 18px 24px; overflow: auto;}
+.mo_inner::-webkit-scrollbar {width:3px; background-color: #ddd; border-radius: 2px;}
+.mo_inner::-webkit-scrollbar-thumb {background: #999; border-radius: 2px;}
 .pmo_tl {font-size:24px; line-height:36px; font-weight:600; margin-bottom:20px;}
 .mcontent {font-size:16px; line-height:26px; color:#222222; margin-top:20px;}
 .mo_inner ul {margin-top:20px;  padding:20px 0; border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf;}
@@ -259,7 +266,7 @@ button {cursor:pointer;}
 .pop_con .btn_wrap .btn_next + .btn {margin-left:6px;}
 .pop_con .pop_preview {font-size:16px; position:absolute; bottom:62px; right:40px;}
 .pview_arrow {background:url('../images/common/ic_pvarrow.png') no-repeat; margin-right:4px;}
-.pcprev_box .mo_inner {padding:20px 0 40px 0; border-bottom:1px solid #cfcfcf;}
+.pcprev_box .mo_inner {width:100%; padding:20px 0 40px 0; border-bottom:1px solid #cfcfcf;}
 .pcprev_box .mo_inner ul {}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
@@ -307,8 +314,8 @@ button {cursor:pointer;}
 
 /* select 박스 */
 .select_form {display:block; height:24px;}
-.select_form select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .select_form select {display:block; font-size:16px; line-height:24px; background:url('../images/common/ic_sorting_L.png') right center no-repeat; padding-right:28px;}
+select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; background:url('../images/common/ic_sorting_L.png') 98% center no-repeat; padding:0 28px 0 16px; font:initial; font-size:14px;}
 
 /* 내앱목록 */
 .app_list {padding-top:32px; border-top:2px solid #222222;}

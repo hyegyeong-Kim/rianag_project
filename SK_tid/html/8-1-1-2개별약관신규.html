@@ -131,12 +131,20 @@
                         <colgroup><col style="width:186px"><col></colgroup>
                         <tr>
                             <th>
-                                <span>약관 코드</span>
+                                <span>약관 코드 선택/직접 입력</span>
                             </th>
                             <td>
-                                <span class="input txt">
-                                    <input type="text" placeholder="코드 이름, 숫자만으로는 등록불가">
+                                <span class="input sel">
+                                    <select name="" id="select1" class="sel_de">
+                                        <option value="">선택</option>
+                                        <option value="">TERMSOFSERVICE </option>
+                                        <option value="direct">직접입력</option>
+                                    </select>
                                 </span>
+                                <span class="input txt direct_input">
+                                    <input type="text" placeholder="직접입력">
+                                </span>
+                                
                                 <p class="warning">
                                     영문 입력이 필수 입니다.
                                 </p>
@@ -326,16 +334,29 @@
     
 </div>
 <script>
+
     $("#file1").on('change',function(){
         var fileName = $("#file1").val();
-        $(".filename").val(fileName);
-        $(".filename").addClass("on");
+        var fnames = $(this).parent().children(".filename");
+
+        fnames.val(fileName);
+        fnames.addClass("on");
     });
     $("#file2").on('change',function(){
         var fileName = $("#file2").val();
-        $(".filename").val(fileName);
-        $(".filename").addClass("on");
+        var fnames = $(this).parent().children(".filename");
+        
+        fnames.val(fileName);
+        fnames.addClass("on");
     });
+    $('#select1').change(function() {
+	var state = $('#select1 option:selected').val();
+	if ( state == 'direct' ) {
+		$('.direct_input').addClass("show");
+	} else {
+		$('.direct_input').removeClass("show");
+	}
+});
 </script>
 </body>
 </html>

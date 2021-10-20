@@ -70,6 +70,7 @@ text-decoration:none;
 }
 
 input, select, button {border:0 none; outline:none;}
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 
 /* 여백 */
 .mt00 {margin-top:00px;}
@@ -226,13 +227,13 @@ input, select, button {border:0 none; outline:none;}
 
 /* popup 공통 */
 .popup {display:none;}
-.popup.open {display:block; width:100%; height:100%; position:fixed; top:0; left:0; z-index: 100;}
-.popup .inner_pop {width:760px; height:auto; max-height:calc(100% - 40px); border-radius:12px; position:relative; top:50%; left:50%; transform:translate(-50%, -50%); z-index:99999; overflow: auto;}
-.popup .inner_pop .popup_title {background:#000000; text-align:center; padding:24px 0; border-radius:12px 12px 0 0;}
-.popup .inner_pop .popup_title p {display:inline-block; color:#ffffff; font-size:22px; line-height:33px;}
+.popup.open {display:block; width:100%; height:100%; position:absolute; top:0; left:0; z-index: 100;}
+.popup .inner_pop {width:760px; border-radius:12px; position:relative; top:50%; left:50%; transform:translate(-50%, -50%); z-index:99999; overflow: auto;}
+.popup .inner_pop .popup_title {height:64px; line-height:64px; background:#000000; text-align:center; border-radius:12px 12px 0 0;}
+.popup .inner_pop .popup_title p {display:inline-block; color:#ffffff; font-size:20px; line-height:33px;}
 .popup .inner_pop .pop_con {padding:48px 40px; background:#ffffff;  border-radius:0 0 12px 12px;}
 .popup .pop_con .btn {min-width:148px;}
-.popup .pop_con .btn_wrap {text-align:center; margin-top:49px;}
+.popup .pop_con .btn_wrap {text-align:center; margin-top:48px;}
 .popup .pop_con .btn_wrap.cover2 {margin-top:8px;}
 .btn.gray {background:#aaaaaa; color:#ffffff;}
 
@@ -241,3 +242,7 @@ input, select, button {border:0 none; outline:none;}
 .popup .alert .btn_wrap {margin-top:32px;}
 
 .popup .dim {display:block;}
+
+@media screen and (max-height: 800px) {
+    .popup .inner_pop {top:32px; transform:translate(-50%, 0);}
+}
