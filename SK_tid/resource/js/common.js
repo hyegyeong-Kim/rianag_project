@@ -114,6 +114,9 @@ $(function(){
         }
     });
 
+    $('.colorchart').minicolors();
+
+
 });
 
 /* alert 타입 팝업 */
