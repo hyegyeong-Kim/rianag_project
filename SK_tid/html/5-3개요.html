@@ -7,10 +7,8 @@
     <title></title>
     <link rel="stylesheet" href="../resource/css/common.css">
     <link rel="stylesheet" href="../resource/css/contents.css">
-    <link rel="stylesheet" href="../resource/css/jquery.minicolors.css">
     <script src="../resource/js/jquery.min.js"></script>
     <script src="../resource/js/common.js"></script>
-    <script src="../resource/js/jquery.minicolors.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -125,16 +123,12 @@
             </div>
 
             <div class="page_contents">
-                <p class="gtit">사용자가 로그인 / 회원가입 / T아이디 사이트&App을 이용할 때 표시되는 정보입니다. 정확한 정보를 입력해주세요.</p>
-                <ul class="guide_txt">
-                    <li>
-                        <span>미리보기 버튼</span>을 클릭 하시면 실제 적용 된 화면을 보실 수 있습니다.
-                    </li>
-                    <li>
-                        도움말 버튼을 클릭 하시면 각 정보에 대한 설명을 보실 수 있습니다.
-                    </li>
-                </ul>
-                <hr class="hr_01">
+                <div class="h3_wrap">
+                    <h3>한글 약관 등록</h3>
+                </div>
+                <div>
+
+                </div>
                 <div class="regist_table">
                     <table>
                         <caption></caption>
@@ -144,31 +138,20 @@
                                 <span>애플리케이션 명</span>
                             </th>
                             <td>
-                                <p class="desc_02">
-                                    애플리케이션 명은 정보 동의 화면, 로그인, 회원가입 등 T아이디 사이트, 페이지에 노출됩니다.<br>
-                                    서비스 설명은 최대 15자 이내로 작성 가능합니다.
-                                </p>
                                 <span class="input txt">
-                                    <input type="text" placeholder="한글,영문,숫자,공백문자, &quot;-&quot; 만 입력가능합니다.">
-                                    <span class="bytes">0/15 bytes</span>
+                                    <input type="text" placeholder="서비스명은 최대15자까지 작성 가능합니다. 한글,영문,숫자,공백문자, &quot;-&quot;만 입력가능합니다.">
+                                    <span class="bytes">00/15</span>
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <th>
                                 <span>애플리케이션 설명</span>
-                                <a href="#none" class="play_view">
-                                    <i class="icon icview">미리보기</i>
-                                </a>
                             </th>
                             <td>
-                                <p class="desc_02">
-                                    T아이디 사이트 “이용가능 서비스" 목록에 서비스 설명이 노출됩니다.<br>
-                                    서비스 설명은 최대 150자 이내로 작성 가능합니다. 
-                                </p>
                                 <span class="input txt">
                                     <input type="text" placeholder="애플리케이션 설명을 입력해주세요">
-                                    <span class="bytes">0/150 bytes</span>
+                                    <span class="bytes">000/150</span>
                                 </span>
                             </td>
                         </tr>
@@ -181,24 +164,15 @@
                                         <p>활성화 OFF : 즉시 노출 종료 된다.</p>
                                     </div>    
                                 </div>
-                                <a href="#none" class="play_view">
-                                    <i class="icon icview">미리보기</i>
-                                </a>
                             </th>
                             <td>
-                                <div id="img_view">
-                                    <img id="img_area" src="" onerror="imgAreaError()"/>
-                                </div>
-                                <div class="view_txt">
-                                    <p class="desc_02">서비스 로고는 T아이디 사이트, 정보 동의 항목 화면에 노출됩니다.</p>
-                                    <p class="desc_02 mfont">(168px * 168px)</p>
-                                    <!-- 첨부파일(이미지파일만 업로드가능) -->
-                                    <span class="input txt">
-                                        <input type="text" class="filename" value="이미지">
-                                        <label for="u_file" class="file_btn">이미지버튼</label>
-                                        <input type="file" id="u_file" name="u_file" accept="image/*">    
-                                    </span>
-                                </div>
+                                <span class="input switch_btn">
+                                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
+                                </span>
+                                <span class="input txt">
+                                    <input type="text" placeholder="로고를 업로드 해주세요">
+                                    <span class="bytes">000/150</span>
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -214,20 +188,18 @@
                                         </p>
                                     </div>    
                                 </div>
-                                <a href="#none" class="play_view">
-                                    <i class="icon icview">미리보기</i>
-                                </a>
                             </th>
                             <td>
-                                <p class="desc_02">
-                                    T아이디 사이트에 서비스 카테고리 를 구분하여 사용자들에게 소개를 합니다.<br> 
-                                    서비스 특성에 맞는 카테고리를 선택해주세요!
-                                </p>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <div class="dateset">
+                                    <span class="input date">
+                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
+                                        <button class="btn_date">날짜</button>
+                                    </span>
+                                    <span class="input date">
+                                        <input type="text" placeholder="00:00" class="mfont">
+                                        <button class="btn_date">시간</button>
+                                    </span>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -241,19 +213,22 @@
                                         </p>
                                     </div>
                                 </div>
-                                <a href="#none" class="play_view">
-                                    <i class="icon icview">미리보기</i>
-                                </a>
+                                
                             </th>
                             <td>
-                                <p class="desc_02">
-                                    로그인 /가입화면에서 서비스명을 나타내는 색상입니다.
-                                </p>
-                                <span>
+                                <span class="input txt">
+                                    <input type="text" class="filename" value="HTML파일 업로드" readonly>                                    
+                                    <label for="file1" class="file_btn"></label>
+                                    <input type="file" id="file1">
                                 </span>
-                                <span class="input txt mfont">
-                                    <input type="text" id="colorpick" class="colorchart mfont" value="#ff6161">
-                                    <label for="colorpick"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>등록/수정 코멘트</span></th>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="약관에 대한 설명, 재등록 사유 등">
+                                    <span class="bytes">0/40 bytes</span>
                                 </span>
                             </td>
                         </tr>
@@ -283,41 +258,6 @@
     <!-- E: footer -->
     
 </div>
-<script>
-    $("#file1").on('change',function(){
-        var fileName = $("#file1").val();
-        $(this).parent().children(".filename").val(fileName);
-        $(".filename").addClass("on");
-    });
-    
-    $("#u_file").on('change',function(){
-        var fileNimg = $("#u_file").val();
-        $(".filename").val(fileNimg);
-        $(".filename").addClass("on");
-    });
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#img_area').attr('src', e.target.result); 
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    $(":input[name='u_file']").change(function() {
-        if( $(":input[name='u_file']").val() == '' ) {
-            $('#img_area').attr('src' , '');  
-        }
-        $('#img_view img').css({ 'display' : '','border':'none'});
-        readURL(this);
-    });
-
-    // 이미지 에러 시 미리보기영역 미노출
-    function imgAreaError(){
-        $('#img_view img').css({ 'display' : 'none','border':'none' });
-    }
-</script>
 </body>
 </html>
 
