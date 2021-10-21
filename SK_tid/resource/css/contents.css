@@ -24,6 +24,8 @@ button {cursor:pointer;}
 .icon.iorder {background:url('../images/common/ic_order.png') no-repeat; width:20px; height:20px; margin-right:0;}
 .icon.icview {width:16px; height:16px; background:url('../images/common/ic_play.png') no-repeat;}
 .icon.more {background:url('../images/common/ic_more.png') no-repeat; margin:-4px 0 0 0;}
+/* .icon.ic_eye {background:url('../images/common/ic_view_on.png') no-repeat; text-indent:-9999px; overflow:hidden; margin-right:0;} */
+
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
 /* device 이미지 */
@@ -207,11 +209,20 @@ button {cursor:pointer;}
 .regist_table span.input.disabled {background:#e0e0e0;}
 .regist_table span.input.disabled input {color:#bfbfbf;}
 .regist_table span.input.disabled button:disabled {opacity: .3; cursor:default;}
+.regist_table .sorting.chkbx {width:460px;}
+.regist_table .sorting.chkbx label {width:146px; margin:0 5px 8px 0;}
+/* 툴팁 */
 .tooltip_wrap {display:inline-block; margin-left:5px; vertical-align:middle; position:relative; top:-5px;}
 .tooltip_wrap .tooltip {display:inline-block; font-size:9px; width:16px; height:16px; background:url('../images/common/ic_question.png') no-repeat; text-indent:-9999px; overflow:hidden;}
 .tooltip_wrap .tipbox {display:none;position:absolute; top:25px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1;}
 .tooltip_wrap .tipbox.open {display:block;}
 .tooltip_wrap .tipbox p {font-size:14px; line-height:24px;}
+.tooltip_wrap .tipbox .tiptl {font-size:16px; font-weight:600;}
+.tooltip_wrap .tipbox .tiptxt {font-size:14px; line-height:22px; font-weight:400; margin-top:20px;}
+.tooltip_wrap .tipbox .tiptxt dd {color:#666; margin-top:12px;}
+.tooltip_wrap .tipbox.tipbg01 {background:#fff url('../images/common/tooltip_bg01.png') center bottom no-repeat; padding-bottom:288px;}
+.tooltip_wrap .tipbox.tipbg02 {background:#fff url('../images/common/tooltip_bg02.png') center bottom no-repeat; padding-bottom:288px;}
+.tooltip_wrap .tipbox.tipbg03 {background:#fff url('../images/common/tooltip_bg03.png') center bottom no-repeat; padding-bottom:288px;}
 
 /* 그룹설정 */
 .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
@@ -240,7 +251,7 @@ button {cursor:pointer;}
 .group_choice ul li .btn_del {position:absolute; top:8px; right:16px;}
 
 .desc {font-size:14px; line-height:22px; color:#666666;  margin-top:8px; letter-spacing: -.8px;}
-.desc_02 {font-size:12px; line-height:20px; color:#666;}
+.desc_02 {font-size:12px; line-height:20px; color:#666; margin-bottom:12px;}
 /* 본문보기 */
 .popup .inner_pop .pop_con .pop_tbox {border:1px solid #cfcfcf; border-radius:5px; height:480px; overflow:hidden; overflow-x:hidden; overflow-y:scroll ;}
 .popup .inner_pop .pop_con .pop_tbox div {padding:24px 32px;}
@@ -272,6 +283,14 @@ button {cursor:pointer;}
 .pcprev_box .mo_inner {width:100%; padding:20px 0 40px 0; border-bottom:1px solid #cfcfcf;}
 .pcprev_box .mo_inner ul {}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
+
+/* 애플리케이션 색상 미리보기 팝업 */
+/* .viewpw {position:absolute; top:3px; right:10px;} */
+.find_wrap a {display:inline-block; padding-right:8px; margin-right:4px; position:relative; font-size:14px; line-height:22px; color:#666;}
+.find_wrap a::before {display:block; content:''; width:1px; height:14px; background:#666; position:absolute; top:7px; right:0;}
+.find_wrap a:last-child {padding-right:0; margin-right:0;}
+.find_wrap a:last-child::before {display:none;}
+
 
 /* 개별약관편집 */
 .txt_reagree {display:inline-block; margin-left:33px;}
@@ -369,6 +388,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .input.txt .minicolors-position-bottom .minicolors-panel {top:48px; right:0;}
 
 /* 이미지 업로드 */
-#img_view {display:inline-block; width:96px; height:96px; background:#f1f1f1;}
-#img_view img {display:block; width:100%; height:100%;}
-.view_txt {display:inline-block; vertical-align:top;}
+#img_view {display:inline-block; width:96px; height:96px; background:#f1f1f1 url('../images/common/ic_eximg.png')center center no-repeat; vertical-align:top; margin-top:2px;}
+#img_view img {display:block; max-width:100%;}
+.view_txt {display:inline-block; vertical-align:top; width:344px; margin-left:16px;}
+.regist_table .view_txt span.input {width:100%;}
+
+
