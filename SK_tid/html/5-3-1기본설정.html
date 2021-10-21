@@ -152,6 +152,7 @@
                                     <input type="text" placeholder="한글,영문,숫자,공백문자, &quot;-&quot; 만 입력가능합니다.">
                                     <span class="bytes">0/15 bytes</span>
                                 </span>
+                                <p class="warning">15자 이내로 입력해주세요.</p>
                             </td>
                         </tr>
                         <tr>
@@ -170,6 +171,7 @@
                                     <input type="text" placeholder="애플리케이션 설명을 입력해주세요">
                                     <span class="bytes">0/150 bytes</span>
                                 </span>
+                                <p class="warning">150자 이내로 입력해주세요.</p>
                             </td>
                         </tr>
                         <tr>
@@ -177,8 +179,12 @@
                                 <span>애플리케이션 로고</span>
                                 <div class="tooltip_wrap">
                                     <button class="tooltip">?</button>
-                                    <div class="tipbox">
-                                        <p>활성화 OFF : 즉시 노출 종료 된다.</p>
+                                    <div class="tipbox tipbg01">
+                                        <p class="tiptl">도움말</p>
+                                        <dl class="tiptxt">
+                                            <dt>서비스로고는 어디에 노출되나요?</dt>
+                                            <dd>T아이디 사이트에 서비스 소개란,  정보 동의 화면등에 서비스명과 아이콘이 노출됩니다.</dd>
+                                        </dl>
                                     </div>    
                                 </div>
                                 <a href="#none" class="play_view">
@@ -190,14 +196,17 @@
                                     <img id="img_area" src="" onerror="imgAreaError()"/>
                                 </div>
                                 <div class="view_txt">
-                                    <p class="desc_02">서비스 로고는 T아이디 사이트, 정보 동의 항목 화면에 노출됩니다.</p>
-                                    <p class="desc_02 mfont">(168px * 168px)</p>
+                                    <p class="desc_02">
+                                        서비스 로고는 T아이디 사이트, 정보 동의 항목 화면에 노출됩니다.<br>
+                                        <span class="mfont">(168px * 168px)</span>
+                                    </p>
                                     <!-- 첨부파일(이미지파일만 업로드가능) -->
                                     <span class="input txt">
                                         <input type="text" class="filename" value="이미지">
                                         <label for="u_file" class="file_btn">이미지버튼</label>
                                         <input type="file" id="u_file" name="u_file" accept="image/*">    
                                     </span>
+                                    <p class="warning">로고를 업로드 해주세요.</p>
                                 </div>
                             </td>
                         </tr>
@@ -206,13 +215,13 @@
                                 <span>카테고리</span>
                                 <div class="tooltip_wrap">
                                     <button class="tooltip">?</button>
-                                    <div class="tipbox">
-                                        <p>
-                                            새 버전을 등록하면 스테이징에는 30분 이내에 즉시 적용됩니다. 
-                                            노출시간 설정은 상용 배포에 해당합니다. 노출 시간은 30분 단위로 설정할 수 있고,
-                                            호출 시점에 노출되고 있는 최신버전을 노출하게 됩니다.
-                                        </p>
-                                    </div>    
+                                    <div class="tipbox tipbg02">
+                                        <p class="tiptl">도움말</p>
+                                        <dl class="tiptxt">
+                                            <dt>카테고리는 무엇인가요?</dt>
+                                            <dd>T아이디 사이트에 서비스 카테고리를 구분하여 사용자들에게 소개를 합니다. 서비스 특성에 맞는 카테고리를 선택해주세요!</dd>
+                                        </dl>
+                                    </div>
                                 </div>
                                 <a href="#none" class="play_view">
                                     <i class="icon icview">미리보기</i>
@@ -223,11 +232,13 @@
                                     T아이디 사이트에 서비스 카테고리 를 구분하여 사용자들에게 소개를 합니다.<br> 
                                     서비스 특성에 맞는 카테고리를 선택해주세요!
                                 </p>
-                                <select name="" id="">
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <span class="input sel">
+                                    <select name="" class="sel_de">
+                                        <option value="">서비스 카테고리 설정1</option>
+                                        <option value="">서비스 카테고리 설정2</option>
+                                        <option value="direct">서비스 카테고리 설정3</option>
+                                    </select>    
+                                </span>
                             </td>
                         </tr>
                         <tr>
@@ -235,10 +246,15 @@
                                 <span>애플리케이션 색상</span>
                                 <div class="tooltip_wrap">
                                     <button class="tooltip">?</button>
-                                    <div class="tipbox">
-                                        <p>
-                                            상용에 배포하려면 호출될수 있게 그룹약관을 설정해야 합니다.
-                                        </p>
+                                    <div class="tipbox tipbg03">
+                                        <p class="tiptl">도움말</p>
+                                        <dl class="tiptxt">
+                                            <dt>서비스 색상은 무엇인가요?</dt>
+                                            <dd>
+                                                로그인 / 가입화면에서<br>
+                                                서비스명을 나타내는 색상입니다.
+                                            </dd>
+                                        </dl>
                                     </div>
                                 </div>
                                 <a href="#none" class="play_view">
@@ -257,7 +273,40 @@
                                 </span>
                             </td>
                         </tr>
+                        <!-- 관리자 접근시에만 노출 -->
+                        <tr>
+                            <th>표준동의서 표시 설정</th>
+                            <td>
+                                <div class="sorting check chkbx">
+                                    <label><input type="checkbox"><span>회원가입</span></label>
+                                    <label><input type="checkbox"><span>이용동의</span></label>
+                                    <label><input type="checkbox"><span>ID/PW 로그인</span></label>
+                                    <label><input type="checkbox"><span>SSO 로그인</span></label>
+                                    <label><input type="checkbox"><span>SSO 로그인(자동)</span></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>애플리케이션 Type</span>
+                            </th>
+                            <td>
+                                <span class="input sel">
+                                    <select class="sel_de">
+                                        <option>D Type</option>
+                                        <option>a</option>
+                                        <option>b</option>
+                                    </select>    
+                                </span>
+                            </td>
+                        </tr>
+                        <!-- // 관리자 접근시에만 노출 -->
                     </table>
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn xlarge gray" onclick="showPop('cancelpop')">취소</a>
+                    <a href="#none" class="btn xlarge black" onclick="showPop('savepop')">저장</a>
+                    <a href="#none" class="btn xlarge black" onclick="showPop('savepop')">수정 사항 저장</a>
                 </div>
             </div>
         </div>
@@ -283,7 +332,92 @@
     <!-- E: footer -->
     
 </div>
+<!-- 애플리케이션 색상 미리보기 팝업 -->
+<div class="popup">
+    <div class="inner_pop mini">
+        <div class="popup_title">
+            <p>미리보기</p>
+        </div>
+        <div class="pop_con">
+            <p>T아이디 로그인</p>
+            <p>T아이디로 <span>NUGU</span>을(를) 이용해 보세요.</p>
+            <div>
+                <p>사업자명</p>
+                <span class="input txt">
+                    <input type="text" placeholder="T아이디(휴대폰, 이메일)또는 T world 아이디">
+                    <span class="bytes">0/15 bytes</span>
+                </span>
+            </div>
+            <div>
+                <p>비밀번호</p>
+                <span class="input txt">
+                    <input type="text" placeholder="비밀번호">
+                    <button class="viewpw">
+                        <i class="icon ic_eye">비밀번호 보기</i>
+                    </button>
+                </span>
+            </div>
+            <div class="find_wrap txtcenter">
+                <a href="#none">아이디 찾기</a>
+                <a href="#none">비밀번호 찾기</a>
+                <a href="#none">T아이디 가입하기</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- // 애플리케이션 색상 미리보기 -->
+<!-- S: 팝업 / 수정 팝업 -->
+<div class="popup" id="cancelpop">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                내용을 수정하지 않고
+                이전 내용을 유지할까요?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray pop_close" onclick="hidePop('cancelpop')">수정 계속</a>
+                <a href="#none" class="btn large black" onclick="hidePop('cancelpop')">이전내용 유지</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 수정 팝업 -->
+<!-- S: 팝업 / 저장메세지 팝업 -->
+<div class="popup" id="savepop">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                저장 되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('savepop')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 저장메세지 팝업 -->
+
+<!-- S: 팝업 / 수정 중 오류 팝업 -->
+<div class="popup" id="errpop">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                수정 중 오류가 발생했습니다.<br>
+                잠시 후에 다시 시도해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('errpop')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 수정 중 오류 팝업 -->
 <script>
+
     $("#file1").on('change',function(){
         var fileName = $("#file1").val();
         $(this).parent().children(".filename").val(fileName);
@@ -296,6 +430,10 @@
         $(".filename").addClass("on");
     });
 
+    // 컬러피커
+    $('.colorchart').minicolors();
+
+    // 이미지 첨부 미리보기
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -309,13 +447,13 @@
         if( $(":input[name='u_file']").val() == '' ) {
             $('#img_area').attr('src' , '');  
         }
-        $('#img_view img').css({ 'display' : '','border':'none'});
+        $('#img_view img').css({ 'display' : ''});
         readURL(this);
     });
 
     // 이미지 에러 시 미리보기영역 미노출
     function imgAreaError(){
-        $('#img_view img').css({ 'display' : 'none','border':'none' });
+        $('#img_view img').css({ 'display' : 'none'});
     }
 </script>
 </body>
