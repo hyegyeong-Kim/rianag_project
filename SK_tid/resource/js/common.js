@@ -114,7 +114,7 @@ $(function(){
         }
     });
 
-    $('.colorchart').minicolors();
+    //$('.colorchart').minicolors();
 
 
 });

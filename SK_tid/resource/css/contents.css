@@ -105,8 +105,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 /* 움직이는 리스트 */
 .moving_wrap {padding-bottom:24px; border-bottom:1px solid #cfcfcf;}
-.moving_wrap li {margin-top:20px;}
-.moving_wrap li:first-child {margin-top:0;}
+.moving_wrap li {padding:10px 0;}
 .moving_part {display:inline-block;}
 .moving_part span {display:inline-block; vertical-align:middle; font-size:16px; line-height:24px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:280px;}
 .moving_part button.btn_del {background:url('../images/common/ic_delete_gray.png') no-repeat; margin-left:4px; vertical-align:middle;}
