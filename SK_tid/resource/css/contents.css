@@ -250,7 +250,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table .appterm_tbl tbody td .has_switch .input.txt  {width:364px;}
 .regist_table span.input.txt button.btn {position:absolute; top:8px; right:16px; height:28px; font-size:12px; padding:0 12px; line-height:15px; min-width:46px;}
 .regist_table .appterm_tbl .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
-.regist_table .appterm_tbl .pview {background:url('../images/common/ic_view.png') right center no-repeat; padding-right:26px;}
 .regist_table .has_switch, .regist_table .switch_desc {position:relative; padding-left:96px;}
 .regist_table .switch_desc {padding-left:68px;}
 .regist_table .has_switch .switch_btn, .regist_table .switch_desc .switch_btn {position:absolute; top:12px; left:0;}
@@ -260,6 +259,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tooltip_wrap .tipbox {display:none;position:absolute; top:25px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1;}
 .tooltip_wrap .tipbox.open {display:block;}
 .tooltip_wrap .tipbox p {font-size:14px; line-height:24px;}
+.pview {background:url('../images/common/ic_view.png') right center no-repeat; padding-right:26px;}
 
 /* 그룹설정 */
 .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
