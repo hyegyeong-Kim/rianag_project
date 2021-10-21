@@ -114,20 +114,25 @@
         <!-- E: lnb -->
         
         <div class="coantents">
-            <!-- 페이지 타이틀 -->
-            <div class="page_tit">
-                <h2>기본 설정</h2>
-                <div class="tit_right">
-                    <a href="#none" class="btn black large">UX 가이드</a>
+            <!-- apptitle -->
+            <div class="app_title">
+                <div class="app_logo">
+                    <img src="../resource/images/common/ic_nugu_100.png" alt="">
                 </div>
+                <div class="app_info">
+                    <span class="app_name">NUGU</span>
+                    <span class="app_certify">비즈니스 인증</span>
+                </div>
+                <div class="app_info">
+                    <span class="app_id">앱 ID</span>
+                    <span class="app_type mfont">ALDN</span>
+                </div>
+                <div class="app_date">등록일 <span class="mfont">2021.01.21</span></div>
             </div>
 
             <div class="page_contents">
                 <div class="h3_wrap">
-                    <h3>한글 약관 등록</h3>
-                </div>
-                <div>
-
+                    <h3>애플리케이션 정보</h3>
                 </div>
                 <div class="regist_table">
                     <table>
@@ -135,104 +140,57 @@
                         <colgroup><col style="width:186px"><col></colgroup>
                         <tr>
                             <th>
-                                <span>애플리케이션 명</span>
+                                <span>Clinet ID</span>
                             </th>
                             <td>
                                 <span class="input txt">
-                                    <input type="text" placeholder="서비스명은 최대15자까지 작성 가능합니다. 한글,영문,숫자,공백문자, &quot;-&quot;만 입력가능합니다.">
-                                    <span class="bytes">00/15</span>
+                                    <input type="text" id="clinetID" placeholder="Clinet ID">
+                                    <button class="btn_copy" id="copy_clinetID" >Clinet ID 복사</button>
                                 </span>
                             </td>
                         </tr>
                         <tr>
                             <th>
-                                <span>애플리케이션 설명</span>
+                                <span>Clinet Secret</span>
                             </th>
                             <td>
-                                <span class="input txt">
-                                    <input type="text" placeholder="애플리케이션 설명을 입력해주세요">
-                                    <span class="bytes">000/150</span>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <span>애플리케이션 로고</span>
-                                <div class="tooltip_wrap">
-                                    <button class="tooltip">?</button>
-                                    <div class="tipbox">
-                                        <p>활성화 OFF : 즉시 노출 종료 된다.</p>
-                                    </div>    
-                                </div>
-                            </th>
-                            <td>
-                                <span class="input switch_btn">
-                                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
-                                </span>
-                                <span class="input txt">
-                                    <input type="text" placeholder="로고를 업로드 해주세요">
-                                    <span class="bytes">000/150</span>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <span>카테고리</span>
-                                <div class="tooltip_wrap">
-                                    <button class="tooltip">?</button>
-                                    <div class="tipbox">
-                                        <p>
-                                            새 버전을 등록하면 스테이징에는 30분 이내에 즉시 적용됩니다. 
-                                            노출시간 설정은 상용 배포에 해당합니다. 노출 시간은 30분 단위로 설정할 수 있고,
-                                            호출 시점에 노출되고 있는 최신버전을 노출하게 됩니다.
-                                        </p>
-                                    </div>    
-                                </div>
-                            </th>
-                            <td>
-                                <div class="dateset">
-                                    <span class="input date">
-                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
-                                        <button class="btn_date">날짜</button>
-                                    </span>
-                                    <span class="input date">
-                                        <input type="text" placeholder="00:00" class="mfont">
-                                        <button class="btn_date">시간</button>
-                                    </span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <span>애플리케이션 색상</span>
-                                <div class="tooltip_wrap">
-                                    <button class="tooltip">?</button>
-                                    <div class="tipbox">
-                                        <p>
-                                            상용에 배포하려면 호출될수 있게 그룹약관을 설정해야 합니다.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                            </th>
-                            <td>
-                                <span class="input txt">
-                                    <input type="text" class="filename" value="HTML파일 업로드" readonly>                                    
-                                    <label for="file1" class="file_btn"></label>
-                                    <input type="file" id="file1">
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th><span>등록/수정 코멘트</span></th>
-                            <td>
-                                <span class="input txt">
-                                    <input type="text" placeholder="약관에 대한 설명, 재등록 사유 등">
-                                    <span class="bytes">0/40 bytes</span>
+                                <span class="input txt password">
+                                    <input type="password" id="password" placeholder="*************************">
+                                    <button class="btn small black">재발급</button>
+                                    <button class="btn_viewon" id="showPassword">Secret Kye보기</button>
                                 </span>
                             </td>
                         </tr>
                     </table>
+                </div>
+
+                <div class="h3_wrap">
+                    <h3>애플리케이션 상태</h3>
+                    <span class="switch_btn">
+                        <label class="on"><input type="checkbox" checked=""><span></span></label><!-- input checked 인경우 label class="on" -->
+                    </span>
+                </div>
+                <div class="app_txtcont">
+                    <div class="txtbox">
+                        앱 상용 신청 전 설정 및 개발 완료 여부를 확인해주세요.  설정 완료 후 앱 사용 신청이 가능합니다.
+                    </div>
+                </div>
+
+                <div class="h3_wrap">
+                    <h3>애플리케이션 삭제</h3>
+                    <a href="#none" class="btn black default distri">애플리케이션 삭제</a>
+                </div>
+                <div class="app_txtcont">
+                    <div class="txtbox">
+                        앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
+                    </div>
+                    <div class="btnbox">
+                        <button class="btn small blue">애플리케이션 정지</button>
+                        <button class="btn small blue">애플리케이션 종료</button>
+
+                        <button class="btn small blue" disabled>애플리케이션 정지</button>
+                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -258,6 +216,28 @@
     <!-- E: footer -->
     
 </div>
+<script type="text/javascript">
+    $(function(){
+        /* Clinet ID 복사 */
+        $('#copy_clinetID').click(function(){
+            $('#clinetID').select();
+            document.execCommand("copy");
+        }),
+
+        /* 비밀번호 표시/숨김 */
+        $('#showPassword').on('click', function(){
+            var passwordField = $('#password');
+            var passwordFieldType = passwordField.attr('type');
+            if(passwordFieldType == 'password'){
+                passwordField.attr('type', 'text');$(this).val('Hide');
+            } else {
+                passwordField.attr('type', 'password');
+                $(this).val('Show');
+            }
+        })
+    })
+    
+    </script>
 </body>
 </html>
 
