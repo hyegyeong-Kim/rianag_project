@@ -129,6 +129,7 @@
                     <table>
                         <caption></caption>
                         <colgroup><col style="width:186px"><col></colgroup>
+                        <!-- S: 211021 modify -->
                         <tr>
                             <th>
                                 <span>약관 코드 선택/직접 입력</span>
@@ -150,6 +151,7 @@
                                 </p>
                             </td>
                         </tr>
+                        <!-- E: 211021 modify 하단스트립트 확인필요 -->
                         <tr>
                             <th>
                                 <span>약관 제목</span>
@@ -334,7 +336,6 @@
     
 </div>
 <script>
-
     $("#file1").on('change',function(){
         var fileName = $("#file1").val();
         var fnames = $(this).parent().children(".filename");

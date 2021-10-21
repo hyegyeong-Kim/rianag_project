@@ -102,6 +102,9 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .txtright {text-align:right !important;} 
 .txtcenter {text-align:center !important;}
 
+/* color */
+.c_grey {color:#bfbfbf;}
+.c_blue {color:#1485cb;}
 
 /* common */
 #wrap {width:100%; height:100%; min-width:768px; position:relative; letter-spacing:-.5px; font-weight:400;}
