@@ -350,6 +350,21 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .pcprev_box .mo_inner ul {}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
+/* 애플리케이션 설정확인 popup */
+.confirmation_state {height:180px; padding-top:96px; font-size:24px; font-weight:600;}
+.confirmation_state > p {margin-top:4px; font-size:16px; font-weight:normal;}
+.confirmation_state.ongoing {background:url('../images/common/img_circle.png') no-repeat center 0; background-size:72px 72px;}
+.confirmation_state.success {background:url('../images/common/ic_complete.png') no-repeat center 0; background-size:72px 72px;}
+.confirmation_state.fail {background:url('../images/common/ic_fail.png') no-repeat center 0; background-size:72px 72px;}
+.confirmation_state.success > p {color:#ffa640;}
+.confirmation_state.failt > p {color:#fc2a2a;}
+.confirmation_list {margin-left:72px; margin-bottom:20px; text-align:left;}
+.confirmation_list li {margin:8px 0; padding-left:32px; color:#bfbfbf;}
+.confirmation_list li.succ {background:url('../images/common/ic_complete_ss.png') no-repeat left center; color:#666;}
+.confirmation_list li.ing {background:url('../images/common/img_buling.png') no-repeat left center; background-size:24px 24px; font-weight:600; color:#222;}
+.confirmation_list li.fails {background:url('../images/common/ic_fail_ss.png') no-repeat left center;}
+.confirmation .confirmation_list + .btn_wrap {margin-top:40px;}
+
 /* 애플리케이션 색상 미리보기 팝업 */
 /* .viewpw {position:absolute; top:3px; right:10px;} */
 .find_wrap a {display:inline-block; padding-right:8px; margin-right:4px; position:relative; font-size:14px; line-height:22px; color:#666;}
