@@ -14,6 +14,7 @@
 
 /* button */
 button {cursor:pointer;}
+button:disabled {cursor:default;}
 .btn {display:inline-block; border:0; border-radius:50px; letter-spacing:-.8px; text-align:center;}
 .btn:active {text-shadow: 0px 0px 1px rgba(255, 255, 255, .5);}
 .btn.black {background:#000; color:#fff;}
@@ -45,7 +46,7 @@ button {cursor:pointer;}
 
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}
-.btn_wrap .btn + .btn {margin-left:12px;}
+.btn_wrap .btn + .btn {margin-left:8px;}
 .btn_w148 .btn {min-width:148px;}
 
 /* input */
@@ -75,22 +76,24 @@ span.input input[type='file'] {display:none;}
 span.input select {height:48px; line-height: 46px;}
 span.input button {position:absolute; top:50%; right:16px; transform: translateY(-50%);}
 span.input button.btn {height:28px; font-size:12px; padding:0 12px; line-height:15px; min-width:46px;}
-span.input.txt {width:460px; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
+span.input.txt {width:100%; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
 span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%);font-family:'Roboto';}
 span.input.txt .filename {color:#999;}
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
-span.input.sel {width:460px; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
+span.input.sel {width: 1000%; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
 span.input.direct_input {display:none;}
 span.input.direct_input.show {display:block;}
 .dateset {display:inline-block;}
-span.input.date {display:inline-block; width:140px; border:solid 1px #cfcfcf; border-radius:4px;}
+span.input.date {display:inline-block; width:140px; padding-right:35px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
 span.input.date + .date {margin-left:12px;}
+span.input.date .btn_date {text-indent:-9999px; background:url('../images/common/ic_sorting.png') no-repeat center; right:12px;}
 span.input.switch_btn {display:inline-block; padding:0; padding-top: 10px;}
 span.input.disabled {background:#e0e0e0;}
 span.input.disabled input {color:#bfbfbf;}
 span.input.disabled button:disabled {opacity: .3; cursor:default;}
 span.input.password button:nth-last-child(2) {right:55px;}
+.warning {padding:5px 0 0 10px;font-size:12px; color:#fc2a2a;}
 
 /* 컬러피커 */
 .input.txt {}
@@ -157,6 +160,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_contents .text_area p {margin-top:28px; margin-bottom: 20px; color:#222;}
 .page_contents .text_area p:first-child {margin-top:0;}
 .onlycont .page_tit h2 {display:block; text-align: center;}
+
+/* dl_input */
+.dl_input {text-align:left;}
+.dl_input dt {margin-top:24px; font-weight:600;}
+.dl_input dt:first-child {margin-top:0;}
+.dl_input dd {margin-top:10px;}
 
 /* board */
 .board .optiongroup {min-height:48px;}
@@ -255,40 +264,20 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table table th {padding:12px 0; vertical-align:top;}
 .regist_table table th span { display:inline-block; min-height:48px; padding-top:12px;}
 .regist_table table td {padding:12px 0;}
-.regist_table table td .warning {padding:10px 0 0 10px;font-size:12px; color:#fc2a2a;}
-
 .regist_table .appterm_tbl tbody td .stc {width:460px;}
 .regist_table .appterm_tbl tbody td .stc .icon.arr {display:block; background:url('../images/common/ic_upper.png') no-repeat; margin:20px auto;}
 .regist_table .appterm_tbl tbody td .moving_wrap li::after {display:block; content:''; clear:both;}
-.regist_table .appterm_tbl tbody td .has_switch .input.txt  {width:364px;}
 .regist_table .appterm_tbl .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 .regist_table .has_switch, .regist_table .switch_desc {position:relative; padding-left:96px;}
 .regist_table .switch_desc {padding-left:68px;}
 .regist_table .has_switch .switch_btn, .regist_table .switch_desc .switch_btn {position:absolute; top:12px; left:0;}
 .regist_table .switch_desc {width: 460px; padding-top:5px;}
-.regist_table span.input {display:block; height:48px; padding:0 16px;}
-.regist_table span.input + .input {margin-top:10px;}
-.regist_table span.input input[type='text'] {width:100%; line-height:46px;}
-.regist_table span.input input::placeholder {color:#999;}
-.regist_table span.input input[type='file'] {display:none;}
-.regist_table span.input select {height:48px; line-height: 46px;}
-.regist_table span.input.txt {width:460px; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
-.regist_table span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%);font-family:'Roboto';}
-.regist_table span.input.txt .filename {color:#999;}
-.regist_table span.input.txt .filename.on {color:#222;}
-.regist_table span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
-.regist_table span.input.sel {width:460px; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
-.regist_table span.input.direct_input {display:none;}
-.regist_table span.input.direct_input.show {display:block;}
-.regist_table .dateset {display:inline-block;}
-.regist_table span.input.date {display:inline-block; width:140px; border:solid 1px #cfcfcf; border-radius:8px;}
-.regist_table span.input.date + .date {margin-left:12px;}
-.regist_table span.input.switch_btn {display:inline-block; padding:0; padding-top: 10px;}
-.regist_table span.input.disabled {background:#e0e0e0;}
-.regist_table span.input.disabled input {color:#bfbfbf;}
-.regist_table span.input.disabled button:disabled {opacity: .3; cursor:default;}
+.regist_table span.input.txt {width:460px;}
+.regist_table span.input.sel {width:460px;padding: 0 0;}
+.regist_table .has_switch span.input.txt  {width:364px;}
 .regist_table .sorting.chkbx {width:460px;}
 .regist_table .sorting.chkbx label {width:146px; margin:0 5px 8px 0;}
+.regist_table .desc_02 + span.input {margin-top:10px;}
 /* 툴팁 */
 .tooltip_wrap {display:inline-block; margin-left:5px; vertical-align:middle; position:relative; top:-5px;}
 .tooltip_wrap .tooltip {display:inline-block; font-size:9px; width:16px; height:16px; background:url('../images/common/ic_question.png') no-repeat; text-indent:-9999px; overflow:hidden;}
@@ -374,11 +363,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .txt_reagree span.tit {display:inline-block; font-size:16px; line-height:24px;}
 .txt_reagree .switch_btn {margin-left:12px;}
 .txt_reagree .tooltip_wrap {top:-3px;}
-.regist_table span.input.date {position:relative; padding-right:35px;}
-.btn_date {text-indent:-9999px; background:url('../images/common/ic_sorting.png') no-repeat; position:absolute; top:15px; right:15px;}
 
 /* 그룹목록 상세 */
-
 .myapp_search {display:block; margin:0 auto 80px; width:460px; position:relative; padding-bottom:12px; border-bottom:4px solid #000000;}
 .myapp_search .btn_sch {background:url('../images/common/ic_search_L.png') no-repeat; width:28px; height:28px; position:absolute; right:0;}
 .myapp_search input {width:100%; padding-right:35px; font-size:20px;}
@@ -395,6 +381,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .code_connect .tstate {font-size:14px; position:absolute; top:20px; right:28px;}
 .code_connect .mfont {margin-top:3px;}
 
+/***** 5. 내앱 *****/
 /* 내앱목록 */
 .app_list {padding-top:32px; border-top:2px solid #222222;}
 .app_list ul.card_type > li {display:inline-block; width:calc(33.3% - 14px); vertical-align:top; margin:0 5px 20px;}
@@ -419,7 +406,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .progress.pro_app {color:#222222; background:url('../images/common/ic_pro_app.png') left center no-repeat;}
 @media screen and (max-width:1023px){
     .app_list ul.card_type > li {width:calc(50% - 14px);}
-
 }
 
 /* 기본설정 */
@@ -434,7 +420,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 /* 이미지 업로드 */
 #img_view {display:inline-block; width:96px; height:96px; background:#f1f1f1 url('../images/common/ic_eximg.png')center center no-repeat; vertical-align:top; margin-top:2px;}
 #img_view img {display:block; max-width:100%;}
-.view_txt {display:inline-block; vertical-align:top; width:344px; margin-left:16px; margin-top:10px;}
+.view_txt {display:inline-block; vertical-align:top; width:344px; margin-left:16px;}
 .regist_table .view_txt span.input {width:100%;}
 
 /* 앱 - 개요 */

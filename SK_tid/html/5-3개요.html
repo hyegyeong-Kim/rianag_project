@@ -91,8 +91,8 @@
                     <li>
                         <a href="#none" class="act">약관 관리</a>
                         <ul class="depth2">
-                            <li><a href="#none" class="act2">계별약관 목록</a></li>
-                            <li><a href="#none">계별약관 History</a></li>
+                            <li><a href="#none" class="act2">개별약관 목록</a></li>
+                            <li><a href="#none">개별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
                             <li><a href="#none">사용자 동의 내역</a></li>
                         </ul>
@@ -156,7 +156,7 @@
                             <td>
                                 <span class="input txt password">
                                     <input type="password" id="password" placeholder="*************************">
-                                    <button class="btn small black">재발급</button>
+                                    <button class="btn small black" onclick="showPop('reissue')">재발급</button>
                                     <button class="btn_viewon" id="showPassword">Secret Kye보기</button>
                                 </span>
                             </td>
@@ -176,18 +176,58 @@
                     </div>
                 </div>
 
+                <!-- 기본 -->
                 <div class="h3_wrap">
                     <h3>애플리케이션 삭제</h3>
-                    <a href="#none" class="btn black default distri">애플리케이션 삭제</a>
+                    <a href="#none" class="btn black default distri" onclick="showPop('appdel_de')">애플리케이션 삭제</a>
                 </div>
                 <div class="app_txtcont">
                     <div class="txtbox">
                         앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
                     </div>
                     <div class="btnbox">
-                        <button class="btn small blue">애플리케이션 정지</button>
-                        <button class="btn small blue">애플리케이션 종료</button>
+                        <button class="btn small blue" onclick="showPop('appstop')">애플리케이션 정지</button>
+                        <button class="btn small blue" onclick="showPop('append')">애플리케이션 종료</button>
 
+                        <button class="btn small blue" disabled>애플리케이션 정지</button>
+                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                        
+                        <button class="btn small blue" onclick="showPop('appstart')">애플리케이션 정지해제</button>
+                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                    </div>
+                </div>
+
+                <!-- 관리자 -->
+                <div class="h3_wrap">
+                    <h3>애플리케이션 삭제</h3>
+                    <a href="#none" class="btn black default distri" onclick="showPop('appdel_ad')">애플리케이션 삭제</a>
+                </div>
+                <div class="app_txtcont">
+                    <div class="txtbox">
+                        앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
+                    </div>
+                    <div class="btnbox">
+                        <button class="btn small blue" onclick="showPop('appstop')">애플리케이션 정지</button>
+                        <button class="btn small blue" onclick="showPop('append')">애플리케이션 종료</button>
+
+                        <button class="btn small blue" disabled>애플리케이션 정지</button>
+                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                        
+                        <button class="btn small blue" onclick="showPop('appstart')">애플리케이션 정지해제</button>
+                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                    </div>
+                </div>
+
+                <!-- 앱복구 -->
+                <div class="h3_wrap">
+                    <h3>애플리케이션 삭제</h3>
+                    <a href="#none" class="btn black default distri" onclick="showPop('apprestore')">애플리케이션 복구</a>
+                </div>
+                <div class="app_txtcont">
+                    <div class="txtbox">
+                        앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
+                    </div>
+                    <div class="btnbox">
                         <button class="btn small blue" disabled>애플리케이션 정지</button>
                         <button class="btn small blue" disabled>애플리케이션 종료</button>
                     </div>
@@ -216,12 +256,272 @@
     <!-- E: footer -->
     
 </div>
+<!-- S: 팝업 / Client ID 복사 팝업 -->
+<div class="popup" id="copy_alert">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                Client ID 복사가 완료되었습니다.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / Client ID 복사 팝업 -->
+
+<!-- S: 팝업 / Client Secret 재발급 팝업 -->
+<div class="popup " id="reissue">
+    <div class="inner_pop mini w420">
+        <div class="popup_title">
+            <p>Client Secret 재발급</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                Secret Key를 재발급 받으시겠습니까?<br>
+                시크릿 키를 재발급 받으면<br>
+                이전 코드가 자동 삭제됩니다. 
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('reissue')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('reissue')">재발급</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / Client Secret 재발급 팝업 -->
+
+<!-- S: 팝업 / 기본 애플리케이션 삭제 팝업 -->
+<div class="popup " id="appdel_de">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>애플리케이션 삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                애플리케이션 삭제 시 설정된 모든 정보는 <br>
+                영구 삭제되며 복구 되지 않습니다. <br>
+                앱을 영구 삭제하시려면 아래 문구를 입력해주세요.
+            </div>
+            <div>
+                <span class="input txt">
+                    <input type="text" placeholder="애플리케이션 삭제에 동의합니다">
+                </span>
+                <p class="warning">
+                    “애플리케이션 삭제에 동의합니다” 문구를 올바르게 입력해주세요.
+                </p>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('appdel_de')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('appdel_de'); showPop('appdel_alert')">앱 삭제</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 기본 애플리케이션 삭제 팝업 -->
+
+<!-- S: 팝업 / 관리자 애플리케이션 삭제 팝업 -->
+<div class="popup " id="appdel_ad">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                애플리케이션을 삭제하시겠습니까?
+            </div>
+            <div>
+                <span class="input txt">
+                    <input type="text" placeholder="삭제사유를 입력해주세요">
+                </span>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('appdel_ad')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('appdel_ad'); showPop('appdel_alert')">삭제</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 관리자 애플리케이션 삭제 팝업 -->
+<!-- S: 팝업 / 삭제 alert 팝업 -->
+<div class="popup" id="appdel_alert">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                애플리케이션이 삭제되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('appdel_alert')">확인</a>   
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 삭제 alert 팝업 -->
+
+<!-- S: 팝업 / 애플리케이션을 정지 팝업 -->
+<div class="popup " id="appstop">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                애플리케이션을 정지하시겠습니까?
+            </div>
+            <dl class="dl_input">
+                <dt>정지사유</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="정지사유를 입력해주세요">
+                    </span>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('appstop')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('appstop'); showPop('stop_alert');">정지</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+    <!-- S: 팝업 / 정지 alert 팝업 -->
+    <div class="popup" id="stop_alert">
+        <div class="inner_pop alert">
+            <div class="pop_con">
+                <div>
+                    애플리케이션이 정지되었습니다.
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large black" onclick="hidePop('stop_alert')">확인</a>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: 팝업 / 정지 alert 팝업 -->
+<!-- E: 팝업 / 애플리케이션을 정지 팝업 -->
+
+<!-- S: 팝업 / 애플리케이션을 종료 팝업 -->
+<div class="popup " id="append">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                애플리케이션을 종료 상태로<br>
+                변경하시겠습니까?
+            </div>
+            <dl class="dl_input">
+                <dt>종료사유</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="종료사유를 입력해주세요">
+                    </span>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('append')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('append'); showPop('end_alert');">종료</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+    <!-- S: 팝업 / 종료 alert 팝업 -->
+    <div class="popup" id="end_alert">
+        <div class="inner_pop alert">
+            <div class="pop_con">
+                <div>
+                    종료 상태로 변경되었습니다.
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large black" onclick="hidePop('end_alert')">확인</a>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: 팝업 / 종료 alert 팝업 -->
+<!-- E: 팝업 / 애플리케이션을 종료 팝업 -->
+
+<!-- S: 팝업 / 애플리케이션 정지해제 팝업 -->
+<div class="popup " id="appstart">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                애플리케이션을 사용 상태로<br>
+                변경하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('appstart')">취소</a>   
+                <a href="#none" class="btn large black" onclick="shidePop('appstart'); howPop('start_alert');">사용</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+    <!-- S: 팝업 / 정지해제 alert 팝업 -->
+    <div class="popup" id="start_alert">
+        <div class="inner_pop alert">
+            <div class="pop_con">
+                <div>
+                    사용 상태로 변경되었습니다.
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large black" onclick="hidePop('start_alert')">확인</a>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: 팝업 / 정지해제 alert 팝업 -->
+<!-- E: 팝업 / 애플리케이션 정지해제 팝업 -->
+
+<!-- S: 팝업 / 애플리케이션을 복구 팝업 -->
+<div class="popup " id="apprestore">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                애플리케이션을 복구하시겠습니까?
+            </div>
+            <dl class="dl_input">
+                <dt>복구사유</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="복구사유를 입력해주세요">
+                    </span>
+                </dd>
+                <dt>문의번호</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="문의번호를 입력해주세요">
+                    </span>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('apprestore')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('apprestore'); showPop('restore_alert');">복구</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+    <!-- S: 팝업 / 복구 alert 팝업 -->
+    <div class="popup" id="restore_alert">
+        <div class="inner_pop alert">
+            <div class="pop_con">
+                <div>
+                    애플리케이션이 복구되었습니다.
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large black" onclick="hidePop('restore_alert')">확인</a>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: 팝업 / 복구 alert 팝업 -->
+<!-- E: 팝업 / 애플리케이션을 복구 팝업 -->
+
 <script type="text/javascript">
     $(function(){
         /* Clinet ID 복사 */
         $('#copy_clinetID').click(function(){
             $('#clinetID').select();
             document.execCommand("copy");
+            $("#copy_alert").fadeIn(100);
+            setTimeout(function() {
+                $("#copy_alert").fadeOut(200)
+            }, 3000);
         }),
 
         /* 비밀번호 표시/숨김 */

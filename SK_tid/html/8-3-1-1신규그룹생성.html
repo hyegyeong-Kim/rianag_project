@@ -91,8 +91,8 @@
                     <li>
                         <a href="#none" class="act">약관 관리</a>
                         <ul class="depth2">
-                            <li><a href="#none" class="act2">계별약관 목록</a></li>
-                            <li><a href="#none">계별약관 History</a></li>
+                            <li><a href="#none" class="act2">개별약관 목록</a></li>
+                            <li><a href="#none">개별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
                         </ul>
                     </li>
@@ -127,33 +127,29 @@
                 </div>
                 <!-- S: 211021 modify -->
                 <div class="regist_table">
-                    <table>
+                    <table class="appterm_tbl">
                         <caption></caption>
                         <colgroup><col style="width:186px"><col></colgroup>
                         <tr>
                             <th>
-                                <span>이용동의(가입) 약관</span>
+                                <span>그룹 약관 코드 선택/<br>
+                                    직접 입력</span>
                             </th>
                             <td>
-                                <div class="switch_desc">
-                                    <span class="switch_btn">
-                                        <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
-                                    </span>
-                                    <p class="desc">
-                                        가입약관은 미리 할당된 그룹코드로 설정됩니다.
-                                    </p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <span>그룹 코드</span>
-                            </th>
-                            <td>
-                                <span class="input txt">
-                                    <input type="text" placeholder="약관 호출에 쓰이는 그룹 코드 이름">
-                                    <span class="bytes">0/40 bytes</span>
+                                <span class="input sel">
+                                    <select name="" id="select1" class="sel_de">
+                                        <option value="">선택</option>
+                                        <option value="">TERMSOFSERVICE </option>
+                                        <option value="direct">직접입력</option>
+                                    </select>
                                 </span>
+                                <span class="input txt direct_input">
+                                    <input type="text" placeholder="직접입력">
+                                </span>
+                                
+                                <p class="warning">
+                                    영문 입력이 필수 입니다.
+                                </p>
                             </td>
                         </tr>
                         <tr>
@@ -169,17 +165,53 @@
                         </tr>
                         <tr>
                             <th>
-                                <span>타 채널 노출 여부</span>
+                                <span>
+                                    타 서비스 노출<br>
+                                    (연결약관)
+                                </span>
+                                <div class="tooltip_wrap">
+                                    <button class="tooltip">?</button>
+                                    <div class="tipbox">
+                                        <p>
+                                            내용없음
+                                        </p>
+                                    </div>    
+                                </div>
                             </th>
                             <td>
-                                <div class="switch_desc">
+                                <div class="has_switch">
                                     <span class="switch_btn">
                                         <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
                                     </span>
-                                    <p class="desc">
-                                        그룹이 등록된 서비스 외의 서비스에서도 해당 약관 그룹을 호출할 수 있습니다. 위 기능을
-                                        사용하시려면, 버튼을 ON 하고 운영자와 사전협의를 위해 문의해 주십시오.
+                                    <span class="input txt">
+                                        <input type="text" placeholder="애플리케이션 코드">
+                                        <button class="btn small black">입력</button>
+                                    </span>
+                                    <p class="warning">
+                                        해당 애플리케이션 코드가 없습니다.
                                     </p>
+                                    <!-- S: 211021 modify -->
+                                    <ul class="code_connect">
+                                        <li>
+                                            <dl>
+                                                <dt>코드</dt>
+                                                <dd class="mfont">TIDD</dd>
+                                                <dt>이름</dt>
+                                                <dd>T아이디</dd>
+                                            </dl>
+                                            <span class="tstate c_grey">승인 중</span>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt>코드</dt>
+                                                <dd class="mfont">TIDD</dd>
+                                                <dt>이름</dt>
+                                                <dd>T아이디T아이디T아이디T아이디T아이디T아이디T아이디T아이디T아이디</dd>
+                                            </dl>
+                                            <span class="tstate c_blue">승인 완료</span>
+                                        </li>
+                                    </ul>
+                                    <!-- E: 211021 modify -->
                                 </div>
                             </td>
                         </tr>
@@ -214,6 +246,17 @@
     <!-- E: footer -->
     
 </div>
+
+<script>
+    $('#select1').change(function() {
+	var state = $('#select1 option:selected').val();
+	if ( state == 'direct' ) {
+		$('.direct_input').addClass("show");
+	} else {
+		$('.direct_input').removeClass("show");
+	}
+});
+</script>
 </body>
 </html>
 

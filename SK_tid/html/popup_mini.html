@@ -91,8 +91,8 @@
                     <li>
                         <a href="#none" class="act">약관 관리</a>
                         <ul class="depth2">
-                            <li><a href="#none" class="act2">계별약관 목록</a></li>
-                            <li><a href="#none">계별약관 History</a></li>
+                            <li><a href="#none" class="act2">개별약관 목록</a></li>
+                            <li><a href="#none">개별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
                         </ul>
                     </li>
@@ -119,8 +119,11 @@
             </div>
 
             <div class="page_contents">
-                <div onclick="showPop('p1')">T아이디 로그인</div>
-                <div onclick="hidePop('p12')">T아이디로 이용 가능한 서비스</div>
+                <div onclick="showPop('p1')">mini w360</div>
+                <div onclick="showPop('p2')">mini w420</div>
+                <div onclick="showPop('p3')">mini w494</div>
+                <div onclick="showPop('p4')">mini alert</div>
+                <div onclick="showPop('p5')">mini alert w494</div>
             </div>
         </div>
     </div>
@@ -129,7 +132,7 @@
 
 <!-- S: 팝업 -->
 <div class="popup " id="p1">
-    <div class="inner_pop mini">
+    <div class="inner_pop mini w360">
         <div class="popup_title"  onclick="hidePop('p1')">
             <p>미리보기</p>
         </div>
@@ -148,8 +151,27 @@
 <!-- E: 팝업 -->
 <!-- S: 팝업 -->
 <div class="popup " id="p2">
-    <div class="inner_pop mini">
+    <div class="inner_pop mini w420">
         <div class="popup_title"  onclick="hidePop('p2')">
+            <p>미리보기</p>
+        </div>
+        <div class="pop_con">
+            <p class="popsub_tl2">T아이디 로그인</p>
+            <div>
+                내용
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn btn_next black">다음</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 -->
+<!-- S: 팝업 -->
+<div class="popup " id="p3">
+    <div class="inner_pop mini w494">
+        <div class="popup_title"  onclick="hidePop('p3')">
             <p>미리보기</p>
         </div>
         <div class="pop_con">
@@ -159,6 +181,38 @@
             </div>
             <div class="btn_wrap onebtn">
                 <a href="#none" class="btn btn_next black">다음</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 -->
+<!-- S: 팝업 -->
+<div class="popup " id="p4">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                내용
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('p4')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('p4')">저장</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 -->
+<!-- S: 팝업 -->
+<div class="popup " id="p5">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div>
+                내용
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('p5')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('p5')">저장</a>
             </div>
         </div>
     </div>
