@@ -21,7 +21,6 @@ button:disabled {cursor:default;}
 .btn.gray {background:#aaaaaa; color:#fff;}
 .btn.blue {background:#1b6491; color:#fff;}
 .btn.white {background:#fff; color:#666; border:solid 1px #aaa}
-.btn:disabled {background:#f1f1f1;color:#bfbfbf;}
 .btn.default {height:40px; line-height:40px; padding:0 24px; font-size:16px;}
 .btn.xlarge {min-width:180px; height:60px; line-height:60px; padding:0 36px; font-size:16px;}
 .btn.large {min-width:130px; height:52px; line-height:52px; padding:0 36px; font-size:16px;}
@@ -34,6 +33,7 @@ button:disabled {cursor:default;}
 .btn_tadd {display:inline-block; width:40px; height:40px;background:url('../images/common/ic_tadd.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_copy {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_copy.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_viewon {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_view_on.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
+.btn:disabled, .btn.disabled {background:#f1f1f1;color:#bfbfbf;}
 .icon {display:inline-block; width:24px; height:24px; margin-top:-2px; margin-right:8px; vertical-align: middle; text-indent:-9999px; overflow:hidden;}
 .icon.edit {background:url('../images/common/ic_edit.png') no-repeat 0 0;}
 .icon.iorder {background:url('../images/common/ic_order.png') no-repeat; width:20px; height:20px; margin-right:0;}
@@ -77,6 +77,7 @@ span.input select {height:48px; line-height: 46px;}
 span.input button {position:absolute; top:50%; right:16px; transform: translateY(-50%);}
 span.input button.btn {height:28px; font-size:12px; padding:0 12px; line-height:15px; min-width:46px;}
 span.input.txt {width:100%; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
+span.input.txt.only {padding-right:16px;}
 span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%);font-family:'Roboto';}
 span.input.txt .filename {color:#999;}
 span.input.txt .filename.on {color:#222;}
@@ -100,7 +101,7 @@ span.input.password button:nth-last-child(2) {right:55px;}
 .input.txt .minicolors {position:static; width:100%;}
 .input.txt .minicolors-theme-default .minicolors-input {padding-left:0; font-size:14px; color:#222222; width:100%; height:auto;}
 .input.txt .minicolors .minicolors-swatch {width:24px; height:24px; top:11px; left:auto; right:16px;}
-.input.txt .minicolors-panel .minicolors-sprite {background-image:url('../images/common/jquery.minicolors.png');}
+.input.txt .minicolors-panel .minicolors-sprite {background-image:url('../images/myapp/jquery.minicolors.png') no-repeat;}
 .input.txt .minicolors-position-bottom .minicolors-panel {top:48px; right:0;}
 
 /* select 박스 */
@@ -243,7 +244,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .term_info div[class^="bx_"]::after {display:block; content:''; clear:both;}
 .term_info div[class^="bx_"] .title_box {width:28%; float:left;}
 .term_info div[class^="bx_"] .cnt_box {float:right; width:72%;}
-.term_info div[class^="bx_"] .title_box p {font-size:24px; line-height:32px; font-weight:600;}
+.title_box p {display:inline-block; font-size:24px; line-height:32px; font-weight:600;}
+.title_box::after {display:block; content:''; clear:both;}
 .term_info .bx_group .cnt_box::after {display:block; content:''; clear:both;}
 .term_info .bx_group .cnt_box ul {display:inline-block; text-align:left;}
 .term_info .bx_group .cnt_box ul li {font-size:16px; line-height:26px; color:#666666;}
@@ -287,9 +289,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tooltip_wrap .tipbox .tiptl {font-size:16px; font-weight:600;}
 .tooltip_wrap .tipbox .tiptxt {font-size:14px; line-height:22px; font-weight:400; margin-top:20px;}
 .tooltip_wrap .tipbox .tiptxt dd {color:#666; margin-top:12px;}
-.tooltip_wrap .tipbox.tipbg01 {background:#fff url('../images/common/tooltip_bg01.png') center bottom no-repeat; padding-bottom:288px;}
-.tooltip_wrap .tipbox.tipbg02 {background:#fff url('../images/common/tooltip_bg02.png') center bottom no-repeat; padding-bottom:288px;}
-.tooltip_wrap .tipbox.tipbg03 {background:#fff url('../images/common/tooltip_bg03.png') center bottom no-repeat; padding-bottom:288px;}
+.tooltip_wrap .tipbox.tipbg01 {background:#fff url('../images/myapp/tooltip_bg01.png') center bottom no-repeat; padding-bottom:288px;}
+.tooltip_wrap .tipbox.tipbg02 {background:#fff url('../images/myapp/tooltip_bg02.png') center bottom no-repeat; padding-bottom:288px;}
+.tooltip_wrap .tipbox.tipbg03 {background:#fff url('../images/myapp/tooltip_bg03.png') center bottom no-repeat; padding-bottom:288px;}
 .pview {background:url('../images/common/ic_view.png') right center no-repeat; padding-right:26px;}
 
 /* 그룹설정 */
@@ -350,33 +352,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .pcprev_box .mo_inner ul {}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
-/* 애플리케이션 설정확인 popup */
-.confirmation_state {height:180px; padding-top:96px; font-size:24px; font-weight:600;}
-.confirmation_state > p {margin-top:4px; font-size:16px; font-weight:normal;}
-.confirmation_state.ongoing {background:url('../images/common/img_circle.png') no-repeat center 0; background-size:72px 72px;}
-.confirmation_state.success {background:url('../images/common/ic_complete.png') no-repeat center 0; background-size:72px 72px;}
-.confirmation_state.fail {background:url('../images/common/ic_fail.png') no-repeat center 0; background-size:72px 72px;}
-.confirmation_state.success > p {color:#ffa640;}
-.confirmation_state.failt > p {color:#fc2a2a;}
-.confirmation_list {margin-left:72px; margin-bottom:20px; text-align:left;}
-.confirmation_list li {margin:8px 0; padding-left:32px; color:#bfbfbf;}
-.confirmation_list li.succ {background:url('../images/common/ic_complete_ss.png') no-repeat left center; color:#666;}
-.confirmation_list li.ing {background:url('../images/common/img_buling.png') no-repeat left center; background-size:24px 24px; font-weight:600; color:#222;}
-.confirmation_list li.fails {background:url('../images/common/ic_fail_ss.png') no-repeat left center;}
-.confirmation .confirmation_list + .btn_wrap {margin-top:40px;}
-
-/* 애플리케이션 색상 미리보기 팝업 */
-/* .viewpw {position:absolute; top:3px; right:10px;} */
-.introtxt {font-size:16px; margin:40px 0 30px;}
-.introtxt span {color:#ffa640; font-weight:600;}
-.bizlogin p {font-size:16px; font-weight:600;}
-.find_wrap {margin:32px 0 120px;}
-.find_wrap a {display:inline-block; padding-right:8px; margin-right:4px; position:relative; font-size:14px; line-height:22px; color:#666;}
-.find_wrap a::before {display:block; content:''; width:1px; height:14px; background:#666; position:absolute; top:7px; right:0;}
-.find_wrap a:last-child {padding-right:0; margin-right:0;}
-.find_wrap a:last-child::before {display:none;}
-
-
 /* 개별약관편집 */
 .txt_reagree {display:inline-block; margin-left:33px;}
 .txt_reagree span.tit {display:inline-block; font-size:16px; line-height:24px;}
@@ -401,6 +376,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .code_connect .mfont {margin-top:3px;}
 
 /***** 5. 내앱 *****/
+.txt_certify {padding-right:20px; margin-left:12px; font-size:14px; color:#1485cb; background:url('../images/common/ic_certify.png') no-repeat right 50%;}
+.txt_nocertify {padding-right:20px; margin-left:12px; font-size:14px; color:#bfbfbf; background:url('../images/common/ic_nocertify.png') no-repeat right 50%;}
+
 /* 내앱목록 */
 .app_list {padding-top:32px; border-top:2px solid #222222;}
 .app_list ul.card_type > li {display:inline-block; width:calc(33.3% - 14px); vertical-align:top; margin:0 5px 20px;}
@@ -458,8 +436,51 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_txtcont .btnbox {float:right; width:300px; text-align: right;}
 .app_txtcont .btnbox .btn {min-width:126px;}
 
-.app_certify {padding-right:20px; margin-left:12px; font-size:14px; color:#1485cb; background:url('../images/common/ic_certify.png') no-repeat right 50%;}
-.app_nocertify {padding-right:20px; margin-left:12px; font-size:14px; color:#bfbfbf; background:url('../images/common/ic_nocertify.png') no-repeat right 50%;}
 
+/* 애플리케이션 설정확인 popup */
+.confirmation_state {height:180px; padding-top:96px; font-size:24px; font-weight:600;}
+.confirmation_state > p {margin-top:4px; font-size:16px; font-weight:normal;}
+.confirmation_state.ongoing {background:url('../images/common/img_circle.png') no-repeat center 0; background-size:72px 72px;}
+.confirmation_state.success {background:url('../images/common/ic_complete.png') no-repeat center 0; background-size:72px 72px;}
+.confirmation_state.fail {background:url('../images/common/ic_fail.png') no-repeat center 0; background-size:72px 72px;}
+.confirmation_state.success > p {color:#ffa640;}
+.confirmation_state.failt > p {color:#fc2a2a;}
+.confirmation_list {margin-left:72px; margin-bottom:20px; text-align:left;}
+.confirmation_list li {margin:8px 0; padding-left:32px; color:#bfbfbf;}
+.confirmation_list li.succ {background:url('../images/common/ic_complete_ss.png') no-repeat left center; color:#666;}
+.confirmation_list li.ing {background:url('../images/common/img_buling.png') no-repeat left center; background-size:24px 24px; font-weight:600; color:#222;}
+.confirmation_list li.fails {background:url('../images/common/ic_fail_ss.png') no-repeat left center;}
+.confirmation .confirmation_list + .btn_wrap {margin-top:40px;}
 
+/* 애플리케이션 색상 미리보기 팝업 */
+.app_preview .introtxt {font-size:16px; margin:40px 0 30px;}
+.app_preview .introtxt span {color:#ffa640; font-weight:600;}
+.app_preview .find_wrap {margin:32px 0; text-align:center;}
+.app_preview .find_wrap a {display:inline-block; padding-right:8px; margin-right:4px; position:relative; font-size:14px; line-height:22px; color:#666;}
+.app_preview .find_wrap a::before {display:block; content:''; width:1px; height:14px; background:#666; position:absolute; top:7px; right:0;}
+.app_preview .find_wrap a:last-child {padding-right:0; margin-right:0;}
+.app_preview .find_wrap a:last-child::before {display:none;}
 
+/* 애플리케이션 설명 팝업 */
+.app_preview {}
+.app_preview .bartxtwrap {position:relative;}
+.app_preview .bartxtwrap .bartxt {position:relative; z-index:1; background:#ffffff; padding-right:16px;}
+.app_preview .bartxtwrap span.bar{display:block; width:100%; height:1px; background:#cfcfcf; position:absolute; top:12px; right:0; z-index:0;}
+.app_preview .prev_applist li {display:inline-block; padding-left:44px; min-height:44px; vertical-align:top; width:calc(50% - 4px); margin-bottom:20px; position:relative;}
+.app_preview .prev_applist li .applogo {position:absolute; top:0; left:0;}
+.app_preview .prev_applist li .applogo img {width:44px; height:44px;}
+.app_preview .prev_applist li .appname {display:table-cell; padding-left:6px; height:44px; line-height:1; vertical-align:middle;}
+.app_preview .prev_applist li .appname p {font-size:13px; position:relative; top:-3px;}
+.app_preview  li .appname p, .app_preview li .appname .tooltip_wrap {display:inline;}
+.app_preview .tooltip_wrap {margin-left:0;}
+.app_preview .tooltip_wrap .tooltip {background:url('../images/common/ic_bang.png') no-repeat; width:16px; height:16px;}
+
+/* 고급설정 */
+.shadow_bg {padding:48px 60px 60px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
+.ad_setbx .sub_txt {font-size:16px; line-height:22px; color:#666; margin-top:20px;}
+.groupid_box {position:relative;}
+.groupid_box .grp_name {display:inline-block; font-size:36px; font-weight:600;}
+.groupid_box dl {display:inline-block;}
+.groupid_box dl dt {display:inline-block;}
+.groupid_box dl dd {display:inline-block; margin-left:4px; padding-left:8px;}
+.groupid_box dl dd::after {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:0; left:0;}
