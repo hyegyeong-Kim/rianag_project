@@ -24,6 +24,7 @@ button:disabled {cursor:default;}
 .btn.default {height:40px; line-height:40px; padding:0 24px; font-size:16px;}
 .btn.xlarge {min-width:180px; height:60px; line-height:60px; padding:0 36px; font-size:16px;}
 .btn.large {min-width:130px; height:52px; line-height:52px; padding:0 36px; font-size:16px;}
+.btn.xsmall {min-width:50px; height:28px; line-height:28px; padding:0 12px; font-size:12px;}
 .btn.small {min-width:50px; height:32px; line-height:32px; padding:0 16px; font-size:13px;}
 .btn_sch {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_search.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_view {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_view.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
@@ -39,11 +40,10 @@ button:disabled {cursor:default;}
 .icon.iorder {background:url('../images/common/ic_order.png') no-repeat; width:20px; height:20px; margin-right:0;}
 .icon.icview {width:16px; height:16px; background:url('../images/common/ic_play.png') no-repeat;}
 .icon.more {background:url('../images/common/ic_more.png') no-repeat; margin:-4px 0 0 0;}
-/* .icon.ic_eye {background:url('../images/common/ic_view_on.png') no-repeat; text-indent:-9999px; overflow:hidden; margin-right:0;} */
-
+.icon.del_bk {background:url('../images/common/ic_del_bk.png') no-repeat; margin-right:0;}
+.icon.ic_owner {background:url('../images/common/ic_owner.png') no-repeat; width:12px; height:12px; margin-right:2px;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
-
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}
 .btn_wrap .btn + .btn {margin-left:8px;}
@@ -184,6 +184,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-word; font-family:'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td a {font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td.empty {padding:50px 0; border:0;}
+.board table tbody tr.pending td {color:#bfbfbf;}
 .board .paging {margin-top:48px; text-align:center;}
 .board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
 .board .paging span {display:inline-block; margin:0 18px;}
@@ -192,12 +193,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .paging a.btn_arr {width:20px; height:20px;background:url('../images/common/ic_arrow.png') no-repeat center center; text-indent:-9999px; overflow:hidden;}
 .board .paging a.next {transform: rotate(180deg);}
 .board .list_more {padding:60px 0 16px; background:url('../images/common/ic_eee.png') no-repeat center 20px; border-top:solid 1px #cfcfcf; text-align:center;}
-
 .inbox.board {padding:0 32px 16px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
 .inbox.board table {border-top:0;}
 .inbox.board table tbody td {height:60px;}
 .inbox.board table tbody :last-child td {border:0;}
-
+.inbox.board .btn_wrap {margin:32px 0 16px;}
+.inbox.board table tbody tr.lastbor td {border-bottom:solid 1px #cfcfcf;}
 /* 사용자 동의 내역 */
 .board table.board_tbl tbody tr.on > td {border-bottom:0;}
 .board table.board_tbl tbody tr.on td .btn_accordion {transform:rotate(180deg);}
@@ -474,13 +475,16 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_preview  li .appname p, .app_preview li .appname .tooltip_wrap {display:inline;}
 .app_preview .tooltip_wrap {margin-left:0;}
 .app_preview .tooltip_wrap .tooltip {background:url('../images/common/ic_bang.png') no-repeat; width:16px; height:16px;}
+.app_preview li:nth-child(even) .tooltip_wrap .tipbox {left:inherit; right:0;}
 
 /* 고급설정 */
 .shadow_bg {padding:48px 60px 60px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
 .ad_setbx .sub_txt {font-size:16px; line-height:22px; color:#666; margin-top:20px;}
-.groupid_box {position:relative;}
-.groupid_box .grp_name {display:inline-block; font-size:36px; font-weight:600;}
-.groupid_box dl {display:inline-block;}
+.groupid_box {position:relative; margin-bottom:40px;}
+.groupid_box .grp_name {display:inline-block; max-width:65%; overflow:hidden; word-break:break-all; font-size:36px; font-weight:600; vertical-align:middle;}
+.groupid_box dl {display:inline-block; vertical-align:top; transform:translateY(50%); margin-left:16px;}
 .groupid_box dl dt {display:inline-block;}
-.groupid_box dl dd {display:inline-block; margin-left:4px; padding-left:8px;}
-.groupid_box dl dd::after {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:0; left:0;}
+.groupid_box dl dd {display:inline-block; font-weight:600; margin-left:4px; padding-left:8px; position:relative;}
+.groupid_box dl dd::after {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:9px; left:0;}
+.titbox h4 {font-size:16px; line-height:24px; margin:30px 0 20px;}
+.owner {display:inline-block; font-size:14px; color:#ffa640;}

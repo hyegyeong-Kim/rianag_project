@@ -82,7 +82,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .mt_20 {margin-top:-20px;}
 .mt_30 {margin-top:-30px;}
 .mt_40 {margin-top:-40px;}
-
+.ml_12 {margin-left:12px;}
 .td_nonpd {padding:0 !important;}
 
 .blind {position:absolute; overflow:hidden; width:1px; height:1px; font-size:0; line-height:0; text-indent:-9999px;}
