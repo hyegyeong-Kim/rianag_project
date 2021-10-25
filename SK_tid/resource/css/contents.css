@@ -367,6 +367,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 /* 애플리케이션 색상 미리보기 팝업 */
 /* .viewpw {position:absolute; top:3px; right:10px;} */
+.introtxt {font-size:16px; margin:40px 0 30px;}
+.introtxt span {color:#ffa640; font-weight:600;}
+.bizlogin p {font-size:16px; font-weight:600;}
+.find_wrap {margin:32px 0 120px;}
 .find_wrap a {display:inline-block; padding-right:8px; margin-right:4px; position:relative; font-size:14px; line-height:22px; color:#666;}
 .find_wrap a::before {display:block; content:''; width:1px; height:14px; background:#666; position:absolute; top:7px; right:0;}
 .find_wrap a:last-child {padding-right:0; margin-right:0;}
