@@ -171,8 +171,8 @@
                         <li>그룹을 생성하면 그룹에 참여한 모든 애플리케이션에 공통 그룹 코드와 시크릿이 발급됩니다.</li>
                     </ul>
                     <div class="btn_wrap">
-                        <a href="#none" class="btn default gray">그룹 참여</a>
-                        <a href="#none" class="btn default black" onclick="hidePop('bizinfo'); showPop('bizinfo_ok');">그룹 생성</a>
+                        <a href="#none" class="btn default gray" onclick="showPop('join_request');">그룹 참여</a>
+                        <a href="#none" class="btn default black" onclick="showPop('newgrp');">그룹 생성</a>
                     </div>
                 </div>
                 <!-- // 애플리케이션 그룹생성및 참여 오너노출 -->
@@ -182,7 +182,7 @@
                     <div class="title_box">
                         <p>비즈니스 애플리케이션</p>
                         <span class="txt_certify">비즈니스 인증</span>
-                        <button class="btn black default float_r">비즈니스 정보</button>
+                        <button class="btn black default float_r" onclick="showPop('bizapp_detail')">비즈니스 정보</button>
                     </div>
                     <p class="sub_txt">
                         비즈니스 애플리케이션 등록 시 추가 동의 항목 정보와 애플리케이션 그룹 설정등을 사용할 수 있습니다.<br> 
@@ -195,7 +195,7 @@
                 <div class="ad_setbx wbox">
                     <div class="title_box">
                         <p>비즈니스 애플리케이션</p>
-                        <button class="btn black default float_r">비즈니스 정보 검토</button>
+                        <button class="btn blue default float_r" onclick="showPop('bizapp_check')">비즈니스 정보 검토</button>
                     </div>
                     <p class="sub_txt">
                         비즈니스 애플리케이션 등록 시 추가 동의 항목 정보와 애플리케이션 그룹 설정등을 사용할 수 있습니다.<br> 
@@ -235,7 +235,7 @@
                         <dt>그룹 ID</dt>
                         <dd>ALDN</dd>
                     </dl>
-                    <button class="btn black default distri">그룹삭제</button>
+                    <button class="btn black default distri" onclick="showPop('del_grppop')">그룹삭제</button>
                 </div>
                 <div class="regist_table">
                     <table>
@@ -260,7 +260,7 @@
                                 <td>
                                     <span class="input txt password">
                                         <input type="password" id="password" placeholder="*******">
-                                        <button class="btn small black">재발급</button>
+                                        <button class="btn small black" onclick="showPop('re_gpsecret')">재발급</button>
                                         <button class="btn_viewon" id="showPassword">Secret Kye보기</button>
                                     </span>
                                 </td>
@@ -313,13 +313,13 @@
                                 <td>Thor</td>
                                 <td>
                                     THOR
-                                    <button class="btn xsmall blue ml_12">참여 승인 요청</button>
+                                    <button class="btn xsmall blue ml_12" onclick="showPop('approved_pop')">참여 승인 요청</button>
                                 </td>
                                 <td class="txtcenter">
                                     <span class="state ready">승인 대기</span>
                                 </td>
                                 <td class="txtcenter">
-                                    <button>                                                            
+                                    <button onclick="showPop('del_ptnr')">                                                            
                                         <i class="icon del_bk"></i>
                                     </button>
                                 </td>
@@ -329,7 +329,7 @@
                                 <td>CTAM</td>
                                 <td class="txtcenter"></td>
                                 <td class="txtcenter">
-                                    <button>                                                            
+                                    <button onclick="showPop('del_ptnr')">                                                            
                                         <i class="icon del_bk"></i>
                                     </button>
                                 </td>
@@ -341,7 +341,7 @@
                                     <span class="state before">초대 중</span>
                                 </td>
                                 <td class="txtcenter">
-                                    <button>                                                            
+                                    <button onclick="showPop('del_ptnr')">                                                            
                                         <i class="icon del_bk"></i>
                                     </button>
                                 </td>
@@ -353,7 +353,7 @@
                                     <span class="state before">개발 중</span>
                                 </td>
                                 <td class="txtcenter">
-                                    <button>                                                            
+                                    <button onclick="showPop('del_ptnr')">                                                            
                                         <i class="icon del_bk"></i>
                                     </button>
                                 </td>
@@ -361,7 +361,7 @@
                         </tbody>
                     </table>
                     <div class="btn_wrap">
-                        <button class="btn small black">그룹 파트너 추가</button>
+                        <button class="btn small black" onclick="showPop('invite_gp')">그룹 파트너 추가</button>
                     </div>
                 </div>
                 <p class="noterms">미사용</p>
@@ -388,9 +388,10 @@
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
+
 <!-- S: 팝업 / 비즈니스 정보등록 팝업 -->
 <div class="popup" id="bizinfo">
-    <div class="inner_pop w494">
+    <div class="inner_pop mini w494">
         <div class="popup_title">
             <p>비즈니스 정보 등록</p>
         </div>
@@ -402,7 +403,7 @@
                         <input type="text" placeholder="">
                     </span>
                 </dd>
-                <dt>사업자 등록번호</dt>
+                <dt>사업자등록번호</dt>
                 <dd>
                     <span class="input txt type_03">
                         <input type="text">
@@ -423,7 +424,7 @@
     </div>
     <div class="dim"></div>
 </div>
-<!-- S: 팝업 / 비즈니스 정보등록 팝업 -->
+<!-- E: 팝업 / 비즈니스 정보등록 팝업 -->
 
 <!-- S: 팝업 / 비즈니스 정보 수정 팝업 -->
 <div class="popup" id="corr_bizinfo">
@@ -461,71 +462,13 @@
     </div>
     <div class="dim"></div>
 </div>
-<!-- S: 팝업 / 비즈니스 정보 수정 팝업 -->
+<!-- E: 팝업 / 비즈니스 정보 수정 팝업 -->
 
-<!-- S: 팝업 /  팝업 -->
-<div class="popup" id="corr_bizinfo">
-    <div class="inner_pop w494">
-        <div class="popup_title">
-            <p>비즈니스 정보 수정</p>
-        </div>
-        <div class="pop_con">
-            <dl class="dl_input">
-                <dt>사업자명</dt>
-                <dd>
-                    <span class="input txt">
-                        <input type="text" placeholder="">
-                    </span>
-                </dd>
-                <dt>사업자 등록번호</dt>
-                <dd>
-                    <span class="input txt type_03">
-                        <input type="text">
-                    </span>
-                    <span class="input txt type_03">
-                        <input type="text">
-                    </span>
-                    <span class="input txt type_03">
-                        <input type="text">
-                    </span>
-                </dd>
-            </dl>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('corr_bizinfo')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('corr_bizinfo'); showPop('bizinfo_ok');">재승인 요청</a>
-                <a href="#none" class="under_txt mt20" onclick="hidePop('corr_bizinfo'); showPop('del_bizinfo')">비즈니스 정보 삭제하기</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- S: 팝업 / 비즈니스 정보 수정 팝업 -->
-
-<!-- S: 팝업 / 비즈니스 정보 삭제 -->
-<div class="popup" id="del_bizinfo">
-    <div class="inner_pop w494">
-        <div class="popup_title">
-            <p>비즈니스 정보 수정</p>
-        </div>
-        <div class="pop_con">
-            비즈니스 정보 삭제 시,<br>
-            동의항목 정보 및 그룹 정보가 모두 초기화 됩니다.<br>
-            비즈니스 정보를 삭제하시겠습니까?
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('del_bizinfo')">유지</a>   
-                <a href="#none" class="btn large black">정보 삭제</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- S: 팝업 / 비즈니스 정보 삭제 -->
-
-<!-- s: 팝업 / 비즈니스 정보등록 완료 팝업 -->
+<!-- S: 팝업 / 비즈니스 정보등록 완료 팝업 -->
 <div class="popup" id="bizinfo_ok">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div class="perfect">
+            <div class="ic_perfect">
                 비즈니스 애플리케이션 정보 등록이 완료되었습니다.<br>
                 등록 승인이 완료까지 시간이 소요됩니다.<br>
                 승인 완료 시 알림이 전달됩니다.<br>
@@ -537,6 +480,68 @@
     </div>
 </div>
 <!-- E: 팝업 / 비즈니스 정보등록 완료 팝업 -->
+
+<!-- S: 팝업 / 비즈니스 정보 삭제 -->
+<div class="popup" id="del_bizinfo">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>비즈니스 정보 수정</p>
+        </div>
+        <div class="pop_con">
+            <p class="txtcenter">
+                비즈니스 정보 삭제 시,<br>
+                동의항목 정보 및 그룹 정보가 모두 초기화 됩니다.<br>
+                비즈니스 정보를 삭제하시겠습니까?
+            </p>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('del_bizinfo')">유지</a>   
+                <a href="#none" class="btn large black">정보 삭제</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 비즈니스 정보 삭제 -->
+
+<!-- S: 팝업 /  애플리케이션 그룹 생성 팝업 -->
+<div class="popup" id="newgrp">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>애플리케이션 그룹 생성</p>
+        </div>
+        <div class="pop_con">
+            <dl class="dl_input">
+                <dt>그룹명</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="그룹명을 입력해주세요">
+                    </span>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('newgrp')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('newgrp'); showPop('ngrp_ok');">생성</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 애플리케이션 그룹 생성 팝업 -->
+
+<!-- S: 팝업 / 그룹명 생성 alert -->
+<div class="popup" id="ngrp_ok">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                %그룹명%이 생성되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('ngrp_ok');">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 그룹명 생성 alert - -->
 
 <!-- S: 팝업 / group code 복사 팝업 -->
 <div class="popup" id="copy_alert">
@@ -550,6 +555,403 @@
 </div>
 <!-- E: 팝업 / group code 복사 팝업 -->
 
+<!-- S: 팝업 / Group Secret 재발급 -->
+<div class="popup" id="re_gpsecret">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>Group Secret 재발급</p>
+        </div>
+        <div class="pop_con">
+            <p class="txtcenter">
+                Secret Key를 재발급 받으시겠습니까?<br>
+                시크릿 키를 재발급 받으면<br>
+                이전 코드가 자동 삭제됩니다.
+            </p>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('re_gpsecret')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('re_gpsecret')">재발급</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / Group Secret 재발급 -->
+
+<!-- S: 팝업 / 그룹 파트너 초대 -->
+<div class="popup" id="invite_gp">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>그룹 파트너 초대</p>
+        </div>
+        <div class="pop_con">
+            <div class="popsub_tl2">
+                Avengers GROUP_Avengers GROUP_AvengersGROUP_Avengers GROUP_Avengers
+            </div>
+            <p class="txtcenter">
+                앱 ID를 입력해주세요.<br>
+                앱 ID는 영문 4글자로 이루어진 ID입니다.
+            </p>
+            <span class="input txt mt30">
+                <input type="text">
+                <button class="btn xsmall black">추가</button>
+            </span>
+            <p class="warning">영문으로 이루어진 앱 ID를 입력해주세요.</p>
+            <div class="ptnid_list">
+                IDFK, DEID, PSDK, IDFK, DEID, PSDK 
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('invite_gp')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('invite_gp'); showPop('invite_ok');">초대</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 그룹 파트너 초대 -->
+
+<!-- S: 팝업 / 그룹 파트너 초대 확인 alert -->
+<div class="popup" id="invite_ok">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                %앱이름(앱아이디)%를 %그룹명%에 초대를 
+                완료 했습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('invite_ok');">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 그룹 파트너 초대 확인 alert -->
+
+<!-- S: 팝업 / 참여승인 요청 -->
+<div class="popup" id="approved_pop">
+    <div class="inner_pop mini w420">
+        <div class="popup_title">
+            <p>그룹 참여 요청</p>
+        </div>
+        <div class="pop_con">
+            <div class="txtcenter">
+                %애플리케이션 이름%%앱 ID%에서 %그룹명%에 참여 요청을 보냈습니다. 
+                승인하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('approved_pop')">참여 거절</a>   
+                <a href="#none" class="btn large black">참여 승인</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 참여승인 요청 -->
+
+<!-- S: 팝업 / 그룹 파트너 삭제 -->
+<div class="popup" id="del_ptnr">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>그룹 파트너 삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="popsub_tl2">
+                %애플리케이션명%
+            </div>
+            <p class="txtcenter">
+                그룹 파트너 삭제 시 연동 된 그룹 기능이 작동하지 않으며<br>
+                해당 그룹의 모든 정보는 삭제됩니다.<br>
+                그룹 파트너를 삭제하시려면 아래 문구를 입력해주세요.
+            </p>
+            <span class="input txt mt30">
+                <input type="text" placeholder="그룹 파트너 삭제에 동의합니다">
+            </span>
+            <p class="warning">“그룹 파트너 삭제에 동의합니다” 문구를 올바르게 입력해주세요.</p>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('del_ptnr')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('del_ptnr');">파트너 삭제</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 그룹 파트너 삭제 -->
+
+<!-- S: 팝업 / 그룹삭제 팝업 -->
+<div class="popup" id="del_grppop">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>그룹삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="popsub_tl2">
+                Avengers GROUP
+            </div>
+            <p class="txtcenter">
+                그룹 삭제 시 그룹 기능이 작동하지 않으며<br>
+                모든 정보는 삭제됩니다.<br>
+                그룹을 영구 삭제하시려면 아래 문구를 입력해주세요.
+            </p>
+            <span class="input txt mt30">
+                <input type="text" placeholder="그룹 파트너 삭제에 동의합니다">
+            </span>
+            <p class="warning">“그룹 파트너 삭제에 동의합니다” 문구를 올바르게 입력해주세요.</p>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('del_grppop')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('del_grppop');">그룹삭제</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 그룹삭제 팝업 -->
+
+<!-- S: 팝업 / 참여요청 -->
+<div class="popup" id="join_request">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>그룹 참여 요청</p>
+        </div>
+        <div class="pop_con">
+            <div class="txtcenter">
+                그룹 ID를 입력해주세요. 
+            </div>
+            <span class="input txt mt30">
+                <input type="text">
+            </span>
+            <p class="warning">영문으로 이루어진 그룹 ID를 입력해주세요.</p>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('join_request')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('join_request'), showPop('ok_grpjoin')" >참여 요청</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 참여요청 -->
+
+<!-- S: 팝업 / 그룹참여요청 확인 alert -->
+<div class="popup" id="ok_grpjoin">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                %그룹명%에 참여 요청을 보냈습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('ok_grpjoin');">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 그룹참여요청확인 alert -->
+
+<!-- S: 팝업 / 비즈니스 애플리케이션 상세정보 -->
+<div class="popup" id="bizapp_detail">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>비즈니스 애플리케이션 상세정보</p>
+        </div>
+        <div class="pop_con">
+            <table class="pop_tbl">
+                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span>애플리케이션 명</span>
+                        </th>
+                        <td>Banana [BANA]</td>    
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>적용일</span>
+                        </th>
+                        <td class="mfont">2021.09.21</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>사업자등록번호</span>
+                        </th>
+                        <td>
+                            <div>
+                                <span class="input txt type_03">
+                                    <input type="text">
+                                    <input type="text">
+                                    <input type="text">
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>애플리케이션 오너 정보</span>
+                        </th>
+                        <td>
+                            <ul>
+                                <li>김선경</li>
+                                <li class="mfont">sungkung@sk.com</li>    
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('bizapp_detail'), showPop('reject_bizapp')" >반려</a>   
+                <a href="#none" class="btn large black">변경</a>    
+            </div>
+        </div>
+        <a href="#none" class="btn_close" onclick="showPop('stop_bizapp')">닫기</a>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 비즈니스 애플리케이션 상세정보 -->
+
+<!-- S: 팝업 / 비즈니스 애플리케이션 검토 -->
+<div class="popup" id="bizapp_check">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>비즈니스 애플리케이션 검토</p>
+        </div>
+        <div class="pop_con">
+            <table class="pop_tbl">
+                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span>애플리케이션 명</span>
+                        </th>
+                        <td>Banana [BANA]</td>    
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>적용일</span>
+                        </th>
+                        <td class="mfont">2021.09.21</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>사업자등록번호</span>
+                        </th>
+                        <td>
+                            <div>
+                                <span class="input txt type_03">
+                                    <input type="text" placeholder="1111" disabled>
+                                    <input type="text" placeholder="1111" disabled>
+                                    <input type="text" placeholder="1111" disabled>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>애플리케이션 오너 정보</span>
+                        </th>
+                        <td>
+                            <ul>
+                                <li>김선경</li>
+                                <li class="mfont">sungkung@sk.com</li>    
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('bizapp_check'), showPop('reject_bizapp')" >반려</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('bizapp_check'), showPop('bizapp_confirm')">승인</a>    
+            </div>
+        </div>
+        <a href="#none" class="btn_close" onclick="showPop('stop_bizapp')">닫기</a>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 비즈니스 애플리케이션 검토 -->
+
+
+
+<!-- S: 팝업 / 비즈니스 애플리케이션 반려 -->
+<div class="popup" id="reject_bizapp">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>비즈니스 애플리케이션 반려</p>
+        </div>
+        <div class="pop_con">
+            <table class="pop_tbl">
+                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <span>애플리케이션 명</span>
+                        </th>
+                        <td>Banana [BANA]</td>  
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <span>반려 사유</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="full">
+                            <textarea placeholder="반려사유를 입력해주세요"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('reject_bizapp'), showPop('bizapp_detail')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('reject_bizapp'); showPop('save_reject');">반려</a>    
+            </div>
+        </div>
+        <a href="#none" class="btn_close" onclick="showPop('stop_bizapp')">닫기</a>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 비즈니스 애플리케이션 반려 -->
+
+<!-- S: 팝업 / 비즈니스 애플리케이션 반려사유 저장 alert -->
+<div class="popup" id="save_reject">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                비즈니스 애플리케이션 반려 사유가<br>
+                저장되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('save_reject');">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 비즈니스 애플리케이션 반려사유 저장 alert -->
+
+<!-- S: 팝업 / 비즈 앱 검토를 중단 alert -->
+<div class="popup" id="stop_bizapp">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                비즈 앱 검토를 중단하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('stop_bizapp'), showPop('')" >취소</a>    
+                <a href="#none" class="btn large black" onclick="hidePop('stop_bizapp')">중단</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 비즈 앱 검토를 중단 alert -->
+
+<!-- S: 팝업 / 비즈 앱 승인완료 alert -->
+<div class="popup" id="bizapp_confirm">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div>
+                비즈니스 애플리케이션 승인이<br>
+                완료되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('bizapp_confirm')">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 비즈 앱 승인완료 alert -->
 <script>
     // group code 복사
     $(function(){
