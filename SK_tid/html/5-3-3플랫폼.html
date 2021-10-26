@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../resource/css/common.css">
     <link rel="stylesheet" href="../resource/css/contents.css">
     <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/jquery-ui.js"></script>
     <script src="../resource/js/common.js"></script>
 </head>
 <body>
@@ -114,108 +115,159 @@
         <!-- E: lnb -->
         
         <div class="coantents">
+            <div class="page_tit">
+                <h2>플랫폼 설정</h2>
+            </div>
             <div class="page_contents">
-                <div class="tab_type01">
+                <div class="tab_type01 lieng">
+                    <ul>
+                        <li>
+                            <a href="#tab_01" class="on">web</a>
+                        </li>
+                        <li>
+                            <a href="#tab_02">Android</a>
+                        </li>
+                        <li>
+                            <a href="#tab_03">iOS</a>
+                        </li>
+                    </ul>
 
-                </div>
-                <div class="regist_table">
-                    <table>
-                        <caption></caption>
-                        <colgroup><col style="width:186px"><col></colgroup>
-                        <tr>
-                            <th>
-                                <span>Clinet ID</span>
-                            </th>
-                            <td>
-                                <span class="input txt">
-                                    <input type="text" id="clinetID" placeholder="Clinet ID">
-                                    <button class="btn_copy" id="copy_clinetID" >Clinet ID 복사</button>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <span>Clinet Secret</span>
-                            </th>
-                            <td>
-                                <span class="input txt password">
-                                    <input type="password" id="password" placeholder="*************************">
-                                    <button class="btn small black" onclick="showPop('reissue')">재발급</button>
-                                    <button class="btn_viewon" id="showPassword">Secret Kye보기</button>
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="h3_wrap">
-                    <h3>애플리케이션 상태</h3>
-                    <span class="switch_btn">
-                        <label class="on"><input type="checkbox" checked=""><span></span></label><!-- input checked 인경우 label class="on" -->
-                    </span>
-                </div>
-                <div class="app_txtcont">
-                    <div class="txtbox">
-                        앱 상용 신청 전 설정 및 개발 완료 여부를 확인해주세요.  설정 완료 후 앱 사용 신청이 가능합니다.
-                    </div>
-                </div>
-
-                <!-- 기본 -->
-                <div class="h3_wrap">
-                    <h3>애플리케이션 삭제</h3>
-                    <a href="#none" class="btn black default distri" onclick="showPop('appdel_de')">애플리케이션 삭제</a>
-                </div>
-                <div class="app_txtcont">
-                    <div class="txtbox">
-                        앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
-                    </div>
-                    <div class="btnbox">
-                        <button class="btn small blue" onclick="showPop('appstop')">애플리케이션 정지</button>
-                        <button class="btn small blue" onclick="showPop('append')">애플리케이션 종료</button>
-
-                        <button class="btn small blue" disabled>애플리케이션 정지</button>
-                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                    <!-- S: web -->
+                    <div id="tab_01">
+                        <div class="regist_table">
+                            <table>
+                                <caption></caption>
+                                <colgroup><col style="width:186px"><col></colgroup>
+                                <tr>
+                                    <th>
+                                        <span>1사이트 URL</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="http://www.siteurl.com">
+                                            <button class="btn_add_b">셀 추가</button>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>Callback URL</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="로그인 후 이동할 페이지의 URL을 입력해주세요.">
+                                            <button class="btn_add_b">셀 추가</button>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                         
-                        <button class="btn small blue" onclick="showPop('appstart')">애플리케이션 정지해제</button>
-                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                        <div class="btn_wrap">
+                            <a href="#none" class="btn xlarge gray">취소</a>
+                            <a href="#none" class="btn xlarge black">저장</a>
+                        </div>
                     </div>
-                </div>
+                    <!-- E: web -->
 
-                <!-- 관리자 -->
-                <div class="h3_wrap">
-                    <h3>애플리케이션 삭제</h3>
-                    <a href="#none" class="btn black default distri" onclick="showPop('appdel_ad')">애플리케이션 삭제</a>
-                </div>
-                <div class="app_txtcont">
-                    <div class="txtbox">
-                        앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
-                    </div>
-                    <div class="btnbox">
-                        <button class="btn small blue" onclick="showPop('appstop')">애플리케이션 정지</button>
-                        <button class="btn small blue" onclick="showPop('append')">애플리케이션 종료</button>
-
-                        <button class="btn small blue" disabled>애플리케이션 정지</button>
-                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                    <!-- S: Android -->
+                    <div id="tab_02">
+                        <div class="regist_table">
+                            <table>
+                                <caption></caption>
+                                <colgroup><col style="width:186px"><col></colgroup>
+                                <tr>
+                                    <th>
+                                        <span>패키지명</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt only">
+                                            <input type="text" id="clinetID" placeholder="" value="NUGU">
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>마켓 URL</span>
+                                    </th>
+                                    <td>
+                                        <span class="input sel">
+                                            <select name="" class="sel_de">
+                                                <option value="">마켓 선택</option>
+                                                <option value="">마켓 선택1</option>
+                                                <option value="">서마켓 선택2</option>
+                                            </select>    
+                                        </span>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="앱을 다운로드할 수 있는 마켓 URL을 입력해주세요.">
+                                            <button class="btn_add_b">셀 추가</button>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>키 해시</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="" value="dsafjkqasdrDKFJ1231SDkwef">
+                                            <button class="btn_remove_b">셀 삭제</button>
+                                        </span>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="" value="DJkjiofoeqk3149df99098143">
+                                            <button class="btn_add_b">셀 추가</button>
+                                        </span><!-- 마지막 입력창인경우 셀 추가 버튼 아닌경우 셀삭제 버튼 -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                         
-                        <button class="btn small blue" onclick="showPop('appstart')">애플리케이션 정지해제</button>
-                        <button class="btn small blue" disabled>애플리케이션 종료</button>
+                        <div class="btn_wrap">
+                            <a href="#none" class="btn xlarge white">삭제</a>
+                            <a href="#none" class="btn xlarge gray">취소</a>
+                            <a href="#none" class="btn xlarge black">수정사항 저장</a>
+                        </div>
                     </div>
-                </div>
+                    <!-- E: Android -->
 
-                <!-- 앱복구 -->
-                <div class="h3_wrap">
-                    <h3>애플리케이션 삭제</h3>
-                    <a href="#none" class="btn black default distri" onclick="showPop('apprestore')">애플리케이션 복구</a>
-                </div>
-                <div class="app_txtcont">
-                    <div class="txtbox">
-                        앱 삭제 시, 설정된 정보와 앱 은 복구 되지 않습니다. 
+                    <!-- S: iOS -->
+                    <div id="tab_03">
+                        <div class="regist_table">
+                            <table>
+                                <caption></caption>
+                                <colgroup><col style="width:186px"><col></colgroup>
+                                <tr>
+                                    <th>
+                                        <span>번들 ID</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="iOS앱의 번들 ID를 입력해주세요. 예) com.tid.dev">
+                                            <button class="btn_add_b">셀 추가</button>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span>마켓 URL</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="앱을 다운로드할 수 있는 마켓 URL을 입력해주세요.">
+                                            <button class="btn_add_b">셀 추가</button>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="btn_wrap">
+                            <a href="#none" class="btn xlarge gray">취소</a>
+                            <a href="#none" class="btn xlarge black">저장</a>
+                        </div>
                     </div>
-                    <div class="btnbox">
-                        <button class="btn small blue" disabled>애플리케이션 정지</button>
-                        <button class="btn small blue" disabled>애플리케이션 종료</button>
-                    </div>
-                </div>
+                    <!-- E: iOS -->
+                </div>       
             </div>
         </div>
     </div>
@@ -240,350 +292,26 @@
     <!-- E: footer -->
     
 </div>
-<!-- S: 팝업 / Client ID 복사 팝업 -->
-<div class="popup" id="copy_alert">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div>
-                Client ID 복사가 완료되었습니다.
-            </div>
-        </div>
-    </div>
-</div>
-<!-- E: 팝업 / Client ID 복사 팝업 -->
-
-<!-- S: 팝업 / Client Secret 재발급 팝업 -->
-<div class="popup " id="reissue">
-    <div class="inner_pop mini w420">
-        <div class="popup_title">
-            <p>Client Secret 재발급</p>
-        </div>
-        <div class="pop_con">
-            <div class="txt_area">
-                Secret Key를 재발급 받으시겠습니까?<br>
-                시크릿 키를 재발급 받으면<br>
-                이전 코드가 자동 삭제됩니다. 
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('reissue')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('reissue')">재발급</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / Client Secret 재발급 팝업 -->
-
-<!-- S: 팝업 / 기본 애플리케이션 삭제 팝업 -->
-<div class="popup " id="appdel_de">
-    <div class="inner_pop mini w494">
-        <div class="popup_title">
-            <p>애플리케이션 삭제</p>
-        </div>
-        <div class="pop_con">
-            <div class="txt_area">
-                애플리케이션 삭제 시 설정된 모든 정보는 <br>
-                영구 삭제되며 복구 되지 않습니다. <br>
-                앱을 영구 삭제하시려면 아래 문구를 입력해주세요.
-            </div>
-            <div>
-                <span class="input txt">
-                    <input type="text" placeholder="애플리케이션 삭제에 동의합니다">
-                </span>
-                <p class="warning">
-                    “애플리케이션 삭제에 동의합니다” 문구를 올바르게 입력해주세요.
-                </p>
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('appdel_de')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('appdel_de'); showPop('appdel_alert')">앱 삭제</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 기본 애플리케이션 삭제 팝업 -->
-
-<!-- S: 팝업 / 관리자 애플리케이션 삭제 팝업 -->
-<div class="popup " id="appdel_ad">
-    <div class="inner_pop alert w494">
-        <div class="pop_con">
-            <div class="txt_area">
-                애플리케이션을 삭제하시겠습니까?
-            </div>
-            <div>
-                <span class="input txt">
-                    <input type="text" placeholder="삭제사유를 입력해주세요">
-                </span>
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('appdel_ad')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('appdel_ad'); showPop('appdel_alert')">삭제</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 관리자 애플리케이션 삭제 팝업 -->
-<!-- S: 팝업 / 삭제 alert 팝업 -->
-<div class="popup" id="appdel_alert">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div>
-                애플리케이션이 삭제되었습니다.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large black" onclick="hidePop('appdel_alert')">확인</a>   
-            </div>
-        </div>
-    </div>
-</div>
-<!-- E: 팝업 / 삭제 alert 팝업 -->
-
-<!-- S: 팝업 / 애플리케이션을 정지 팝업 -->
-<div class="popup " id="appstop">
-    <div class="inner_pop alert w494">
-        <div class="pop_con">
-            <div class="txt_area">
-                애플리케이션을 정지하시겠습니까?
-            </div>
-            <dl class="dl_input">
-                <dt>정지사유</dt>
-                <dd>
-                    <span class="input txt">
-                        <input type="text" placeholder="정지사유를 입력해주세요">
-                    </span>
-                </dd>
-            </dl>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('appstop')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('appstop'); showPop('stop_alert');">정지</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-    <!-- S: 팝업 / 정지 alert 팝업 -->
-    <div class="popup" id="stop_alert">
-        <div class="inner_pop alert">
-            <div class="pop_con">
-                <div>
-                    애플리케이션이 정지되었습니다.
-                </div>
-                <div class="btn_wrap">
-                    <a href="#none" class="btn large black" onclick="hidePop('stop_alert')">확인</a>   
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- E: 팝업 / 정지 alert 팝업 -->
-<!-- E: 팝업 / 애플리케이션을 정지 팝업 -->
-
-<!-- S: 팝업 / 애플리케이션을 종료 팝업 -->
-<div class="popup " id="append">
-    <div class="inner_pop alert w494">
-        <div class="pop_con">
-            <div class="txt_area">
-                애플리케이션을 종료 상태로<br>
-                변경하시겠습니까?
-            </div>
-            <dl class="dl_input">
-                <dt>종료사유</dt>
-                <dd>
-                    <span class="input txt">
-                        <input type="text" placeholder="종료사유를 입력해주세요">
-                    </span>
-                </dd>
-            </dl>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('append')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('append'); showPop('end_alert');">종료</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-    <!-- S: 팝업 / 종료 alert 팝업 -->
-    <div class="popup" id="end_alert">
-        <div class="inner_pop alert">
-            <div class="pop_con">
-                <div>
-                    종료 상태로 변경되었습니다.
-                </div>
-                <div class="btn_wrap">
-                    <a href="#none" class="btn large black" onclick="hidePop('end_alert')">확인</a>   
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- E: 팝업 / 종료 alert 팝업 -->
-<!-- E: 팝업 / 애플리케이션을 종료 팝업 -->
-
-<!-- S: 팝업 / 애플리케이션 정지해제 팝업 -->
-<div class="popup " id="appstart">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="txt_area">
-                애플리케이션을 사용 상태로<br>
-                변경하시겠습니까?
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('appstart')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('appstart'); showPop('start_alert')">사용</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-    <!-- S: 팝업 / 정지해제 alert 팝업 -->
-    <div class="popup" id="start_alert">
-        <div class="inner_pop alert">
-            <div class="pop_con">
-                <div>
-                    사용 상태로 변경되었습니다.
-                </div>
-                <div class="btn_wrap">
-                    <a href="#none" class="btn large black" onclick="hidePop('start_alert')">확인</a>   
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- E: 팝업 / 정지해제 alert 팝업 -->
-<!-- E: 팝업 / 애플리케이션 정지해제 팝업 -->
 
 <!-- S: 팝업 / 애플리케이션을 복구 팝업 -->
-<div class="popup " id="apprestore">
+<div class="popup open" id="platform_del">
     <div class="inner_pop alert w494">
         <div class="pop_con">
             <div class="txt_area">
-                애플리케이션을 복구하시겠습니까?
+                %사용자 아이디%의 멤버 권한을<br>
+                삭제하시겠습니까?
             </div>
-            <dl class="dl_input">
-                <dt>복구사유</dt>
-                <dd>
-                    <span class="input txt">
-                        <input type="text" placeholder="복구사유를 입력해주세요">
-                    </span>
-                </dd>
-                <dt>문의번호</dt>
-                <dd>
-                    <span class="input txt">
-                        <input type="text" placeholder="문의번호를 입력해주세요">
-                    </span>
-                </dd>
-            </dl>
             <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('apprestore')">취소</a>   
-                <a href="#none" class="btn large black" onclick="hidePop('apprestore'); showPop('restore_alert');">복구</a>    
+                <a href="#none" class="btn large gray" onclick="hidePop('platform_del')">플랫폼 유지</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('platform_del');">플랫폼 삭제</a>    
             </div>
         </div>
     </div>
     <div class="dim"></div>
 </div>
-    <!-- S: 팝업 / 복구 alert 팝업 -->
-    <div class="popup" id="restore_alert">
-        <div class="inner_pop alert">
-            <div class="pop_con">
-                <div>
-                    애플리케이션이 복구되었습니다.
-                </div>
-                <div class="btn_wrap">
-                    <a href="#none" class="btn large black" onclick="hidePop('restore_alert')">확인</a>   
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- E: 팝업 / 복구 alert 팝업 -->
 <!-- E: 팝업 / 애플리케이션을 복구 팝업 -->
-
-<!-- S: 팝업 / 애플리케이션 설정 확인 1 팝업 -->
-<div class="popup" id="confirmation">
-    <div class="inner_pop alert">
-        <div class="pop_con confirmation">
-            <div class="confirmation_state ongoing">
-                애플리케이션 설정 확인
-            </div>
-            <ul class="confirmation_list">
-                <li class="succ">SSO설정 확인 완료</li>
-                <li class="ing">API 설정을 확인 중입니다.</li>
-                <li>약관 관리 설정을 확인 중입니다.</li>
-                <li>설정 정보를 확인 중입니다.</li>
-            </ul>
-            <div></div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 애플리케이션 설정 확인 1 팝업 -->
-
-<!-- S: 팝업 / 애플리케이션 설정 확인 2 팝업 -->
-<div class="popup" id="confirmation">
-    <div class="inner_pop alert">
-        <div class="pop_con confirmation">
-            <div class="confirmation_state success">
-                애플리케이션 설정 확인
-                <p>이제 애플리케이션 사용이 가능합니다!</p>
-            </div>
-            <ul class="confirmation_list">
-                <li class="succ">SSO설정 확인 완료</li>
-                <li class="succ">API 설정을 확인 완료</li>
-                <li class="succ">약관 관리 설정을 확인 완료</li>
-                <li class="succ">설정 정보를 확인 완료</li>
-            </ul>
-            <div></div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 애플리케이션 설정 확인 2 팝업 -->
-
-<!-- S: 팝업 / 애플리케이션 설정 확인 3 팝업 -->
-<div class="popup" id="confirmation">
-    <div class="inner_pop alert">
-        <div class="pop_con confirmation">
-            <div class="confirmation_state fail">
-                애플리케이션 설정 확인
-                <p>이제 애플리케이션 사용이 가능합니다!</p>
-            </div>
-            <ul class="confirmation_list">
-                <li class="succ">SSO설정 확인 완료</li>
-                <li class="fails">API 설정을 확인 완료</li>
-                <li class="fails">약관 관리 설정을 확인 완료</li>
-                <li class="fails">설정 정보를 확인 완료</li>
-            </ul>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large black">가이드 문서 확인하기</a>   
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 애플리케이션 설정 확인 3 팝업 -->
-
 <script type="text/javascript">
-    $(function(){
-        /* Clinet ID 복사 */
-        $('#copy_clinetID').click(function(){
-            $('#clinetID').select();
-            document.execCommand("copy");
-            $("#copy_alert").fadeIn(100);
-            setTimeout(function() {
-                $("#copy_alert").fadeOut(200)
-            }, 3000);
-        }),
-
-        /* 비밀번호 표시/숨김 */
-        $('#showPassword').on('click', function(){
-            var passwordField = $('#password');
-            var passwordFieldType = passwordField.attr('type');
-            if(passwordFieldType == 'password'){
-                passwordField.attr('type', 'text');$(this).val('Hide');
-            } else {
-                passwordField.attr('type', 'password');
-                $(this).val('Show');
-            }
-        })
-    })
+    
     
     </script>
 </body>

@@ -244,7 +244,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .popup .inner_pop.w420 {width:420px;}
 .popup .inner_pop.w494 {width:494px;}
 .popup .inner_pop.mini {position:fixed;}
-.popup .inner_pop.mini .pop_con {max-height:667px;}
+.popup .inner_pop.mini .pop_con {max-height:667px; letter-spacing: -.8px;}
 .popup .inner_pop.mini .btn_wrap {margin-top:32px;}
 .popup .inner_pop.w494 .btn_wrap {margin-top:48px;}
 .pop_con::-webkit-scrollbar {width:5px; background-color: #ddd; border-radius: 5px;}
@@ -256,6 +256,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .popup .alert .pop_con { padding:60px 40px 48px; text-align:center;}
 .popup .inner_pop .btn_close {position:absolute; top:20px; right:35px; display:block; background:url('../images/common/ic_appclose.png')no-repeat; width:24px; height:24px; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
 .popup .dim {display:block;}
+.popup .inner_pop.mini .tooltip_wrap .tipbox {width:187px;}
 
 @media screen and (max-height: 800px) {
     .popup .inner_pop {top:32px; transform:translate(-50%, 0);}
