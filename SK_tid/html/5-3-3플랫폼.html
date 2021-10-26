@@ -119,8 +119,8 @@
                 <h2>플랫폼 설정</h2>
             </div>
             <div class="page_contents">
-                <div class="tab_type01 lieng">
-                    <ul>
+                <div class="tab_type01">
+                    <ul class="tab01 lieng">
                         <li>
                             <a href="#tab_01" class="on">web</a>
                         </li>
@@ -223,7 +223,7 @@
                         </div>
                         
                         <div class="btn_wrap">
-                            <a href="#none" class="btn xlarge white">삭제</a>
+                            <a href="#none" class="btn xlarge white" onclick="showPop('platform_del')">삭제</a>
                             <a href="#none" class="btn xlarge gray">취소</a>
                             <a href="#none" class="btn xlarge black">수정사항 저장</a>
                         </div>
@@ -294,7 +294,7 @@
 </div>
 
 <!-- S: 팝업 / 애플리케이션을 복구 팝업 -->
-<div class="popup open" id="platform_del">
+<div class="popup" id="platform_del">
     <div class="inner_pop alert w494">
         <div class="pop_con">
             <div class="txt_area">

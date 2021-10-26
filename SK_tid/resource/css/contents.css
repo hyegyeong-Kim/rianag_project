@@ -137,7 +137,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 /* 상태표시 */
 .state {display:inline-block; min-width:76px; height:32px; padding:6px 12px; border-radius:5px; font-size:13px; font-weight:normal; text-align:center;}
-* + .state { margin-left:12px;}
+* + .state { margin-left:8px;}
+.state + .state { margin-left:4px;}
 .state.before {background:#f1f1f1; color:#bfbfbf;}
 .state.ready {border:1px solid #1485cb; color:#1485cb; background:#ffffff;}
 .state.compl {border:1px solid #222222; color:#222222;}
@@ -188,14 +189,14 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .dl_input dd {margin-top:10px;}
 
 /* tab_type01 */
-.tab_type01 ul {margin-bottom:20px; border-bottom:1px solid #222;}
-.tab_type01 ul::after {content:''; display:block; clear:both;}
-.tab_type01 li {float:left;}
-.tab_type01 li a {display:block; height:48px; line-height:32px; font-size:24px; text-align:center; font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif; position:relative;}
-.tab_type01 li a.on {font-weight:600;}
-.tab_type01 li a.on:after {content:''; display:block; width:100%; height:4px; background:#222; position:absolute; bottom:0;}
-.tab_type01.lieng li a {width:120px;}
-.tab_type01.likor li a {width:180px;}
+.tab01 {margin-bottom:20px; border-bottom:1px solid #222;}
+.tab01::after {content:''; display:block; clear:both;}
+.tab01 li {float:left;}
+.tab01 li a {display:block; height:48px; line-height:32px; font-size:24px; text-align:center; font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif; position:relative;}
+.tab01 li a.on {font-weight:600;}
+.tab01 li a.on:after {content:''; display:block; width:100%; height:4px; background:#222; position:absolute; bottom:0;}
+.tab01.lieng li a {width:120px;}
+.tab01.likor li a {width:180px;}
 
 /* board */
 .board .optiongroup {min-height:48px;}
@@ -213,6 +214,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-word; font-family:'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td a {font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td.empty {padding:50px 0; border:0;}
+.board table tbody td.txtinert {color:#bfbfbf;}
 .board table tbody tr.pending td {color:#bfbfbf;}
 .board .paging {margin-top:48px; text-align:center;}
 .board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
@@ -307,9 +309,13 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table .switch_desc {padding-left:68px;}
 .regist_table .has_switch .switch_btn, .regist_table .switch_desc .switch_btn {position:absolute; top:12px; left:0;}
 .regist_table .switch_desc {width: 460px; padding-top:5px;}
+.regist_table .txton {font-size:14px; color:#666;}
+.regist_table .txton, 
 .regist_table span.input.txt {width:460px;}
 .regist_table span.input.sel {width:460px;padding: 0 0;}
+.regist_table .has_switch .txton, 
 .regist_table .has_switch span.input.txt  {width:364px;}
+* + .regist_table .txton {margin-top:8px;}
 .regist_table .sorting.chkbx {width:460px;}
 .regist_table .sorting.chkbx label {width:146px; margin:0 5px 8px 0;}
 .regist_table .desc_02 + span.input {margin-top:10px;}

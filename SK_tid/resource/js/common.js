@@ -120,8 +120,8 @@ $(function(){
     if($(".tab_type01").length){
         $(function(){
             $(".tab_type01").tabs();
-            $(".tab_type01 a").click(function(){
-                $(".tab_type01 a").removeClass("on");
+            $(".tab01 a").click(function(){
+                $(".tab01 a").removeClass("on");
                 $(this).addClass("on");
             });
         });
