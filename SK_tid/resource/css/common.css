@@ -255,7 +255,7 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop.w375 .pop_con {padding:24px 20px; }
 .popup .alert {width:420px; position:fixed; box-shadow:0px 0px 5px 0px rgba(0, 0, 0, .2);}
 .popup .alert .pop_con { padding:60px 40px 48px; text-align:center;}
-.popup .inner_pop .btn_close {position:absolute; top:20px; right:35px; display:block; background:url('../images/common/ic_appclose.png')no-repeat; width:24px; height:24px; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
+.popup .inner_pop .btn_close {position:absolute; top:20px; right:35px; display:block; background:url('../images/common/ic_appclose.png')no-repeat; width:24px; height:24px; text-indent:-9999px; overflow:hidden; }
 .popup .dim {display:block;}
 .popup .inner_pop.mini .tooltip_wrap .tipbox {width:187px;}
 

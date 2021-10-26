@@ -60,7 +60,6 @@ button:disabled {cursor:default;}
 .sorting.check label span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_checkoff.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
 .sorting.check label input:checked + span::after {background:#fff url('../images/common/ic_checkon.png') no-repeat 0 0}
 
-.sorting label {display:inline-block; margin-right:15px; font-size:16px; letter-spacing:-.8px; color:#222; vertical-align:top;}
 .sorting.radio label {padding-left:35px; position:relative;}
 .sorting.radio label input[type="radio"] {visibility:hidden; width:0;}
 .sorting.radio label span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_radiooff.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
@@ -102,8 +101,10 @@ span.input.date {display:inline-block; width:140px; padding-right:35px; border:s
 span.input.date + .date {margin-left:12px;}
 span.input.date .btn_date {text-indent:-9999px; background:url('../images/common/ic_sorting.png') no-repeat center; right:12px;}
 span.input.switch_btn {display:inline-block; padding:0; padding-top: 10px;}
+.disabled span.input,  
 span.input.disabled {background:#e0e0e0;}
 span.input.disabled input {color:#bfbfbf;}
+span.input input:disabled {background:#e0e0e0; color:#bfbfbf;}
 span.input.disabled button:disabled {opacity: .3; cursor:default;}
 span.input.password button:nth-last-child(2) {right:55px;}
 .warning {padding:5px 0 0 10px;font-size:12px; color:#fc2a2a;}
