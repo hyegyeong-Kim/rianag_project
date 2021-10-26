@@ -169,11 +169,11 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .userinfo .infotit span {display:inline-block; vertical-align:middle;}
 .userinfo .infotit .it1 {font-size:24px; font-weight:600;}
 .userinfo .infotit .it2 {height:32px; line-height:30px; padding:0 12px; margin-left:20px; font-size:16px; border:solid 1px #fff; border-radius: 4px;}
-.userinfo .ongoing {margin-left:104px; color:#fff;}
-.userinfo .ongoing dt {padding-left:26px; margin:0 0 5px; background:url('../images/common/ic_dev.png') no-repeat 0 -1px;font-size:14px;}
-.userinfo .ongoing dd {width:100px; height:4px; border-radius:2px; background:#fff; overflow:hidden;}
-.userinfo .ongoing dd span {display:block; height:4px; background:#ffa640; text-indent:-9999px;}
-.userinfo .device {margin-left:48px; margin-right:-10px;}
+.userinfo .ongoing {margin-left:130px; margin-right:47px; color:#fff;}
+.userinfo .ongoing span {display:inline-block; height:24px; padding-left:30px; margin:0 0 5px; font-size:14px;}
+.userinfo .ongoing span.dev {background:url('../images/common/ic_dev.png') no-repeat 0 -1px;}
+.userinfo .ongoing span.use {background:url('../images/common/ic_use.png') no-repeat 0 -1px;}
+px {margin-left:48px; margin-right:-10px;}
 @media screen and (max-width: 1023px) {
     #utility {top:72px;}
     .location {margin-left:56px;}
@@ -187,7 +187,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 
 .lnb {width:290px; height:calc(100% - 160px); background:#fff; border:solid 1px #cfcfcf; border-width:0 1px; position:absolute; overflow: auto;}
 .lnb_in {position:relative; z-index:1;}
-.lnb_ti {height:98px; padding:35px 32px; border-bottom:solid 1px #cfcfcf;font-family:'Roboto'; font-size:26px; font-weight:600; color:#222;}
+.lnb_ti {padding:35px 32px; border-bottom:solid 1px #cfcfcf;font-family:'Roboto'; font-size:26px; font-weight:600; color:#222; word-break: break-word;}
 .lnb_menu {margin-top:10px;}
 .lnb_menu li a {display:block; padding: 10px 33px; color:#999; font-size:16px; letter-spacing:-.8px;}
 .lnb_menu li a:hover {color:#222;}
