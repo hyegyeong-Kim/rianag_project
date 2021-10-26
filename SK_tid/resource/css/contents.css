@@ -465,6 +465,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_title {min-height:100px; padding:0 132px; margin-bottom:60px; position:relative;}
 .app_title .app_logo {width:100px; height:100px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15); position:absolute; top:0; left:0;}
 .app_title .app_logo img {width:100%;}
+.app_title .app_info > div {display:inline-block; margin-right:20px;}
 .app_title .app_info span {display: inline-block; vertical-align:middle;}
 .app_title .app_name {font-family:'roboto'; font-size:36px; font-weight:600;}
 .app_title .app_id, .app_title .app_type  {font-size:16px; color:#222;}
