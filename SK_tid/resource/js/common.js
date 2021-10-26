@@ -136,4 +136,7 @@ function showPop(pName){
 function hidePop(pName){
     $("#"+ pName).removeClass("open");
 };
+function allHide(){
+    $(".popup").removeClass("open");
+};
 
