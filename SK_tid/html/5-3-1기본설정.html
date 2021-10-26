@@ -223,7 +223,7 @@
                                         </dl>
                                     </div>
                                 </div>
-                                <a href="#none" class="play_view" onclick="showPop('appview')">
+                                <a href="#none" class="play_view">
                                     <i class="icon icview">미리보기</i>
                                 </a>
                             </th>
@@ -331,136 +331,65 @@
     
 </div>
 <!-- 애플리케이션 색상 미리보기 팝업 -->
-<div class="popup open" id="colorpop">
-    <div class="inner_pop mini w375">
+<div class="popup" id="colorpop">
+    <div class="inner_pop mini w360">
         <div class="popup_title">
             <p>미리보기</p>
         </div>
-        <div class="pop_con pop_moreview">
+        <div class="pop_con">
             <p class="popsub_tl2">T아이디 로그인</p>
-            <div class="app_preview">
+            <div>
                 <p class="introtxt">T아이디로 <span>NUGU</span>을(를) 이용해 보세요.</p>
                 <dl class="dl_input">
                     <dt>사업자명</dt>
                     <dd>
-                        <span class="input txt only">
-                            <input type="text" placeholder="T아이디(휴대폰, 이메일)또는 T world 아이디" disabled>
+                        <span class="input txt">
+                            <input type="text" placeholder="T아이디(휴대폰, 이메일)또는 T world 아이디">
                         </span>
                     </dd>
                     <dt>비밀번호</dt>
                     <dd>
                         <span class="input txt password">
-                            <input type="password" id="password" placeholder="********" disabled>
-                            <button class="btn_viewon" id="showPassword" disabled>Secret Kye보기</button>
+                            <input type="password" id="password" placeholder="*************************">
+                            <button class="btn_viewon" id="showPassword">Secret Kye보기</button>
                         </span>
                     </dd>
                 </dl>
-                <div class="btn_wrap onebtn">
-                    <a class="btn btn_next black disabled" >로그인</a>    
-                </div>
-                <div class="find_wrap">
+                <div class="find_wrap txtcenter">
                     <a href="#none">아이디 찾기</a>
                     <a href="#none">비밀번호 찾기</a>
                     <a href="#none">T아이디 가입하기</a>
                 </div>
             </div>
+            <div class="btn_wrap onebtn">
+                <a href="#none" class="btn btn_next black" onclick="hidePop('colorpop')">다음</a>    
+            </div>
         </div>
-        <a href="#none" class="btn_close" onclick="hidePop('colorpop')">닫기</a>
     </div>
     <div class="dim"></div>
 </div>
 <!-- // 애플리케이션 색상 미리보기 -->
 
-<!-- 애플리케이션 설명 팝업 -->
-<div class="popup open" id="appview">
-    <div class="inner_pop mini w375">
+<!-- T아이디로 이용 가능한 서비스 미리보기 팝업 -->
+<div class="popup" id="">
+    <div class="inner_pop mini w360">
         <div class="popup_title">
             <p>미리보기</p>
+            <a href="#none">닫기</a>
         </div>
-        <div class="pop_con pop_moreview">
+        <div class="pop_con">
             <p class="popsub_tl2">T아이디로 이용가능한 서비스</p>
-            <div class="app_preview">
-                <p class="bartxtwrap">
-                    <span class="bartxt">비즈니스 / 개발자</span>
-                    <span class="bar"></span>
-                </p>
-                <ul class="prev_applist">
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p>NUGU 스마트홈홈홈홈홈홈</p>
-                            <div class="tooltip_wrap">
-                                <button class="tooltip">!</button>
-                                <div class="tipbox">
-                                    앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%
-                                </div>    
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p>NUGU 스마트홈NUNUG</p>
-                            <div class="tooltip_wrap">
-                                <button class="tooltip">!</button>
-                                <div class="tipbox">
-                                    앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%앱 설명%
-                                </div>    
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p>NUGU 스마트홈NUNUGU 스마U</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p> 스마트홈홈홈홈홈스마트홈홈홈홈홈</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p>NUGU 스마트U</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p>NUGU 스마트홈NUNUGU 스마U</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="applogo">
-                            <img src="../resource/images/common/ic_appdefault.png">
-                        </div>
-                        <div class="appname">
-                            <p>T아이디</p>
-                        </div>
-                    </li>
+            <div>
+                <p>비즈니스 / 개발자</p>
+                <ul>
+                    <li></li>
                 </ul>
             </div>
         </div>
-        <a href="#none" class="btn_close" onclick="hidePop('appview')">닫기</a>
     </div>
     <div class="dim"></div>
 </div>
-<!-- // 애플리케이션 설명 팝업 -->
+<!-- // 애플리케이션 색상 미리보기 -->
 
 <!-- S: 팝업 / 수정 팝업 -->
 <div class="popup" id="cancelpop">

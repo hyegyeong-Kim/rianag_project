@@ -116,6 +116,17 @@ $(function(){
 
     //$('.colorchart').minicolors();
 
+    /* tab_type01 */
+    if($(".tab_type01").length){
+        $(function(){
+            $(".tab_type01").tabs();
+            $(".tab_type01 a").click(function(){
+                $(".tab_type01 a").removeClass("on");
+                $(this).addClass("on");
+            });
+        });
+    }
+
 });
 
 /* alert 타입 팝업 */
@@ -125,3 +136,4 @@ function showPop(pName){
 function hidePop(pName){
     $("#"+ pName).removeClass("open");
 };
+

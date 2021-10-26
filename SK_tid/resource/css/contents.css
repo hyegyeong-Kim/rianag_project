@@ -34,6 +34,9 @@ button:disabled {cursor:default;}
 .btn_tadd {display:inline-block; width:40px; height:40px;background:url('../images/common/ic_tadd.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_copy {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_copy.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_viewon {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_view_on.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
+.btn_add_b {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_add_b.png') no-repeat; text-indent:-9999px; overflow:hidden;}
+.btn_remove_b {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_remove_b.png') no-repeat; text-indent:-9999px; overflow:hidden;}
+
 .btn:disabled, .btn.disabled {background:#f1f1f1;color:#bfbfbf;}
 .icon {display:inline-block; width:24px; height:24px; margin-top:-2px; margin-right:8px; vertical-align: middle; text-indent:-9999px; overflow:hidden;}
 .icon.edit {background:url('../images/common/ic_edit.png') no-repeat 0 0;}
@@ -56,6 +59,15 @@ button:disabled {cursor:default;}
 .sorting.check label input[type="checkbox"] {visibility:hidden; width:0;}
 .sorting.check label span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_checkoff.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
 .sorting.check label input:checked + span::after {background:#fff url('../images/common/ic_checkon.png') no-repeat 0 0}
+
+.sorting label {display:inline-block; margin-right:15px; font-size:16px; letter-spacing:-.8px; color:#222; vertical-align:top;}
+.sorting.radio label {padding-left:35px; position:relative;}
+.sorting.radio label input[type="radio"] {visibility:hidden; width:0;}
+.sorting.radio label span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_radiooff.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
+.sorting.radio label input:checked + span::after {background:#fff url('../images/common/ic_radioon.png') no-repeat 0 0}
+.sorting.radio label input:disabled + span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_radiooff_dis.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
+.sorting.radio label input:checked:disabled + span::after {background:#fff url('../images/common/ic_radioon_dis.png') no-repeat 0 0}
+.sorting.radio label input:disabled + span {color:#bfbfbf;}
 
 /* 라디오 */
 .radiobox {display:inline-block; border:1px solid #cfcfcf; border-radius:5px; overflow:hidden;}
@@ -167,6 +179,16 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .dl_input dt {margin-top:24px; font-weight:600;}
 .dl_input dt:first-child {margin-top:0;}
 .dl_input dd {margin-top:10px;}
+
+/* tab_type01 */
+.tab_type01 ul {margin-bottom:20px; border-bottom:1px solid #222;}
+.tab_type01 ul::after {content:''; display:block; clear:both;}
+.tab_type01 li {float:left;}
+.tab_type01 li a {display:block; height:48px; line-height:32px; font-size:24px; text-align:center; font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif; position:relative;}
+.tab_type01 li a.on {font-weight:600;}
+.tab_type01 li a.on:after {content:''; display:block; width:100%; height:4px; background:#222; position:absolute; bottom:0;}
+.tab_type01.lieng li a {width:120px;}
+.tab_type01.likor li a {width:180px;}
 
 /* board */
 .board .optiongroup {min-height:48px;}
