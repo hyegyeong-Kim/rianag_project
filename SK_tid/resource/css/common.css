@@ -235,7 +235,7 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop {width:760px; border-radius:12px; position:relative; top:50%; left:50%; transform:translate(-50%, -50%); z-index:99999; overflow: auto;}
 .popup .inner_pop .popup_title {height:64px; line-height:64px; background:#000000; text-align:center; border-radius:12px 12px 0 0;}
 .popup .inner_pop .popup_title p {display:inline-block; color:#ffffff; font-size:20px; line-height:33px;}
-.popup .inner_pop .pop_con {max-height: 850px; padding:48px 40px; background:#ffffff; overflow: auto;}
+.popup .inner_pop .pop_con {max-height: 850px; padding:48px 40px; background:#ffffff; overflow:auto; letter-spacing: -.8px;}
 .popup .inner_pop .pop_moreview {height:603px;}
 .popup .pop_con .btn {min-width:148px;}
 .popup .pop_con .btn_wrap {text-align:center; margin-top:48px;}
@@ -245,7 +245,7 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop.w420 {width:420px;}
 .popup .inner_pop.w494 {width:494px;}
 .popup .inner_pop.mini {position:fixed;}
-.popup .inner_pop.mini .pop_con {max-height:667px; letter-spacing: -.8px;}
+.popup .inner_pop.mini .pop_con {max-height:667px;}
 .popup .inner_pop.mini .btn_wrap {margin-top:32px;}
 .popup .inner_pop.w494 .btn_wrap {margin-top:48px;}
 .pop_con::-webkit-scrollbar {width:5px; background-color: #ddd; border-radius: 5px;}
