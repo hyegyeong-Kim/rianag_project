@@ -54,6 +54,7 @@ button:disabled {cursor:default;}
 .btn_w148 .btn {min-width:148px;}
 
 /* input */
+input::placeholder {color:#bfbfbf; font-weight:350;}
 /* input sorting */
 .sorting label {display:inline-block; margin-right:15px; font-size:16px; letter-spacing:-.8px; color:#222; vertical-align:top;}
 .sorting.check label {padding-left:35px; position:relative;}
@@ -83,7 +84,6 @@ span.input {display:block; height:48px; padding:0 16px;}
 span.input + .input {margin-top:10px;}
 span.input input[type='text'],
 span.input input[type='password'] {width:100%; line-height:46px;}
-span.input input::placeholder {color:#999;}
 span.input input[type='file'] {display:none;}
 span.input select {height:48px; line-height: 46px;}
 span.input button {position:absolute; top:50%; right:16px; transform: translateY(-50%);}
@@ -196,10 +196,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tab01 {margin-bottom:20px; border-bottom:1px solid #222;}
 .tab01::after {content:''; display:block; clear:both;}
 .tab01 li {float:left;}
-.tab01 li a {display:block; height:48px; line-height:32px; font-size:24px; text-align:center; font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif; position:relative;}
-.tab01 li a.on {font-weight:600;}
+.tab01 li a {display:block; height:48px; line-height:32px; font-size:24px; text-align:center; color:#999; position:relative;}
+.tab01 li a.on {color:#222; font-weight:600;}
 .tab01 li a.on:after {content:''; display:block; width:100%; height:4px; background:#222; position:absolute; bottom:0;}
-.tab01.lieng li a {width:120px;}
+.tab01.lieng li a {width:120px; font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .tab01.likor li a {width:180px;}
 
 /* board */
@@ -237,6 +237,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board table .tooltip_wrap {font-weight:normal;}
 .inbox.board table .markplus {position:relative; padding-right:80px;}
 .inbox.board table .markplus .owner {position:absolute; top:16px; right:16px;}
+.board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 
 /* 사용자 동의 내역 */
 .board table.board_tbl tbody tr.on > td {border-bottom:0;}
@@ -321,7 +322,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table .txton {font-size:14px; color:#666;}
 .regist_table .txton, 
 .regist_table span.input.txt {width:460px;}
-.regist_table span.input.sel {width:460px;padding: 0 0;}
+.regist_table span.input.sel {width:460px; padding: 0 0;border-radius:4px;}
 .regist_table .has_switch .txton, 
 .regist_table .has_switch span.input.txt  {width:364px;}
 * + .regist_table .txton {margin-top:8px;}
@@ -329,9 +330,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table .sorting.chkbx label {width:146px; margin:0 5px 8px 0;}
 .regist_table .desc_02 + span.input {margin-top:10px;}
 /* 툴팁 */
-.tooltip_wrap {display:inline-block; margin-left:5px; vertical-align:middle; position:relative; top:-5px; text-align:left;}
+.tooltip_wrap {display:inline-block; margin-left:5px; position:relative; text-align:left;}
 .tooltip_wrap .tooltip {display:inline-block; font-size:9px; width:16px; height:16px; background:url('../images/common/ic_question.png') no-repeat; text-indent:-9999px; overflow:hidden;}
-.tooltip_wrap .tipbox {display:none;position:absolute; top:25px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1;}
+.tooltip_wrap .tipbox {display:none;position:absolute; top:30px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1;}
+.tooltip_wrap .tipbox.right {left:-100px;}
 .tooltip_wrap .tipbox.open {display:block;}
 .tooltip_wrap .tipbox p {font-size:14px; line-height:22px;}
 .tooltip_wrap .tipbox p + p {margin-top:12px;}
@@ -344,6 +346,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tooltip_wrap .listtxt li:nth-child(1) {margin-top:16px;}
 .tooltip_wrap .listtxt li {position:relative; padding-left:10px; font-size:14px; line-height:22px; color:#666; margin-top:12px;}
 .tooltip_wrap .listtxt li::before {display:block; content:''; width:3px; height:3px; border-radius:3px; background:#666; position:absolute; left:0; top:11px;}
+.regist_table .tooltip_wrap {vertical-align:top; top:12px;}
+.board thead .tooltip_wrap {top:-1px;}
+.h3_wrap h3 + .tooltip_wrap {margin-left:-4px; top:2px;}
 .pview {background:url('../images/common/ic_view.png') right center no-repeat; padding-right:26px;}
 
 /* 그룹설정 */
@@ -413,7 +418,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myapp_search {display:block; margin:0 auto 80px; width:460px; position:relative; padding-bottom:12px; border-bottom:4px solid #000000;}
 .myapp_search .btn_sch {background:url('../images/common/ic_search_L.png') no-repeat; width:28px; height:28px; position:absolute; right:0;}
 .myapp_search input {width:100%; padding-right:35px; font-size:20px;}
-.myapp_search input::placeholder {color:#bfbfbf; font-weight:350;}
 
 /* 그룹설정 */
 .regist_table .code_connect {width:364px; }
