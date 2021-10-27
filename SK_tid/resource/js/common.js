@@ -65,16 +65,17 @@ $(function(){
 
 
     /* LNB */
-    /*
+    /* */
     $(".lnb_menu > li > a").click(function(){
         $(".lnb_menu a").removeClass();
-        $(this).addClass("act")
+        $(this).addClass("act");
+        $(this).siblings(".depth2").children(".fir").children("a").addClass("act2")
     });
     $(".depth2 a").click(function(){
         $(".depth2 a").removeClass();
         $(this).addClass("act2")
     });
-     */
+    
     $(".btn_lnbopen").click(function(){
         scrollOff();
         $(".lnb").addClass("open");
