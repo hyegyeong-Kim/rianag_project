@@ -96,6 +96,7 @@
                             <li><a href="#none" class="act2">개별약관 목록</a></li>
                             <li><a href="#none">개별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
+                            <li><a href="#none">사용자 동의 내역</a></li>
                         </ul>
                     </li>
                     <li>
@@ -117,31 +118,88 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>페이지 타이틀</h2>
-                <span class="switch_btn">
-                    <label class="on"><input type="checkbox" checked><span></span></label><!-- input checked 인경우 label class="on" -->
-                </span>
+                <h2>개별약관 목록</h2>
                 <div class="tit_right">
                     <a href="#none" class="btn black large">신규 약관 등록</a>
                 </div>
             </div>
 
             <div class="page_contents">
-                <!-- 컨텐츠입력 -->
-                <div class="h3_wrap">
-                    <h3>h3 타이틀</h3>
-                    <span>
-                        span
-                    </span>
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="search">
+                            <input type="text" placeholder="제목 검색">
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                    </div>
+                    <div class="sch_txt">
+                        '%검색어%'검색결과 <strong>00</strong>개
+                    </div>
+                    <!-- table -->
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:80px"><col style="width:auto"><col style="width:180px"></colgroup>
+                        <thead>
+                            <tr>
+                                <th class="txtcenter mfont">
+                                    <span>No.</span>
+                                </th>
+                                <th>
+                                    <span>제목</span>
+                                </th>
+                                <th>
+                                    <span>등록일</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="txtcenter mfont">01</td>
+                                <td><a href="#none">중개서비스<em class="schword">판매</em> 약관 (17)</a></td><!--  검색한 검색어 class="schword" -->
+                                <td class="mfont">2021/08/14 16:37</td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">10</td>
+                                <td><a href="#none"><em class="schword">판매</em>중개서비스 약관 (17)</a></td><!--  검색한 검색어 class="schword" --> 
+                                <td class="mfont">2021/08/14 16:37</td>
+                            </tr>
+                            <!-- list 10개씩 노출 -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none"class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
+
+                    <!-- 검색어 검색결과 없는경우 -->
+                    <div class="sch_registbox">
+                        <p>
+                            <span class="schword">'%검색어%'검색결과</span> <br>
+                            검색견과가 없습니다.
+                        </p>
+                        <p>
+                            단어의 철자가 정학한지 확인해주세요.<br>
+                            검색어의 단어 수를 줄이거나 다른 검색어로 검색해보세요.<br>
+                            더 일반적인 검색어로 검색해보세요.
+                        </p>
+                    </div>
                 </div>
-                <div class="text_area">
-                    <p>
-                        text_area영역
-                    </p>
-                    <p>
-                        text_area영역
-                    </p>
-                </div>
+                <!-- E: Board Type -->
             </div>
         </div>
     </div>
@@ -161,32 +219,10 @@
             <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
-    
+
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
-
-<!-- S: 팝업 -->
-<div class="popup open">
-    <div class="inner_pop">
-        <div class="popup_title">
-            <p>팝업타이틀</p>
-        </div>
-        <div class="pop_con">
-            <p class="popsub_tl">소타이틀</p>
-            <div>
-                내용
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray pop_close">취소</a>
-                <a href="#none" class="btn large black ">저장</a>
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 -->
-
 </body>
 </html>
 
