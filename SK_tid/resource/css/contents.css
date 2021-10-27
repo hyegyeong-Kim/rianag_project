@@ -20,6 +20,7 @@ button:disabled {cursor:default;}
 .btn.black {background:#000; color:#fff;}
 .btn.gray {background:#aaaaaa; color:#fff;}
 .btn.blue {background:#1b6491; color:#fff;}
+.btn.yellow {background:#ffa640; color:#fff;}
 .btn.white {background:#fff; color:#666; border:solid 1px #aaa}
 .btn.default {height:40px; line-height:40px; padding:0 24px; font-size:16px;}
 .btn.xlarge {min-width:180px; height:60px; line-height:60px; padding:0 36px; font-size:16px;}
