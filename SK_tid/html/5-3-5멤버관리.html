@@ -125,7 +125,7 @@
                             <a href="#tab_02">테스터 관리</a>
                         </li>
                     </ul>
-
+                    <!-- 멤버 -->
                     <!-- S: web -->
                     <div id="tab_01">
                         <div class="regist_table">
@@ -139,7 +139,7 @@
                                     <td>
                                         <span class="input txt">
                                             <input type="text" id="clinetID" placeholder="이메일을 입력해주세요.">
-                                            <button class="btn small black" onclick="showPop('invite')">초대</button>
+                                            <button class="btn small black" onclick="showPop('mem_invite')">초대</button>
                                         </span>
                                         <p class="warning">
                                             초대완료 또는 초대중인 이메일 입니다.
@@ -171,11 +171,38 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <span>sungkung@sk.com</span>
+                                            <span>sungkung@sk.com 관리자가 오너 삭제</span>
                                         </td>
                                         <td>Owner</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('owner_al')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>susssg@sk.com 멤버본인이 삭제</span>
+                                        </td>
+                                        <td>Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('member_del')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>susssg@sk.com 오너 및 관리자가 삭제</span>
+                                        </td>
+                                        <td>Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('member_del2')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>susssg@sk.com 오너가 본인 삭제</span>
+                                        </td>
+                                        <td>Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('transfer_dele')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                     <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
@@ -186,7 +213,7 @@
                                         </td>
                                         <td>Member</td>
                                         <td class="txtcenter">
-                                            <button onclick="showPop('tester_del')"><i class="icon del_bk"></i></button>
+                                            <button onclick="showPop('')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -248,7 +275,7 @@
                         </div>
                         <!-- E:  -->  
                     </div>
-
+                    <!-- 테스터 관리 -->
                     <!-- S: web -->
                     <div id="tab_02">
                         <div class="regist_table">
@@ -262,7 +289,7 @@
                                     <td>
                                         <span class="input txt">
                                             <input type="text" id="clinetID" placeholder="이메일을 입력해주세요.">
-                                            <button class="btn small black">초대</button>
+                                            <button class="btn small black" onclick="showPop('invite')">초대</button>
                                         </span>
                                         <ul class="ul_type01 mt10">
                                             <li>T아이디 회원만 멤버로 추가 가능합니다.</li>
@@ -337,30 +364,15 @@
     
 </div>
 
-<!-- S: 팝업 / 오너이관 alert 팝업 -->
-<div class="popup" id="owner_al">
-    <div class="inner_pop alert w494">
-        <div class="pop_con">
-            <div class="txt_area">
-                오너 권한 이관 후 <br>
-                삭제를 진행해주세요.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large black" onclick="hidePop('owner_al')">확인</a>
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 오너이관 alert 팝업 -->
 
+<!-- 테스터 관리 -->
 <!-- S: 팝업 / 테스터초대 팝업 -->
 <div class="popup" id="invite">
     <div class="inner_pop alert w494">
         <div class="pop_con">
             <div class="txt_area">
-                %사용자 아이디%<br>
-                초대를 완료했습니다.
+                % 사용자 아이디 % 에게<br>
+                %앱이름% 테스터 초대를 보냈습니다.
             </div>
             <div class="btn_wrap">
                 <a href="#none" class="btn large black" onclick="hidePop('invite')">확인</a>
@@ -375,7 +387,7 @@
 <div class="popup" id="tester_del">
     <div class="inner_pop mini w494">
         <div class="popup_title">
-            <p>미리보기</p>
+            <p>테스터 권한 삭제</p>
         </div>
         <div class="pop_con">
             <div class="txt_area">
@@ -397,8 +409,8 @@
         <div class="inner_pop alert w494">
             <div class="pop_con">
                 <div class="txt_area">
-                    %사용자 아이디%의 멤버 권한을<br>
-                    삭제하시겠습니까?
+                    %사용자 아이디%<br>
+                    테스터를 삭제할까요?
                 </div>
                 <div class="btn_wrap">
                     <a href="#none" class="btn large gray" onclick="hidePop('tester_del2')">테스터 유지</a>
@@ -410,17 +422,47 @@
     <!-- E: 팝업 / alert 팝업 -->
 <!-- E: 팝업 / 테스터삭제 팝업 -->
 
+
+<!-- 멤버관리 -->
+
+<div class="popup" id="mem_invite">
+    <div class="inner_pop alert w420">
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%<br>
+                초대를 완료했습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('mem_invite')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- S: 팝업 / 오너이관 alert 팝업 -->
+<div class="popup" id="owner_al">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                오너 권한 이관 후 <br>
+                삭제를 진행해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('owner_al')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 오너이관 alert 팝업 -->
+
 <!-- S: 팝업 / 권한이관 팝업 -->
-<div class="popup" id="transfer">
+<div class="popup open" id="transfer">
     <div class="inner_pop mini w494">
         <div class="popup_title">
             <p>오너 권한 이관</p>
         </div>
         <div class="pop_con">
-            <div>
-                오너 권한 이관 후, 삭제가 가능합니다.<br>
-                멤버에게 권한을 이관해주세요.
-            </div>
             <div class="search_set">
                 <div class="search_input">
                     <input type="text" placeholder="오너 권한을 이관할 멤버 아이디를 검색해주세요.">
@@ -430,10 +472,10 @@
                     이메일 형식에 맞게 입력해주세요.
                 </p>
                 <div class="search_list">
-                    <ul class="sorting check">
+                    <ul class="sorting radio">
                         <li>
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -441,7 +483,7 @@
                         </li>
                         <li>
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -449,7 +491,7 @@
                         </li>
                         <li>
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -457,7 +499,7 @@
                         </li>
                         <li>
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -465,7 +507,7 @@
                         </li>
                         <li>
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -473,7 +515,7 @@
                         </li>
                         <li>
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -481,39 +523,7 @@
                         </li>
                         <li>
                             <label>
-                                <input type="checkbox">
-                                <span class="member">
-                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox">
-                                <span class="member">
-                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox">
-                                <span class="member">
-                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox">
-                                <span class="member">
-                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox">
+                                <input type="radio">
                                 <span class="member">
                                     <em>%사용자명%</em> <em>%사용자 아이디%</em>
                                 </span>
@@ -547,7 +557,160 @@
     <!-- E: 팝업 /  팝업 -->
 <!-- E: 팝업 / 권한이관 팝업 -->
 
+<!-- S: 팝업 / 오너 권한 이관 및 오너 삭제 -->
+<div class="popup" id="transfer_dele">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>오너 권한 이관 및 오너 삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="txtcenter">
+                오너 권한 이관 후, 삭제가 가능합니다.<br>
+                멤버에게 권한을 이관해주세요.
+            </div>
+            <div class="search_set mt30">
+                <div class="search_input">
+                    <input type="text" placeholder="오너 권한을 이관할 멤버 아이디를 검색해주세요.">
+                    <button class="btn_sch">검색</button>
+                </div>
+                <p class="warning">
+                    이메일 형식에 맞게 입력해주세요.
+                </p>
+                <div class="search_list">
+                    <ul class="sorting radio">
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+                    <!-- 결과없을 경우 노출 -->
+                    <p class="noterms">검색결과가 없습니다.</p>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('transfer_dele')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('transfer_dele'); showPop('owner_ok')">권한 이관</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 오너 권한 이관 및 오너 삭제 -->
 
+<!-- S: 팝업 / 멤버 권한 삭제 -->
+<div class="popup" id="member_del">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>미리보기</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                멤버 권한을 삭제하시면<br>
+                애플리케이션에 접근이 불가합니다.<br>
+                %앱이름%에서 멤버 권한을<br>
+                삭제하고 나가시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('member_del')">유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('member_del');">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 멤버 권한 삭제 -->
+
+<!-- S: 팝업 / 오너 권한 이관 완료 -->
+<div class="popup" id="owner_ok">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>미리보기</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%에<br>
+                오너권한 이관을 완료했습니다.<br>
+                %앱이름%에서 %사용자이름%님의<br>
+                오너 권한을 삭제하고 나가시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('owner_ok')">멤버로 유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('owner_ok')">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 멤버 권한 삭제 -->
+
+<!-- S: 팝업 / alert 팝업 -->
+<div class="popup" id="member_del2">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%의 멤버 권한을<br>
+                삭제하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('member_del2')">유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('member_del2'), showPop('memdel_ok')">삭제</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / alert 팝업 -->
+
+<!-- S: 팝업 / alert 팝업 -->
+<div class="popup" id="memdel_ok">
+    <div class="inner_pop alert w494">
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%에<br> 
+                멤버 권한 삭제를 완료했습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('memdel_ok')">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / alert 팝업 -->
 <script type="text/javascript">
 </script>
 </body>
