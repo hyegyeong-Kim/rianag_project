@@ -249,8 +249,6 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop.w494 {width:494px;}
 .popup .inner_pop.mini {position:fixed;}
 .popup .inner_pop.mini .pop_con {max-height:667px;}
-.popup .inner_pop.mini .btn_wrap {margin-top:32px;}
-.popup .inner_pop.w494 .btn_wrap {margin-top:48px;}
 .pop_con::-webkit-scrollbar {width:5px; background-color: #ddd; border-radius: 5px;}
 .pop_con::-webkit-scrollbar-thumb {background: #999; border-radius: 5px;}
 .pop_con .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
