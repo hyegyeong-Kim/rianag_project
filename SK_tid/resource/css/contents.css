@@ -235,12 +235,16 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board table .tooltip_wrap {font-weight:normal;}
 .inbox.board table .markplus {position:relative; padding-right:80px;}
 .inbox.board table .markplus .owner {position:absolute; top:16px; right:16px;}
+
 /* 사용자 동의 내역 */
 .board table.board_tbl tbody tr.on > td {border-bottom:0;}
 .board table.board_tbl tbody tr.on td .btn_accordion {transform:rotate(180deg);}
 .board table.board_tbl tbody tr.alist_tit.on td {font-weight:600;}
 .board table.board_tbl tbody tr.alist_contents {display:none;}
 .board table.board_tbl tbody tr.alist_contents.on {display:table-row;}
+
+/* 검색결과없음 */
+.board .sch_registbox {margin:20px 0;}
 
 /* 더보기 */
 .board_more {display:block; text-align:center; margin-top:60px;}
