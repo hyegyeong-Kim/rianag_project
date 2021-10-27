@@ -69,7 +69,7 @@ $(function(){
     $(".lnb_menu > li > a").click(function(){
         $(".lnb_menu a").removeClass();
         $(this).addClass("act");
-        $(this).siblings(".depth2").children(".fir").children("a").addClass("act2")
+        $(this).siblings(".depth2").children().eq(0).children("a").addClass("act2")
     });
     $(".depth2 a").click(function(){
         $(".depth2 a").removeClass();
