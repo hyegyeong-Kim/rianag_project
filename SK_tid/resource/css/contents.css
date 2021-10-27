@@ -117,6 +117,7 @@ span.input.type_03 input {display:inline-block; width:calc((100% - 26px)/3); mar
 .input.txt .minicolors {position:static; width:100%;}
 .input.txt .minicolors-theme-default .minicolors-input {padding-left:0; font-size:14px; color:#222222; width:100%; height:auto;}
 .input.txt .minicolors .minicolors-swatch {width:24px; height:24px; top:11px; left:auto; right:16px;}
+.input.txt .minicolors .minicolors-swatch .minicolors-swatch-color {border-radius:4px;}
 /* .input.txt .minicolors-panel .minicolors-sprite {background-image:url('../images/myapp/jquery.minicolors.png') no-repeat;} */
 .input.txt .minicolors-position-bottom .minicolors-panel {top:48px; right:0;}
 
@@ -306,7 +307,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table {}
 .regist_table table {width:100%;}
 .regist_table table th {padding:12px 0; vertical-align:top;}
-.regist_table table th span { display:inline-block; min-height:48px; padding-top:12px;}
+.regist_table table th span { display:inline-block; padding-top:12px;}
+.regist_table table th span.th_type {display:inline-block; padding-top:0;}
 .regist_table table td {padding:12px 0;}
 .regist_table .appterm_tbl tbody td .stc {width:460px;}
 .regist_table .appterm_tbl tbody td .stc .icon.arr {display:block; background:url('../images/common/ic_upper.png') no-repeat; margin:20px auto;}
@@ -425,15 +427,17 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .code_connect .mfont {margin-top:3px;}
 
 /***** 5. 내앱 *****/
-.txt_certify {padding-right:20px; margin-left:12px; font-size:14px; color:#1485cb; background:url('../images/common/ic_certify.png') no-repeat right 50%;}
-.txt_nocertify {padding-right:20px; margin-left:12px; font-size:14px; color:#bfbfbf; background:url('../images/common/ic_nocertify.png') no-repeat right 50%;}
+.txt_certify {padding-right:20px; margin-left:12px; font-size:14px; font-weight:600; color:#1485cb; background:url('../images/common/ic_certify.png') no-repeat right 50%;}
+.txt_nocertify {padding-right:20px; margin-left:12px; font-size:14px; font-weight:600; color:#bfbfbf; background:url('../images/common/ic_nocertify.png') no-repeat right 50%;}
 
 /* 내앱목록 */
 .app_list {padding-top:32px; border-top:2px solid #222222;}
-.app_list ul.card_type > li {display:inline-block; width:calc(33.3% - 14px); vertical-align:top; margin:0 5px 20px;}
+.app_list ul.card_type {margin:0 -10px;}
+.app_list ul.card_type::after {display:block; content:''; clear:both;}
+.app_list ul.card_type > li {float:left; width:33.3%; vertical-align:top; padding:0 10px 20px;}
 .app_list .noterms {margin-top:30px;}
 .app_part {display:inline-block; padding:32px 32px 24px; width:100%; height:192px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); border-radius:8px;}
-.app_part .app_img {display:inline-block; width:60px; height:60px; vertical-align:top; border-radius:8px; box-shadow:2px 2px 8px rgba(0,0,0,0.2); overflow:hidden;}
+.app_part .app_img {display:inline-block; width:60px; height:60px; vertical-align:top; border-radius:8px; box-shadow:1px 1px 5px rgba(0,0,0,0.15); overflow:hidden;}
 .app_part .app_img img {display:block; width:100%;}
 .app_part .app_img.noimg {background:#f1f1f1 url('../images/common/ic_device.png') center center no-repeat; text-indent:-9999px; overflow:hidden; }
 .app_part .app_namebox {display:inline-block; position:relative; width:calc(100% - 80px); vertical-align:top; margin-left:16px;}
@@ -448,7 +452,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_part .appresi {display:block; font-size:14px; color:#bfbfbf; text-align:center; background:url('../images/common/ic_add.png')center center no-repeat; padding-top:50px; transform:translateY(50%); margin-top:-15px;}
 .progress {display:inline-block; font-size:14px; line-height:24px; padding-left:30px;}
 .progress.pro_dev {color:#bfbfbf; background:url('../images/common/ic_dev_con.png') left center no-repeat;}
-.progress.pro_use {color:#222; background:url('../images/common/ic_use_con.png') left center no-repeat;}
+.progress.pro_use {color:#222; font-weight:500; background:url('../images/common/ic_use_con.png') left center no-repeat;}
 @media screen and (max-width:1023px){
     .app_list ul.card_type > li {width:calc(50% - 14px);}
 }
@@ -463,7 +467,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .play_view {display:block;}
 
 /* 이미지 업로드 */
-#img_view {display:inline-block; width:96px; height:96px; background:#f1f1f1 url('../images/common/ic_eximg.png')center center no-repeat; vertical-align:top; margin-top:2px;}
+#img_view {display:inline-block; width:96px; height:96px; background:#f1f1f1 url('../images/common/ic_eximg.png')center center no-repeat; vertical-align:top; margin-top:2px; border-radius:4px;}
 #img_view img {display:block; max-width:100%;}
 .view_txt {display:inline-block; vertical-align:top; width:344px; margin-left:16px;}
 .regist_table .view_txt span.input {width:100%;}
@@ -472,13 +476,14 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_title {min-height:100px; padding:0 132px; margin-bottom:60px; position:relative;}
 .app_title .app_logo {width:100px; height:100px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15); position:absolute; top:0; left:0;}
 .app_title .app_logo img {width:100%;}
+.app_title .appcover {padding-top:12px;}
 .app_title .app_info > div {display:inline-block; margin-right:20px;}
 .app_title .app_info span {display: inline-block; vertical-align:middle;}
 .app_title .app_name {font-family:'roboto'; font-size:36px; font-weight:600;}
 .app_title .app_id, .app_title .app_type  {font-size:16px; color:#222;}
-.app_title .app_type {margin-top:3px;font-weight: 600;}
+.app_title .app_type {margin-top:3px;font-weight: 600; line-height:21px;}
 .app_title .app_type::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
-.app_title .app_date {font-size:14px; color:#aaa; position:absolute; top:0; right:0;}
+.app_title .app_date {font-size:14px; color:#aaa; position:absolute; top:23px; right:0;}
 .app_title .app_date span::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
 .app_txtcont::after {display:block; content:''; clear:both;}
 .app_txtcont .txtbox {float:left; width:calc(100% - 300px);font-size:16px; letter-spacing:-.8px; color:#666;}
