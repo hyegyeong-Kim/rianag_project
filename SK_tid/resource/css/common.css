@@ -83,6 +83,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .mt_20 {margin-top:-20px;}
 .mt_30 {margin-top:-30px;}
 .mt_40 {margin-top:-40px;}
+.ml_8 {margin-left:8px;}
 .ml_12 {margin-left:12px;}
 .td_nonpd {padding:0 !important;}
 
