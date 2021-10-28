@@ -133,7 +133,7 @@
                         </div>
                         
                         <div>
-                            <span class="app_id">회사</span>
+                            <span class="app_id">회사명</span>
                             <span class="app_type mfont">SK텔레콤</span>
                         </div>
                         
@@ -285,7 +285,7 @@
 </div>
 <!-- S: 팝업 / Client ID 복사 팝업 -->
 <div class="popup" id="copy_alert">
-    <div class="inner_pop alert">
+    <div class="inner_pop alert toast">
         <div class="pop_con">
             <div>
                 Client ID 복사가 완료되었습니다.
@@ -372,7 +372,7 @@
 <div class="popup" id="appdel_alert">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div>
+            <div class="txt_area">
                 애플리케이션이 삭제되었습니다.
             </div>
             <div class="btn_wrap">
@@ -410,7 +410,7 @@
     <div class="popup" id="stop_alert">
         <div class="inner_pop alert">
             <div class="pop_con">
-                <div>
+                <div class="txt_area">
                     애플리케이션이 정지되었습니다.
                 </div>
                 <div class="btn_wrap">
@@ -450,7 +450,7 @@
     <div class="popup" id="end_alert">
         <div class="inner_pop alert">
             <div class="pop_con">
-                <div>
+                <div class="txt_area">
                     종료 상태로 변경되었습니다.
                 </div>
                 <div class="btn_wrap">
@@ -482,7 +482,7 @@
     <div class="popup" id="start_alert">
         <div class="inner_pop alert">
             <div class="pop_con">
-                <div>
+                <div class="txt_area">
                     사용 상태로 변경되었습니다.
                 </div>
                 <div class="btn_wrap">
@@ -527,7 +527,7 @@
     <div class="popup" id="restore_alert">
         <div class="inner_pop alert">
             <div class="pop_con">
-                <div>
+                <div class="txt_area">
                     애플리케이션이 복구되었습니다.
                 </div>
                 <div class="btn_wrap">
@@ -615,15 +615,16 @@
             }, 3000);
         }),
 
-        /* 비밀번호 표시/숨김 */
+       /* 비밀번호 표시/숨김 */
         $('#showPassword').on('click', function(){
             var passwordField = $('#password');
             var passwordFieldType = passwordField.attr('type');
             if(passwordFieldType == 'password'){
-                passwordField.attr('type', 'text');$(this).val('Hide');
+                passwordField.attr('type', 'text');
+                $(this).val('Show').addClass('on'); 
             } else {
                 passwordField.attr('type', 'password');
-                $(this).val('Show');
+                $(this).val('Hide').removeClass('on');
             }
         })
     })

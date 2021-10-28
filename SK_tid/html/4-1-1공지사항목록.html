@@ -96,6 +96,7 @@
                             <li><a href="#none" class="act2">개별약관 목록</a></li>
                             <li><a href="#none">개별약관 History</a></li>
                             <li><a href="#none">그룹 설정</a></li>
+                            <li><a href="#none">사용자 동의 내역</a></li>
                         </ul>
                     </li>
                     <li>
@@ -117,121 +118,89 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>기본설정 팝업</h2>
+                <h2>공지사항</h2>
+                <div class="tit_right">
+                    <a href="#none" class="btn black large">신규 약관 등록</a>
+                </div>
             </div>
 
             <div class="page_contents">
-                <div onclick="showPop('p1')">mini w375</div>
-                <div onclick="showPop('p2')">mini w420</div>
-                <div onclick="showPop('p3')">mini w494</div>
-                <div onclick="showPop('p4')">mini alert</div>
-                <div onclick="showPop('p5')">mini alert w494</div>
-                <div onclick="showPop('p6')">mini toast w420</div>
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- table -->
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:10%"><col style="width:auto"><col style="width:23%"></colgroup>
+                        <thead>
+                            <tr>
+                                <th class="txtcenter">
+                                    <span>No.</span>
+                                </th>
+                                <th>
+                                    <p><span>제목</span></p>
+                                </th>
+                                <th>
+                                    <p><span>등록일</span></p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="txtcenter">01</td>
+                                <td><a href="#none">SELLERBRIDGE</a></td>
+                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter">10</td>
+                                <td>SELLERBRIDGE</td>
+                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
+                            </tr>
+                            <!-- list 10개씩 노출 -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none" class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
+                </div>
+                <!-- E: Board Type -->
             </div>
         </div>
     </div>
     <!-- E: container -->
-</div>
 
-<!-- S: 팝업 -->
-<div class="popup " id="p1">
-    <div class="inner_pop mini w375">
-        <div class="popup_title"  onclick="hidePop('p1')">
-            <p>미리보기</p>
-        </div>
-        <div class="pop_con">
-            <p class="popsub_tl2">T아이디 로그인</p>
-            <div class="txt_area">
-                내용
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
             </div>
-            <div class="btn_wrap onebtn">
-                <a href="#none" class="btn btn_next black">다음</a>    
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
             </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
-    <div class="dim"></div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+    
 </div>
-<!-- E: 팝업 -->
-<!-- S: 팝업 -->
-<div class="popup " id="p2">
-    <div class="inner_pop mini w420">
-        <div class="popup_title"  onclick="hidePop('p2')">
-            <p>미리보기</p>
-        </div>
-        <div class="pop_con">
-            <p class="popsub_tl2">T아이디 로그인</p>
-            <div class="txt_area">
-                내용
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn btn_next black">다음</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 -->
-<!-- S: 팝업 -->
-<div class="popup " id="p3">
-    <div class="inner_pop mini w494">
-        <div class="popup_title"  onclick="hidePop('p3')">
-            <p>미리보기</p>
-        </div>
-        <div class="pop_con">
-            <p class="popsub_tl2">T아이디 로그인</p>
-            <div class="txt_area">
-                내용
-            </div>
-            <div class="btn_wrap onebtn">
-                <a href="#none" class="btn btn_next black">다음</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 -->
-<!-- S: 팝업 -->
-<div class="popup " id="p4">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="txt_area">
-                내용
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('p4')">취소</a>
-                <a href="#none" class="btn large black" onclick="hidePop('p4')">저장</a>
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 -->
-<!-- S: 팝업 -->
-<div class="popup " id="p5">
-    <div class="inner_pop alert w494">
-        <div class="pop_con">
-            <div class="txt_area">
-                내용
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('p5')">취소</a>
-                <a href="#none" class="btn large black" onclick="hidePop('p5')">저장</a>
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 -->
-<!-- S: 팝업 -->
-<div class="popup " id="p6">
-    <div class="inner_pop alert toast">
-        <div class="pop_con">
-            내용
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 -->
 </body>
 </html>
 

@@ -264,7 +264,9 @@
                                     <span class="input txt password">
                                         <input type="password" id="password" placeholder="*******">
                                         <button class="btn small black" onclick="showPop('re_gpsecret')">재발급</button>
-                                        <button class="btn_viewon" id="showPassword" value="show">Secret Kye보기</button>
+                                        <button class="btn_viewon" id="showPassword" value="show">
+                                            Secret Kye보기
+                                        </button>
                                     </span>
                                 </td>
                             </tr>
@@ -651,7 +653,7 @@
             <p>그룹 파트너 삭제</p>
         </div>
         <div class="pop_con">
-            <div class="popsub_tl2">
+            <div class="popsub_tl2 txtcenter">
                 %애플리케이션명%
             </div>
             <p class="txtcenter">
@@ -730,7 +732,7 @@
 <div class="popup" id="ok_grpjoin">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div>
+            <div class="txt_area">
                 %그룹명%에 참여 요청을 보냈습니다.
             </div>
             <div class="btn_wrap">
@@ -782,10 +784,10 @@
                             <span>애플리케이션 오너 정보</span>
                         </th>
                         <td>
-                            <ul>
-                                <li>김선경</li>
-                                <li class="mfont">sungkung@sk.com</li>    
-                            </ul>
+                            <p class="appowner_info">
+                                <span class="mfont">sungkung@sk.com</span>
+                                <span>김선경</span>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -842,10 +844,10 @@
                             <span>애플리케이션 오너 정보</span>
                         </th>
                         <td>
-                            <ul>
-                                <li>김선경</li>
-                                <li class="mfont">sungkung@sk.com</li>    
-                            </ul>
+                            <p class="appowner_info">
+                                <span class="mfont">sungkung@sk.com</span>
+                                <span>김선경</span>
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -923,7 +925,7 @@
 <div class="popup" id="stop_bizapp">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div>
+            <div class="txt_area">
                 비즈 앱 검토를 중단하시겠습니까?
             </div>
             <div class="btn_wrap">
@@ -939,7 +941,7 @@
 <div class="popup" id="bizapp_confirm">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div>
+            <div class="txt_area">
                 비즈니스 애플리케이션 승인이<br>
                 완료되었습니다.
             </div>
@@ -967,10 +969,11 @@
             var passwordField = $('#password');
             var passwordFieldType = passwordField.attr('type');
             if(passwordFieldType == 'password'){
-                passwordField.attr('type', 'text');$(this).val('Hide');
+                passwordField.attr('type', 'text');
+                $(this).val('Show').addClass('on'); 
             } else {
                 passwordField.attr('type', 'password');
-                $(this).val('Show');
+                $(this).val('Hide').removeClass('on');
             }
         })
     });
