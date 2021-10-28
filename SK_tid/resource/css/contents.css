@@ -38,7 +38,7 @@ button:disabled {cursor:default;}
 .btn_viewon.on {background:url('../images/common/ic_view_pw.png') no-repeat 0 0;}
 .btn_add_b {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_add_b.png') no-repeat; text-indent:-9999px; overflow:hidden;}
 .btn_remove_b {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_remove_b.png') no-repeat; text-indent:-9999px; overflow:hidden;}
-
+.btn_delete {display:inline-block; width:16px; height:16px; background:url('../images/common/ic_del_small.png') no-repeat; text-indent:-9999px; overflow:hidden; }
 .btn:disabled, .btn.disabled {background:#f1f1f1;color:#bfbfbf;}
 .icon {display:inline-block; width:24px; height:24px; margin-top:-2px; margin-right:8px; vertical-align: middle; text-indent:-9999px; overflow:hidden;}
 .icon.edit {background:url('../images/common/ic_edit.png') no-repeat 0 0;}
@@ -52,6 +52,10 @@ button:disabled {cursor:default;}
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}
 .btn_wrap .btn + .btn {margin-left:8px;}
+
+
+
+
 .btn_w148 .btn {min-width:148px;}
 
 /* input */
@@ -95,7 +99,7 @@ span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; r
 /* span.input.txt .filename {color:#999;} */
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
-span.input.sel {width: 1000%; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
+span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
 span.input.direct_input {display:none;}
 span.input.direct_input.show {display:block;}
 .dateset {display:inline-block;}
@@ -208,8 +212,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup::after {content:''; display:block; clear:both;}
 .board .optiongroup .sorting {float:left;transform: translateY(50%);}
 .board .optiongroup .select_form {margin-left:20px;}
-.board .optiongroup .search {float:right;}
-.board .optiongroup + table {margin-top:30px;}
+.board .optiongroup .search {float:right; position:relative;}
+.board .optiongroup .search .btn_delete {display:none; position:absolute; top:calc(50% - 8px); right:50px;}
+.board .optiongroup + table {margin-top:24px;}
 
 .board table {width:100%; border-top:solid 2px #000; table-layout:fixed;}
 .board table thead th {height:76px; padding:16px; border-bottom:solid 1px #000; font-size:16px; font-weight:600; text-align:left;}
@@ -221,6 +226,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody td.empty {padding:50px 0; border:0;}
 .board table tbody td.txtinert {color:#bfbfbf;}
 .board table tbody tr.pending td {color:#bfbfbf;}
+.board table tbody tr.imprt td {background:#f6f6f6;}
+.board table tbody tr.imprt td a {font-weight:600;}
+.board table tbody tr.imprt td .flag {display:inline-block; background:#fff; border:solid 1px #222; font-size:13px; line-height:31px; height:31px; width:44px; border-radius:4px;}
 .board .paging {margin-top:48px; text-align:center;}
 .board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
 .board .paging span {display:inline-block; margin:0 18px;}
@@ -574,3 +582,27 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .search_set .search_list li + li {margin-top:12px;}
 .search_set .search_list li .member em + em::before {content:''; display:inline-block; width:1px; height:12px; margin:0 10px; background:#cfcfcf;}
 .pop_con .search_set {height:350px;}
+
+/* 공지사항 ,FAQ */
+.f_yellow {color:#ffa640; font-weight:600;}
+.board .optiongroup .result_txt {float:left; margin-top:22px;}
+.board .optiongroup .faqbox {float:right;}
+.board .optiongroup .faqbox::after {display:block; content:''; clear:both;}
+.board .optiongroup .faqbox .input.sel {float:left; width:156px;}
+.board .optiongroup .faqbox .input.sel select.sel_de {background:url('../images/common/ic_sel_down.png') 90% center no-repeat;}
+.board .optiongroup .faqbox .input.sel + .search {margin-left:16px;}
+.h3_wrap .sub_box::after {display:block; content:''; clear:both;}
+.h3_wrap .sub_box .stext {float:left; color:#222; margin-bottom:17px;}
+.h3_wrap .sub_box .stext p {display:inline-block; position:relative; padding-right:8px; margin-right:4px;}
+.h3_wrap .sub_box .stext p:last-child {margin-right:0; padding-right:0;}
+.h3_wrap .sub_box .stext p::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:4px; right:0;}
+.h3_wrap .sub_box .stext p:last-child::before {display:none;}
+.h3_wrap .sub_box .date {float:right; color:#666; font-family:'Roboto'; margin-bottom:17px;}
+.h3_wrap.bor_type {border-bottom:solid 1px #cfcfcf;}
+.notice_contents {font-size:16px; color:#666; width:100%;}
+.notice_contents img {max-width:100%;}
+/* 검색결과 없음 */
+.no_result {margin-top:24px; border-top:2px solid #222;}
+.no_result .noterms {margin-top:162px;}
+.no_result .noterms + ul {margin-top:20px;}
+.no_result li {font-size:12px; color:#222; line-height:20px;}

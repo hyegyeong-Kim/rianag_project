@@ -82,31 +82,13 @@
                 <div class="lnb_ti">NUGU</div>
                 <ul class="lnb_menu">
                     <li>
-                        <a href="#none">개요</a>
+                        <a href="#none">공지사항</a>
                     </li>
                     <li>
-                        <a href="#none">기본 설정</a>
+                        <a href="#none">FAQ</a>
                     </li>
                     <li>
-                        <a href="#none">앱 설정</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="act">약관 관리</a>
-                        <ul class="depth2">
-                            <li><a href="#none" class="act2">개별약관 목록</a></li>
-                            <li><a href="#none">개별약관 History</a></li>
-                            <li><a href="#none">그룹 설정</a></li>
-                            <li><a href="#none">사용자 동의 내역</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#none">멤버 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none">테스트 계정 설정</a>
-                    </li>
-                    <li>
-                        <a href="#none">통계</a>
+                        <a href="#none">1:1문의</a>
                     </li>
                 </ul>
                 <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
@@ -118,52 +100,102 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>개별약관 목록</h2>
-                <div class="tit_right">
-                    <a href="#none" class="btn black large">신규 약관 등록</a>
-                </div>
+                <h2>공지사항</h2>
             </div>
 
             <div class="page_contents">
-                <!-- S: Board Type -->
                 <div class="board">
                     <!-- optiongroup -->
                     <div class="optiongroup">
+                        <p class="result_txt"><strong>‘공지’</strong> 검색 결과 <span class="f_yellow">5</span>개</p>
                         <div class="search">
-                            <input type="text" placeholder="제목 검색">
+                            <input type="text" placeholder="검색어를 입력하세요.">
                             <a href="#none" class="btn_sch">검색하기</a>
                         </div>
-                    </div>
-                    <div class="sch_txt">
-                        '%검색어%'검색결과 <strong>00</strong>개
                     </div>
                     <!-- table -->
                     <table>
                         <caption></caption>
-                        <colgroup><col style="width:80px"><col style="width:auto"><col style="width:180px"></colgroup>
+                        <colgroup><col style="width:10%"><col style="width:auto"><col style="width:15%"></colgroup>
                         <thead>
                             <tr>
-                                <th class="txtcenter mfont">
+                                <th class="txtcenter">
                                     <span>No.</span>
                                 </th>
                                 <th>
-                                    <span>제목</span>
+                                    <p><span>제목</span></p>
                                 </th>
-                                <th>
-                                    <span>등록일</span>
+                                <th class="txtcenter">
+                                    <p><span>등록일</span></p>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="txtcenter mfont">01</td>
-                                <td><a href="#none">중개서비스<em class="schword">판매</em> 약관 (17)</a></td><!--  검색한 검색어 class="schword" -->
-                                <td class="mfont">2021/08/14 16:37</td>
+                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
+                                <td class="txtcenter mfont">
+                                    <span class="flag">중요</span>
+                                </td>
+                                <td>
+                                    <a href="#none">Q. "API limit has been exceeded." 에러가 발생합니다. <span class="f_yellow">공지</span></a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
+                                <td class="txtcenter mfont">
+                                    <span class="flag">중요</span>
+                                </td>
+                                <td>
+                                    <a href="#none">Q. "API limit has been exceeded." 에러가 발생합니다. <span class="f_yellow">공지</span></a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
                             </tr>
                             <tr>
-                                <td class="txtcenter mfont">10</td>
-                                <td><a href="#none"><em class="schword">판매</em>중개서비스 약관 (17)</a></td><!--  검색한 검색어 class="schword" --> 
-                                <td class="mfont">2021/08/14 16:37</td>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">19</a>
+                                </td>
+                                <td>
+                                    <a href="#none">단축 URL API 변경 작업 (11/1) <span class="f_yellow">공지</span></a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">15</a>
+                                </td>
+                                <td>
+                                    <a href="#none">[네이버 아이디로 로그인] nid.naver.com 도메인의 DNS 정보 변경에 따른 <span class="f_yellow">공지</span></a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">105</a>
+                                </td>
+                                <td>
+                                    <a href="#none">NAVER API 서비스 이용약관의 단축 URL 특약조건 신설 <span class="f_yellow">공지</span>(2021년 4월 12일 시행 예정)</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">106</a>
+                                </td>
+                                <td>
+                                    <a href="#none">[네이버 아이디로 로그인] 이용자 프로필 정보 추가 제공 관련 <span class="f_yellow">공지</span></a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
                             </tr>
                             <!-- list 10개씩 노출 -->
                         </tbody>
@@ -185,21 +217,7 @@
                         <a href="#none" class="btn_arr next"></a>
                         <!-- paging 10개씩 노출 -->
                     </div>
-
-                    <!-- 검색어 검색결과 없는경우 -->
-                    <div class="sch_registbox">
-                        <p>
-                            <span class="schword">'%검색어%'검색결과</span> <br>
-                            검색견과가 없습니다.
-                        </p>
-                        <p>
-                            단어의 철자가 정학한지 확인해주세요.<br>
-                            검색어의 단어 수를 줄이거나 다른 검색어로 검색해보세요.<br>
-                            더 일반적인 검색어로 검색해보세요.
-                        </p>
-                    </div>
                 </div>
-                <!-- E: Board Type -->
             </div>
         </div>
     </div>
@@ -219,9 +237,10 @@
             <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
-
+    
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
+    
 </div>
 </body>
 </html>

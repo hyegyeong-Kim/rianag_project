@@ -82,31 +82,13 @@
                 <div class="lnb_ti">NUGU</div>
                 <ul class="lnb_menu">
                     <li>
-                        <a href="#none">개요</a>
+                        <a href="#none">공지사항</a>
                     </li>
                     <li>
-                        <a href="#none">기본 설정</a>
+                        <a href="#none">FAQ</a>
                     </li>
                     <li>
-                        <a href="#none">앱 설정</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="act">약관 관리</a>
-                        <ul class="depth2">
-                            <li><a href="#none" class="act2">개별약관 목록</a></li>
-                            <li><a href="#none">개별약관 History</a></li>
-                            <li><a href="#none">그룹 설정</a></li>
-                            <li><a href="#none">사용자 동의 내역</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#none">멤버 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none">테스트 계정 설정</a>
-                    </li>
-                    <li>
-                        <a href="#none">통계</a>
+                        <a href="#none">1:1문의</a>
                     </li>
                 </ul>
                 <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
@@ -119,18 +101,22 @@
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
                 <h2>공지사항</h2>
-                <div class="tit_right">
-                    <a href="#none" class="btn black large">신규 약관 등록</a>
-                </div>
             </div>
 
             <div class="page_contents">
-                <!-- S: Board Type -->
                 <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="search">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                    </div>
                     <!-- table -->
                     <table>
                         <caption></caption>
-                        <colgroup><col style="width:10%"><col style="width:auto"><col style="width:23%"></colgroup>
+                        <colgroup><col style="width:10%"><col style="width:auto"><col style="width:15%"></colgroup>
                         <thead>
                             <tr>
                                 <th class="txtcenter">
@@ -139,23 +125,79 @@
                                 <th>
                                     <p><span>제목</span></p>
                                 </th>
-                                <th>
+                                <th class="txtcenter">
                                     <p><span>등록일</span></p>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="txtcenter">01</td>
-                                <td><a href="#none">SELLERBRIDGE</a></td>
-                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
+                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
+                                <td class="txtcenter mfont">
+                                    <span class="flag">중요</span>
+                                </td>
+                                <td>
+                                    <a href="#none">단축 URL API 변경 작업 (11/1) 공지</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
+                                <td class="txtcenter mfont">
+                                    <span class="flag">중요</span>
+                                </td>
+                                <td>
+                                    <a href="#none">[네이버 아이디로 로그인] nid.naver.com 도메인의 DNS 정보 변경에 따른 공지</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
+                                <td class="txtcenter mfont">
+                                    <span class="flag">중요</span>
+                                </td>
+                                <td>
+                                    <a href="#none">[네이버 아이디로 로그인] nid.naver.com 도메인의 DNS 정보 변경에 따른 공지</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
                             </tr>
                             <tr>
-                                <td class="txtcenter">10</td>
-                                <td>SELLERBRIDGE</td>
-                                <td><a href="#none">판매중개서비스 약관 (17)</a></td>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">105</a>
+                                </td>
+                                <td>
+                                    <a href="#none">NAVER API 서비스 이용약관의 단축 URL 특약조건 신설 공지(2021년 4월 12일 시행 예정)</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
                             </tr>
-                            <!-- list 10개씩 노출 -->
+                            <tr>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">104</a>
+                                </td>
+                                <td>
+                                    <a href="#none">[네이버 아이디로 로그인] 이용자 프로필 정보 추가 제공 관련 공지</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">
+                                    <a href="#none">103</a>
+                                </td>
+                                <td>
+                                    <a href="#none">[네이버 아이디로 로그인] 이용자 프로필 정보 추가 제공 관련 공지</a>
+                                </td>
+                                <td class="txtcenter">
+                                    <a href="#none">2021/08/14</a>
+                                </td>
+                            </tr>
+                            <!-- list 개씩 노출 -->
                         </tbody>
                     </table>
                     <div class="paging">
@@ -176,7 +218,6 @@
                         <!-- paging 10개씩 노출 -->
                     </div>
                 </div>
-                <!-- E: Board Type -->
             </div>
         </div>
     </div>
@@ -201,6 +242,13 @@
     <!-- E: footer -->
     
 </div>
+<script>
+
+    var clearInput = function(obj) {
+        obj.parentNode.querySelector('input').value = ""
+    }
+
+</script>
 </body>
 </html>
 
