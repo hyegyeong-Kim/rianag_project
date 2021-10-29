@@ -100,34 +100,98 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2 class="mfont">FAQ</h2>
+                <h2>1:1문의</h2>
             </div>
 
             <div class="page_contents">
+                <div class="h3_wrap">
+                    <h3>영문 약관 등록(선택)</h3>
+                </div>
+                <div class="regist_table">
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:186px"><col></colgroup>
+                        <tbody><tr>
+                            <th>
+                                <span>애플리케이션 이름</span>
+                            </th>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="사용자에게 노출될 약관 제목">
+                                    <span class="bytes">0/40 bytes</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>노출 활성화 여부</span>
+                            </th>
+                            <td>
+                                <span class="input switch_btn">
+                                    <label><input type="checkbox"><span></span></label><!-- input checked 인경우 label class="on" -->
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>노출 시작 일시</span>
+                            </th>
+                            <td>
+                                <div class="dateset">
+                                    <span class="input date">
+                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
+                                        <button class="btn_date">날짜</button>
+                                    </span>
+                                    <span class="input date">
+                                        <input type="text" placeholder="00:00" class="mfont">
+                                        <button class="btn_date">시간</button>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>영문 약관본문 파일</span>
+                            </th>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" class="filename" value="HTML파일 업로드" readonly="">                                    
+                                    <label for="file2" class="file_btn"></label>
+                                    <input type="file" id="file2">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><span>등록/수정 코멘트</span></th>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="약관에 대한 설명, 재등록 사유 등">
+                                    <span class="bytes">0/40 bytes</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <div>
+                    문의
+                </div>
                 <div class="board">
+                    <!-- optiongroup -->
                     <div class="optiongroup">
-                        <p class="result_txt"><strong>‘확인바랍’</strong> 검색 결과 <span class="f_yellow">5</span>개</p>
-                        <div class="faqbox">
-                            <span class="input sel">
-                                <select name="" id="select1" class="sel_de">
-                                    <option value="">전체</option>
-                                </select>
-                            </span>
-                            <div class="search">
-                                <input type="text" placeholder="검색어를 입력하세요.">
-                                <button class="btn_delete" onclick="clearInput(this)">지우기</button>
-                                <a href="#none" class="btn_sch">검색하기</a>
-                            </div>
+                        <div class="search">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                            <a href="#none" class="btn_sch">검색하기</a>
                         </div>
                     </div>
                     <!-- table -->
                     <table>
                         <caption></caption>
-                        <colgroup><col style="width:10%"><col style="width:15%"><col style="width:auto"><col style="width:15%"></colgroup>
+                        <colgroup><col style="width:20%"><col style="width:10%"><col style="width:auto"><col style="width:10%;"><col style="width:10%;"><col style="width:10%;"><col style="width:10%;"></colgroup>
                         <thead>
                             <tr>
-                                <th class="txtcenter">
-                                    <span>No.</span>
+                                <th>
+                                    <span>애플리케이션 이름</span>
                                 </th>
                                 <th>
                                     <span>유형</span>
@@ -135,97 +199,37 @@
                                 <th>
                                     <span>제목</span>
                                 </th>
+                                <th>
+                                    <span>작성자</span>
+                                </th>
+                                <th>
+                                    <span>상태</span>
+                                </th>
                                 <th class="txtcenter">
                                     <span>등록일</span>
+                                </th>
+                                <th>
+                                    <span>답변일</span>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
-                                <td class="txtcenter mfont">
-                                    <span class="flag">중요</span>
-                                </td>
-                                <td>
-                                    <a href="#none">인증/회원</a>
-                                </td>
-                                <td>
-                                    <a href="#none">Q. "API limit has been exceeded." 에러가 발생합니다. <span class="f_yellow">확인바랍</span>니다.</a>
-                                </td>
-                                <td class="txtcenter">
-                                    <span>2021/08/14</span>
-                                </td>
-                            </tr>
-                            <tr class="imprt"><!-- 고정 중요공지 클래스 imprt추가 -->
-                                <td class="txtcenter mfont">
-                                    <span class="flag">중요</span>
-                                </td>
-                                <td>
-                                    <a href="#none">인증/회원</a>
-                                </td>
-                                <td>
-                                    <a href="#none">Q. "API limit has been exceeded." 에러가 발생합니다. <span class="f_yellow">확인바랍</span>니다.</a>
-                                </td>
-                                <td class="txtcenter">
-                                    <span>2021/08/14</span>
-                                </td>
-                            </tr>
                             <tr>
-                                <td class="txtcenter mfont">
-                                    <a href="#none">15</a>
+                                <td class="mfont">
+                                    <a href="#none">abcdefghi</a>
                                 </td>
                                 <td>
                                     <a href="#none">SDK/API</a>
                                 </td>
                                 <td>
-                                    <a href="#none">Q. "API limit has been exceeded." 에러가 발생합니다. <span class="f_yellow">확인바랍</span>니다..</a>
+                                    <a href="#none">문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목</a>
                                 </td>
-                                <td class="txtcenter">
-                                    <span>2021/08/14</span>
-                                </td>
+                                <td>고길동</td>
+                                <td>재등록</td>
+                                <td>2021.06.26</td>
+                                <td></td>
                             </tr>
-                            <tr>
-                                <td class="txtcenter mfont">
-                                    <a href="#none">105</a>
-                                </td>
-                                <td>
-                                    <a href="#none">통계/DATA</a>
-                                </td>
-                                <td>
-                                    <a href="#none">Q. 애플리케이션 소유자를 변경하고 싶어요. <span class="f_yellow">확인바랍</span>니다.</a>
-                                </td>
-                                <td class="txtcenter">
-                                    <span>2021/08/14</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="txtcenter mfont">
-                                    <a href="#none">106</a>
-                                </td>
-                                <td>
-                                    <a href="#none">약관</a>
-                                </td>
-                                <td>
-                                    <a href="#none">Q. 앱 키 재발급 시 복구할 수 있나요? <span class="f_yellow">확인바랍</span>니다.</a>
-                                </td>
-                                <td class="txtcenter">
-                                    <span>2021/08/14</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="txtcenter mfont">
-                                    <a href="#none">106</a>
-                                </td>
-                                <td>
-                                    <a href="#none">디자인</a>
-                                </td>
-                                <td>
-                                    <a href="#none">Q. [Android SDK] android keyhash mismatched! 에러가 발생합니다. <span class="f_yellow">확인바랍</span>니다.</a>
-                                </td>
-                                <td class="txtcenter">
-                                    <span>2021/08/14</span>
-                                </td>
-                            </tr>
-                            <!-- list 10개씩 노출 -->
+                            <!-- list -->
                         </tbody>
                     </table>
                     <div class="paging">

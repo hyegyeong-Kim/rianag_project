@@ -141,3 +141,18 @@ function allHide(){
     $(".popup").removeClass("open");
 };
 
+//  검색값 클리어
+ var clearInput = function(obj) {
+    obj.parentNode.querySelector('input').value = "";
+    obj.style.display = 'none';
+}
+$(function(){
+    $('.search input').on('input', function(){
+        if($('.search input').val() ==''){
+            $(this).siblings('.btn_delete').css("display","none");
+        }else{
+            $(this).siblings('.btn_delete').css("display","block");
+            
+        }
+    });
+});

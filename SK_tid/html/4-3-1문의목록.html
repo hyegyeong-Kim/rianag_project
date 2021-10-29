@@ -53,12 +53,14 @@
                         <span class="it1">NUGU</span>
                         <span class="it2">ALDN</span>
                     </div>
-                    <dl class="ongoing">
-                        <dt>개발진행중...</dt>
-                        <dd>
-                            <span class="size">80%</span><!-- 입력값으로 bar 길이 조정 -->
-                        </dd>
-                    </dl>
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                    </div>
+                    <!--
+                    <div class="ongoing">
+                        <span class="use">상용중</span>
+                    </div>
+                    -->
                     <ul class="device">
                         <li><span class="ic ic_web">web</span></li>
                         <li><span class="ic ic_ios">ios</span></li>
@@ -80,31 +82,13 @@
                 <div class="lnb_ti">NUGU</div>
                 <ul class="lnb_menu">
                     <li>
-                        <a href="#none">개요</a>
+                        <a href="#none">공지사항</a>
                     </li>
                     <li>
-                        <a href="#none">기본 설정</a>
+                        <a href="#none">FAQ</a>
                     </li>
                     <li>
-                        <a href="#none">앱 설정</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="act">약관 관리</a>
-                        <ul class="depth2">
-                            <li><a href="#none">개별약관 목록</a></li>
-                            <li><a href="#none">개별약관 History</a></li>
-                            <li><a href="#none">그룹 설정</a></li>
-                            <li><a href="#none" class="act2">사용자 동의 내역</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#none">멤버 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none">테스트 계정 설정</a>
-                    </li>
-                    <li>
-                        <a href="#none">통계</a>
+                        <a href="#none">1:1문의</a>
                     </li>
                 </ul>
                 <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
@@ -116,19 +100,87 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>사용자 동의 내역</h2>
+                <h2>1:1문의</h2>
             </div>
 
             <div class="page_contents">
-                <div class="h3_wrap">
-                    <h3>T아이디 정보</h3>
-                    <div class="search">
-                        <input type="text" placeholder="T아이디 검색">
-                        <a href="#none" class="btn_sch">검색하기</a>
-                    </div>    
-                </div>
                 <div>
-                    <p class="noterms">사용자 아이디를 검색해 주세요</p>
+                    문의
+                </div>
+                <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="search">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                    </div>
+                    <!-- table -->
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:20%"><col style="width:10%"><col style="width:auto"><col style="width:10%;"><col style="width:10%;"><col style="width:10%;"><col style="width:10%;"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>애플리케이션 이름</span>
+                                </th>
+                                <th>
+                                    <span>유형</span>
+                                </th>
+                                <th>
+                                    <span>제목</span>
+                                </th>
+                                <th>
+                                    <span>작성자</span>
+                                </th>
+                                <th>
+                                    <span>상태</span>
+                                </th>
+                                <th class="txtcenter">
+                                    <span>등록일</span>
+                                </th>
+                                <th>
+                                    <span>답변일</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mfont">
+                                    <a href="#none">abcdefghi</a>
+                                </td>
+                                <td>
+                                    <a href="#none">SDK/API</a>
+                                </td>
+                                <td>
+                                    <a href="#none">문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목문의 제목</a>
+                                </td>
+                                <td>고길동</td>
+                                <td>재등록</td>
+                                <td>2021.06.26</td>
+                                <td></td>
+                            </tr>
+                            <!-- list -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none" class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,9 +201,10 @@
             <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
-
+    
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
+    
 </div>
 </body>
 </html>

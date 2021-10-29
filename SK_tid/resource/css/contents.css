@@ -342,7 +342,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 /* 툴팁 */
 .tooltip_wrap {display:inline-block; margin-left:5px; position:relative; text-align:left;}
 .tooltip_wrap .tooltip {display:inline-block; font-size:9px; width:16px; height:16px; background:url('../images/common/ic_question.png') no-repeat; text-indent:-9999px; overflow:hidden;}
-.tooltip_wrap .tipbox {display:none;position:absolute; top:30px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1;}
+.tooltip_wrap .tipbox {display:none;position:absolute; top:30px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1; font-weight:400;}
 .tooltip_wrap .tipbox.right {left:-100px;}
 .tooltip_wrap .tipbox.open {display:block;}
 .tooltip_wrap .tipbox p {font-size:14px; line-height:22px;}
@@ -423,7 +423,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .txt_reagree {display:inline-block; margin-left:33px;}
 .txt_reagree span.tit {display:inline-block; font-size:16px; line-height:24px;}
 .txt_reagree .switch_btn {margin-left:12px;}
-.txt_reagree .tooltip_wrap {top:-3px;}
+.txt_reagree .tooltip_wrap {top:7px;}
 
 /* 그룹목록 상세 */
 .myapp_search {display:block; margin:0 auto 80px; width:460px; position:relative; padding-bottom:12px; border-bottom:4px solid #000000;}
@@ -598,7 +598,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .h3_wrap .sub_box .stext p::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:4px; right:0;}
 .h3_wrap .sub_box .stext p:last-child::before {display:none;}
 .h3_wrap .sub_box .date {float:right; color:#666; font-family:'Roboto'; margin-bottom:17px;}
-.h3_wrap.bor_type {border-bottom:solid 1px #cfcfcf;}
 .notice_contents {font-size:16px; color:#666; width:100%;}
 .notice_contents img {max-width:100%;}
 /* 검색결과 없음 */
