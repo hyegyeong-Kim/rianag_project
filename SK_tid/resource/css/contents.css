@@ -603,5 +603,4 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 /* 검색결과 없음 */
 .no_result {margin-top:24px; border-top:2px solid #222;}
 .no_result .noterms {margin-top:162px;}
-.no_result .noterms + ul {margin-top:20px;}
 .no_result li {font-size:12px; color:#222; line-height:20px;}
