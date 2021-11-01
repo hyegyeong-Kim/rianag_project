@@ -227,7 +227,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody td.txtinert {color:#bfbfbf;}
 .board table tbody tr.pending td {color:#bfbfbf;}
 .board table tbody tr.imprt td {background:#f6f6f6;}
-.board table tbody tr.imprt td a {font-weight:600;}
+.board table tbody tr.imprt td {font-weight:600;}
 .board table tbody tr.imprt td .flag {display:inline-block; background:#fff; border:solid 1px #222; font-size:13px; line-height:31px; height:31px; width:44px; border-radius:4px;}
 .board .paging {margin-top:48px; text-align:center;}
 .board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
