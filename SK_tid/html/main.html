@@ -5,179 +5,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
+    <link rel="stylesheet" href="../resource/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/main.css">
     <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="../resource/js/swiper-bundle.min.js"></script>
 </head>
-<body>
-<div id="wrap" class="main">
+<body class="main">
+<div id="wrap">
     <div id="header">
-        <h1 class="h_logo">T아이디 Developers</h1>
-        <div class="h_gnb">
-            <ul>
-                <li><a href="#none">T아이디 소개</a></li>
-                <li><a href="#none">문서</a></li>
-                <li><a href="#none">지원</a></li>
-                <li><a href="#none">내 애플리케이션</a></li>
-                <li><a href="#none" class="btn_log">Login</a></li>
-            </ul>
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <a href="#none" class="btn_login">LOGIN</a>
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
         </div>
+        <!-- E: top -->
     </div>
 
-    <div class="m_contents">
+    <div id="m_container">
         <!-- S: visual -->
-        <div>
-            <div>
-                <span>T</span> 아이디, 
-                하나의 아이디로 손쉽고                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-                안전한 연결
+        <div class="main_visual">
+            <div class="visual_txt">
+                서비스에<br>
+                <span class="txt_t">T</span> 아이디 로그인을<br>
+                쉽게 적용하세요
             </div>
+            <a href="#none" class="btn_visual">T아이디 적용하기</a>
         </div>
         <!-- E: visual -->
-
-        <div>
-            <div>
-                <a href="#none">T아이디 소개</a>
-            </div>
-            <div>
-                <div>
-                    <p>General</p>
-                    <a href="#none">연동가이드</a>
-                    <a href="#none">UX가이드</a>
-                </div>
-                <div>
-                    <p>Web</p> 
-                    <a href="#none">통합 인증 연동 구성</a>
-                    <a href="#none">Web 라이브러리 다운로드</a>
-                </div>
-                <div>
-                    <p>Web</p>
-                    <a href="#none">Xcode 설정</a>
-                    <a href="#none">SDK 사용 예제</a>
-                    <a href="#none">SDK 다운로드</a>
-                </div>
-                <div>
-                    <p>Android</p>
-                    <a href="#none">DE 설정</a>
-                    <a href="#none">SDK 사용 예제</a>
-                    <a href="#none">SDK 다운로드</a>
+        
+        <!-- S: 연동가이드 퀵 메뉴 -->
+        <div class="cont_quick">
+            <div class="inner">
+                <h2 class="blind">연동가이드 퀵 메뉴</h2>
+                <div class="menu_link">
+                    <dl class="quick01">
+                        <dt>General <a href="#none" class="btn_shortcut">바로가기</a></dt>
+                        <dd><a href="#none">시작 가이드</a></dd>
+                        <dd><a href="#none">약관관리 가이드</a></dd>
+                        <dd><a href="#none">UX가이드</a></dd>
+                    </dl>
+                    <dl class="quick02">
+                        <dt>Web <a href="#none" class="btn_shortcut">바로가기</a></dt> 
+                        <dd><a href="#none">연동 가이드</a></dd>
+                        <dd><a href="#none">SDK 다운로드</a></dd>
+                    </dl>
+                    <dl class="quick03">
+                        <dt>IOS <a href="#none" class="btn_shortcut">바로가기</a></dt>
+                        <dd><a href="#none">연동 가이드</a></dd>
+                        <dd><a href="#none">SDK 다운로드</a></dd>
+                    </dl>
+                    <dl class="quick04">
+                        <dt>Android <a href="#none" class="btn_shortcut">바로가기</a></dt>
+                        <dd><a href="#none">연동 가이드</a></dd>
+                        <dd><a href="#none">SDK 다운로드</a></dd>
+                    </dl>
                 </div>
             </div>
         </div>
+        <!-- E: 연동가이드 퀵 메뉴 -->
 
-        <div>
-            <h2>Quick Download</h2>
-            <div>
-                <dl>
-                    <dt>Web</dt>
-                    <dd>
-                        <a href="#none" class="btn_down">T아이디_연동규격서(APP)_v2.45</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt></dt>
-                    <dd>
-                        <a href="#none" class="btn_down">연동된 다른 채널에 접근, 가입 테스트 위한 T아이디 앱</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt></dt>
-                    <dd>
-                        <a href="#none" class="btn_down">API 연동을 위한 라이브러리 (다운로드 후 확장자 변경 필요 > .jar)</a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt></dt>
-                    <dd>
-                        <a href="#none" class="btn_down">T아이디 UX Guideline_190903, T아이디 로고 ai</a>
-                    </dd>
-                </dl>
+        <!-- S: T아이디 적용 서비스 -->
+        <div class="cont_service">
+            <div class="inner">
+                <h2><span class="txt_t">T</span>아이디 적용 서비스</h2>
+                <div class="sub_txt">
+                    T아이디가 적용된 다양한 서비스를 확인해보고<br>T아이디로 가입 / 로그인 해보세요!
+                </div>
+                
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev">이전</div>
+                    <div class="swiper-button-next">다음</div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="swiper service_link">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/Tworld.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/AIA.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/Tmem.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/Tdirectshop.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/FLO.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/11st.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/Tfactory.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/NUGU.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/ifland.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/wavve.png" alt="Tworld"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/Tworld.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/AIA.png" alt="Tworld"></a>
+                                </li>
+                                <li>
+                                    <a href="#none"><img src="../resource/images/terms/Tmem.png" alt="Tworld"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- E: T아이디 적용 서비스 -->
 
-        <div>
-            <h2>QnA</h2>
-            <div>
-                <dl>
-                    <dt>FAQ <span>NEW</span></dt>
-                    <dd>
-                        <a href="#none">
-                            4007 에러 발생 시 해결 방안 (client_secret 또는 앱패키지 정보 등의 오류로 발생)
-                            <span>2021.07.16</span>
-                        </a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>FAQ</dt>
-                    <dd>
-                        <a href="#none">
-                            [FAQ]  내 서비스 회원의 선택약관 동의여부, 동의율 등을 알고 싶어요
-                            <span>2021.07.16</span>
-                        </a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>SDK/API</dt>
-                    <dd>
-                        <a href="#none">
-                            TID 연결해지통보 관련 문의입니다. 
-                            <span>2021.07.16</span>
-                        </a>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>FAQ</dt>
-                    <dd>
-                        <a href="#none">
-                            채널 관리자를 추가 및 수정하고 싶어요 ( +BP도 관리자 가능한가요 )
-                            <span>2021.07.16</span>
-                        </a>
-                    </dd>
-                </dl>
+        <!-- S: FAQ -->
+        <div class="cont_faq">
+            <div class="inner">
+                <h2 class="mfont">FAQ <a href="#none" class="btn_shortcut">바로가기</a></h2>
+                <div class="faq_list">
+                    <dl>
+                        <dt>약관/디자인/기타 <span class="txt_new">NEW</span></dt>
+                        <dd>
+                            <a href="#none">
+                                4007 에러 발생 시 해결 방안 (client_secret 또는 앱패키지 정보 등의 오류로 발생)
+                            </a>
+                            <span class="date">2021.07.16</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>인증/회원</dt>
+                        <dd>
+                            <a href="#none">
+                                [FAQ]  내 서비스 회원의 선택약관 동의여부, 동의율 등을 알고 싶어요
+                            </a>
+                            <span class="date">2021.07.16</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>SDK/API</dt>
+                        <dd>
+                            <a href="#none">
+                                TID 연결해지통보 관련 문의입니다. 
+                            </a>
+                            <span class="date">2021.07.16</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>장애/에러</dt>
+                        <dd>
+                            <a href="#none">
+                                채널 관리자를 추가 및 수정하고 싶어요 ( +BP도 관리자 가능한가요 )
+                            </a>
+                            <span class="date">2021.07.16</span>
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </div>
+        <!-- E: FAQ -->
 
-        <div>
-            <h2>Notice</h2>
-            <div class="notice_list">
-                <ul>
-                    <li>
-                        <a href="#none">iOS App 심사 시 주의 사항</a>
-                        <span>
-                            2021.00.00
-                        </span>
-                    </li>
-                    <li>
-                        <a href="#none">T 아이디 연동 규격서(APP)_v2.45 배포 공지</a>
-                        <span>
-                            2021.00.00
-                        </span>
-                    </li>
-                    <li>
-                        <a href="#none">채널 약관 신규등록, 변경 시 유의점</a>
-                        <span>
-                            2021.00.00
-                        </span>
-                    </li>
-                    <li>
-                        <a href="#none">스테이징 서버 연동 채널 확인</a>
-                        <span>
-                            2021.00.00
-                        </span>
-                    </li>
-                </ul>
+        <!-- S: Notice -->
+        <div class="cont_notice">
+            <div class="inner">
+                <h2 class="mfont">Notice <a href="#none" class="btn_shortcut">바로가기</a></h2>
+                <div class="notice_list">
+                    <ul>
+                        <li>
+                            <a href="#none">iOS App 심사 시 주의 사항 <span class="txt_new">NEW</span></a>
+                            <span class="date">2021.00.00</span>
+                        </li>
+                        <li>
+                            <a href="#none">T 아이디 연동 규격서(APP)_v2.45 배포 공지</a>
+                            <span class="date">2021.00.00</span>
+                        </li>
+                        <li>
+                            <a href="#none">채널 약관 신규등록, 변경 시 유의점</a>
+                            <span class="date">2021.00.00</span>
+                        </li>
+                        <li>
+                            <a href="#none">스테이징 서버 연동 채널 확인</a>
+                            <span class="date">2021.00.00</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <!-- E: Notice -->
     </div>
 
-    <div class="footer">
-        <div class="footer_link">
-            <a href="#none"></a>
-            <a href="#none"></a>
-        </div>
-        <div class="footer_contact">
-            
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
         </div>
     </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
 </div>
+<script>
+    var swiper = new Swiper(".service_link", {
+      slidesPerView: 1,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>

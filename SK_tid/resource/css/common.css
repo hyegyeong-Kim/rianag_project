@@ -117,12 +117,6 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .minibox {display:none; padding:20px; background:#fff; border-radius:8px; box-shadow:0px 0px 5px 0px rgba(0, 0, 0, .2); position:absolute; z-index:1;}
 .on + .minibox {display:block;}
 
-/* Main */
-#wrap.main { max-width:1920px; margin: 0 auto;}
-.main #header {height:100px;padding-top:40px;}
-
-#m_contents {width:100%; max-width:1420px; margin: 0 auto; padding:0 80px;}
-
 /*header*/
 #header {width:100%; position:fixed; z-index:2;}
 #top {width:100%; max-width: 1760px; height:88px; padding:29px 24px; margin:0 auto; background:#fff;}
@@ -138,12 +132,13 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .h_gnb .menu > li > a.act::after {content:''; display:inline-block; height:2px; background:#ffa640; position:absolute; bottom:0; left:0; right:0;}
 .h_gnb .myemail {display:inline-block; margin: 0 20px;}
 .h_gnb .myemail > a {display:inline-block; font-family:'Roboto'; color:#afafaf; }
-.h_gnb .myemail > .minibox {width:200px; padding:20px 30px; margin-top:10px; right:0;}
-.h_gnb .myemail > .minibox li {margin:10px 0;}
+.h_gnb .myemail > .minibox {width:200px; padding:10px 30px; margin-top:10px; right:0;}
+.h_gnb .myemail > .minibox li {margin:20px 0;}
 .h_gnb a.alarm {margin-left:20px;vertical-align:middle;}
 .h_gnb a.alarm span {display:block; width:24px; height:24px; background:url('../images/common/ic_alarm.png') no-repeat right center; text-indent:-9999px; position:relative; overflow:hidden;}
 .h_gnb a.alarm span i.new {display:block;width:8px; height:8px; border-radius:50%; background:#ffa640 ; text-indent:-9999px; position:absolute; top:0; right:0; overflow:hidden;}
 .h_gnb a.btn_menuopen {display:none;}
+.h_gnb a.btn_login {display:inline-block; width:80px; height:38px; line-height:40px; margin-top:-10px; background:#1b6491; border-radius:50px; letter-spacing:-.8px; text-align:center; font-family:'Roboto'; font-size:14px; color:#fff;} 
 
 @media (max-width: 1023px) {
     #top {height:72px; padding:20px 24px;}
