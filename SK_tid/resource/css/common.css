@@ -238,8 +238,11 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .pop_con .btn_wrap {text-align:center; margin-top:48px;}
 .popup .pop_con .btn_wrap .btn {width:148px;}
 .popup .pop_con .btn_wrap.cover2 {margin-top:8px;}
-.popup .pop_con .txt_area {margin:0 0 32px; text-align:center;}
+.pop_con .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
+.pop_con .popsub_tl2 {font-size:24px; font-weight:600; color:#222222; margin-bottom:12px;}
+.popup .pop_con .txt_area {margin-bottom:32px; text-align:center;}
 .popup .pop_con .txt_area + .btn_wrap {margin-top:32px;}
+* + .txt_area {margin-top:32px;}
 .popup .inner_pop.w375 {width:376px;}
 .popup .inner_pop.w420 {width:420px;}
 .popup .inner_pop.w494 {width:494px;}
@@ -247,8 +250,6 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop.mini .pop_con {max-height:667px;}
 .pop_con::-webkit-scrollbar {width:5px; background-color: #ddd; border-radius: 5px;}
 .pop_con::-webkit-scrollbar-thumb {background: #999; border-radius: 5px;}
-.pop_con .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
-.pop_con .popsub_tl2 {font-size:24px; font-weight:600; color:#222222; margin-bottom:12px;}
 .popup .inner_pop.w375 .pop_con {padding:24px 20px; }
 .popup .alert {width:420px; position:fixed; box-shadow:0px 0px 5px 0px rgba(0, 0, 0, .2);}
 .popup .alert.toast .pop_con {padding:48px 40px; text-align:center;}
