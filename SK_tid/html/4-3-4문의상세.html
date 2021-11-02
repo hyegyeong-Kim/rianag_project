@@ -1,0 +1,291 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                    </div>
+                    <!--
+                    <div class="ongoing">
+                        <span class="use">상용중</span>
+                    </div>
+                    -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#none">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#none">1:1문의</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+
+            <div class="page_contents">
+                <!-- 공지사항 상세 -->
+                <div class="notice_title">
+                    <div class="sub_box">
+                        <div class="sub_left">
+                            <p class="mfont">No.100</p>
+                            <p class="f_yellow">디자인 가이드</p>
+                        </div>
+                        <div class="sub_right">
+                            <p>이학성</p>
+                            <p class="mfont">2021.10.25</p>
+                        </div>    
+                    </div>
+                    <div class="ntit_box">
+                        <h3>Q. [Android SDK] android keyhash mismatched! 에러가 발생합니다.</h3>
+                        <!-- 상태표시 한가지만 노출 -->
+                        <div class="labelbox">
+                            <span class="lab big">처리중</span>
+                            <!-- <span class="lab big">재등록</span> -->
+                            <!-- <span class="lab big">등록</span> -->
+                            <!-- <span class="lab big blue">답변완료</span> -->
+                        </div>    
+                        <!-- // 상태표시 한가지만 노출 -->
+                    </div>
+                </div>
+                <div class="notice_contents">
+                    iOS 앱등록 심사시 로그인 가능한 T아이디 계정을 같이 제공하는데<br>
+                    해외에서 심사를 하다보니 로그인을 못해서 심사 거부를 당하는 경우가 있습니다.<br>
+                    <br>
+                    심사 요청시 제공되는 T아이디의 설정 2개를 꼭 확인해주세요<br>
+                    <br>
+                    T아이디 App에 들어가서 (https://play.google.com/store/apps/details?id=com.sktelecom.tid&hl=ko)<br>
+                    보안설정/ 로그인설정  화면에서 
+                    <br><br>
+                    1.퀀텀 로그인 2단계 인증 ==> OFF 하기<br>
+                    2.해외 로그인 차단 ==> OFF 하기 
+                </div>
+                <div class="comment_wrap">
+                    <div class="com_title">
+                        <p>댓글 7개</p>
+                    </div>
+                    <ul class="commentlist">
+                        <!-- 기본댓글 set -->
+                        <li>
+                            <div class="comment_unit">
+                                <div>
+                                    <p class="writer">관리자</p>
+                                </div>
+                                <div class="comment_txt">
+                                    해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                </div>
+                                <div class="comment_date">
+                                    <p class="mfont">2021.10.02.09:50</p>
+                                    <button>답글쓰기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 기본댓글 set -->
+                        <!-- 댓글 total set -->
+                        <li>
+                            <div class="comment_unit">
+                                <div>
+                                    <p class="writer">이학성</p>
+                                    <span class="lab mini blue">작성자</span>
+                                </div>
+                                <div class="comment_txt">
+                                    해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                </div>
+                                <div class="comment_date">
+                                    <p class="mfont">2021.10.02.09:50</p>
+                                    <button>답글쓰기</button>
+                                </div>
+                                <div class="editbox">
+                                    <button class="btn_edit_bk">편집</button>
+                                    <button class="btn_del02 ml_12">지우기</button>
+                                </div>
+                            </div>
+                            <!-- 대댓글 set -->
+                            <div class="comment_depth2">
+                                <!-- 대댓글 리스트 -->
+                                <div class="dep2_list">
+                                    <div class="comment_unit">
+                                        <div>
+                                            <p class="writer">관리자</p>
+                                        </div>
+                                        <div class="comment_txt">
+                                            해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                        </div>
+                                        <div class="comment_date">
+                                            <p class="mfont">2021.10.02.09:50</p>
+                                            <button>답글쓰기</button>
+                                        </div>
+                                    </div>
+                                    <div class="comment_unit">
+                                        <div>
+                                            <p class="writer">이학성</p>
+                                            <span class="lab mini blue">작성자</span>
+                                        </div>
+                                        <div class="comment_txt">
+                                            <strong>관리자</strong> 해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                            해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                        </div>
+                                        <div class="comment_date">
+                                            <p class="mfont">2021.10.02.09:50</p>
+                                            <button>답글쓰기</button>
+                                        </div>
+                                        <div class="editbox">
+                                            <button class="btn_edit_bk">편집</button>
+                                            <button class="btn_del02 ml_12">지우기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 대댓글 리스트 -->
+                                
+                                <!-- comment -->
+                                <div class="new_comment">
+                                    <div>
+                                        <p class="writer">이학성</p>
+                                    </div>
+                                    <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
+                                    <div class="btn_box">
+                                        <a href="#none" class="btn xsmall gray99">취소</a>
+                                        <a href="#none" class="btn xsmall grayf1">등록</a>
+                                    </div>
+                                </div>
+                                <!-- // comment -->
+                            </div>
+                            <!-- 대댓글 set -->
+                        </li>
+                        <!-- 댓글 total set -->
+                        <li>
+                            <div class="comment_unit">
+                                <div>
+                                    <p class="writer">이상국</p>
+                                </div>
+                                <div class="comment_txt">
+                                    해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                </div>
+                                <div class="comment_date">
+                                    <p class="mfont">2021.10.02.09:50</p>
+                                    <button>답글쓰기</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="new_comment">
+                        <p class="writer">이학성</p>
+                        <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
+                        <div class="btn_box">
+                            <a href="#none" class="btn xsmall gray99">취소</a>
+                            <a href="#none" class="btn xsmall grayf1">등록</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <button class="btn xlarge black">목록</button>
+                </div>
+                <!-- 공지사항 상세 -->
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+<script>
+    $("textarea.comment_area").on('keydown keyup', function () {
+        $(this).height(1).height( $(this).prop('scrollHeight'));	
+    });
+</script>
+</body>
+</html>
+
+

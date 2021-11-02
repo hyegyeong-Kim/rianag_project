@@ -104,68 +104,135 @@
             </div>
 
             <div class="page_contents">
-                <hr class="hr_01">
-                <div class="regist_table">
-                    <table>
-                        <caption></caption>
-                        <colgroup><col style="width:186px"><col></colgroup>
+                <!-- 문의 내역 박스 -->
+                <div class="wbox">
+                    <div class="title_box">
+                        <p>문의 내역 전체 <span class="mfont">17</span> </p>
+                        <button class="btn black default float_r">1:1문의 등록하기</button>
+                    </div>
+                    <ul class="allqna mt40">
+                        <li>
+                            <span>788888</span>
+                            <p>등록</p>
+                        </li>
+                        <li>
+                            <span>7</span>
+                            <p>재등록</p>
+                        </li>
+                        <li>
+                            <span>7</span>
+                            <p>처리중</p>
+                        </li>
+                        <li class="f_blue">
+                            <span>6</span>
+                            <p>답변 완료</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // 문의 내역 박스 -->
+                
+                <!-- 검색 필터 -->
+                <div class="filtergroup mt40">
+                    <table> 
+                        <colgroup><col style="width:18%;"><col style="width:30%;"><col style="width:19%;"><col style="width:30%;"></colgroup>
                         <tbody>
                             <tr>
-                                <th>
-                                    <span>작성자</span>
-                                </th>
+                                <th><span>애플리케이션 이름</span></th>
                                 <td>
                                     <span class="input sel">
                                         <select name="" class="sel_de dw_gray">
-                                            <option value="">NUGU</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th><span>유형</span></th>
+                                <td>
+                                    <span class="input sel">
+                                        <select name="" class="sel_de dw_gray">
+                                            <option value="">디자인 가이드</option>
+                                            <option value="">통계/데이터</option>
                                         </select>
                                     </span>
                                 </td>
                             </tr>
                             <tr>
-                                <th>
-                                    <span>유형</span>
-                                </th>
+                                <th><span>작성자</span></th>
                                 <td>
                                     <span class="input sel">
                                         <select name="" class="sel_de dw_gray">
-                                            <option value="">인증/회원</option>
+                                            <option value="">전체</option>
                                         </select>
                                     </span>
                                 </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <span>제목</span>
-                                </th>
+                                <th><span>상태</span></th>
                                 <td>
-                                    <span class="input txt only">
-                                        <input type="text" placeholder="제목을 입력해주세요.">
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <span>내용</span>
-                                </th>
-                                <td colspan="2" class="full">
-                                    <textarea placeholder="내용을 입력해주세요."></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span>이메일</span></th>
-                                <td>
-                                    <span class="input txt only">
-                                        <input type="text" placeholder="이메일 주소를 입력해주세요.">
+                                    <span class="input sel">
+                                        <select name="" id="select1" class="sel_de dw_gray">
+                                            <option value="">전체</option>
+                                        </select>
                                     </span>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="search search_type01 mt40">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                        <a href="#none" class="btn_sch">검색하기</a>
+                    </div>
                 </div>
-                <div class="btn_wrap">
-                    <a href="#none" class="btn xlarge gray">목록</a>
-                    <a href="#none" class="btn xlarge black" onclick="showPop('newgrp');">등록</a>
+                <!-- //검색 필터 -->
+
+                <!-- 게시판 리스트 -->
+                <div class="board mt60">
+                    <div class="optiongroup">
+                        <p class="result_txt"><strong>‘디자인’</strong> 검색 결과 <span class="f_yellow">0</span>개</p>
+                    </div>
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:20%"><col style="width:15%"><col style="width:auto"><col style="width:9%;"><col style="width:10%;"><col style="width:10%;"><col style="width:10%;"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>애플리케이션 이름</span>
+                                </th>
+                                <th>
+                                    <span>유형</span>
+                                </th>
+                                <th>
+                                    <span>제목</span>
+                                </th>
+                                <th>
+                                    <span>작성자</span>
+                                </th>
+                                <th>
+                                    <span>상태</span>
+                                </th>
+                                <th class="txtcenter">
+                                    <span>등록일</span>
+                                </th>
+                                <th class="txtcenter">
+                                    <span>답변일</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- 검색결과 없을때 -->
+                                <td colspan="7" class="nothing">
+                                    <div class="no_result">
+                                        <p class="noterms">‘ㅂㄴㅌ’ 검색 결과가 없습니다.</p>
+                                        <ul class="txtcenter mt20">
+                                            <li>- 단어의 철자가 정확한지 확인해주세요.</li>
+                                            <li>- 검색어의 단어 수를 줄이거나 다른 검색어로 검색해보세요.</li>
+                                            <li>- 더 일반적인 검색어로 검색해보세요.</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- list 10개 -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -191,31 +258,6 @@
     <!-- E: footer -->
     
 </div>
-
-<!-- S: 팝업 / 1:1문의 등록 -->
-<div class="popup" id="notice_regi">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="popsub_tl2">
-                1:1 문의를 등록하시겠습니까?
-            </div>
-            <div class="txt_area">
-                1:1 문의를 등록 하신 후에는<br>
-                수정/삭제 할 수 없습니다.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('notice_regi');">취소</a>    
-                <a href="#none" class="btn large black" onclick="hidePop('notice_regi');">확인</a>    
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 1:1문의 등록 -->
-
-<script>
-
-</script>
 </body>
 </html>
 

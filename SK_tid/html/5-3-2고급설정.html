@@ -196,6 +196,9 @@
                 <div class="ad_setbx wbox">
                     <div class="title_box">
                         <p>비즈니스 애플리케이션</p>
+                        <!-- 211102 modify -->
+                        <span class="txt_certify_chk">비즈니스 정보 검토 중</span>
+                        <!-- // 211102 modify -->
                         <button class="btn yellow default float_r" onclick="showPop('bizapp_check')">비즈니스 정보 검토</button>
                     </div>
                     <p class="sub_txt">
@@ -238,7 +241,10 @@
                         <dt>그룹 ID</dt>
                         <dd>ALDN</dd>
                     </dl>
-                    <button class="btn black default distri" onclick="showPop('del_grppop')">그룹삭제</button>
+                    <button class="btn black default distri" onclick="showPop('del_grppop')">그룹삭제</button> <!-- 슈퍼 관리자에게 노출 -->
+                    <!-- 211102 modify -->
+                    <button class="btn black default distri" onclick="showPop('group_exit')">그룹 나가기</button>
+                    <!-- // 211102 modify -->
                 </div>
                 <div class="regist_table">
                     <table>
@@ -952,6 +958,25 @@
     </div>
 </div>
 <!-- E: 팝업 / 비즈 앱 승인완료 alert -->
+<!-- 211102 modify -->
+<!-- S: 팝업 /그룹 나가기 -->
+<div class="popup" id="group_exit">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                비즈니스 애플리케이션 승인이<br>
+                완료되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('group_exit')">유지</a>    
+                <a href="#none" class="btn large black" onclick="hidePop('group_exit')">나가기</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 그룹 나가기 -->
+<!-- // 211102 modify -->
+
 <script>
     // group code 복사
     $(function(){
