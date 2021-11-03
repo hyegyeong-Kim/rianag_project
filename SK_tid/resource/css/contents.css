@@ -103,7 +103,7 @@ span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; r
 /* span.input.txt .filename {color:#999;} */
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
-span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:8px; position:relative;}
+span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
 span.input.direct_input {display:none;}
 span.input.direct_input.show {display:block;}
 .dateset {display:inline-block;}
@@ -620,7 +620,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .board .optiongroup .result_txt {float:left; margin-top:22px;}
 .board .optiongroup .faqbox {float:right;}
 .board .optiongroup .faqbox::after {display:block; content:''; clear:both;}
-.board .optiongroup .faqbox .input.sel {float:left; width:156px;}
+.board .optiongroup .faqbox .input.sel {float:left; width:156px; border-radius:8px;}
 .board .optiongroup .faqbox .input.sel + .search {margin-left:16px;}
 .notice_title {padding-bottom:16px; border-bottom:solid 1px #222; position:relative; margin-bottom:32px;}
 .notice_title h3 {font-size:24px; font-weight:600; color:#222; vertical-align:top;}
