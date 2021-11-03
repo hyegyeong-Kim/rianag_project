@@ -247,7 +247,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .board table tbody tr.imprt td {font-weight:600;}
 .board table tbody tr td .clamp3 {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:3; overflow:hidden;  }
 .board table tbody tr td .clamp2 {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:2; overflow:hidden;  }
-.board table tbody tr.imprt td .flag {display:inline-block; background:#fff; border:solid 1px #222; font-size:13px; line-height:31px; height:31px; width:44px; border-radius:4px;}
+.board table tbody tr.imprt td .flag {display:inline-block; background:#fff; border:solid 1px #222; font-size:13px; line-height:31px; height:31px; width:44px; border-radius:4px; font-weight:normal;}
 .board table tbody tr td.nothing {border:0;}
 .board table tbody tr td.nothing .no_result {border-top:0; margin-top:0;}
 .board .paging {margin-top:48px; text-align:center;}
@@ -655,7 +655,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .allqna li {float:left; position:relative; padding-left:16px; min-width:103px; margin-left:16px;}
 .allqna li:first-child { margin-left:0; padding-left:0;}
 .allqna li:first-child::before {display:none;}
-.allqna li::before {display:block; content:''; width:1px; height:20px; background:#cfcfcf; position:absolute; top:10px; left:0;}
+.allqna li::before {display:block; content:''; width:1px; height:20px; background:#cfcfcf; position:absolute; top:6px; left:0;}
 .allqna li span {display:block; font-size:24px; font-weight:600; font-family:'Roboto';}
 .allqna li.f_blue {color:#1485cb;}
 .allqna li p {color:#666; font-size:14px; line-height:20px;}
