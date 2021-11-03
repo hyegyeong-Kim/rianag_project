@@ -638,10 +638,13 @@
             <p>그룹 참여 요청</p>
         </div>
         <div class="pop_con">
+            <!-- 211102 modify -->
             <div class="txtcenter">
-                %애플리케이션 이름%%앱 ID%에서 %그룹명%에 참여 요청을 보냈습니다. 
+                %애플리케이션 이름%%앱 ID%에서<br>
+                %그룹명%에 참여 요청을 보냈습니다.<br> 
                 승인하시겠습니까?
             </div>
+            <!-- // 211102 modify -->
             <div class="btn_wrap">
                 <a href="#none" class="btn large gray" onclick="hidePop('approved_pop')">참여 거절</a>   
                 <a href="#none" class="btn large black">참여 승인</a>    
@@ -964,8 +967,7 @@
     <div class="inner_pop alert">
         <div class="pop_con">
             <div class="txt_area">
-                비즈니스 애플리케이션 승인이<br>
-                완료되었습니다.
+                %그룹명%에서 나가시겠습니까?
             </div>
             <div class="btn_wrap">
                 <a href="#none" class="btn large gray" onclick="hidePop('group_exit')">유지</a>    

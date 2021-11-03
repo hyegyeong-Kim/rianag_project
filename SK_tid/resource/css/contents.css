@@ -343,7 +343,6 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .regist_table table th span { display:inline-block; padding-top:12px;}
 .regist_table table th span.th_type {display:inline-block; padding-top:0;}
 .regist_table table td {padding:12px 0;}
-.regist_table tr td.full {padding:0;}
 .regist_table tr td textarea {width:100%; padding:14px 16px; height:320px; border-radius:4px; resize:none; border:solid 1px #cfcfcf;}
 .regist_table .appterm_tbl tbody td .stc {width:460px;}
 .regist_table .appterm_tbl tbody td .stc .icon.arr {display:block; background:url('../images/common/ic_upper.png') no-repeat; margin:20px auto;}
@@ -497,12 +496,16 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .progress {display:inline-block; font-size:14px; line-height:24px; padding-left:30px; font-weight:500;}
 .progress.pro_dev {color:#bfbfbf; background:url('../images/common/ic_dev_con.png') left center no-repeat;}
 .progress.pro_use {color:#222; background:url('../images/common/ic_use_con.png') left center no-repeat;}
+.progress.pro_stop {color:#bfbfbf; background:url('../images/common/ic_dev_stop.png') left center no-repeat;}
+.progress.pro_end {color:#bfbfbf; background:url('../images/common/ic_dev_end.png') left center no-repeat;}
+.progress.pro_del {color:#bfbfbf; background:url('../images/common/ic_dev_delete.png') left center no-repeat;}
 @media screen and (max-width:1023px){
     .app_list ul.card_type > li {width:calc(50% - 14px);}
 }
 
 /* 기본설정 */
 .page_contents .gtit {font-size:16px; color:#666;}
+.page_contents .gtit + .hr_01 {margin-top:16px;}
 .page_contents .guide_txt {margin:26px 0 60px;}
 .page_contents .guide_txt li {font-size:14px; color:#666; padding-left:24px;}
 .page_contents .guide_txt li span {color:#1485cb;}
@@ -613,6 +616,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 
 /* 공지사항 ,FAQ */
 .f_yellow {color:#ffa640; font-weight:600;}
+.f_blue {color:#1485cb;}
 .board .optiongroup .result_txt {float:left; margin-top:22px;}
 .board .optiongroup .faqbox {float:right;}
 .board .optiongroup .faqbox::after {display:block; content:''; clear:both;}
