@@ -250,6 +250,13 @@
         prevEl: ".swiper-button-prev",
       },
     });
+    $(document).scroll(function(){
+        if($(document).scrollTop() <= 100 ) {
+           $(".main #header").removeClass("topbg"); 
+        } else {
+            $(".main #header").addClass("topbg"); 
+        }
+    })
   </script>
 </body>
 </html>
