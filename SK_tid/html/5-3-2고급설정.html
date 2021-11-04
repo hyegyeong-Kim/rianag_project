@@ -253,22 +253,24 @@
                         <tbody>
                             <tr>
                                 <th>
-                                    <span>Group Code</span>
+                                    <span class="mfont">Group Code</span><!-- 211103 modify -->
                                 </th>
                                 <td>
+                                    <!-- 211103 modify -->
                                     <span class="input txt">
-                                        <input type="text" id="grpcode" placeholder="Group Code">
+                                        <input type="text" id="grpcode" class="mfont" placeholder="Group Code">
                                         <button class="btn_copy" id="copy_grpcode">id복사</button>
                                     </span>
+                                    <!-- // 211103 modify -->
                                 </td>
                             </tr>
                             <tr>
                                 <th>
-                                    <span>Group Secret</span>
+                                    <span class="mfont">Group Secret</span><!-- 211103 modify -->
                                 </th>
                                 <td>
                                     <span class="input txt password">
-                                        <input type="password" id="password" placeholder="*******">
+                                        <input type="password" id="password" class="mfont" placeholder="*******">
                                         <button class="btn small black" onclick="showPop('re_gpsecret')">재발급</button>
                                         <button class="btn_viewon" id="showPassword" value="show">
                                             Secret Kye보기
@@ -293,15 +295,17 @@
                                 <th><span>앱 ID</span></th>
                                 <th class="txtcenter">
                                     <span>상태</span>
-                                    <div class="tooltip_wrap right">
+                                    <!-- 211103 modify -->
+                                    <div class="tooltip_wrap">
                                         <button class="tooltip">?</button>
-                                        <div class="tipbox">
+                                        <div class="tipbox right">
                                             <p><strong>연동 중 :</strong> 개발이 완료 된 상태로 상용 배포된 상태입니다.</p>
                                             <p><strong>개발 중 :</strong> 파트너 참여 후, 개발 진행 중인 상태 입니다.</p>
                                             <p><strong>승인 대기 :</strong> 애플리케이션에서 참여 요청을 보내온 상태로 그룹 오너의 승인이 필요한 상태 입니다.</p>
                                             <p><strong>초대 중 :</strong> 그룹 오너가 애플리케이션 오너에게 참여 요청을 보낸 상태입니다.</p>
                                         </div>    
                                     </div>
+                                    <!-- // 211103 modify -->
                                 </th>
                                 <th class="txtcenter"><span>삭제</span></th>                                                 
                             </tr>
@@ -314,7 +318,7 @@
                                     </p>
                                     <span class="owner"><i class="icon ic_owner"></i>Owner</span>
                                 </td>
-                                <td>IRMA</td>
+                                <td class="mfont">IRMA</td><!-- 211103 modify -->
                                 <td class="txtcenter">
                                     <span class="state compl">연동 중</span>
                                 </td>
@@ -322,7 +326,7 @@
                             </tr>
                             <tr>
                                 <td>Thor</td>
-                                <td>
+                                <td class="mfont"><!-- 211103 modify -->
                                     THOR
                                     <button class="btn xsmall blue ml_12" onclick="showPop('approved_pop')">참여 승인 요청</button>
                                 </td>
@@ -337,7 +341,7 @@
                             </tr>
                             <tr>
                                 <td>Black widow</td>
-                                <td>CTAM</td>
+                                <td class="mfont">CTAM</td><!-- 211103 modify -->
                                 <td class="txtcenter"></td>
                                 <td class="txtcenter">
                                     <button onclick="showPop('del_ptnr')">                                                            
@@ -347,7 +351,7 @@
                             </tr>
                             <tr class="pending">
                                 <td>Captain America</td>
-                                <td>BLWD</td>
+                                <td class="mfont">BLWD</td><!-- 211103 modify -->
                                 <td class="txtcenter">
                                     <span class="state before">초대 중</span>
                                 </td>
@@ -359,7 +363,7 @@
                             </tr>
                             <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                 <td>hulk</td>
-                                <td>CTAM</td>
+                                <td class="mfont">CTAM</td><!-- 211103 modify -->
                                 <td class="txtcenter">
                                     <span class="state before">개발 중</span>
                                 </td>
@@ -438,7 +442,7 @@
 
 <!-- S: 팝업 / 비즈니스 정보 수정 팝업 -->
 <div class="popup" id="corr_bizinfo">
-    <div class="inner_pop w494">
+    <div class="inner_pop mini w494">
         <div class="popup_title">
             <p>비즈니스 정보 수정</p>
         </div>
@@ -474,7 +478,7 @@
 <div class="popup" id="bizinfo_ok">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div class="ic_perfect">
+            <div class="ic_perfect txt_area">
                 비즈니스 애플리케이션 정보 등록이 완료되었습니다.<br>
                 등록 승인이 완료까지 시간이 소요됩니다.<br>
                 승인 완료 시 알림이 전달됩니다.<br>
@@ -551,7 +555,7 @@
 
 <!-- S: 팝업 / group code 복사 팝업 -->
 <div class="popup" id="copy_alert">
-    <div class="inner_pop alert">
+    <div class="inner_pop alert toast"> <!-- 211103 modify -->
         <div class="pop_con">
             <div>
                 Client ID 복사가 완료되었습니다.
@@ -584,13 +588,14 @@
 <!-- E: 팝업 / Group Secret 재발급 -->
 
 <!-- S: 팝업 / 그룹 파트너 초대 -->
+<!-- 211103 modify -->
 <div class="popup" id="invite_gp">
     <div class="inner_pop mini w494">
         <div class="popup_title">
             <p>그룹 파트너 초대</p>
         </div>
         <div class="pop_con">
-            <div class="popsub_tl2 txtcenter">
+            <div class="popsub_tl2 txtcenter mfont">
                 Avengers GROUP_Avengers GROUP_AvengersGROUP_Avengers GROUP_Avengers
             </div>
             <p class="txtcenter txt_area">
@@ -602,7 +607,7 @@
                 <button class="btn xsmall black">추가</button>
             </span>
             <p class="warning">영문으로 이루어진 앱 ID를 입력해주세요.</p>
-            <div class="ptnid_list ">
+            <div class="ptnid_list mfont">
                 IDFK, DEID, PSDK, IDFK, DEID, PSDK 
             </div>
             <div class="btn_wrap">
@@ -613,6 +618,7 @@
     </div>
     <div class="dim"></div>
 </div>
+<!-- // 211103 modify -->
 <!-- E: 팝업 / 그룹 파트너 초대 -->
 
 <!-- S: 팝업 / 그룹 파트너 초대 확인 alert -->
@@ -639,7 +645,7 @@
         </div>
         <div class="pop_con">
             <!-- 211102 modify -->
-            <div class="txtcenter">
+            <div class="txt_area">
                 %애플리케이션 이름%%앱 ID%에서<br>
                 %그룹명%에 참여 요청을 보냈습니다.<br> 
                 승인하시겠습니까?
@@ -691,7 +697,7 @@
             <p>그룹삭제</p>
         </div>
         <div class="pop_con">
-            <div class="popsub_tl2 txtcenter">
+            <div class="popsub_tl2 txtcenter mfont"><!-- 211103 modify -->
                 Avengers GROUP
             </div>
             <p class="txtcenter">
@@ -753,6 +759,7 @@
 <!-- E: 팝업 / 그룹참여요청확인 alert -->
 
 <!-- S: 팝업 / 비즈니스 애플리케이션 상세정보 -->
+<!-- 211103 modify -->
 <div class="popup" id="bizapp_detail">
     <div class="inner_pop mini w494">
         <div class="popup_title">
@@ -760,7 +767,7 @@
         </div>
         <div class="pop_con">
             <table class="pop_tbl">
-                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <colgroup><col style="width:36%;"><col style="width:auto;"></colgroup>
                 <tbody>
                     <tr>
                         <th>
@@ -810,9 +817,11 @@
     </div>
     <div class="dim"></div>
 </div>
+<!-- // 211103 modify -->
 <!-- E: 팝업 / 비즈니스 애플리케이션 상세정보 -->
 
 <!-- S: 팝업 / 비즈니스 애플리케이션 검토 -->
+<!-- 211103 modify -->
 <div class="popup" id="bizapp_check">
     <div class="inner_pop mini w494">
         <div class="popup_title">
@@ -820,7 +829,7 @@
         </div>
         <div class="pop_con">
             <table class="pop_tbl">
-                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <colgroup><col style="width:36%;"><col style="width:auto;"></colgroup>
                 <tbody>
                     <tr>
                         <th>
@@ -870,6 +879,7 @@
     </div>
     <div class="dim"></div>
 </div>
+<!-- // 211103 modify -->
 <!-- E: 팝업 / 비즈니스 애플리케이션 검토 -->
 
 
@@ -881,7 +891,7 @@
             <p>비즈니스 애플리케이션 반려</p>
         </div>
         <div class="pop_con">
-            <table class="pop_tbl">
+            <table class="pop_tbl txt_area"> <!-- 211103 modify -->
                 <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
                 <tbody>
                     <tr>

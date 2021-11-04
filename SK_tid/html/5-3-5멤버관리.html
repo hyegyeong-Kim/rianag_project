@@ -158,7 +158,7 @@
                                 </tr>
                             </table>
                         </div>
-
+                        <!-- 211103 modify -->
                         <!-- S: Board Type -->
                         <div class="board inbox mt60">
                             <!-- 기본 -->
@@ -175,55 +175,54 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <span>sungkung@sk.com 관리자가 오너 삭제</span>
+                                        <td> 
+                                            <span class="mfont">sungkung@sk.com 관리자가 오너 삭제</span>
                                         </td>
-                                        <td>Owner</td>
+                                        <td class="mfont">Owner</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('owner_al')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>susssg@sk.com 멤버본인이 삭제</span>
+                                            <span class="mfont">susssg@sk.com 멤버본인이 삭제</span>
                                         </td>
-                                        <td>Member</td>
+                                        <td class="mfont">Member</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('member_del')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>susssg@sk.com 오너 및 관리자가 삭제</span>
+                                            <span class="mfont">susssg@sk.com 오너 및 관리자가 삭제</span>
                                         </td>
-                                        <td>Member</td>
+                                        <td class="mfont">Member</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('member_del2')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>susssg@sk.com 오너가 본인 삭제</span>
+                                            <span class="mfont">susssg@sk.com 오너가 본인 삭제</span>
                                         </td>
-                                        <td>Member</td>
+                                        <td class="mfont">Member</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('transfer_dele')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                     <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                         <td>
-                                            <span>sungkung@sk.com</span>
-                                            <span class="state ready">초대중</span>
+                                            <span class="mfont">sungkung@sk.com</span>
+                                            <span class="lab mid blue">초대중</span>
                                             <a href="#none" class="btn blue xsmall ml_8">다시 초대하기</a>
                                         </td>
-                                        <td>Member</td>
+                                        <td class="mfont">Member</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            
                             <!-- 개발자 사이트 관리자 접근 시 -->
                             <table>
                                 <colgroup>
@@ -243,42 +242,42 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="#none">sungkung@sk.com</a>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
                                         </td>
                                         <td>
-                                            <a href="#none">sungkung@sk.com</a>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
                                         </td>
                                         <td>김선경</td>
                                         <td>SK텔레콤</td>
                                         <td>개발</td>
-                                        <td>Owner</td>
+                                        <td class="mfont">Owner</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('owner_al')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                     <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                         <td>
-                                            <a href="#none">sungkung@sk.com</a>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
                                         </td>
                                         <td>
-                                            <a href="#none">sungkung@sk.com</a>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
                                         </td>
                                         <td>김선경</td>
                                         <td>SK플래닛닛닛닛닛닛</td>
                                         <td>개발</td>
-                                        <td>Member</td>
+                                        <td class="mfont">Member</td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('tester_del')"><i class="icon del_bk"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-
                             <div class="btn_wrap">
                                 <button class="btn small black" onclick="showPop('transfer')">오너 변경</button>
                             </div>
                         </div>
                         <!-- E:  -->  
+                        <!-- // 211103 modify -->
                     </div>
                     <!-- 테스터 관리 -->
                     <!-- S: web -->
@@ -309,6 +308,7 @@
 
                         <!-- S: Board Type -->
                         <div class="board inbox mt60">
+                            <!-- 211103 modify -->
                             <table>
                                 <colgroup>
                                     <col style="width:auto;"><col style="width:80px;">
@@ -322,7 +322,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="#none" onclick="showPop('invite')">sungkung@sk.com</a>
+                                            <a href="#none" class="mfont" onclick="showPop('invite')">sungkung@sk.com</a>
                                         </td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('tester_del')"><i class="icon del_bk"></i></button>
@@ -330,8 +330,8 @@
                                     </tr>
                                     <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                         <td>
-                                            <a>sungkung@sk.com</a>
-                                            <span class="state ready">초대중</span>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
+                                            <span class="lab blue mid">초대중</span>
                                         </td>
                                         <td class="txtcenter">
                                             <button><i class="icon del_bk" onclick="showPop('tester_del')"></i></button>
@@ -339,6 +339,7 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <!-- // 211103 modify -->
                         </div>
                         <!-- E:  -->  
                     </div>

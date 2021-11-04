@@ -126,13 +126,14 @@
             <div class="page_contents">
                 <!-- S: Board Type -->
                 <div class="board inbox">
-                    <table>
+                    <!-- 211103 modify -->
+                    <table class="list_setting">
                         <colgroup>
                             <col style="width:80px;"><col style="width:200px;"><col style="width:248px;"><col style="width:auto; min-width: 320px;">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th class="txtcenter mfont"><span>No.</span></th>
+                                <th class="txtcenter mfont"><span class="mfont">No.</span></th>
                                 <th><span>제공 정보</span></th>
                                 <th><span>항목 명</span></th>
                                 <th class="txtcenter"><span>사용 여부</span></th>                                                 
@@ -141,8 +142,8 @@
                         <tbody>
                             <tr>
                                 <td class="txtcenter mfont">01</td>
-                                <td>사용자 ID</td>
-                                <td>subs_id</td>
+                                <td class="mfont">User ID</td>
+                                <td class="mfont">subs_id</td>
                                 <td class="txtcenter">
                                     <div class="sorting radio">
                                         <label>
@@ -162,8 +163,8 @@
                             </tr>
                             <tr>
                                 <td class="txtcenter mfont">01</td>
-                                <td>사용자 ID</td>
-                                <td>subs_id</td>
+                                <td class="mfont">User ID</td>
+                                <td class="mfont">subs_id</td>
                                 <td class="txtcenter">
                                     <div class="sorting radio">
                                         <label>
@@ -183,8 +184,8 @@
                             </tr>
                             <tr>
                                 <td class="txtcenter mfont">01</td>
-                                <td>사용자 ID</td>
-                                <td>subs_id</td>
+                                <td class="mfont">User ID</td>
+                                <td class="mfont">subs_id</td>
                                 <td class="txtcenter">
                                     <div class="sorting radio">
                                         <label>
@@ -204,22 +205,23 @@
                             </tr>
                             <tr>
                                 <td class="txtcenter mfont">01</td>
-                                <td class="txtinert">사용자 ID</td>
-                                <td class="txtinert">subs_id</td>
+                                <td class="txtinert mfont">User ID</td>
+                                <td class="txtinert mfont">subs_id</td>
                                 <td class="txtcenter">
                                     <span class="state before">권한 없음</span>
                                 </td>
                             </tr>
                             <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                 <td class="txtcenter mfont">01</td>
-                                <td class="txtinert">사용자 ID</td>
-                                <td class="txtinert">subs_id</td>
+                                <td class="txtinert mfont">User ID</td>
+                                <td class="txtinert mfont">subs_id</td>
                                 <td class="txtcenter">
                                     <span class="state before">권한 없음</span>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <!-- 211103 modify -->
                     <div class="btn_wrap">
                         <button class="btn small black">비즈니스 애플리케이션 설정</button>
                         <p class="pxtxt">권한이 필요한 항목은 비즈니스 애플리케이션 설정이 필요합니다.</p>
