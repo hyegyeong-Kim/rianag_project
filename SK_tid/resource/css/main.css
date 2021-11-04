@@ -29,8 +29,8 @@
 
 
 #m_container .main_visual {max-width:1420px; padding:0 24px; margin: 0 auto; margin-bottom:-140px;}
-.main_visual .visual_txt {line-height:100px; margin-bottom:50px; letter-spacing:-7px; font-size:86px; font-weight: 600;}
-.main_visual .visual_txt .txt_t {display:inline-block; width:83px; height:90px; background:url('../images/main/logo_abb.png') no-repeat 0 0; background-size:auto 100%; overflow:hidden; text-indent:-10000px;}
+.main_visual .visual_txt {line-height:100px; margin-bottom:50px; letter-spacing:-7px; font-size:86px; font-weight: 600; color:#222;}
+.main_visual .visual_txt .txt_t {display:inline-block; width:83px; height:90px; margin-right:-7px; background:url('../images/main/logo_abb.png') no-repeat 0 0; background-size:auto 100%; overflow:hidden; text-indent:-10000px; position:relative; top:10px}
 .main_visual .btn_visual {display:inline-block; width:204px; height:80px; line-height:80px; background:#000; border:0; border-radius:50px; letter-spacing:-.8px; text-align:center; font-size:18px; color:#fff;} 
 @media (max-width: 1280px) {
     #m_container .main_visual {margin-bottom:0;}
@@ -72,7 +72,7 @@
 .cont_service .service_link ul::after {content:''; display:block; clear:both;}
 .cont_service .service_link li {float:left; width:100px; height:100px; margin:0 0 60px 50px;}
 .cont_service .service_link li:nth-child(5n + 1) {margin-left:0;}
-.cont_service .service_link li img {width:100%; border-radius:20px; box-shadow:14px 14px 15px 0 rgba(68, 64, 128, 0.12);}
+.cont_service .service_link li img {width:100%; border-radius:20px; box-shadow:5px 5px 15px 0px rgb(68 64 128 / 32%)}
 .cont_service .service_link li a {display:block;}
 .swiper-slide {text-align:center; font-size:18px;}
 .swiper-buttons {height:48px; position:absolute; bottom:200px; text-align:left;}
