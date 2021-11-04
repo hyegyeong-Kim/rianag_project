@@ -239,7 +239,7 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop .pop_con {max-height: 850px; padding:48px 40px; background:#ffffff; overflow:auto; letter-spacing: -.8px;}
 .popup .inner_pop .pop_moreview {height:603px;}
 .popup .pop_con .btn_wrap {text-align:center; margin-top:48px;}
-.popup .pop_con .btn_wrap .btn {width:148px;}
+.popup .pop_con .btn_wrap .btn {width:148px; padding:0 30px;}
 .popup .pop_con .btn_wrap.cover2 {margin-top:8px;}
 .pop_con .popsub_tl {font-size:22px; line-height:33px; font-weight:600; color:#222222; padding-bottom:8px; border-bottom:1px solid #222222; margin-bottom:24px;}
 .pop_con .popsub_tl2 {font-size:24px; font-weight:600; color:#222222; margin-bottom:12px;}

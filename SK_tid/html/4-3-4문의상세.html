@@ -172,8 +172,8 @@
                                     <button>답글쓰기</button>
                                 </div>
                                 <div class="editbox">
-                                    <button class="btn_edit_bk">편집</button>
-                                    <button class="btn_del02 ml_12">지우기</button>
+                                    <button class="btn_edit">편집</button>
+                                    <button class="btn_del02 ml_12" onclick="showPop('comment_del')">지우기</button>
                                 </div>
                             </div>
                             <!-- 대댓글 set -->
@@ -206,8 +206,8 @@
                                             <button>답글쓰기</button>
                                         </div>
                                         <div class="editbox">
-                                            <button class="btn_edit_bk">편집</button>
-                                            <button class="btn_del02 ml_12">지우기</button>
+                                            <button class="btn_edit">편집</button>
+                                            <button class="btn_del02 ml_12" onclick="showPop('comment_del')">지우기</button>
                                         </div>
                                     </div>
                                 </div>
@@ -220,15 +220,14 @@
                                     </div>
                                     <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
                                     <div class="btn_box">
-                                        <a href="#none" class="btn xsmall gray99">취소</a>
-                                        <a href="#none" class="btn xsmall grayf1">등록</a>
+                                        <a href="#none" class="btn xsmall grayf1 regist">등록</a>
                                     </div>
                                 </div>
                                 <!-- // comment -->
                             </div>
-                            <!-- 대댓글 set -->
+                            <!-- // 대댓글 set -->
                         </li>
-                        <!-- 댓글 total set -->
+                        <!-- // 댓글 total set -->
                         <li>
                             <div class="comment_unit">
                                 <div>
@@ -243,15 +242,58 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- s: 작성 댓글 수정 -->
+                        <li>
+                            <div class="new_comment">
+                                <p class="writer">이학성</p>
+                                <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
+                                <div class="btn_box">
+                                    <a href="#none" class="btn xsmall gray99">취소</a>
+                                    <a href="#none" class="btn xsmall grayf1 regist">등록</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- e: 작성 댓글 수정 -->
+                        <li>
+                            <div class="comment_unit">
+                                <div>
+                                    <p class="writer">김연아</p>
+                                </div>
+                                <div class="comment_txt">
+                                    해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                </div>
+                                <div class="comment_date">
+                                    <p class="mfont">2021.10.02.09:50</p>
+                                    <button>답글쓰기</button>
+                                </div>
+                            </div>
+                            <!-- 대댓글 set -->
+                            <div class="comment_depth2">
+                                <!-- s: 작성 대댓글 수정 -->
+                                <div class="dep2_list">
+                                    <div class="new_comment">
+                                        <p class="writer">이학성</p>
+                                        <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
+                                        <div class="btn_box">
+                                            <a href="#none" class="btn xsmall gray99">취소</a>
+                                            <a href="#none" class="btn xsmall grayf1 regist">등록</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- e: 작성 대댓글 수정 -->
+                            </div>
+                            <!-- // 대댓글 set -->
+                        </li>
                     </ul>
+                    <!--S: comment -->
                     <div class="new_comment">
                         <p class="writer">이학성</p>
                         <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
                         <div class="btn_box">
-                            <a href="#none" class="btn xsmall gray99">취소</a>
-                            <a href="#none" class="btn xsmall grayf1">등록</a>
+                            <a href="#none" class="btn xsmall grayf1 regist">등록</a>
                         </div>
                     </div>
+                    <!--E: comment -->
                 </div>
                 <div class="btn_wrap">
                     <button class="btn xlarge black">목록</button>
@@ -280,9 +322,32 @@
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
+
+<!-- S: 팝업 /댓글삭제 확인팝업 -->
+<div class="popup" id="comment_del">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                댓글을 삭제하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('comment_del')">취소</a>    
+                <a href="#none" class="btn large black" onclick="hidePop('comment_del')">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 댓글삭제 확인팝업 -->
+
 <script>
     $("textarea.comment_area").on('keydown keyup', function () {
-        $(this).height(1).height( $(this).prop('scrollHeight'));	
+        $(this).height(1).height( $(this).prop('scrollHeight'));
+        if($(this).val() == ''){
+            $(this).siblings(".btn_box").children(".regist").removeClass("black").addClass("grayf1")
+        }else{
+            $(this).siblings(".btn_box").children(".regist").removeClass("grayf1").addClass("black")
+
+        }
     });
 </script>
 </body>
