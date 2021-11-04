@@ -677,8 +677,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .comment_wrap .commentlist li .comment_unit {position:relative; padding:16px 175px 0 0;}
 .comment_wrap .commentlist li .comment_unit .comment_txt {font-size:14px; line-height:20px; color:#666; margin:12px 0 13px; word-break:break-word;}
 .comment_wrap .commentlist li .comment_unit .comment_txt strong {color:#222;}
-.comment_wrap .commentlist li .comment_unit .comment_date p {display:inline-block; font-size:14px; color:#666; position:relative; padding-right:8px; margin-right:4px;}
-.comment_wrap .commentlist li .comment_unit .comment_date p::before {content:''; display:block; width:1px; height:10px; background:#aaa; position:absolute; top:3px; right:0;}
+.comment_wrap .commentlist li .comment_unit .comment_date p {display:inline-block; font-size:14px; line-height:20px; color:#666; position:relative; padding-right:8px; margin-right:4px;}
+.comment_wrap .commentlist li .comment_unit .comment_date p::before {content:''; display:block; width:1px; height:10px; background:#aaa; position:absolute; top:6px; right:0;}
 .comment_wrap .commentlist li .comment_unit .comment_date button {display: inline-block; font-size:14px; font-weight:500; padding:0;}
 .comment_wrap .commentlist li .comment_unit .editbox {position:absolute; top:16px; right:0;}
 .comment_wrap .commentlist li .new_comment {margin-top:16px;}
