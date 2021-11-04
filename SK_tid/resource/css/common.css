@@ -138,7 +138,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .h_gnb a.alarm span {display:block; width:24px; height:24px; background:url('../images/common/ic_alarm.png') no-repeat right center; text-indent:-9999px; position:relative; overflow:hidden;}
 .h_gnb a.alarm span i.new {display:block;width:8px; height:8px; border-radius:50%; background:#ffa640 ; text-indent:-9999px; position:absolute; top:0; right:0; overflow:hidden;}
 .h_gnb a.btn_menuopen {display:none;}
-.h_gnb a.btn_login {display:inline-block; width:80px; height:38px; line-height:40px; margin-top:-10px; background:#1b6491; border-radius:50px; letter-spacing:-.8px; text-align:center; font-family:'Roboto'; font-size:14px; color:#fff;} 
+.h_gnb a.btn_login {display:inline-block; width:80px; height:38px; line-height:38px; margin-top:-10px; background:#1b6491; border-radius:50px; letter-spacing:-.8px; text-align:center; font-size:14px; color:#fff;} 
 
 @media (max-width: 1023px) {
     #top {height:72px; padding:20px 24px;}
