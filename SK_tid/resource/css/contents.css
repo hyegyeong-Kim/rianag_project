@@ -23,16 +23,17 @@ button:disabled {cursor:default;}
 .btn.grayf1 {background:#f1f1f1; color:#bfbfbf;}
 .btn.blue {background:#1b6491; color:#fff;}
 .btn.yellow {background:#ffa640; color:#fff;}
-.btn.white {background:#fff; color:#666; border:solid 2px #aaa}
+.btn.white {background:#fff; color:#666; border:solid 2px #aaa;}
 .btn.default {height:40px; line-height:40px; padding:0 24px; font-size:16px;}
 .btn.xlarge {min-width:180px; height:60px; line-height:60px; padding:0 36px; font-size:16px;}
 .btn.large {min-width:130px; height:52px; line-height:52px; padding:0 36px; font-size:16px;}
 .btn.xsmall {min-width:50px; height:28px; line-height:28px; padding:0 12px; font-size:12px;}
 .btn.small {min-width:50px; height:32px; line-height:32px; padding:0 16px; font-size:13px;}
+.btn.xlarge.white {line-height:56px;}
 .btn_sch {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_search.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_view {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_view.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_accordion {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_accordion.png') no-repeat; text-indent:-9999px; overflow:hidden; transition:all .5s;}
-.btn_edit {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_edit_s.png') no-repeat; text-indent:-9999px; overflow:hidden;}
+.btn_edit {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_edit_bk.png') no-repeat; text-indent:-9999px; overflow:hidden;}
 .btn_del {display:inline-block; width:20px; height:20px; background:url('../images/terms/ic_delete.png') no-repeat; text-indent:-9999px; overflow:hidden; border:none;}
 .btn_del02 {display:inline-block; background:url('../images/common/ic_delete_can.png') no-repeat; text-indent:-9999px; overflow:hidden; width:24px; height:24px;}
 .btn_tadd {display:inline-block; width:40px; height:40px;background:url('../images/common/ic_tadd.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
@@ -89,6 +90,8 @@ textarea::placeholder {color:#bfbfbf; font-weight:350;}
 .radiobox label input[type="radio"] + span {color:#bfbfbf;} 
 
 /* input type */
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #fff inset ; -webkit-text-fill-color: #000; }
+input:disabled {background:#f1f1f1; border-color:#e0e0e0; color:#bfbfbf;}
 span.input {display:block; height:48px; padding:0 16px;}
 span.input + .input {margin-top:10px;}
 span.input input[type='text'],
@@ -101,21 +104,19 @@ span.input.txt {width:100%; padding:0 100px 0 16px; border:solid 1px #cfcfcf; bo
 span.input.txt.only {padding-right:16px;}
 span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%);font-family:'Roboto';}
 /* span.input.txt .filename {color:#999;} */
+.direct_input {display:none; margin-top:10px;}
+.direct_input.show {display:block;}
+span.input.disabled, .disabled span.input {background:#f1f1f1;}
+.disabled button:disabled {opacity: .3; cursor:default;}
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
 span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
-span.input.direct_input {display:none;}
-span.input.direct_input.show {display:block;}
 .dateset {display:inline-block;}
+.dateset span.input + .input {margin-top:0;}
 span.input.date {display:inline-block; width:140px; padding-right:35px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
 span.input.date + .date {margin-left:12px;}
 span.input.date .btn_date {text-indent:-9999px; background:url('../images/common/ic_sorting.png') no-repeat center; right:12px;}
 span.input.switch_btn {display:inline-block; padding:0; padding-top: 10px;}
-.disabled span.input,  
-span.input.disabled {background:#e0e0e0;}
-span.input.disabled input {color:#bfbfbf;}
-span.input input:disabled {background:#e0e0e0; color:#bfbfbf;}
-span.input.disabled button:disabled {opacity: .3; cursor:default;}
 span.input.password button:nth-last-child(2) {right:55px;}
 .warning {padding:5px 0 0 10px;font-size:12px; color:#fc2a2a;}
 span.input.type_03 {display:inline-block; margin:0 3px; padding:0; border:none; border-radius:0; margin:0;}
@@ -142,7 +143,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .switch_btn label.on {background:#1b6491;}
 .switch_btn label input[type="checkbox"] {visibility:hidden;}
 .switch_btn label span::after {content:'on'; display:inline-block; width:20px; height:20px; background:#fff; border-radius:30px; text-indent:-9999px; overflow:hidden; position:absolute; top:2px; left:2px; vertical-align:middle; transition:all .5s;}
-.switch_btn label input:checked + span::after {content:'off'; left:inherit; left:calc(100% - 22px);}
+.switch_btn label.on input:checked + span::after {content:'off'; left:calc(100% - 22px);}
 
 /* search */
 .search {width:340px; height:48px; padding:0 50px 0 16px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
@@ -237,6 +238,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .board table thead th span  {display:inline-block; word-break: keep-all; vertical-align:middle;}
 .board table thead th p span { max-width:calc(100% - 30px); }
 .board table thead th p .btn_sort {display:inline-block; width:16px; height:16px; margin-left:5px; background:url('../images/common/ic_sorting.png') no-repeat center center; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
+.board table thead th em {font-weight:600}
 .board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-word; font-family:'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td.f_blue {color:#1485cb;}
 .board table tbody td a {font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
@@ -269,6 +271,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .inbox.board table .markplus {position:relative; padding-right:80px;}
 .inbox.board table .markplus .owner {position:absolute; top:16px; right:16px;}
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
+.board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 
 /* 사용자 동의 내역 */
 .board table.board_tbl tbody tr.on > td {border-bottom:0;}
@@ -298,7 +301,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 /* content_tbl */
 .content_tbl {width:100%;}
 .content_tbl tr th {font-size:16px; line-height:26px; font-weight:600; color:#222222; padding:9px 5px;}
-.content_tbl tr td {font-size:16px; line-height:26px; font-weight:400; color:#666666; padding:9px 5px 9px 52px;}
+.content_tbl tr td {font-size:16px; line-height:26px; font-weight:400; color:#666666; padding:9px 5px;}
 .content_tbl tr td span .under_txt {margin-left:16px;}
 
 /* 약관 기능 사용하기 */
@@ -347,7 +350,6 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .regist_table .appterm_tbl tbody td .stc {width:460px;}
 .regist_table .appterm_tbl tbody td .stc .icon.arr {display:block; background:url('../images/common/ic_upper.png') no-repeat; margin:20px auto;}
 .regist_table .appterm_tbl tbody td .moving_wrap li::after {display:block; content:''; clear:both;}
-.regist_table .appterm_tbl .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 .regist_table .has_switch, .regist_table .switch_desc {position:relative; padding-left:96px;}
 .regist_table .switch_desc {padding-left:68px;}
 .regist_table .has_switch .switch_btn, .regist_table .switch_desc .switch_btn {position:absolute; top:12px; left:0;}
@@ -438,13 +440,13 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .mo_inner::-webkit-scrollbar-thumb {background: #999; border-radius: 2px;}
 .pmo_tl {font-size:24px; line-height:36px; font-weight:600; margin-bottom:20px;}
 .mcontent {font-size:16px; line-height:26px; color:#222222; margin-top:20px;}
-.mo_inner ul {margin-top:20px;  padding:20px 0; border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf;}
+.mo_inner ul {margin-top:21px;  padding:20px 0; border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf;}
 .mo_inner ul li {margin-top:12px;}
 .mo_inner ul li:first-child {margin-top:0;}
 .mo_inner ul li a {display:block; background:url('../images/terms/ic_arrow_s.png') right center no-repeat;}
-.mo_inner .desc {font-size:14px; line-height:22px; color:#666666; margin-top:32px;}
+.mo_inner .desc {margin-bottom:70px;}
 .pview_arrow {background:url('../images/common/ic_pvarrow.png') no-repeat; margin-right:4px;}
-.pcprev_box .mo_inner {width:100%; padding:20px 0 40px 0; border-bottom:1px solid #cfcfcf;}
+.pcprev_box .mo_inner {width:100%; padding:0 0 40px 0; border-bottom:1px solid #cfcfcf;}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
 /* 개별약관편집 */
@@ -466,7 +468,7 @@ select.sel_de.dw_gray {background:url('../images/common/ic_sel_down.png') 90% ce
 .code_connect dt {width:40px; display:inline-block;}
 .code_connect dt::after {content:'';display: inline-block; width:1px;height:10px; margin-left:8px; background-color:#aaa;}
 .code_connect dd {width:calc(100% - 50px); font-weight:600;}
-.code_connect .tstate {font-size:14px; position:absolute; top:20px; right:28px;}
+.code_connect .tstate {font-size:14px; position:absolute; top:20px; right:28px; font-weight:600;}
 .code_connect .mfont {margin-top:3px;}
 
 /***** 5. 내앱 *****/

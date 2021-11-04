@@ -24,7 +24,7 @@ $(function(){
     $(function(){
         $("#btn_gotop").hide();
         $(document).scroll(function(){
-            if($(document).scrollTop() > $("body").height() - 300){
+            if($(document).scrollTop() > $("body").height() - 600){
                 $("#btn_gotop").fadeIn();
             } else if($(document).scrollTop() == $(document).height() - $(window).height()) {
                 $("#btn_gotop").fadeIn();

@@ -24,6 +24,11 @@
                     <li><a href="#none" class="act">지원</a></li>
                     <li><a href="#none">내 애플리케이션</a></li>
                 </ul>
+                <!-- S: 로그인 전 -->
+                <!-- <a href="#none" class="btn_login">LOGIN</a> -->
+                <!-- E: 로그인 전 -->
+
+                <!-- S: 로그인 후 -->
                 <div class="myemail">
                     <a href="#none" class="mylink">sungkung@sk.com</a>
                     <div class="minibox">
@@ -34,7 +39,12 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a> <!-- 새로운 알림이 있는경우 i 노출 -->
+                <div>
+                    
+                </div>
+                <!-- E: 로그인 후 -->
+
                 <!-- 1024 미만사이즈 에서 노출 -->
                 <a href="#none" class="btn_menuopen">메뉴보기</a>
             </div>
@@ -53,12 +63,15 @@
                         <span class="it1">NUGU</span>
                         <span class="it2">ALDN</span>
                     </div>
-                    <dl class="ongoing">
-                        <dt>개발진행중...</dt>
-                        <dd>
-                            <span class="size">80%</span><!-- 입력값으로 bar 길이 조정 -->
-                        </dd>
-                    </dl>
+                    <!-- 211102 modify -->
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                        <!-- <span class="use">상용중</span> -->
+                        <!-- <span class="stop">정지</span> -->
+                        <!-- <span class="end">종료</span> -->
+                        <!-- <span class="delete">삭제</span> -->
+                    </div>
+                    <!-- // 211102 modify -->
                     <ul class="device">
                         <li><span class="ic ic_web">web</span></li>
                         <li><span class="ic ic_ios">ios</span></li>
@@ -153,6 +166,7 @@
                 </div>
                 <!-- S: Board Type -->
                 <div class="board">
+                    <!-- S: 211103 modify table 하위태그들 class추가, span추가, col 값 변경 -->
                     <!-- table -->
                     <table class="board_tbl">
                         <caption></caption>
@@ -167,7 +181,7 @@
                         <thead>
                             <tr>
                                 <th class="txtcenter">
-                                    <span>No.</span>
+                                    <span class="mfont">No.</span>
                                 </th>
                                 <th>
                                     <span> 약관 이름</span>
@@ -188,11 +202,11 @@
                             <!-- unit -->
                             <!-- alist_tit -->
                             <tr class="alist_tit">
-                                <td class="txtcenter">01</td>
+                                <td class="mfont txtcenter">01</td>
                                 <td>서비스 이용 약관</td>
                                 <td>철회 이력 없음</td>
-                                <td>2021/09/10/19:42:02</td>
-                                <td class="txtcenter">N</td>
+                                <td><span class="mfont">2021/09/10/19:42:02</span></td>
+                                <td class="mfont txtcenter">N</td>
                                 <td class="txtcenter">
                                     <button class="btn_accordion">내역 보기</button>
                                 </td>
@@ -223,24 +237,24 @@
                                             <tbody>
                                                 <tr>
                                                     <td>회원포털</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>-</td>
                                                     <td>철회</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Tmap App, 도미노 피자 이용 동의</td>
                                                     <td>-</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>동의</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>NUGU App, CJ오쇼핑 이용 동의</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>-</td>
                                                     <td>철회</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -253,11 +267,11 @@
                             <!-- unit -->
                             <!-- alist_tit -->
                             <tr class="alist_tit">
-                                <td class="txtcenter">02</td>
+                                <td class="mfont txtcenter">02</td>
                                 <td>서비스 이용 약관</td>
                                 <td>철회 이력 없음</td>
-                                <td>2021/09/10/19:42:02</td>
-                                <td class="txtcenter">N</td>
+                                <td><span class="mfont">2021/09/10/19:42:02</span></td>
+                                <td class="mfont txtcenter">N</td>
                                 <td class="txtcenter">
                                     <button class="btn_accordion">내역 보기</button>
                                 </td>
@@ -288,24 +302,24 @@
                                             <tbody>
                                                 <tr>
                                                     <td>회원포털</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>-</td>
                                                     <td>철회</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Tmap App, 도미노 피자 이용 동의</td>
                                                     <td>-</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>동의</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>NUGU App, CJ오쇼핑 이용 동의</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>-</td>
                                                     <td>철회</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -318,10 +332,10 @@
                             <!-- unit -->
                             <!-- alist_tit -->
                             <tr class="alist_tit">
-                                <td class="txtcenter">03</td>
+                                <td class="mfont txtcenter">03</td>
                                 <td>서비스 이용 약관</td>
                                 <td>철회 이력 없음</td>
-                                <td>2021/09/10/19:42:02</td>
+                                <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                 <td class="txtcenter">N</td>
                                 <td class="txtcenter">
                                     <button class="btn_accordion">내역 보기</button>
@@ -353,24 +367,24 @@
                                             <tbody>
                                                 <tr>
                                                     <td>회원포털</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>-</td>
                                                     <td>철회</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Tmap App, 도미노 피자 이용 동의</td>
                                                     <td>-</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>동의</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>NUGU App, CJ오쇼핑 이용 동의</td>
-                                                    <td>2021/09/10/19:42:02</td>
+                                                    <td><span class="mfont">2021/09/10/19:42:02</span></td>
                                                     <td>-</td>
                                                     <td>철회</td>
-                                                    <td>100</td>
+                                                    <td><span class="mfont">100</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
