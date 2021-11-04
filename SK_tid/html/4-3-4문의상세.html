@@ -339,14 +339,37 @@
 </div>
 <!-- E: 팝업 / 댓글삭제 확인팝업 -->
 
+<!-- S: 팝업 / 댓글입력 요청 팝업 -->
+<div class="popup" id="comment_enter">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                댓글을 입력해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('comment_enter')">확인</a>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / 댓글입력 요청 팝업 -->
+
 <script>
+    // 등록버튼 활성화
     $("textarea.comment_area").on('keydown keyup', function () {
         $(this).height(1).height( $(this).prop('scrollHeight'));
         if($(this).val() == ''){
             $(this).siblings(".btn_box").children(".regist").removeClass("black").addClass("grayf1")
+
         }else{
             $(this).siblings(".btn_box").children(".regist").removeClass("grayf1").addClass("black")
 
+        }
+    });
+    // 입력요청
+    $(".regist").on("click",function(){
+        if($(this).parent().siblings(".comment_area").val() == "" ){
+            $("#comment_enter").addClass("open");
         }
     });
 </script>
