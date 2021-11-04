@@ -225,7 +225,7 @@ px {margin-left:48px; margin-right:-10px;}
 #footer .copy { font-family:'Roboto'; position:absolute; bottom:0; right:24px;}
 
 /* page top button */
-#btn_gotop {display:block; width:48px; height:48px; background:url('../images/common/ic_button_top.png') no-repeat center center; text-indent:-9999px; overflow:hidden; position:fixed; bottom:120px; right:24px;}
+#btn_gotop {display:block; width:48px; height:48px; background:url('../images/common/ic_button_top.png') no-repeat center center; text-indent:-9999px; overflow:hidden; position:fixed; bottom:120px; right:24px; z-index:1;}
 
 @media screen and (min-width: 1761px) {
     #btn_gotop { right:inherit; left:calc(50% + 820px)}

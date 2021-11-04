@@ -68,7 +68,8 @@
 #m_container .cont_service h2 {float:left; width:500px; text-align:left;}
 .cont_service::after {content:''; display:block; clear:both;}
 .cont_service .sub_txt {clear:both; float:left; text-align:left;}
-.cont_service .service_link {display:inline-block; width:730px; height:300px; margin-right:-28px;}
+.cont_service .service_link {display:inline-block; width:760px; height:320px; margin-right:-28px; margin-top:-20px;}
+.cont_service .swiper-slide {padding:20px;}
 .cont_service .service_link ul::after {content:''; display:block; clear:both;}
 .cont_service .service_link li {float:left; width:100px; height:100px; margin:0 0 60px 50px;}
 .cont_service .service_link li:nth-child(5n + 1) {margin-left:0;}
@@ -89,7 +90,7 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {margin:0 8px; background:#cfcfcf; opacity:1;}
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {background:#222;}
 @media (max-width: 1280px) {
-    .cont_service .service_link {width:760px;}
+    .cont_service .swiper {left:-20px;}
     .cont_service .service_link li {margin-left:55px;}
 }
 @media (max-width: 1023px) {
