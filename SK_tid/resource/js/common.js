@@ -156,3 +156,10 @@ $(function(){
         }
     });
 });
+
+/* onlycont */
+$(function(){
+    if($(".coantents").hasClass("onlycont")){
+        $("#utility").addClass("hiddenlnb");
+    }
+})

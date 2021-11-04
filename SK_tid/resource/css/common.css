@@ -177,6 +177,7 @@ px {margin-left:48px; margin-right:-10px;}
     #utility {top:72px;}
     .location {margin-left:56px;}
     .userinfo {display:none;}
+    .hiddenlnb .location {margin-left:0;}
 }
 
 /* container */

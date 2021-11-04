@@ -9,10 +9,10 @@
 /*header*/
 .main #header {width:100%; position:fixed; z-index:2;}
 .main #header.topbg {background:#fff; border-bottom:solid 1px #cfcfcf}
-.main #top {width:100%; max-width: 1760px; height:88px; padding:24px 80px; margin:0 auto; background:none;}
+.main #top {width:100%; max-width: 1760px; height:88px; padding:29px 80px; margin:0 auto; background:none;}
 
 @media (max-width: 1420px) {
-    .main #top {padding:24px;margin:0 auto; background:none;}
+    .main #top {padding:29px 24px;margin:0 auto; background:none;}
 }
 
 /* container */
