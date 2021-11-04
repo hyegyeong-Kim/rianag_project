@@ -428,11 +428,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .pop_con {position:relative;}
 .pop_con .btn_next { text-align:center; border-radius:12px; padding:12px 0; font-weight:500; font-size:16px;}
 .pop_con .btn_wrap.onebtn .btn_next {width:100%; padding:12px 0;}
-.pop_con .btn_wrap .btn_next + .btn {margin-left:6px;}
+.pop_con .btn_wrap .btn_next + .btn_next {margin-left:6px;}
 .pop_con .pop_preview {font-size:16px; position:absolute; bottom:62px; right:40px;}
 .pop_con .pop_time {display:block; padding-left:32px; position:absolute; bottom:51px; left:40px; font-weight:500;}
 .pop_con .pop_time .ic_refresh {position:absolute; top:12px; left:0;}
 .pop_con .pop_time p {color:#666; font-weight:400;}
+.pop_con .mo_inner .btn_wrap .btn_next {padding:12px 0;}
 .mobile_box {width:360px; height:650px; border:6px solid #b5b5b5; border-radius:10px; margin:0 auto;}
 .mobile_box .btn_wrap {margin-top:40px;}
 .mobile_box .btn_wrap .check {text-align:left; margin-bottom:20px;}
@@ -477,7 +478,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 /***** 5. 내앱 *****/
 .txt_certify {padding-right:20px; margin-left:12px; font-size:14px; font-weight:600; color:#1485cb; background:url('../images/common/ic_certify.png') no-repeat right 50%;}
 .txt_nocertify {padding-right:20px; margin-left:12px; font-size:14px; font-weight:600; color:#bfbfbf; background:url('../images/common/ic_nocertify.png') no-repeat right 50%;}
-.txt_certify_chk {padding-right:16px; margin-left:12px; font-size:14px; font-weight:600; color:#ffa640; background:url('../images/common/ic_certi_check.png') no-repeat right center;}
+.txt_certify_chk {padding-right:16px; margin-left:12px; font-size:14px; font-weight:600; color:#ffa640; background:url('../images/common/ic_certi_check.png') no-repeat right 59%;}
 /* 내앱목록 */
 .app_list {padding-top:32px; border-top:2px solid #222222;}
 .app_list ul.card_type {margin:0 -10px;}
