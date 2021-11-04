@@ -478,7 +478,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 /***** 5. 내앱 *****/
 .txt_certify {padding-right:20px; margin-left:12px; font-size:14px; font-weight:600; color:#1485cb; background:url('../images/common/ic_certify.png') no-repeat right 50%;}
 .txt_nocertify {padding-right:20px; margin-left:12px; font-size:14px; font-weight:600; color:#bfbfbf; background:url('../images/common/ic_nocertify.png') no-repeat right 50%;}
-.txt_certify_chk {padding-right:16px; margin-left:12px; font-size:14px; font-weight:600; color:#ffa640; background:url('../images/common/ic_certi_check.png') no-repeat right center;}
+.txt_certify_chk {padding-right:16px; margin-left:12px; font-size:14px; font-weight:600; color:#ffa640; background:url('../images/common/ic_certi_check.png') no-repeat right 59%;}
 /* 내앱목록 */
 .app_list {padding-top:32px; border-top:2px solid #222222;}
 .app_list ul.card_type {margin:0 -10px;}
