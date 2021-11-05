@@ -654,12 +654,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
 /* 검색결과 없음 */
-.no_result {margin-top:24px; border-top:2px solid #222;}
+.no_result {margin-top:24px; padding-bottom:120px; border-top:2px solid #222;}
 .no_result .noterms {margin-top:100px;}
 .no_result li {font-size:12px; color:#222; line-height:20px;}
 
 .allqna::after {display:block; content:''; clear:both;}
-.allqna li {float:left; position:relative; padding-left:16px; min-width:103px; margin-left:16px;}
+.allqna li {float:left; position:relative; padding-left:16px; min-width:103px; margin-left:16px; text-align:center;}
 .allqna li:first-child { margin-left:0; padding-left:0;}
 .allqna li:first-child::before {display:none;}
 .allqna li::before {display:block; content:''; width:1px; height:20px; background:#cfcfcf; position:absolute; top:6px; left:0;}
