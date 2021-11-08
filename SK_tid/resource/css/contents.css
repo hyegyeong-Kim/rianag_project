@@ -54,6 +54,7 @@ button:disabled {cursor:default;}
 .icon.ic_refresh {background:url('../images/common/ic_refresh.png') no-repeat;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
+.btn.w370 {width:370px}
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}
 .btn_wrap .btn + .btn {margin-left:8px;}
@@ -63,6 +64,7 @@ button:disabled {cursor:default;}
 /* input */
 input::placeholder,
 textarea::placeholder {color:#bfbfbf; font-weight:350; font-family:'NotoSansKR';}
+textarea:focus {outline:none;}
 
 /* input sorting */
 .sorting label {display:inline-block; margin-right:15px; font-size:16px; letter-spacing:-.8px; color:#222; vertical-align:top;}
@@ -120,6 +122,7 @@ span.input.password button:nth-last-child(2) {right:55px;}
 .warning {padding:5px 0 0 10px;font-size:12px; color:#fc2a2a;}
 span.input.type_03 {display:inline-block; padding:0; border:none; border-radius:0; margin:0;}
 span.input.type_03 input {display:inline-block; width:calc((100% - 26px)/3); margin:0 3px; padding:0 8px; border:solid 1px #cfcfcf; border-radius:4px; font-family:'roboto';}
+span.input button.timeplus {padding:0; font-size:14px; font-weight:500; color:#222; right:75px; border-bottom:solid 2px #222;}
 
 /* 컬러피커 */
 .input.txt {}
@@ -202,7 +205,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_contents .text_area p:first-child {margin-top:0;}
 .onlycont .page_tit h2 {display:block; line-height:50px; text-align: center;}
 .onlycont .page_tit h2 span {font-size:28px; font-weight:400;}
-
 /* ul_type */
 .ul_type01 li {position:relative; padding-left:12px; font-size:14px; color:#666;}
 .ul_type01 li::before {content:''; display:block; width:3px; height:3px; background:#666; border-radius:3px; position:absolute; top:9px; left:0;}
@@ -343,6 +345,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_form tr th {font-size:16px; font-weight:600; padding:12px 0;}
 .regist_form tr td {padding-bottom:12px;}
 .regist_form tr td:last-child {padding-bottom:0;}
+
 /* 등록 테이블 */
 .regist_table {}
 .regist_table table {width:100%;}
@@ -687,7 +690,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .comment_wrap .new_comment .btn_box {position:absolute; top:24px; right:32px;}
 .comment_wrap .new_comment .btn_box .btn + .btn {margin-left:4px;}
 .comment_wrap .new_comment textarea.comment_area {margin-top:14px; width:100%; font-size:16px; line-height:22px; resize:none; border:none; word-break:break-word; min-height:24px;}
-.comment_wrap .new_comment textarea.comment_area:focus {outline:none;}
 .comment_wrap .commentlist li .comment_depth2 {padding:0 0 0 48px; margin-top:20px; border-top:solid 1px #cfcfcf;}
 .comment_wrap .commentlist li .comment_depth2 .dep2_list .comment_unit {border-bottom:solid 1px #cfcfcf; padding-bottom:20px;}
 .comment_wrap .commentlist li .comment_depth2 .dep2_list .comment_unit:last-child {border-bottom:0; padding-bottom:0;}
@@ -700,3 +702,19 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 #container.common_page {max-width:100%; padding-top:88px; min-height:100%;}
 #container.common_page::before {content:''; display:block; width:100%; height:1px; background-color:#cfcfcf; position:fixed; top:88px; z-index:1}
 .common_page .coantents {}
+.onlycont .page_tit + .comtxt.narr {margin-top:-28px;}
+.onlycont .comtxt {font-size:16px; color:#222; line-height:26px; text-align:center;}
+.onlycont .comtxt span {font-weight:600;}
+.onlycont .emailimg {background:url('../images/common/img_email.png') center top no-repeat; padding-top:200px;}
+.onlycont .paperimg {background:url('../images/common/img_paper.png') center top no-repeat; padding-top:210px; margin-bottom:32px;}
+.onlycont .paperimg h2 span {font-size:36px;}
+.onlycont .restimg {background:url('../images/common/img_rest.png') center top no-repeat; padding-top:200px;}
+.onlycont .overimg {background:url('../images/common/img_over.png') center top no-repeat; padding-top:200px;}
+.onlycont .errorimg {background:url('../images/common/img_err.png') center top no-repeat; padding-top:195px;}
+.onlycont .comtxt + .regist_form {margin-top:60px;}
+.onlycont .comtxt + .btn_wrap {margin-top:60px;}
+.onlycont .btn_wrap .emailchg {display:block; margin:0 auto 16px}
+.onlycont .btn_wrap .emailchg + .warning {margin:-8px 0 8px;}
+.onlycont .btn_wrap .btnset div {display:inline-block;}
+.onlycont .btn_wrap .btnset div .btn + .desc_02 {margin-top:4px;}
+.regist_form .btn_wrap {margin-top:60px;}

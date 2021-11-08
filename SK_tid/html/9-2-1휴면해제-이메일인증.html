@@ -1,0 +1,152 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="common_page">
+        <div class="coantents onlycont">
+            <div class="page_tit">
+                <h2>이메일 인증</h2>
+            </div>
+            <p class="comtxt narr">
+                회원정보로 등록한 회사 이메일 또는 개인 이메일을 입력해주세요.<br>
+                회원정보와 정보가 같아야 인증번호를 받을 수 있습니다.
+            </p>
+            <div class="regist_form">
+                <table>
+                    <caption></caption>
+                    <colgroup><col style="width:460px"></colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <span>이메일</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="이메일을 입력해주세요.">
+                                    <button class="btn xsmall gray focus">인증</button>
+                                    <!-- 인증번호 발송시 -->
+                                    <!-- <button class="btn xsmall gray">재발송</button> --> 
+                                </span>
+                                <p class="warning">올바른 이메일 주소를 입력해주세요.</p>
+                            </td>    
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>인증번호</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="input txt">
+                                    <input type="text" placeholder="인증번호를 입력해주세요.">
+                                    <button class="timeplus">시간 연장</button>
+                                    <button class="btn xsmall gray focus">확인</button>
+                                </span>
+                                <p class="warning">남은 시간 02:55</p>
+                                <p class="warning">인증 번호 입력시간이 초과 되었습니다. 인증 번호를 재발송 해주세요.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn xlarge gray">취소</a>
+                    <a href="#none" class="btn xlarge black" onclick="showPop('dormant_acc')">휴면 해제</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+<!-- S: 팝업 / 휴면 해제 -->
+<div class="popup" id="dormant_acc">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                휴면 해제가 완료되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('dormant_acc');">취소</a>    
+                <a href="#none" class="btn large black" onclick="hidePop('dormant_acc');">확인</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 휴면 해제 -->
+<script>
+    // 등록버튼 활성화
+    $(".input input").on('keydown keyup', function () {
+        if($(this).val() == ''){
+            $(this).siblings(".focus").removeClass("black").addClass("gray")
+        }else{
+            $(this).siblings(".focus").addClass("black").removeClass("gray")
+
+        }
+    });
+</script>
+</body>
+</html>
+
+
