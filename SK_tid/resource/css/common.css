@@ -98,6 +98,8 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 /*font_style*/
 *{font-family:'NotoSansKR','돋움','Tahoma','Arial',sans-serif; box-sizing:border-box;}
 .mfont{font-family:'Roboto' !important;}
+.f_bold {font-weight:600;}
+.f_normal {font-weight:400;}
 
 /* text align */
 .txtleft {text-align:left !important;}

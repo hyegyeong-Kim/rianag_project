@@ -200,7 +200,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_contents .h3_wrap .optxt {display:inline-block; font-size:18px; font-weight:600;}
 .page_contents .text_area p {margin-top:28px; margin-bottom: 20px; color:#222;}
 .page_contents .text_area p:first-child {margin-top:0;}
-.onlycont .page_tit h2 {display:block; text-align: center;}
+.onlycont .page_tit h2 {display:block; line-height:50px; text-align: center;}
+.onlycont .page_tit h2 span {font-size:28px; font-weight:400;}
 
 /* ul_type */
 .ul_type01 li {position:relative; padding-left:12px; font-size:14px; color:#666;}
@@ -694,3 +695,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .comment_wrap .commentlist li .comment_depth2 .new_comment .editbox {top:24px; right:32px;}
 .comment_wrap .commentlist li .comment_depth2 .dep2_list .new_comment {margin-top:16px;}
 .comment_wrap .commentlist li .comment_depth2 .dep2_list .new_comment + .comment_unit  {margin-top:20px; border-top:solid 1px #cfcfcf;}
+
+/* 공통페이지 */
+#container.common_page {max-width:100%; padding-top:88px; min-height:100%;}
+#container.common_page::before {content:''; display:block; width:100%; height:1px; background-color:#cfcfcf; position:fixed; top:88px; z-index:1}
+.common_page .coantents {}
