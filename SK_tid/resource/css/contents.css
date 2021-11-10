@@ -194,6 +194,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_tit {margin-bottom:60px; position:relative;}
 .page_tit h2 {display:inline-block; margin-right:15px; font-size:36px; font-weight:600; letter-spacing:-1.8px; vertical-align:middle;}
 .page_tit .tit_right {position:absolute; top:0; right:0;}
+.page_tit.titborder {border-bottom:2px solid #222; padding-bottom:20px; margin-bottom:32px;}
 .page_contents .h3_wrap {padding-bottom:16px; margin-top:80px; margin-bottom:32px; border-bottom:solid 2px #222; position:relative;}
 .page_contents .h3_wrap:first-of-type {margin-top:0;}
 .page_contents .h3_wrap h3 {display:inline-block; margin-right:12px; font-size:24px; font-weight:600; color:#222; vertical-align:middle;}
@@ -203,7 +204,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_contents .text_area p {margin-top:28px; margin-bottom: 20px; color:#222;}
 .page_contents .text_area p:first-child {margin-top:0;}
 .onlycont .page_tit h2 {display:block; line-height:50px; text-align: center;}
-.onlycont .page_tit h2 span {font-size:28px; font-weight:400;}
+
 /* ul_type */
 .ul_type01 li {position:relative; padding-left:12px; font-size:14px; color:#666;}
 .ul_type01 li::before {content:''; display:block; width:3px; height:3px; background:#666; border-radius:3px; position:absolute; top:9px; left:0;}
@@ -718,6 +719,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 }
 .common_page .coantents {padding-top:120px;}
 .common_page .page_tit + .comtxt.narr {margin-top:-28px;}
+.common_page .onlycont .page_tit h2 span {font-size:28px; font-weight:400;}
 .common_page .comtxt {font-size:16px; color:#222; line-height:26px; text-align:center;}
 .common_page .comtxt span {font-weight:600;}
 .common_page .emailimg {background:url('../images/common/img_email.png') center top no-repeat; padding-top:200px;}
@@ -743,3 +745,28 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 @media screen and (max-width:1023px) {
 .common_page .page_tit h2 {margin:0 30px;}
 }
+
+/* 내정보 */
+.mybx_cover::after {display:block; content:''; clear:both;}
+.myinfo_manage {float:left; display:block; width:460px; margin-right:20px; margin-bottom:100px;}
+.myinfo_manage .wbox {padding:44px 40px 53px; margin-top:-40px;}
+.myinfo_manage .myinfopart {padding:0 30px 24px 0; margin-bottom:24px; border-bottom:solid 1px #cfcfcf; position:relative;}
+.myinfo_manage .myinfopart:last-child {margin-bottom:0; padding-bottom:0; border-bottom:0;}
+.myinfo_manage .myinfopart dt {font-size:16px; font-weight:600; color:#222;}
+.myinfo_manage .myinfopart dt .mini_logo {display:block; padding-left:29px; background:url('../images/common/Tlogo_mini.png') left center no-repeat;}
+.myinfo_manage .myinfopart dd {font-size:16px; line-height:24px; font-weight:400; color:#666; margin-top:10px;}
+.myinfo_manage .myinfopart dd .btn_edit {position:absolute; top:0; right:0;}
+.myinfo_manage .myinfopart dd .company span {display:inline-block; position:relative; padding-left:8px; margin-left:4px;}
+.myinfo_manage .myinfopart dd .company span:first-child {margin:0; padding:0;}
+.myinfo_manage .myinfopart dd .company span::before {position:absolute; top:5px; left:0; display:block; content:''; width:1px; height:16px; background:#666;}
+.myinfo_manage .myinfopart dd .company span:first-child::before {display:none;}
+.myinquiries {float:right; display:block; width:calc(100% - 480px);}
+.myinquiries .inbox {padding:16px 40px; margin-top:-40px; height:392px;}
+.myinquiries .inbox .noterms {transform:translateY(50%);}
+.myinquiries .inbox tr td {padding:14px 0;}
+.myinquiries .inbox tr td .myqnatxt {display:inline-block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.myinquiries .inbox tr td .lab {min-width:68px;}
+.myinquiries .allview {padding-right:26px; background:url('../images/common/ic_arrow_black.png') right center no-repeat; display:block; position:absolute; top:15px; right:0;}
+.leavetid .app_txtcont .txtbox {width:calc(100% - 357px); word-break:keep-all;}
+.leavetid .app_txtcont .btnbox {width:322px; margin-left:35px;}
+.leavetid .app_txtcont .btnbox .btn:first-child {margin-right:4px;}
