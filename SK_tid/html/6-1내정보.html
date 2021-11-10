@@ -44,32 +44,36 @@
     <!-- E: header -->
 
     <!-- S: container -->
-    <div id="container" class="common_page">
+    <div id="container" class="inner">
         <div class="coantents onlycont">
-            <div>
-                <div>
+            <div class="mybx_cover">
+                <div class="myinfo_manage">
                     <div class="page_tit">
-                        <h2>내 정보 관리</h2>
+                        <h2 class="txtleft">내 정보 관리</h2>
                     </div>
                     <div class="wbox">
-                        <dl>
-                            <dt><span class="">T아이디</span></dt>
+                        <dl class="myinfopart">
+                            <dt>
+                                <span class="mini_logo">
+                                    아이디
+                                </span>
+                            </dt>
                             <dd>
                                 <p class="mfont">sungkung@gmail.com</p>
                                 <p class="mfont">010-1234-5678</p>
                             </dd>
                         </dl>
-                        <dl>
-                            <dt><span class="">회사 이메일</span></dt>
+                        <dl class="myinfopart">
+                            <dt>회사 이메일</dt>
                             <dd>
                                 <p class="mfont">sungkung@gmail.com</p>
                                 <button class="btn_edit">편집</button>
                             </dd>
                         </dl>
-                        <dl>
+                        <dl class="myinfopart">
                             <dt><span class="">소속회사 및 담당업무</span></dt>
                             <dd>
-                                <p>
+                                <p class="company">
                                     <span>SK텔레콤</span>
                                     <span>기획</span>
                                 </p>
@@ -78,47 +82,106 @@
                         </dl>
                     </div>
                 </div>
-                <div>
+                <div class="myinquiries">
                     <div class="page_tit">
-                        <h2>문의 내역 <span class="mfont">(8)</span></h2>
-                        <a href="#none">
-                            <i class="icon"></i>
+                        <h2 class="txtleft">문의 내역 <span class="mfont">(8)</span></h2>
+                        <a href="#none" class="allview">
                             전체보기
                         </a>
                     </div>
                     <div class="board inbox">
                         <table>
-                            <colgroup> <!-- 211110 modify 오타수정 -->
-                                <col style="width:80%"><col style="width:20%">
+                            <colgroup>
+                                <col style="width:72%"><col style="width:78px"><col style="width:75px">
                             </colgroup>
                             <tbody>
                                 <tr>
                                     <td>
-                                        (필수) 개인정보 수집/이용 동의 - T멤버십
+                                        <a href="#none" class="myqnatxt">id_token 복호화 오류 발생 관련문의</a>
                                     </td>
+                                    <td class="txtcenter">
+                                        <span class="lab mid">처리중</span>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="mfont">2021.10.29</span>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>
-                                        <span class="state">처리중</span>
+                                        <a href="#none" class="myqnatxt">안드로이드 키 해시는 어떻게 추출하나요?</a>
                                     </td>
-                                    <td class="mfont">
-                                        2021.10.29
+                                    <td class="txtcenter">
+                                        <span class="lab mid">처리중</span>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="mfont">2021.10.29</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#none" class="myqnatxt"> 디자인 가이드에 관해 문의합니다.</a>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="lab mid">처리중</span>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="mfont">2021.10.29</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#none" class="myqnatxt">애플리케이션이 제대로 연동이 되지 않아서 문의 드립니다 확인 바래요.</a>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="lab mid">처리중</span>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="mfont">2021.10.29</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#none" class="myqnatxt">3일 전에 문의 드렸던 디자인 관하여 답변이 아직 없어서 계속 문의 올립니다.  어떻게 되는 상황인지 빨리어떻게 되는 상황인지 빨리어떻게 되는 상황인지 빨리</a>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="lab mid blue">답변완료</span>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="mfont">2021.10.29</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#none" class="myqnatxt">3일 전에 문의 드렸던 디자인 관하여 답변이 아직 없어서 계속 문의 올립니다.  어떻게 되는 상황인지 빨리 </a>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="lab mid">처리중</span>
+                                    </td>
+                                    <td class="txtcenter">
+                                        <span class="mfont">2021.10.29</span>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <!-- s : 문의내역 없을경우 -->
+                        <!-- <div class="noterms">
+                            문의 내역이 없습니다.
+                        </div> -->
+                        <!-- e : 문의내역 없을경우 -->
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="page_tit">
-                    <h2>T아이디 Developers 탈퇴</h2>
+            <div class="leavetid">
+                <div class="page_tit titborder">
+                    <h2 class="txtleft">T아이디 Developers 탈퇴</h2>
                 </div>
-                <div>
-                    <p>
+                <div class="app_txtcont">
+                    <div class="txtbox">
                         회원 탈퇴 시, T아이디 Developers의 모든 정보가 삭제됩니다. 운영자 권한 앱이 있는 경우 탈퇴할 수 없습니다.<br>
                         앱을 삭제하거나,  운영자 권한을 다른 멤버로 변경해주세요.
-                    </p>
-                    <div>
-                        <a href="#none" class="btn default gray">내앱목록</a>
+                    </div>
+                    <div class="btnbox">
+                        <a href="#none" class="btn default gray">내 앱 목록</a>
                         <a href="#none" class="btn default black">Developers 회원 탈퇴</a>
                     </div>
                 </div>
@@ -144,8 +207,38 @@
     
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
-    
 </div>
+<!-- S: 팝업 / 회사 이메일 수정 -->
+<div class="popup open" id="bizinfo">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>회사 이메일 수정</p>
+        </div>
+        <div class="pop_con">
+            <dl class="dl_input">
+                <dt>이메일</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" class="mfont" placeholder="">
+                    </span>
+                </dd>
+                <dt>인증번호</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" class="mfont" placeholder="">
+                    </span>
+                    <p></p>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('bizinfo')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('bizinfo'); showPop('bizinfo_ok');">수정</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 회사 이메일 수정 -->
 </body>
 </html>
 
