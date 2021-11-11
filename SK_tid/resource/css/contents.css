@@ -52,6 +52,7 @@ button:disabled {cursor:default;}
 .icon.del_bk {background:url('../images/common/ic_del_bk.png') no-repeat; margin-right:0;}
 .icon.ic_owner {background:url('../images/common/ic_owner.png') no-repeat; width:12px; height:12px; margin-right:2px;}
 .icon.ic_refresh {background:url('../images/common/ic_refresh.png') no-repeat;}
+.icon.ic_allview {background:url('../images/common/ic_arrow_black.png') no-repeat;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
 .btn.w370 {width:370px}
@@ -417,7 +418,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .group_srch ul li:first-child {margin-top:0;}
 
 .group_choice ul {height:240px; overflow:hidden; overflow-x:hidden; overflow-y:scroll;}
-.group_choice ul li {position:relative; display:inline-block; max-width:300px; margin-top:8px; background:#000000; padding:6px 48px 6px 16px; border-radius:20px;}
+.group_choice ul li {position:relative; display:inline-block; max-width:300px; margin-top:8px; background:#000000; padding:6px 48px 6px 16px; border-radius:20px; margin-right:5px;}
 .group_choice ul li span {display:inline-block; max-width:250px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#ffffff; font-size:14px; line-height:20px;}
 .group_choice ul li:first-child {margin-top:0;}
 .group_choice ul li .btn_del {position:absolute; top:8px; right:16px;}
@@ -767,7 +768,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myinquiries .inbox.board tr td .myqnatxt {display:inline-block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .myinquiries .inbox.board tr td .lab {min-width:68px;}
 .myinquiries .inbox.board .noterms {transform:translateY(50%);}
-.myinquiries .allview {padding-right:26px; background:url('../images/common/ic_arrow_black.png') right center no-repeat; display:block; position:absolute; top:15px; right:0;}
+.myinquiries .allview {font-size:16px; line-height:24px; display:block; position:absolute; top:15px; right:0;}
+.myinquiries .allview .ic_allview {margin:-6px 0 0 0;}
 .myinquiries .inbox tr td .inqudate {color:#666; font-family:'Roboto';}
 .leavetid .app_txtcont .txtbox {width:calc(100% - 357px); word-break:keep-all;}
 .leavetid .app_txtcont .btnbox {width:322px; margin-left:35px;}
