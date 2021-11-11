@@ -47,62 +47,30 @@
     <div id="container" class="common_page">
         <div class="coantents onlycont">
             <div class="page_tit">
-                <h2>타 애플리케이션 약관 노출(연결약관) 신청이 있습니다.</h2>
+                <h2>탈퇴 신청 전<br>
+                    유의 사항을 확인해주세요.</h2>
             </div>
-            <p class="comtxt narr">
-                %신청 애플리케이션 명%의 %연결약관 그룹 이름%의 노출 신청이 있습니다.<br>
-                승인하시면 즉시 테스트 상태로 적용되며 상용 적용을 위해서는 %신청애플리케이션명% Owner의 배포가 필요합니다.
-            </p>
-            <div class="wbox approve_tbl">
-                <div class="regist_table">
-                    <table>
-                        <caption></caption>
-                        <colgroup><col style="width:186px"><col></colgroup>
-                        <tbody>
-                            <tr>
-                                <th>
-                                    신청 애플리케이션
-                                </th>
-                                <td>
-                                    NUGU
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    적용 애플리케이션
-                                </th>
-                                <td>
-                                    Tmap
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    그룹 제목
-                                </th>
-                                <td>
-                                    도미노피자 주문을 위한 약관
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    개별 약관 목록
-                                </th>
-                                <td>
-                                    <ul class="approve_terms">
-                                        <li>
-                                            <span>판매중개서비스 약관판매중개서비스 약관판매중개서비스 약관판매중개서비스 약관</span> <strong class="float_r">필수</strong>
-                                        </li>
-                                        <li>
-                                            <span>개인정보 제3자 제공 동의 - T멤버십</span> <strong class="float_r">필수</strong>
-                                        </li>
-                                        <li>
-                                            <span>개인정보 수집/이용 동의 - T멤버십</span> <strong class="float_r">선택</strong>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="caution_exit">
+                <div class="wbox">
+                    <ul>
+                        <li>
+                            T아이디 Develpers의 서비스 이용 기록은 삭제됩니다.<br>
+                            T아이디 Developers 해지 후에도 T아이디 회원 자격은 유지됩니다.
+                        </li>
+                        <li>
+                            탈퇴 후, 애플리케이션 문의 사항은 애플리케이션 삭제 전까지 그대로 남아있습니다.<br>
+                            삭제를 원하시면 탈퇴 전 삭제해 주시기 바랍니다.
+                        </li>
+                        <li>
+                            멤버로 등록 된 애플리케이션은 자동으로 권한이 삭제됩니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="sorting check">
+                    <label>
+                        <input type="checkbox">
+                        <span>위 내용을 모두 확인하였으며, 해지 시 모든 정보를 복구할 수 없음에 동의합니다.</span>
+                    </label>
                 </div>
             </div>
             <div class="btn_wrap">
@@ -130,8 +98,32 @@
     
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
-    
 </div>
+<!-- S: 팝업 / T 아이디 Developers 탈퇴 -->
+<div class="popup" id="tidexit">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>T 아이디 Developers 탈퇴</p>
+        </div>
+        <div class="pop_con">
+            <dl class="dl_input">
+                <dt>비밀번호 확인</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="password" class="mfont" placeholder="비밀번호를 입력해주세요.">
+                    </span>
+                    <p class="warning">비밀번호가 올바르지 않습니다.</p>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('tidexit')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('tidexit');">회원 탈퇴</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / T 아이디 Developers 탈퇴 -->
 </body>
 </html>
 

@@ -775,3 +775,11 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
     .myinfo_manage {float:none; width:100%; margin-right:0; margin-bottom:60px;}
     .myinquiries {float:none; width:100%;}
 }
+.caution_exit {max-width:638px; margin:-20px auto 0;}
+.caution_exit .wbox {padding:48px 55px;}
+.caution_exit .wbox ul li {color:#666; padding-left:12px; margin-top:20px; position:relative; letter-spacing:-.8px;}
+.caution_exit .wbox ul li:first-child {margin-top:0;}
+.caution_exit .wbox ul li::before {content:''; display:block; width:4px; height:4px; border-radius:4px; background:#666; position:absolute; top:10px; left:0;}
+.caution_exit + .btn_wrap {margin-top:60px;}
+.caution_exit .sorting {text-align:center; margin-top:32px;}
+.caution_exit .sorting label {padding-left:26px;}
