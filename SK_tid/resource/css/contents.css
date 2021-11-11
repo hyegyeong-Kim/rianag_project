@@ -761,13 +761,27 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myinfo_manage .myinfopart dd .company span:first-child {margin:0; padding:0;}
 .myinfo_manage .myinfopart dd .company span::before {position:absolute; top:5px; left:0; display:block; content:''; width:1px; height:16px; background:#666;}
 .myinfo_manage .myinfopart dd .company span:first-child::before {display:none;}
-.myinquiries {float:right; display:block; width:calc(100% - 480px);}
+.myinquiries {float:right; display:block; width:calc(100% - 480px); margin-bottom:100px;}
+.common_page .onlycont .myinquiries .page_tit h2 span {font-size:36px; font-weight:600;}
 .myinquiries .inbox {padding:16px 40px; margin-top:-40px; height:392px;}
 .myinquiries .inbox .noterms {transform:translateY(50%);}
 .myinquiries .inbox tr td {padding:14px 0;}
 .myinquiries .inbox tr td .myqnatxt {display:inline-block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .myinquiries .inbox tr td .lab {min-width:68px;}
 .myinquiries .allview {padding-right:26px; background:url('../images/common/ic_arrow_black.png') right center no-repeat; display:block; position:absolute; top:15px; right:0;}
+.myinquiries .inbox tr td .inqudate {color:#666; font-family:'Roboto';}
 .leavetid .app_txtcont .txtbox {width:calc(100% - 357px); word-break:keep-all;}
 .leavetid .app_txtcont .btnbox {width:322px; margin-left:35px;}
 .leavetid .app_txtcont .btnbox .btn:first-child {margin-right:4px;}
+@media screen and (max-width:1024px) {
+    .myinfo_manage {float:none; width:100%; margin-right:0; margin-bottom:60px;}
+    .myinquiries {float:none; width:100%;}
+}
+.caution_exit {max-width:638px; margin:-20px auto 0;}
+.caution_exit .wbox {padding:48px 55px;}
+.caution_exit .wbox ul li {color:#666; padding-left:12px; margin-top:20px; position:relative; letter-spacing:-.8px;}
+.caution_exit .wbox ul li:first-child {margin-top:0;}
+.caution_exit .wbox ul li::before {content:''; display:block; width:4px; height:4px; border-radius:4px; background:#666; position:absolute; top:10px; left:0;}
+.caution_exit + .btn_wrap {margin-top:60px;}
+.caution_exit .sorting {text-align:center; margin-top:32px;}
+.caution_exit .sorting label {padding-left:26px;}
