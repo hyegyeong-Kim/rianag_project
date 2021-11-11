@@ -151,8 +151,8 @@
                                     서비스 설명은 최대 15자 이내로 작성 가능합니다.
                                 </p>
                                 <span class="input txt">
-                                    <input type="text" placeholder="한글,영문,숫자,공백문자, &quot;-&quot; 만 입력가능합니다.">
-                                    <span class="bytes">0/15 bytes</span>
+                                    <input type="text" placeholder="한글,영문,숫자,공백문자, &quot;-&quot; 만 입력가능합니다." onkeyup="fnChkByte(this, '15')">
+                                    <span class="bytes"><em class="count">0</em>/<em class="total">15</em> bytes</span>
                                 </span>
                                 <p class="warning">15자 이내로 입력해주세요.</p>
                             </td>
@@ -170,8 +170,8 @@
                                     서비스 설명은 최대 150자 이내로 작성 가능합니다. 
                                 </p>
                                 <span class="input txt">
-                                    <input type="text" placeholder="애플리케이션 설명을 입력해주세요">
-                                    <span class="bytes">0/150 bytes</span>
+                                    <input type="text" placeholder="애플리케이션 설명을 입력해주세요" onkeyup="fnChkByte(this, '150')">
+                                    <span class="bytes"><em class="count">0</em>/<em class="total">150</em>  bytes</span>
                                 </span>
                                 <p class="warning">150자 이내로 입력해주세요.</p>
                             </td>
