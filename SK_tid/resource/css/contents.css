@@ -744,9 +744,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .common_page .approve_tbl .regist_table .approve_terms li:first-child {margin-top:0;}
 .common_page .approve_tbl .regist_table .approve_terms li::after {display:block; content:''; clear:both;}
 .common_page .approve_tbl .regist_table .approve_terms li strong {color:#222;}
-@media screen and (max-width:1023px) {
-.common_page .page_tit h2 {margin:0 30px;}
-}
 
 /* 내정보 */
 .mybx_cover::after {display:block; content:''; clear:both;}
