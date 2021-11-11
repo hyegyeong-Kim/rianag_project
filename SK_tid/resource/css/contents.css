@@ -761,6 +761,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myinfo_manage .myinfopart dd .company span::before {position:absolute; top:5px; left:0; display:block; content:''; width:1px; height:16px; background:#666;}
 .myinfo_manage .myinfopart dd .company span:first-child::before {display:none;}
 .myinquiries {float:right; display:block; width:calc(100% - 480px); margin-bottom:100px;}
+.common_page .onlycont .myinquiries .page_tit h2 span {font-size:36px; font-weight:600;}
 .myinquiries .inbox {padding:16px 40px; margin-top:-40px; height:392px;}
 .myinquiries .inbox .noterms {transform:translateY(50%);}
 .myinquiries .inbox tr td {padding:14px 0;}
