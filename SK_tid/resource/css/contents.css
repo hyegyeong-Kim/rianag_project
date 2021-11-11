@@ -439,6 +439,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .pop_con .pop_time .ic_refresh {position:absolute; top:12px; left:0;}
 .pop_con .pop_time p {color:#666; font-weight:400;}
 .pop_con .mo_inner .btn_wrap .btn_next {padding:12px 0;}
+.pop_con .exiterror {background:url('../images/common/ic_caution.png') center top no-repeat; padding-top:100px;}
 .mobile_box {width:360px; height:650px; border:6px solid #b5b5b5; border-radius:10px; margin:0 auto;}
 .mobile_box .btn_wrap {margin-top:40px;}
 .mobile_box .btn_wrap .check {text-align:left; margin-bottom:20px;}
@@ -763,11 +764,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myinfo_manage .myinfopart dd .company span:first-child::before {display:none;}
 .myinquiries {float:right; display:block; width:calc(100% - 480px); margin-bottom:100px;}
 .common_page .onlycont .myinquiries .page_tit h2 span {font-size:36px; font-weight:600;}
-.myinquiries .inbox {padding:16px 40px; margin-top:-40px; height:392px;}
-.myinquiries .inbox .noterms {transform:translateY(50%);}
-.myinquiries .inbox tr td {padding:14px 0;}
-.myinquiries .inbox tr td .myqnatxt {display:inline-block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
-.myinquiries .inbox tr td .lab {min-width:68px;}
+.myinquiries .inbox.board {padding:16px 40px; margin-top:-40px; height:392px;}
+.myinquiries .inbox.board tbody tr td {padding:14px 0; border-bottom:solid 1px #cfcfcf;}
+.myinquiries .inbox.board tbody tr:nth-child(6) td {border-bottom:0}
+.myinquiries .inbox.board tr td .myqnatxt {display:inline-block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.myinquiries .inbox.board tr td .lab {min-width:68px;}
+.myinquiries .inbox.board .noterms {transform:translateY(50%);}
 .myinquiries .allview {padding-right:26px; background:url('../images/common/ic_arrow_black.png') right center no-repeat; display:block; position:absolute; top:15px; right:0;}
 .myinquiries .inbox tr td .inqudate {color:#666; font-family:'Roboto';}
 .leavetid .app_txtcont .txtbox {width:calc(100% - 357px); word-break:keep-all;}
