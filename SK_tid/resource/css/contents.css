@@ -104,9 +104,9 @@ span.input button {position:absolute; top:50%; right:16px; transform: translateY
 span.input button.btn {height:28px; font-size:12px; padding:0 12px; line-height:15px; min-width:46px;}
 span.input.txt {width:100%; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
 span.input.txt.only {padding-right:16px;}
+span.input.txt.twobtn {padding-right:140px;}
 span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%); font-family:'Roboto';}
 span.input.txt .bytes em { font-family:'Roboto';}
-/* span.input.txt .filename {color:#999;} */
 .direct_input {display:none; margin-top:10px;}
 .direct_input.show {display:block;}
 span.input.disabled, .disabled span.input {background:#f1f1f1;}
