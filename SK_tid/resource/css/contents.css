@@ -197,6 +197,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_tit h2 {display:inline-block; margin-right:15px; font-size:36px; font-weight:600; letter-spacing:-1.8px; vertical-align:middle;}
 .page_tit .tit_right {position:absolute; top:0; right:0;}
 .page_tit.titborder {border-bottom:2px solid #222; padding-bottom:20px; margin-bottom:32px;}
+.page_tit span.numcount {display:inline-block; text-align:center; font-weight:600; height:40px; line-height:40px; font-size:32px; background:#222; color:#fff; font-family:'Roboto'; padding:0 18px; border-radius:25px;}
 .page_contents .h3_wrap {padding-bottom:16px; margin-top:80px; margin-bottom:32px; border-bottom:solid 2px #222; position:relative;}
 .page_contents .h3_wrap:first-of-type {margin-top:0;}
 .page_contents .h3_wrap h3 {display:inline-block; margin-right:12px; font-size:24px; font-weight:600; color:#222; vertical-align:middle;}
@@ -731,6 +732,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .common_page .restimg {background:url('../images/common/img_rest.png') center top no-repeat; padding-top:200px;}
 .common_page .overimg {background:url('../images/common/img_over.png') center top no-repeat; padding-top:200px;}
 .common_page .errorimg {background:url('../images/common/img_err.png') center top no-repeat; padding-top:195px;}
+.common_page .exitimg {background:url('../images/common/img_exit.png') center top no-repeat; padding-top:195px;}
 .common_page .comtxt + .regist_form {margin-top:60px;}
 .common_page .comtxt + .btn_wrap {margin-top:60px;}
 .common_page .btn_wrap .emailchg {display:block; margin:0 auto 16px}
@@ -761,7 +763,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myinfo_manage .myinfopart dd .company span::before {position:absolute; top:5px; left:0; display:block; content:''; width:1px; height:16px; background:#666;}
 .myinfo_manage .myinfopart dd .company span:first-child::before {display:none;}
 .myinquiries {float:right; display:block; width:calc(100% - 480px); margin-bottom:100px;}
-.common_page .onlycont .myinquiries .page_tit h2 span {font-size:36px; font-weight:600;}
+.common_page .onlycont .myinquiries .page_tit h2 .numcount {font-weight:600; font-size:32px; transform:translateY(-6%);}
 .myinquiries .inbox.board {padding:16px 40px; margin-top:-40px; height:392px;}
 .myinquiries .inbox.board tbody tr td {padding:14px 0; border-bottom:solid 1px #cfcfcf;}
 .myinquiries .inbox.board tbody tr:nth-child(6) td {border-bottom:0}
