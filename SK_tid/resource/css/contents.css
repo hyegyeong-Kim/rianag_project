@@ -2,7 +2,7 @@
 
 /*********** contents 공통 ***********/
 /* common */
-.noterms {padding:120px 0 0 0; text-align:center; font-size:18px; color:#cfcfcf; background:url('../images/terms/noterms.png') center center no-repeat;}
+.noterms {padding:80px 0 0 0; text-align:center; font-size:18px; color:#cfcfcf; background:url('../images/terms/noterms.png') center top no-repeat; margin-top:160px;}
 .under_txt {display:inline-block; font-size:16px; font-weight:500; color:#222222; border-bottom:2px solid #222222; padding-bottom:1px;}
 .ellipsis {width:calc(100% - 1px); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
@@ -196,6 +196,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_tit {margin-bottom:60px; position:relative;}
 .page_tit h2 {display:inline-block; margin-right:15px; font-size:36px; font-weight:600; letter-spacing:-1.8px; vertical-align:middle;}
 .page_tit .tit_right {position:absolute; top:0; right:0;}
+.page_tit .tit_right .newalarm {}
 .page_tit.titborder {border-bottom:2px solid #222; padding-bottom:20px; margin-bottom:32px;}
 .page_tit span.numcount {display:inline-block; text-align:center; font-weight:600; height:40px; line-height:40px; font-size:32px; background:#222; color:#fff; font-family:'Roboto'; padding:0 18px; border-radius:25px;}
 .page_contents .h3_wrap {padding-bottom:16px; margin-top:80px; margin-bottom:32px; border-bottom:solid 2px #222; position:relative;}
@@ -247,7 +248,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-all; font-family:'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td.f_blue {color:#1485cb;}
 .board table tbody td a {font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
-.board table tbody td.empty {padding:50px 0; border:0;}
+.board table tbody td.empty {padding:160px 0 50px; border:0;}
+.board table tbody td.empty .noterms {margin-top:0;}
 .board table tbody td.txtinert {color:#bfbfbf;}
 .board table tbody tr.pending td {color:#bfbfbf;}
 .board table tbody tr.imprt td {background:#f6f6f6;}
@@ -257,6 +259,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody tr.imprt td .flag {display:inline-block; background:#fff; border:solid 1px #222; font-size:13px; line-height:31px; height:31px; width:44px; border-radius:4px; font-weight:normal;}
 .board table tbody tr td.nothing {border:0;}
 .board table tbody tr td.nothing .no_result {border-top:0; margin-top:0;}
+.board table tr td .board.inbox {border:solid 1px #cfcfcf;}
 .board .paging {margin-top:48px; text-align:center;}
 .board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
 .board .paging span {display:inline-block; margin:0 18px;}
@@ -277,6 +280,16 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board table .markplus .owner {position:absolute; top:16px; right:16px; font-family:'roboto';}
 .inbox.board .list_setting tr td {height:68px;}
 .inbox.board .list_setting tr td .sorting.radio label {padding-left:30px; margin-right:36px;}
+.inbox.board .intext {padding-top:24px;}
+.inbox.board .intext::after {content:''; display:block; clear:both;}
+.inbox.board .intext p.intit{float:left; font-size:16px; color:#1b6491; font-weight:600;}
+.inbox.board .intext .inbtn {float:right;}
+.inbox.board .intext .inbtn .btn:first-child {margin-right:3px;}
+.inbox.board .ac_state {display:inline-block; margin:16px 12px 0 0;}
+.inbox.board .ac_state:nth-of-type(1) {margin-left:0;}
+.inbox.board .ac_state dt {display:inline-block; font-weight:600; font-size:14px; position:relative; padding-right:8px; margin:0 4px 16px 0;}
+.inbox.board .ac_state dt::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:6px; right:0;}
+.inbox.board .ac_state dd {display:inline-block; font-family:'Roboto'; color:#666;}
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 .board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 
@@ -492,7 +505,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_list ul.card_type {margin:0 -10px;}
 .app_list ul.card_type::after {display:block; content:''; clear:both;}
 .app_list ul.card_type > li {float:left; width:33.3%; vertical-align:top; padding:0 10px 20px;}
-.app_list .noterms {margin-top:30px;}
 .app_part {display:inline-block; padding:32px 32px 24px; width:100%; height:192px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); border-radius:8px;}
 .app_part .app_img {display:inline-block; width:60px; height:60px; vertical-align:top; border-radius:8px; box-shadow:1px 1px 5px rgba(0,0,0,0.15); overflow:hidden;}
 .app_part .app_img img {display:block; width:100%;}
@@ -624,6 +636,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .search_set .search_input input[type="text"] {width:100%; line-height:48px; }
 .search_set .search_input .btn_sch {position:absolute; top:calc(50% - 12px); right:16px;}
 .search_set .search_list {width:100%; height:256px; padding:24px; margin-top:24px; border:solid 1px #cfcfcf; border-radius:4px; overflow:auto;}
+.search_set .search_list .noterms {font-size:16px; margin-top:72px; padding-top:55px; background:url('../images/common/noterm_mini.png') center top no-repeat;}
 .search_set .search_list li + li {margin-top:12px;}
 .search_set .search_list li .member em + em::before {content:''; display:inline-block; width:1px; height:12px; margin:0 10px; background:#cfcfcf;}
 .pop_con .search_set {height:350px;}
@@ -637,6 +650,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup .faqbox .input.sel {float:left; width:156px;}
 .board .optiongroup .faqbox .input.sel .sel_de {background-position:92% center;}
 .board .optiongroup .faqbox .input.sel + .search {margin-left:16px;}
+.board .optiongroup .faqbox .warning {clear:both; margin-left:calc(100% - 340px); padding-left:16px;}
 .notice_title {padding-bottom:16px; border-bottom:solid 1px #222; position:relative; margin-bottom:32px;}
 .notice_title h3 {font-size:24px; font-weight:600; color:#222; vertical-align:top;}
 .notice_title .sub_box::after {display:block; content:''; clear:both;}
@@ -663,7 +677,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
 /* 검색결과 없음 */
 .no_result {margin-top:24px; padding-bottom:120px; border-top:2px solid #222;}
-.no_result .noterms {margin-top:100px;}
+.no_result .noterms {margin-top:160px;}
 .no_result li {font-size:12px; color:#222; line-height:20px;}
 
 .allqna::after {display:block; content:''; clear:both;}
@@ -769,10 +783,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .myinquiries .inbox.board tbody tr:nth-child(6) td {border-bottom:0}
 .myinquiries .inbox.board tr td .myqnatxt {display:inline-block; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
 .myinquiries .inbox.board tr td .lab {min-width:68px;}
-.myinquiries .inbox.board .noterms {transform:translateY(50%);}
 .myinquiries .allview {font-size:16px; line-height:24px; display:block; position:absolute; top:15px; right:0;}
 .myinquiries .allview .ic_allview {margin:-6px 0 0 0;}
 .myinquiries .inbox tr td .inqudate {color:#666; font-family:'Roboto';}
+.myinquiries .noterms {margin-top:143px;}
 .leavetid .app_txtcont .txtbox {width:calc(100% - 357px); word-break:keep-all;}
 .leavetid .app_txtcont .btnbox {width:322px; margin-left:35px;}
 .leavetid .app_txtcont .btnbox .btn:first-child {margin-right:4px;}
@@ -788,3 +802,5 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .caution_exit + .btn_wrap {margin-top:60px;}
 .caution_exit .sorting {text-align:center; margin-top:32px;}
 .caution_exit .sorting label {padding-left:26px;}
+
+/* 관리자 */
