@@ -160,6 +160,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 #utility .inner {max-width:1712px; padding:0 24px;}
 .location {float:left; color:#9d9d9d; line-height: 72px; font-size:14px;}
 .location span {padding-right:25px;background:url('../images/common/ic_location.png') no-repeat right center;}
+.location span:last-of-type {background:none;}
 .location strong {color:#fff; font-weight:normal;}
 .userinfo {float:right; padding: 20px 0;}
 .userinfo > * {display:inline-block; vertical-align:middle;}
