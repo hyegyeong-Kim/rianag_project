@@ -732,7 +732,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .common_page .restimg {background:url('../images/common/img_rest.png') center top no-repeat; padding-top:200px;}
 .common_page .overimg {background:url('../images/common/img_over.png') center top no-repeat; padding-top:200px;}
 .common_page .errorimg {background:url('../images/common/img_err.png') center top no-repeat; padding-top:195px;}
-.common_page .exitimg {background:url('../images/common/img_exit.png') center top no-repeat; padding-top:195px;}
+.common_page .exitimg {background:url('../images/common/img_exit.png') center top no-repeat; padding-top:220px;}
 .common_page .comtxt + .regist_form {margin-top:60px;}
 .common_page .comtxt + .btn_wrap {margin-top:60px;}
 .common_page .btn_wrap .emailchg {display:block; margin:0 auto 16px}
