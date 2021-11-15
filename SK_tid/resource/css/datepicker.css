@@ -1,0 +1,43 @@
+.mx-datepicker {width:100%;}
+.mx-icon-calendar, .mx-icon-clear {right:0;}
+
+.mx-datepicker-popup {border-radius:8px; overflow:hidden;}
+.mx-calendar {padding:0;}
+.mx-calendar-header, .mx-time-header {height:auto; padding:16px 20px; background:#000; color:#fff;}
+.mx-icon-double-left:after, .mx-icon-double-left:before, .mx-icon-double-right:after, .mx-icon-double-right:before, .mx-icon-left:before, .mx-icon-right:before {border-color:#fff; border-width:3px 0 0 3px;} 
+.mx-btn-icon-double-left, .mx-btn-icon-left, .mx-btn-icon-double-right, .mx-btn-icon-right {padding:0;}
+.mx-btn {color:#fff;}
+.mx-btn:hover {color:#ddd;}
+.mx-btn-text {padding:0 3px;}
+.mx-calendar {width:276px;}
+
+.mx-calendar-content {height:264px; padding:16px 12px;}
+.mx-calendar-content .cell:hover {background:none; font-weight:500; color:#222;}
+.mx-calendar-content .cell {border-radius:8px; text-align:center; color:#222;}
+.mx-calendar-content .cell.active {background:#000; color:#fff;}
+
+.mx-calendar-panel-date .mx-calendar-header {padding-bottom:40px;}
+.mx-calendar-panel-date .mx-calendar-content {padding-top:0; margin-top:-35px;} 
+.mx-calendar-panel-date .mx-calendar-content .cell.active {background:none;}
+.mx-table tbody :first-child td {padding:15px 0 5px;}
+.mx-table tbody :last-child td {padding:5px 0 15px;}
+.mx-table thead th {text-align:center; color:#fff;}
+.mx-table thead th:first-child {color:#f87575;}
+.mx-table thead th:last-child {color:#5498f2;}
+.mx-table tbody td {text-align:center; color:#222;}
+.mx-table tbody td > div {width:32px; height:32px; line-height:32px; display:inline-block; text-align:center; border-radius:50%;}
+.mx-table-date .today div {text-decoration:underline;}
+.mx-table-date .cell.active > div {background:#000; color:#fff;}
+
+.mx-time {width:312px;}
+.mx-time-content {height:270px;padding-top:10px;}
+.mx-time-columns {display: block;}
+.mx-time-column {height:auto; padding:12px;}
+.mx-time-column .mx-time-item {display:inline-block; width:32px; height:32px; margin:2px; line-height:32px; text-align:center; border-radius:50%; color:#222;}
+.mx-time-column .mx-time-item.active {background:#000; font-weight:400; color:#fff;}
+.mx-time-column .mx-time-item:hover {background:none; font-weight:500; color:#222;}
+.mx-time-column .mx-time-list {text-align: left;}
+.mx-time-column .mx-time-list:after {display:none;}
+.mx-time-column:first-child::before, .mx-time-column:last-child::before { display:block; margin:0 0 10px 10px; text-align:left; font-size:11px; color:#999;}
+.mx-time-column:first-child::before {content:'시 Hour';}
+.mx-time-column:last-child::before {content:'분 Minute';}

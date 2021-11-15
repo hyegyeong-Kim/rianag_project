@@ -803,3 +803,14 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .caution_exit .sorting label {padding-left:26px;}
 
 /* 관리자 */
+.coantents.dashboard h2 {margin-bottom:20px; font-size:24px; letter-spacing:-1.2px; font-weight:600;}
+.coantents.dashboard > div {margin-top:100px;}
+.coantents.dashboard > div:first-child {margin-top:0;}
+.dashboard .dash_list {float:left; width:calc(50% - 20px); position:relative;}
+.dashboard .dash_list.right {float:right;} 
+.dashboard .dash_list .btn_more {position:absolute; top:0; right:0; }
+.dashboard .dash_box {padding:20px 0 48px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
+.dashboard .dash_list .dash_box {}
+.dashboard .dash01 dl {display:inline-block; width:calc(100% / 3 - 8px); text-align:center; position:relative;}
+.dashboard .dash01 dl dt {padding-top:76px; font-size:14px;}
+.dashboard .dash01 dl dd {width:100%; font-size:36px; font-weight:600; position:absolute; top:20px;}
