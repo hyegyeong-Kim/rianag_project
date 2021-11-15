@@ -125,6 +125,13 @@ span.input.password button:nth-last-child(2) {right:55px;}
 span.input.type_03 {display:inline-block; padding:0; border:none; border-radius:0; margin:0;}
 span.input.type_03 input {display:inline-block; width:calc((100% - 26px)/3); margin:0 3px; padding:0 8px; border:solid 1px #cfcfcf; border-radius:4px; font-family:'roboto';}
 span.input button.timeplus {padding:0; font-size:14px; font-weight:500; color:#222; right:75px; border-bottom:solid 2px #222;}
+.calendarset {display:inline-block;}
+.calendarset + .btn {margin-left:12px;}
+.calendarset .bar {display:inline-block; margin:0 6px;}
+.calendarset span.input.cal {position:relative; padding:0 50px 0 16px; font-size:14px; display:inline-block; width:140px; border-radius:4px; border:solid 1px #cfcfcf; font-family:'Roboto'; }
+.calendarset span.input.cal button {background:url('../images/common/ic_calendar.png') no-repeat; width:24px; height:24px; overflow:hidden; text-indent:-9999px;}
+.calendarbtn .btn + .btn {margin-left:4px;}
+.calendarbtn .btn.white {border:solid 1px #cfcfcf; color:#bfbfbf; height:28px; line-height:26px; margin-top:12px;}
 
 /* 컬러피커 */
 .input.txt {}
@@ -196,7 +203,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_tit {margin-bottom:60px; position:relative;}
 .page_tit h2 {display:inline-block; margin-right:15px; font-size:36px; font-weight:600; letter-spacing:-1.8px; vertical-align:middle;}
 .page_tit .tit_right {position:absolute; top:0; right:0;}
-.page_tit .tit_right .newalarm {}
+.page_tit .tit_right .newalarm {display:block; border-radius:50%; width:36px; height:36px; font-weight:600; line-height:36px; color:#fff; font-family:'Roboto'; text-align:center; background:#ffa640; position:absolute; top:-18px; right:4px;}
 .page_tit.titborder {border-bottom:2px solid #222; padding-bottom:20px; margin-bottom:32px;}
 .page_tit span.numcount {display:inline-block; text-align:center; font-weight:600; height:40px; line-height:40px; font-size:32px; background:#222; color:#fff; font-family:'Roboto'; padding:0 18px; border-radius:25px;}
 .page_contents .h3_wrap {padding-bottom:16px; margin-top:80px; margin-bottom:32px; border-bottom:solid 2px #222; position:relative;}
@@ -473,6 +480,22 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .pcprev_box .mo_inner {width:100%; padding:0 0 40px 0; border-bottom:1px solid #cfcfcf;}
 .pcprev_box .mo_inner .btn_wrap .check {margin-bottom:24px;}
 
+/* 회원관리 */
+.popup .inner_pop.w960 {transition:ease .5s;}
+.pop_con .scroll_table {width:100%; overflow:hidden; overflow-x:auto; margin-top:20px; border-bottom:solid 1px #cfcfcf;}
+.pop_con .scroll_table + .paging {margin-top:24px;}
+.pop_con .scroll_table .stbl_head  {width:880px;}
+.pop_con .scroll_table .stbl_head thead th {height:56px; border-bottom:solid 1px #cfcfcf; font-size:14px;}
+.pop_con .scroll_table .stbl_cont {height:242px; width:880px; overflow:hidden; overflow-y:auto;}
+.pop_con .scroll_table .stbl_cont table {border-top:0; width:880px;}
+.pop_con .scroll_table .stbl_cont table td {border:0; padding:12px; height:44px;}
+.pop_con .scroll_table .stbl_cont table tr:first-child td {padding-top:24px;}
+/* .pop_con .scroll_table .board.th {height:56px; border-bottom:solid 1px #cfcfcf;} */
+/* .pop_con .scroll_table .board table tbody td {padding:12px; height:55px; border-bottom:0;} */
+@media screen and (max-width:1023px) {
+    .popup .inner_pop.w960 {width:760px; transition:ease .5s;}
+}
+
 /* 개별약관편집 */
 .txt_reagree {display:inline-block; margin-left:33px;}
 .txt_reagree span.tit {display:inline-block; font-size:16px; line-height:24px;}
@@ -670,10 +693,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 /* 검색필터 */
 .filtergroup{padding:0 60px 0 0; margin-top:60px;}
 .filtergroup table {width:100%;}
-.filtergroup table tr th {padding:6px 25px 6px 60px; font-size:16px; font-weight:600;}
+.filtergroup table tr th {padding:6px 20px 6px 60px; font-size:16px; font-weight:600;}
 .filtergroup table tr td {padding:6px 0;}
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
+.wbox.app_manage {padding:48px 0 60px; margin-bottom:80px;}
+.wbox.app_manage .filtergroup {margin-top:0;}
 /* 검색결과 없음 */
 .no_result {margin-top:24px; padding-bottom:120px; border-top:2px solid #222;}
 .no_result .noterms {margin-top:160px;}
