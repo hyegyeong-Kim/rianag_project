@@ -126,18 +126,24 @@
                 <h2>애플리케이션 관리</h2>
                 <div class="tit_right">
                     <a href="#none" class="btn black large">비즈니스 애플리케이션 요청 리스트</a>
+                    <!-- 요청있을때 -->
                     <span class="newalarm">44</span>
                 </div>
             </div>
 
             <div class="page_contents">
-                <div class="wbox">
+                <div class="wbox app_manage">
                     <div class="filtergroup">
-                        <table> 
-                            <colgroup><col style="width:18%;"><col style="width:30%;"><col style="width:19%;"><col style="width:30%;"></colgroup>
+                        <div class="search search_type01">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                        <table class="mt40"> 
+                            <colgroup><col style="width:22%;"><col style="width:28%;"><col style="width:22%;"><col style="width:28%;"></colgroup>
                             <tbody>
                                 <tr>
-                                    <th><span>애플리케이션</span></th>
+                                    <th><span>정렬기준</span></th>
                                     <td>
                                         <span class="input sel">
                                             <select name="" class="sel_de ">
@@ -145,7 +151,7 @@
                                             </select>
                                         </span>
                                     </td>
-                                    <th><span>유형</span></th>
+                                    <th><span>애플리케이션 타입</span></th>
                                     <td>
                                         <span class="input sel">
                                             <select name="" class="sel_de ">
@@ -156,7 +162,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><span>작성자</span></th>
+                                    <th><span>애플리케이션 상태</span></th>
                                     <td>
                                         <span class="input sel">
                                             <select name="" class="sel_de ">
@@ -164,7 +170,7 @@
                                             </select>
                                         </span>
                                     </td>
-                                    <th><span>상태</span></th>
+                                    <th><span>비즈 앱 상태</span></th>
                                     <td>
                                         <span class="input sel">
                                             <select name="" id="select1" class="sel_de ">
@@ -175,232 +181,78 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="search search_type01 mt40">
-                            <input type="text" placeholder="검색어를 입력하세요.">
-                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
-                            <a href="#none" class="btn_sch">검색하기</a>
-                        </div>
                     </div>
                 </div>
                 <!-- S: Board Type -->
                 <div class="board">
-                    <!-- optiongroup -->
-                    <div class="optiongroup">
-                        <div class="faqbox">
-                            <span class="input sel">
-                                <select name="" id="select1" class="sel_de">
-                                    <option value="">T아이디</option>
-                                    <option value="">이름</option>
-                                </select>
-                            </span>
-                            <div class="search">
-                                <input type="text" placeholder="검색어를 입력하세요.">
-                                <button class="btn_delete" onclick="clearInput(this)">지우기</button>
-                                <a href="#none" class="btn_sch">검색하기</a>
-                            </div>
-                            <p class="warning">한글, 영문을 입력해주세요.</p>
-                        </div>
-                    </div>
-
                     <!-- table -->
                     <table class="board_tbl">
                         <caption></caption>
                         <colgroup>
-                            <col style="width:22%"><col style="width:22%;"><col style="width:15%;"><col style="width:15%"><col style="width:15%"><col style="width:8%">
+                            <col style="width:25%"><col style="width:25%;"><col style="width:15%;"><col style="width:10%"><col style="width:15%"><col style="width:10%">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th>
-                                    <span>T아이디</span>
+                                    <span>애플리케이션</span>
                                 </th>
                                 <th>
-                                    <span>회사이메일</span>
+                                    <span>앱 ID</span>
                                 </th>
-                                <th>
-                                    <span>이름</span>
+                                <th class="txtcenter mfont">
+                                    <span>Type</span>
                                 </th>
-                                <th>
-                                    <span>회사명</span>
+                                <th class="txtcenter mfont">
+                                    <span>상태</span>
                                 </th>
-                                <th>
-                                    <span>담당업무</span>
+                                <th class="txtcenter mfont">
+                                    <span>상용일시</span>
                                 </th>
-                                <th></th>
+                                <th class="txtcenter mfont">
+                                    <span>비즈앱</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- unit -->
-                            <!-- alist_tit -->
-                            <tr class="alist_tit">
-                                <td class="mfont">1234@gmail.com</td>
-                                <td class="mfont">1234@sk.com</td>
-                                <td>이상국</td>
-                                <td>SKT</td>
-                                <td>프론트엔드 개발</td>
-                                <td class="txtcenter">
-                                    <button class="btn_accordion">내역 보기</button>
-                                </td>
+                            <tr>
+                                <td class="mfont">APPLE</td>
+                                <td class="mfont">APLE</td>
+                                <td class="txtcenter">A</td>
+                                <td class="txtcenter">개발중</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">Y</td>
                             </tr>
-                            <!-- // alist_tit -->
-                            <!-- alist_contents -->
-                            <tr class="alist_contents">
-                                <td colspan="6">
-                                    <!-- inbox -->
-                                    <div class="board inbox">
-                                        <div class="intext">
-                                            <p class="intit">계정정보</p>
-                                            <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
-                                            </div>
-                                        </div>
-                                        <dl class="ac_state">
-                                            <dt>가입 일시</dt>
-                                            <dd>2018.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 일시</dt>
-                                            <dd>2019.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 해제 일시</dt>
-                                            <dd>2020.09.21</dd>
-                                        </dl>
-                                    </div>
-                                    <!-- inbox -->
-                                </td>
-                            </tr>
-                            <!-- // alist_contents -->
                             <!-- // unit -->
-                            <!-- unit -->
-                            <!-- alist_tit -->
-                            <tr class="alist_tit">
-                                <td class="mfont">1234@gmail.com</td>
-                                <td class="mfont">1234@sk.com</td>
-                                <td>권재준</td>
-                                <td>SK플래닛</td>
-                                <td>백엔드 개발</td>
-                                <td class="txtcenter">
-                                    <button class="btn_accordion">내역 보기</button>
+                            <tr>
+                                <td class="mfont">BANANANA</td>
+                                <td class="mfont">BAVA</td>
+                                <td class="txtcenter mfont">B</td>
+                                <td class="txtcenter">상용중</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">N</td>
+                            </tr>
+                            <tr>
+                                <td class="mfont">APPLE</td>
+                                <td class="mfont">APLE</td>
+                                <td class="txtcenter">A</td>
+                                <td class="txtcenter">개발중</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">Y</td>
+                            </tr>
+                            <tr>
+                                <td class="mfont">BANANANA</td>
+                                <td class="mfont">BAVA</td>
+                                <td class="txtcenter mfont">B</td>
+                                <td class="txtcenter">상용중</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">N</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="empty">
+                                    <p class="noterms">조회 결과가 없습니다.</p>
                                 </td>
                             </tr>
-                            <!-- // alist_tit -->
-                            <!-- alist_contents -->
-                            <tr class="alist_contents">
-                                <td colspan="6">
-                                    <!-- inbox -->
-                                    <div class="board inbox">
-                                        <div class="intext">
-                                            <p class="intit">계정정보</p>
-                                            <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
-                                            </div>
-                                        </div>
-                                        <dl class="ac_state">
-                                            <dt>가입 일시</dt>
-                                            <dd>2018.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 일시</dt>
-                                            <dd>2019.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 해제 일시</dt>
-                                            <dd>2020.09.21</dd>
-                                        </dl>
-                                    </div>
-                                    <!-- inbox -->
-                                </td>
-                            </tr>
-                            <!-- // alist_contents -->
-                            <!-- // unit -->
-                            <!-- unit -->
-                            <!-- alist_tit -->
-                            <tr class="alist_tit">
-                                <td class="mfont">1234@gmail.com</td>
-                                <td class="mfont">1234@sk.com</td>
-                                <td>김수산나다니엘</td>
-                                <td>SKT</td>
-                                <td>프론트엔드 개발</td>
-                                <td class="txtcenter">
-                                    <button class="btn_accordion">내역 보기</button>
-                                </td>
-                            </tr>
-                            <!-- // alist_tit -->
-                            <!-- alist_contents -->
-                            <tr class="alist_contents">
-                                <td colspan="6">
-                                    <!-- inbox -->
-                                    <div class="board inbox">
-                                        <div class="intext">
-                                            <p class="intit">계정정보</p>
-                                            <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
-                                            </div>
-                                        </div>
-                                        <dl class="ac_state">
-                                            <dt>가입 일시</dt>
-                                            <dd>2018.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 일시</dt>
-                                            <dd>2019.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 해제 일시</dt>
-                                            <dd>2020.09.21</dd>
-                                        </dl>
-                                    </div>
-                                    <!-- inbox -->
-                                </td>
-                            </tr>
-                            <!-- // alist_contents -->
-                            <!-- // unit -->
-                            <!-- unit -->
-                            <!-- alist_tit -->
-                            <tr class="alist_tit">
-                                <td class="mfont">1234@gmail.com</td>
-                                <td class="mfont">1234@sk.com</td>
-                                <td>이상국</td>
-                                <td>SK커뮤니케이션</td>
-                                <td>디자인</td>
-                                <td class="txtcenter">
-                                    <button class="btn_accordion">내역 보기</button>
-                                </td>
-                            </tr>
-                            <!-- // alist_tit -->
-                            <!-- alist_contents -->
-                            <tr class="alist_contents">
-                                <td colspan="6">
-                                    <!-- inbox -->
-                                    <div class="board inbox">
-                                        <div class="intext">
-                                            <p class="intit">계정정보</p>
-                                            <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
-                                            </div>
-                                        </div>
-                                        <dl class="ac_state">
-                                            <dt>가입 일시</dt>
-                                            <dd>2018.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 일시</dt>
-                                            <dd>2019.09.21</dd>
-                                        </dl>
-                                        <dl class="ac_state">
-                                            <dt>휴면 해제 일시</dt>
-                                            <dd>2020.09.21</dd>
-                                        </dl>
-                                    </div>
-                                    <!-- inbox -->
-                                </td>
-                            </tr>
-                            <!-- // alist_contents -->
-                            <!-- // unit -->
                             <!-- list 10개씩 노출 -->
                         </tbody>
                     </table>
@@ -445,6 +297,36 @@
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
+
+<!--  팝업 회원 정보 변경 이력 조회 -->
+<div class="popup open">
+    <div class="inner_pop w494">
+        <div class="popup_title">
+            <p>비즈니스 애플리케이션 요청 리스트</p>
+        </div>
+        <div class="pop_con">
+            <ul>
+                <li>
+                    <div class="">
+                        <p>2021.09.21</p>
+                        <dl>
+                            <dt>애플리케이션</dt>
+                            <dd class="mfont">bananbananbanan</dd>
+                        </dl>
+                        <dl>
+                            <dt>앱ID</dt>
+                            <dd class="mfont">ABCDE</dd>
+                        </dl>
+                        <a href="#none" class="btn black xsmall">검토</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#none" class="btn_close" onclick="hidePop('stop_bizapp')">닫기</a>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- // 팝업 회원 정보 변경 이력 조회 -->
 </body>
 </html>
 

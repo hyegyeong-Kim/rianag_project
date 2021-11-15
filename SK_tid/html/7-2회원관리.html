@@ -196,8 +196,8 @@
                                         <div class="intext">
                                             <p class="intit">계정정보</p>
                                             <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
+                                                <a href="#none" class="btn small gray" onclick="showPop('meminfo_chge')">이력 조회</a>
+                                                <a href="#none" class="btn small black" onclick="showPop('memapp_info')" >애플리케이션 정보</a>
                                             </div>
                                         </div>
                                         <dl class="ac_state">
@@ -239,8 +239,8 @@
                                         <div class="intext">
                                             <p class="intit">계정정보</p>
                                             <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
+                                                <a href="#none" class="btn small gray" onclick="showPop('meminfo_chge')">이력 조회</a>
+                                                <a href="#none" class="btn small black" onclick="showPop('memapp_info')" >애플리케이션 정보</a>
                                             </div>
                                         </div>
                                         <dl class="ac_state">
@@ -282,8 +282,8 @@
                                         <div class="intext">
                                             <p class="intit">계정정보</p>
                                             <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
+                                                <a href="#none" class="btn small gray" onclick="showPop('meminfo_chge')">이력 조회</a>
+                                                <a href="#none" class="btn small black" onclick="showPop('memapp_info')" >애플리케이션 정보</a>
                                             </div>
                                         </div>
                                         <dl class="ac_state">
@@ -325,8 +325,8 @@
                                         <div class="intext">
                                             <p class="intit">계정정보</p>
                                             <div class="inbtn">
-                                                <a href="#none" class="btn small gray ">이력 조회</a>
-                                                <a href="#none" class="btn small black ">애플리케이션 정보</a>
+                                                <a href="#none" class="btn small gray" onclick="showPop('meminfo_chge')">이력 조회</a>
+                                                <a href="#none" class="btn small black" onclick="showPop('memapp_info')" >애플리케이션 정보</a>
                                             </div>
                                         </div>
                                         <dl class="ac_state">
@@ -397,8 +397,8 @@
     <!-- E: footer -->
 </div>
 
-<!--  팝업3 회원 정보 변경 이력 조회 -->
-<div class="popup open">
+<!--  팝업 회원 정보 변경 이력 조회 -->
+<div class="popup" id="meminfo_chge">
     <div class="inner_pop w960">
         <div class="popup_title">
             <p>회원 정보 변경 이력 조회</p>
@@ -422,68 +422,258 @@
                                 <span>조회기간</span>
                             </th>
                             <td>
-                                <span class="input txt type_03">
-                                    <input type="text">
-                                    <input type="text">
-                                </span>
+                                <div class="calendarset">
+                                    <span class="input cal">
+                                        <input type="text">
+                                        <button>캘린더</button>
+                                    </span>
+                                    <span class="bar">~</span>
+                                    <span class="input cal">
+                                        <input type="text">
+                                        <button>캘린더</button>
+                                    </span>    
+                                </div>
+                                <button class="btn black small">조회</button>
+                                <div class="calendarbtn">
+                                    <button class="btn black xsmall">1개월</button>
+                                    <button class="btn white xsmall">3개월</button>
+                                    <button class="btn white xsmall">6개월</button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="board">
-                <table class="board_tbl">
-                    <caption></caption>
-                    <colgroup>
-                        <col style="width:17%"><col style="width:15%;"><col style="width:15%;"><col style="width:10%"><col style="width:17%"><col style="width:12%"><col style="width:12%">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>
-                                <span>변경일시</span>
-                            </th>
-                            <th>
-                                <span>변경항목</span>
-                            </th>
-                            <th>
-                                <span>애플리케이션</span>
-                            </th>
-                            <th>
-                                <span>권한</span>
-                            </th>
-                            <th>
-                                <span>회사이메일</span>
-                            </th>
-                            <th>
-                                <span>회사명</span>
-                            </th>
-                            <th>
-                                <span>담당업무</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="mfont">2021.08.16 09:34:29</td>
-                            <td>회사 이메일 변경</td>
-                            <td class="mfont">CaptinAmerica</td>
-                            <td class="mfont">member</td>
-                            <td class="mfont">1234@sk.com</td>
-                            <td>SK커뮤니케이션</td>
-                            <td>프론트 개발</td>
-                        </tr>
-                        <!-- list 10개씩 노출 -->
-                    </tbody>
-                </table>
+                <div class="scroll_table">
+                    <div class="stbl_head">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:17%"><col style="width:15%;"><col style="width:15%;"><col style="width:10%"><col style="width:17%"><col style="width:13%"><col style="width:12%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span>변경일시</span>
+                                    </th>
+                                    <th>
+                                        <span>변경항목</span>
+                                    </th>
+                                    <th>
+                                        <span>애플리케이션</span>
+                                    </th>
+                                    <th>
+                                        <span>권한</span>
+                                    </th>
+                                    <th>
+                                        <span>회사이메일</span>
+                                    </th>
+                                    <th>
+                                        <span>회사명</span>
+                                    </th>
+                                    <th>
+                                        <span>담당업무</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="stbl_cont">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:17%"><col style="width:15%;"><col style="width:15%;"><col style="width:10%"><col style="width:17%"><col style="width:13%"><col style="width:12%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="mfont">2021.08.16 09:34:29</td>
+                                    <td>회사 이메일 변경</td>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">1234@sk.com</td>
+                                    <td>SK커뮤니케이션</td>
+                                    <td>프론트 개발</td>
+                                </tr>
+                                <tr>
+                                    <td class="mfont">2021.08.16 09:34:29</td>
+                                    <td>휴면 해제로 인한 권한 삭제임</td>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">1234@sk.com</td>
+                                    <td>SK커뮤니케이션</td>
+                                    <td>프론트 개발</td>
+                                </tr>
+                                <tr>
+                                    <td class="mfont">2021.08.16 09:34:29</td>
+                                    <td>휴면 해제로 인한 권한 삭제로 인한 회사명 변경</td>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">1234@sk.com</td>
+                                    <td>SK커뮤니케이션</td>
+                                    <td>프론트 개발</td>
+                                </tr>
+                                <tr>
+                                    <td class="mfont">2021.08.16 09:34:29</td>
+                                    <td>휴면 해제로 인한 권한 삭제임</td>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">1234@sk.com</td>
+                                    <td>SK커뮤니케이션</td>
+                                    <td>프론트 개발</td>
+                                </tr>
+                                <tr>
+                                    <td class="mfont">2021.08.16 09:34:29</td>
+                                    <td>휴면 해제로 인한 권한 삭제임</td>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">1234@sk.com</td>
+                                    <td>SK커뮤니케이션</td>
+                                    <td>프론트 개발</td>
+                                </tr>
+                                <!-- list 10개씩 노출 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="paging">
+                    <a href="#none" class="btn_arr prev"></a>
+                    <span>
+                        <a href="#none" class="on">1</a>
+                        <a href="#none">2</a>
+                        <a href="#none">3</a>
+                        <a href="#none">4</a>
+                    </span>
+                    <a href="#none" class="btn_arr next"></a>
+                    <!-- paging 10개씩 노출 -->
+                </div>
             </div>
             <div class="btn_wrap">
-                <a href="#none" class="btn black pop_close large">닫기</a>
+                <a href="#none" class="btn black pop_close large" onclick="hidePop('meminfo_chge')">닫기</a>
             </div>
         </div>
     </div>
     <div class="dim"></div>
 </div>
-<!-- // 팝업3 미리보기 PC -->
+<!-- // 팝업 회원 정보 변경 이력 조회 -->
+
+<!-- 팝업 애플리케이션 정보 -->
+<div class="popup" id="memapp_info">
+    <div class="inner_pop w960">
+        <div class="popup_title">
+            <p>애플리케이션 정보</p>
+        </div>
+        <div class="pop_con">
+            <div class="regist_table">
+                <table>
+                    <caption></caption>
+                    <colgroup><col style="width:186px"><col></colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                회원정보
+                            </th>
+                            <td>
+                                <span class="mfont">sungkung@sk.com</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="board">
+                <div class="scroll_table">
+                    <div class="stbl_head">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:27%"><col style="width:45%;"><col style="width:14%;"><col style="width:14%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span>애플리케이션</span>
+                                    </th>
+                                    <th>
+                                        <span>앱 ID</span>
+                                    </th>
+                                    <th>
+                                        <span>권한</span>
+                                    </th>
+                                    <th>
+                                        <span>권한 등록 일시</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="stbl_cont">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:27%"><col style="width:45%;"><col style="width:14%;"><col style="width:14%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">CTAMDFGHJDSDD</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">2021.08.16</td>
+                                </tr>
+                                <tr>
+                                    <td>CaptinAmericaDDDDDDDDDDDDDDDDDDDDDDDDDDD</td>
+                                    <td class="mfont">CTAMERTYUI_CTAMDFGHJDSDD_CTAMDFGHJDSDD_CTAMDFGHJDSDD_CTAMDFGHJDSDD</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">2021.08.16</td>
+                                </tr>
+                                <tr>
+                                    <td>Avengers</td>
+                                    <td class="mfont">CTAM</td>
+                                    <td class="mfont">Owner</td>
+                                    <td class="mfont">2021.08.16</td>
+                                </tr>
+                                <tr>
+                                    <td>CaptinAmerica</td>
+                                    <td class="mfont">CTAMDFGHJDSDD</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">2021.08.16</td>
+                                </tr>
+                                <tr>
+                                    <td>CaptinAmericaDDDDDDDDDDDDDDDDDDDDDDDDDDD</td>
+                                    <td class="mfont">CTAMERTYUI_CTAMDFGHJDSDD_CTAMDFGHJDSDD_CTAMDFGHJDSDD_CTAMDFGHJDSDD</td>
+                                    <td class="mfont">member</td>
+                                    <td class="mfont">2021.08.16</td>
+                                </tr>
+                                <tr>
+                                    <td>Avengers</td>
+                                    <td class="mfont">CTAM</td>
+                                    <td class="mfont">Owner</td>
+                                    <td class="mfont">2021.08.16</td>
+                                </tr>
+                                <!-- list 10개씩 노출 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="paging">
+                    <a href="#none" class="btn_arr prev"></a>
+                    <span>
+                        <a href="#none" class="on">1</a>
+                        <a href="#none">2</a>
+                        <a href="#none">3</a>
+                        <a href="#none">4</a>
+                    </span>
+                    <a href="#none" class="btn_arr next"></a>
+                    <!-- paging 10개씩 노출 -->
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn black pop_close large" onclick="hidePop('memapp_info')">닫기</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- // 팝업 애플리케이션 정보 -->
 </body>
 </html>
 
