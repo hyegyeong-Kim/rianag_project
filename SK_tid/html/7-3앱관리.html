@@ -125,7 +125,7 @@
             <div class="page_tit">
                 <h2>애플리케이션 관리</h2>
                 <div class="tit_right">
-                    <a href="#none" class="btn black large">비즈니스 애플리케이션 요청 리스트</a>
+                    <a href="#none" class="btn black large" onclick="showPop('bizapp_ask')">비즈니스 애플리케이션 요청 리스트</a>
                     <!-- 요청있을때 -->
                     <span class="newalarm">44</span>
                 </div>
@@ -298,35 +298,82 @@
     <!-- E: footer -->
 </div>
 
-<!--  팝업 회원 정보 변경 이력 조회 -->
-<div class="popup open">
+<!--  팝업 비즈니스 애플리케이션 요청 리스트 -->
+<div class="popup" id="bizapp_ask">
     <div class="inner_pop w494">
         <div class="popup_title">
             <p>비즈니스 애플리케이션 요청 리스트</p>
         </div>
         <div class="pop_con">
-            <ul>
-                <li>
-                    <div class="">
-                        <p>2021.09.21</p>
+            <div  class="bizapplist">
+                <ul>
+                    <li>
+                        <div class="bizapp">
+                            <p class="appdate">2021.09.21</p>
+                            <a href="#none" class="btn black xsmall float_r">검토</a>
+                        </div>
                         <dl>
                             <dt>애플리케이션</dt>
-                            <dd class="mfont">bananbananbanan</dd>
+                            <dd>bananbananbanan</dd>
                         </dl>
                         <dl>
                             <dt>앱ID</dt>
-                            <dd class="mfont">ABCDE</dd>
+                            <dd>ABCDE</dd>
                         </dl>
-                        <a href="#none" class="btn black xsmall">검토</a>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <div class="bizapp">
+                            <p class="appdate">2021.09.21</p>
+                            <a href="#none" class="btn black xsmall float_r">검토</a>
+                        </div>
+                        <dl>
+                            <dt>애플리케이션</dt>
+                            <dd>bananbananbanan</dd>
+                        </dl>
+                        <dl>
+                            <dt>앱ID</dt>
+                            <dd>ABCDE</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="bizapp">
+                            <p class="appdate">2021.09.21</p>
+                            <a href="#none" class="btn black xsmall float_r">검토</a>
+                        </div>
+                        <dl>
+                            <dt>애플리케이션</dt>
+                            <dd>bananbananbananbananbananbananbananbananbanan</dd>
+                        </dl>
+                        <dl>
+                            <dt>앱ID</dt>
+                            <dd>ABCDE</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="bizapp">
+                            <p class="appdate">2021.09.21</p>
+                            <a href="#none" class="btn black xsmall float_r">검토</a>
+                        </div>
+                        <dl>
+                            <dt>애플리케이션</dt>
+                            <dd>bananbananbanan</dd>
+                        </dl>
+                        <dl>
+                            <dt>앱ID</dt>
+                            <dd>ABCDE</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <!-- 내역 없을때 -->
+                <p class="noterms">요청 내역이 없습니다.</p>
+                <!-- 내역 없을때 노출 -->
+            </div>
         </div>
-        <a href="#none" class="btn_close" onclick="hidePop('stop_bizapp')">닫기</a>
+        <a href="#none" class="btn_close" onclick="hidePop('bizapp_ask')">닫기</a>
     </div>
     <div class="dim"></div>
 </div>
-<!-- // 팝업 회원 정보 변경 이력 조회 -->
+<!-- // 팝업 비즈니스 애플리케이션 요청 리스트 -->
 </body>
 </html>
 

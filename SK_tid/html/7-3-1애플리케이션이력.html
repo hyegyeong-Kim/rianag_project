@@ -1,0 +1,754 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/jquery-ui.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                    </div>
+                    <!--
+                    <div class="ongoing">
+                        <span class="use">상용중</span>
+                    </div>
+                    -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">개요</a>
+                    </li>
+                    <li>
+                        <a href="#none">기본 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">앱 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">약관 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">개별약관 목록</a></li>
+                            <li><a href="#none">개별약관 History</a></li>
+                            <li><a href="#none">그룹 설정</a></li>
+                            <li><a href="#none">사용자 동의 내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">멤버 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">테스트 계정 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">통계</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <div class="page_tit">
+                <h2>애플리케이션 관리</h2>
+            </div>
+            <div class="page_contents">
+                <div class="app_title">
+                    <div class="app_logo">
+                        <img src="../resource/images/common/ic_nugu_100.png">
+                        <!-- 211103 modify 이미지없을경우 노출 -->
+                        <!-- <img src="../resource/images/common/ic_device_L.png"> -->
+                        <!-- // 211103 modify 이미지없을경우 노출 -->
+                    </div>
+                    <div class="appcover">
+                        <div class="app_info">
+                            <span class="app_name">NUGU</span>
+                        </div>
+                        <div class="app_info">
+                            <div>
+                                <span class="app_id">앱 ID</span>
+                                <span class="app_type mfont">ALDN</span>
+                            </div>
+                        </div>
+                        <div class="app_date">
+                            <p>등록일 <span class="mfont">2021.01.21</span></p>
+                            <p>상용일 <span class="mfont">2021.01.21</span></p>
+                        </div>
+                        <!-- <div class="app_date">상용일 <span class="mfont">2021.01.21</span></div> -->
+                    </div>
+                </div>
+                <p>
+                    그들은 품에 바이며, 그들의 인생에 피고, 보내는 남는 끓는다. 이 커다란 심장의 있다. 실현에 있는 가치를 장식하는 심장의 새 이는 봄바람을 뿐이다. 얼음 없는 목숨을 이상 인간은 오아이스도 심장의 용감하고 많이 뿐이다. 구하지 
+                    같이, 그들은 풍부하게 아름다우냐? 되는 하는 그들은 하였으며, 설산에서 앞이 내려온 보라. 꽃이 청춘 가지에 
+                    자신과 천지는 있다.
+                </p>
+                <div class="tab_type01">
+                    <ul class="tab01 likor">
+                        <li>
+                            <a href="#tab_01" class="on">멤버 관리</a>
+                        </li>
+                        <li>
+                            <a href="#tab_02">테스터 관리</a>
+                        </li>
+                    </ul>
+                    <!-- 멤버 -->
+                    <!-- S: web -->
+                    <div id="tab_01">
+                        <div class="regist_table">
+                            <table>
+                                <caption></caption>
+                                <colgroup><col style="width:186px"><col></colgroup>
+                                <tr>
+                                    <th>
+                                        <span>멤버 추가</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="이메일을 입력해주세요.">
+                                            <button class="btn small black" onclick="showPop('mem_invite')">초대</button>
+                                        </span>
+                                        <p class="warning">
+                                            초대완료 또는 초대중인 이메일 입니다.
+                                        </p>
+                                        <ul class="ul_type01 mt10">
+                                            <li>T아이디 회원만 멤버로 추가 가능합니다.</li>
+                                            <li>멤버는 앱 삭제, Secret key 재 발급, 고급 설정, 연결약관 승인, 멤버삭제 이외의 모든 설정 내용을 수정하고 조회하는 권한이 부여됩니다.</li>
+                                            <li>멤버는 테스트 기능이 기본 권한으로 제공됩니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 211103 modify -->
+                        <!-- S: Board Type -->
+                        <div class="board inbox mt60">
+                            <!-- 기본 -->
+                            <table>
+                                <colgroup>
+                                    <col style="width:auto;"><col style="width:200px;"><col style="width:80px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><span>T아이디</span></th>
+                                        <th><span>권한</span></th>
+                                        <th class="txtcenter"><span>삭제</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 
+                                            <span class="mfont">sungkung@sk.com 관리자가 오너 삭제</span>
+                                        </td>
+                                        <td class="mfont">Owner</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('owner_al')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="mfont">susssg@sk.com 멤버본인이 삭제</span>
+                                        </td>
+                                        <td class="mfont">Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('member_del')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="mfont">susssg@sk.com 오너 및 관리자가 삭제</span>
+                                        </td>
+                                        <td class="mfont">Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('member_del2')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="mfont">susssg@sk.com 오너가 본인 삭제</span>
+                                        </td>
+                                        <td class="mfont">Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('transfer_dele')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
+                                        <td>
+                                            <span class="mfont">sungkung@sk.com</span>
+                                            <span class="lab mid blue">초대중</span>
+                                            <a href="#none" class="btn blue xsmall ml_8">다시 초대하기</a>
+                                        </td>
+                                        <td class="mfont">Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 개발자 사이트 관리자 접근 시 -->
+                            <table>
+                                <colgroup>
+                                    <col style="width:22%;"><col style="width:22%;"><col style="width:11%;"><col style="width:auto;"><col style="width:10%;"><col style="width:10%;"><col style="width:80px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><span>T아이디</span></th>
+                                        <th><span>회사이메일</span></th>
+                                        <th><span>이름</span></th>
+                                        <th><span>회사</span></th>
+                                        <th><span>업무</span></th>
+                                        <th><span>권한</span></th>
+                                        <th class="txtcenter" onclick="showPop('tester_del')"><span>삭제</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
+                                        </td>
+                                        <td>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
+                                        </td>
+                                        <td>김선경</td>
+                                        <td>SK텔레콤</td>
+                                        <td>개발</td>
+                                        <td class="mfont">Owner</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('owner_al')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
+                                        <td>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
+                                        </td>
+                                        <td>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
+                                        </td>
+                                        <td>김선경</td>
+                                        <td>SK플래닛닛닛닛닛닛</td>
+                                        <td>개발</td>
+                                        <td class="mfont">Member</td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('tester_del')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="btn_wrap">
+                                <button class="btn small black" onclick="showPop('transfer')">오너 변경</button>
+                            </div>
+                        </div>
+                        <!-- E:  -->  
+                        <!-- // 211103 modify -->
+                    </div>
+                    <!-- 테스터 관리 -->
+                    <!-- S: web -->
+                    <div id="tab_02">
+                        <div class="regist_table">
+                            <table>
+                                <caption></caption>
+                                <colgroup><col style="width:186px"><col></colgroup>
+                                <tr>
+                                    <th>
+                                        <span>테스터 추가</span>
+                                    </th>
+                                    <td>
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="이메일을 입력해주세요.">
+                                            <button class="btn small black" onclick="showPop('invite')">초대</button>
+                                        </span>
+                                        <ul class="ul_type01 mt10">
+                                            <li>T아이디 회원만 멤버로 추가 가능합니다.</li>
+                                            <li>테스터는 T아이디 적용 개발 중인 애플리케이션 또는 웹에 로그인하여 테스트 할 수 있는 ID입니다.</li>
+                                            <li>멤버는 테스트 기능이 기본 권한으로 제공됩니다.</li>
+                                            <li>테스터는 최대 50명까지 추가 가능합니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- S: Board Type -->
+                        <div class="board inbox mt60">
+                            <!-- 211103 modify -->
+                            <table>
+                                <colgroup>
+                                    <col style="width:auto;"><col style="width:80px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><span>T아이디</span></th>
+                                        <th class="txtcenter"><span>삭제</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#none" class="mfont" onclick="showPop('invite')">sungkung@sk.com</a>
+                                        </td>
+                                        <td class="txtcenter">
+                                            <button onclick="showPop('tester_del')"><i class="icon del_bk"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
+                                        <td>
+                                            <a href="#none" class="mfont">sungkung@sk.com</a>
+                                            <span class="lab blue mid">초대중</span>
+                                        </td>
+                                        <td class="txtcenter">
+                                            <button><i class="icon del_bk" onclick="showPop('tester_del')"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- // 211103 modify -->
+                        </div>
+                        <!-- E:  -->  
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+    
+</div>
+
+
+<!-- 테스터 관리 -->
+<!-- S: 팝업 / 테스터초대 팝업 -->
+<div class="popup" id="invite">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                % 사용자 아이디 % 에게<br>
+                %앱이름% 테스터 초대를 보냈습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('invite')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 테스터초대 팝업 -->
+
+<!-- S: 팝업 / 테스터삭제 팝업 -->
+<div class="popup" id="tester_del">
+    <div class="inner_pop mini w420">
+        <div class="popup_title">
+            <p>테스터 권한 삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                테스터 권한을 삭제하시면<br>
+                애플리케이션에 접근이 불가합니다.<br>
+                %앱이름%에서 테스터 권한을 <br>
+                삭제하고 나가시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('tester_del')">유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('tester_del');showPop('tester_del2')">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+    <!-- S: 팝업 / alert 팝업 -->
+    <div class="popup" id="tester_del2">
+        <div class="inner_pop alert">
+            <div class="pop_con">
+                <div class="txt_area">
+                    %사용자 아이디%<br>
+                    테스터를 삭제할까요?
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large gray" onclick="hidePop('tester_del2')">테스터 유지</a>
+                    <a href="#none" class="btn large black" onclick="hidePop('tester_del2')">테스터 삭제</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: 팝업 / alert 팝업 -->
+<!-- E: 팝업 / 테스터삭제 팝업 -->
+
+
+<!-- 멤버관리 -->
+
+<div class="popup" id="mem_invite">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%<br>
+                초대를 완료했습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('mem_invite')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- S: 팝업 / 오너이관 alert 팝업 -->
+<div class="popup" id="owner_al">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                오너 권한 이관 후 <br>
+                삭제를 진행해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('owner_al')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 오너이관 alert 팝업 -->
+
+<!-- S: 팝업 / 권한이관 팝업 -->
+<div class="popup" id="transfer">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>오너 권한 이관</p>
+        </div>
+        <div class="pop_con">
+            <div class="search_set">
+                <div class="search_input">
+                    <input type="text" placeholder="오너 권한을 이관할 멤버 아이디를 검색해주세요.">
+                    <button class="btn_sch">검색</button>
+                </div>
+                <p class="warning">
+                    이메일 형식에 맞게 입력해주세요.
+                </p>
+                <div class="search_list">
+                    <ul class="sorting radio">
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('transfer')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('transfer');showPop('transfer_al')">권한 이관</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+    <!-- S: 팝업 /  팝업 -->
+    <div class="popup" id="transfer_al">
+        <div class="inner_pop alert">
+            <div class="pop_con">
+                <div class="txt_area">
+                    %사용자 아이디%에<br>
+                    오너 권한 이관을 완료했습니다.
+                </div>
+                <div class="btn_wrap">
+                    <a href="#none" class="btn large black" onclick="hidePop('transfer_al')">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: 팝업 /  팝업 -->
+<!-- E: 팝업 / 권한이관 팝업 -->
+
+<!-- S: 팝업 / 오너 권한 이관 및 오너 삭제 -->
+<div class="popup" id="transfer_dele">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>오너 권한 이관 및 오너 삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="txtcenter">
+                오너 권한 이관 후, 삭제가 가능합니다.<br>
+                멤버에게 권한을 이관해주세요.
+            </div>
+            <div class="search_set mt30">
+                <div class="search_input">
+                    <input type="text" placeholder="오너 권한을 이관할 멤버 아이디를 검색해주세요.">
+                    <button class="btn_sch">검색</button>
+                </div>
+                <p class="warning">
+                    이메일 형식에 맞게 입력해주세요.
+                </p>
+                <div class="search_list">
+                    <ul class="sorting radio">
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio">
+                                <span class="member">
+                                    <em>%사용자명%</em> <em>%사용자 아이디%</em>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+                    <!-- 결과없을 경우 노출 -->
+                    <p class="noterms">검색결과가 없습니다.</p>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('transfer_dele')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('transfer_dele'); showPop('owner_ok')">권한 이관</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 오너 권한 이관 및 오너 삭제 -->
+
+<!-- S: 팝업 / 멤버 권한 삭제 -->
+<div class="popup" id="member_del">
+    <div class="inner_pop mini w420">
+        <div class="popup_title">
+            <p>멤버 권한 삭제</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                멤버 권한을 삭제하시면<br>
+                애플리케이션에 접근이 불가합니다.<br>
+                %앱이름%에서 멤버 권한을<br>
+                삭제하고 나가시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('member_del')">유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('member_del');">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 멤버 권한 삭제 -->
+
+<!-- S: 팝업 / 오너 권한 이관 완료 -->
+<div class="popup" id="owner_ok">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>오너 권한 이관 완료</p>
+        </div>
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%에<br>
+                오너권한 이관을 완료했습니다.<br>
+                %앱이름%에서 %사용자이름%님의<br>
+                오너 권한을 삭제하고 나가시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('owner_ok')">멤버로 유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('owner_ok')">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 멤버 권한 삭제 -->
+
+<!-- S: 팝업 / alert 팝업 -->
+<div class="popup" id="member_del2">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%의 멤버 권한을<br>
+                삭제하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('member_del2')">유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('member_del2'), showPop('memdel_ok')">삭제</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / alert 팝업 -->
+
+<!-- S: 팝업 / alert 팝업 -->
+<div class="popup" id="memdel_ok">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                %사용자 아이디%에<br> 
+                멤버 권한 삭제를 완료했습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('memdel_ok')">확인</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- E: 팝업 / alert 팝업 -->
+<script type="text/javascript">
+</script>
+</body>
+</html>
+
+

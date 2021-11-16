@@ -105,6 +105,7 @@
             <div class="page_contents">
                 <p class="gtit">1:1 문의를 등록 하신 후에는 <span class="f_blue">수정/삭제</span> 할 수 없습니다. 등록된 문의글에 관리자가 댓글을 달면 이메일 주소로 메일 알림이 제공됩니다.</p>
                 <hr class="hr_01">
+                <!-- 211116 modify -->
                 <div class="regist_table">
                     <table>
                         <caption></caption>
@@ -139,8 +140,9 @@
                                     <span>제목</span>
                                 </th>
                                 <td>
-                                    <span class="input txt only">
+                                    <span class="input txt">
                                         <input type="text" placeholder="제목을 입력해주세요.">
+                                        <span class="bytes">0/100 bytes</span>
                                     </span>
                                 </td>
                             </tr>
@@ -148,8 +150,11 @@
                                 <th>
                                     <span>내용</span>
                                 </th>
-                                <td colspan="2" >
-                                    <textarea placeholder="내용을 입력해주세요."></textarea>
+                                <td colspan="2">
+                                    <div class="txtarea">
+                                        <textarea placeholder="내용을 입력해주세요."></textarea>
+                                        <span class="bytes">0/5000 bytes</span>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -163,6 +168,7 @@
                         </tbody>
                     </table>
                 </div>
+                <!-- // 211116 modify -->
                 <div class="btn_wrap">
                     <a href="#none" class="btn xlarge gray">목록</a>
                     <a href="#none" class="btn xlarge black" onclick="showPop('notice_regi');">등록</a>
@@ -192,6 +198,7 @@
     
 </div>
 
+<!-- 211116 modify -->
 <!-- S: 팝업 / 1:1문의 등록 -->
 <div class="popup" id="notice_regi">
     <div class="inner_pop alert">
@@ -200,18 +207,18 @@
                 1:1 문의를 등록하시겠습니까?
             </div>
             <div class="txt_area">
-                1:1 문의를 등록 하신 후에는<br>
-                수정/삭제 할 수 없습니다.
+                등록 후 내용을 수정하실 수 없습니다.
             </div>
             <div class="btn_wrap">
                 <a href="#none" class="btn large gray" onclick="hidePop('notice_regi');">취소</a>    
-                <a href="#none" class="btn large black" onclick="hidePop('notice_regi');">확인</a>    
+                <a href="#none" class="btn large black" onclick="hidePop('notice_regi');">등록</a>  
             </div>
         </div>
     </div>
     <div class="dim"></div>
 </div>
 <!-- E: 팝업 / 1:1문의 등록 -->
+<!-- 211116 modify -->
 
 <!-- S: 팝업 / 제목입력 요청 팝업 -->
 <div class="popup" id="title_enter">
