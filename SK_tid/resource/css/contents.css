@@ -232,7 +232,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tab01 {margin-bottom:20px; border-bottom:2px solid #222;}
 .tab01::after {content:''; display:block; clear:both;}
 .tab01 li {float:left;}
-.tab01 li a {display:block; height:48px; line-height:32px; padding:0 40px; font-size:24px; text-align:center; color:#999; position:relative;}
+.tab01 li a {display:block; height:48px; line-height:32px; padding:0 40px; font-size:24px; text-align:center; color:#999; position:relative; font-weight:500;}
 .tab01 li a.on {color:#222; font-weight:600;}
 .tab01 li a.on:after {content:''; display:block; width:100%; height:4px; background:#222; position:absolute; bottom:0; left:0}
 .tab01.lieng li a {min-width:120px; font-family:'Roboto';}
@@ -265,13 +265,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody tr td.nothing {border:0;}
 .board table tbody tr td.nothing .no_result {border-top:0; margin-top:0;}
 .board table tr td .board.inbox {border:solid 1px #cfcfcf;}
-.board .paging {margin-top:48px; text-align:center;}
-.board .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
-.board .paging span {display:inline-block; margin:0 18px;}
-.board .paging span a {min-width:28px; height:28px; line-height:30px; margin:0 2px; border-radius:30px; font-size:14px; text-align: center; color:#b4b4b4;}
-.board .paging a.on {background:#000;color:#fff;}
-.board .paging a.btn_arr {width:20px; height:20px;background:url('../images/common/ic_arrow.png') no-repeat center center; text-indent:-9999px; overflow:hidden;}
-.board .paging a.next {transform: rotate(180deg);}
 .board .list_more {padding:60px 0 16px; background:url('../images/common/ic_eee.png') no-repeat center 20px; border-top:solid 1px #cfcfcf; text-align:center;}
 .inbox.board {padding:0 32px 16px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
 .inbox.board table {border-top:0;}
@@ -297,6 +290,13 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board .ac_state dd {display:inline-block; font-family:'Roboto'; color:#666;}
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 .board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
+.paging {margin-top:48px; text-align:center;}
+.paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
+.paging span {display:inline-block; margin:0 18px;}
+.paging span a {min-width:28px; height:28px; line-height:30px; margin:0 2px; border-radius:30px; font-size:14px; text-align: center; color:#b4b4b4;}
+.paging a.on {background:#000;color:#fff;}
+.paging a.btn_arr {width:20px; height:20px;background:url('../images/common/ic_arrow.png') no-repeat center center; text-indent:-9999px; overflow:hidden;}
+.paging a.next {transform: rotate(180deg);}
 
 /* 사용자 동의 내역 */
 .board table.board_tbl tbody tr.on > td {border-bottom:0;}
@@ -592,7 +592,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_title .app_type::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
 .app_title .app_date {font-size:14px; color:#aaa; position:absolute; top:23px; right:0;}
 .app_title .app_date p {display:inline-block; margin-left:10px;}
-
+.app_title .desc {font-size:16px; line-height:26px; max-width:700px; margin:36px 0 0 -130px;}
 
 .app_title .app_date span::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
 .app_txtcont::after {display:block; content:''; clear:both;}
@@ -738,19 +738,25 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 /* 댓글 */
 .comment_wrap {margin-top:120px;}
+.tab_type01 div .comment_wrap  {margin-top:32px;}
 .comment_wrap .com_title {border-bottom:solid 1px #cfcfcf; padding-bottom:16px;}
 .comment_wrap .com_title p {font-size:24px; line-height:34px; font-weight:600; color:#222;}
-.comment_wrap .writer {display:inline-block; font-size:16px; line-height:24px; font-weight:600; color:#222;}
+.comment_wrap .writer {display:inline-block; font-size:16px; line-height:24px; font-weight:600; color:#222; padding-left:8px; margin-left:4px; position:relative;}
+.comment_wrap .writer::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; left:0; top:9px;}
+.comment_wrap .writer:first-child {margin-left:0; padding-left:0;}
+.comment_wrap .writer:first-child::before {display:none;}
 .comment_wrap .commentlist li {padding-bottom:20px; border-bottom:solid 1px #cfcfcf;}
 .comment_wrap .commentlist li .comment_unit {position:relative; padding:16px 175px 0 0;}
 .comment_wrap .commentlist li .comment_unit .comment_txt {font-size:14px; line-height:20px; color:#666; margin:12px 0 13px; word-break:break-word;}
 .comment_wrap .commentlist li .comment_unit .comment_txt strong {color:#222;}
 .comment_wrap .commentlist li .comment_unit .comment_date p {display:inline-block; font-size:14px; line-height:20px; color:#666; position:relative; padding-right:8px; margin-right:4px;}
 .comment_wrap .commentlist li .comment_unit .comment_date p::before {content:''; display:block; width:1px; height:10px; background:#aaa; position:absolute; top:6px; right:0;}
+.comment_wrap .commentlist li .comment_unit .comment_date p:last-child::before {display:none;}
 .comment_wrap .commentlist li .comment_unit .comment_date button {display: inline-block; font-size:14px; font-weight:500; padding:0;}
 .comment_wrap .commentlist li .comment_unit .editbox {position:absolute; top:16px; right:0;}
 .comment_wrap .commentlist li .new_comment {margin-top:16px;}
-.comment_wrap .new_comment {padding:24px 185px 24px 32px; background:#fff; border:solid 1px #cfcfcf; box-shadow:1px 1px 8px 0 rgba(0,0,0,0.06); border-radius:8px; position:relative; margin-top:32px;}
+.comment_wrap .commentlist + .new_comment {margin-top:32px;}
+.comment_wrap .new_comment {padding:24px 185px 24px 32px; background:#fff; border:solid 1px #cfcfcf; box-shadow:1px 1px 8px 0 rgba(0,0,0,0.06); border-radius:8px; position:relative; min-height:120px;}
 .comment_wrap .new_comment .btn_box {position:absolute; top:24px; right:32px;}
 .comment_wrap .new_comment .btn_box .btn + .btn {margin-left:4px;}
 .comment_wrap .new_comment textarea.comment_area {margin-top:14px; width:100%; font-size:16px; line-height:22px; resize:none; border:none; word-break:break-all; min-height:24px;}

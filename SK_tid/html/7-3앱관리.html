@@ -134,23 +134,10 @@
             <div class="page_contents">
                 <div class="wbox app_manage">
                     <div class="filtergroup">
-                        <div class="search search_type01">
-                            <input type="text" placeholder="검색어를 입력하세요.">
-                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
-                            <a href="#none" class="btn_sch">검색하기</a>
-                        </div>
-                        <table class="mt40"> 
+                        <table> 
                             <colgroup><col style="width:22%;"><col style="width:28%;"><col style="width:22%;"><col style="width:28%;"></colgroup>
                             <tbody>
                                 <tr>
-                                    <th><span>정렬기준</span></th>
-                                    <td>
-                                        <span class="input sel">
-                                            <select name="" class="sel_de ">
-                                                <option value="">전체</option>
-                                            </select>
-                                        </span>
-                                    </td>
                                     <th><span>애플리케이션 타입</span></th>
                                     <td>
                                         <span class="input sel">
@@ -160,8 +147,6 @@
                                             </select>
                                         </span>
                                     </td>
-                                </tr>
-                                <tr>
                                     <th><span>애플리케이션 상태</span></th>
                                     <td>
                                         <span class="input sel">
@@ -170,6 +155,8 @@
                                             </select>
                                         </span>
                                     </td>
+                                </tr>
+                                <tr>
                                     <th><span>비즈 앱 상태</span></th>
                                     <td>
                                         <span class="input sel">
@@ -181,10 +168,27 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="search search_type01 mt40">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
                     </div>
                 </div>
                 <!-- S: Board Type -->
                 <div class="board">
+                    <div class="optiongroup">
+                        <div class="sorting radio mt20">
+                            <label>
+                                <input type="radio">
+                                <span>가나다순</span>
+                            </label>
+                            <label>
+                                <input type="radio">
+                                <span>최신등록 순</span>
+                            </label>
+                        </div>
+                    </div>
                     <!-- table -->
                     <table class="board_tbl">
                         <caption></caption>
