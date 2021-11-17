@@ -114,6 +114,7 @@ span.input.disabled, .disabled span.input {background:#f1f1f1;}
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden;}
 span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
+
 .dateset {display:inline-block;}
 .dateset span.input + .input {margin-top:0;}
 span.input.date {display:inline-block; width:140px; padding-right:35px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
@@ -163,7 +164,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .search.search_type01 input {width:100%; padding-right:30px; font-size:16px;}
 .search.search_type01 .btn_sch {position:absolute; top:0; right:0;}
 .search.search_type01 .btn_delete {display:none; position:absolute; top:5px; right:38px;}
-
+.optionsearch {}
+.optionsearch .input.sel {display:inline-block; border:0; border-radius:0; width:140px; border-bottom:solid 2px #222; padding-bottom:10px;} 
+.optionsearch .input.sel .sel_de {padding:0 28px 0 0;}
+.optionsearch .input.sel + .search {display:inline-block; margin-left:16px;}
 /* 상태표시 */
 .state {display:inline-block; min-width:76px; height:32px; padding:6px 12px; border-radius:5px; font-size:13px; font-weight:normal; text-align:center;}
 * + .state { margin-left:8px;}
@@ -714,7 +718,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .filtergroup table tr td {padding:6px 10px 0 0;}
 .filtergroup table tr td .input.sel {width:86%;}
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
-.filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
+.filtergroup .search_type01 {margin-left:calc((100% - 472px) / 2);}
 .wbox.app_manage {padding:48px 0 60px; margin-bottom:80px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
 @media screen and (max-width:1420px){
