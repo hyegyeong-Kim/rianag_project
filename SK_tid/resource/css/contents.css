@@ -587,6 +587,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_title .app_info > div {display:inline-block; margin-right:20px;}
 .app_title .app_info span {display: inline-block; vertical-align:middle;}
 .app_title .app_name {font-family:'roboto'; font-size:36px; font-weight:600;}
+.app_title .app_info .prouse {background:url('../images/admin/ic_dev_use.png') left center no-repeat; padding-left:24px; margin-left:16px; font-size:14px; font-weight:500;}
 .app_title .app_id, .app_title .app_type  {font-size:16px; color:#222;}
 .app_title .app_type {margin-top:3px;font-weight: 600; line-height:21px;}
 .app_title .app_type::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
