@@ -251,9 +251,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table thead th p span { max-width:calc(100% - 30px); }
 .board table thead th p .btn_sort {display:inline-block; width:16px; height:16px; margin-left:5px; background:url('../images/common/ic_sorting.png') no-repeat center center; text-indent:-9999px; overflow:hidden; vertical-align:middle;}
 .board table thead th em {font-weight:600}
-.board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-all; font-family:'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
+.board table tbody td {height:76px; padding:16px; border-bottom:solid 1px #cfcfcf; font-size:14px; color:#222; word-break:break-all;}
 .board table tbody td.f_blue {color:#1485cb;}
-.board table tbody td a {font-family:'Roboto', 'NotoSansKR','돋움','Tahoma','Arial',sans-serif;}
 .board table tbody td.empty {padding:160px 0 50px; border:0;}
 .board table tbody td.empty .noterms {margin-top:0;}
 .board table tbody td.txtinert {color:#bfbfbf;}
@@ -831,11 +830,30 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .coantents.dashboard h2 {margin-bottom:20px; font-size:24px; letter-spacing:-1.2px; font-weight:600;}
 .coantents.dashboard > div {margin-top:100px;}
 .coantents.dashboard > div:first-child {margin-top:0;}
+.dashboard .dash_box {padding:20px 0 48px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
+.dashboard .dash01 dl {display:inline-block; width:calc(100% / 3 - 4px); text-align:center; position:relative;}
+.dashboard .dash01 dl::after {content:''; display:block; width:1px; height:40px; background:#cfcfcf; color:#222; position:absolute; top:calc(50% - 10px); left:0;}
+.dashboard .dash01 dl:first-child::after {display:none;}
+.dashboard .dash01 dl dt {display:inline-block; margin-top:76px; padding-left:30px; font-size:14px;}
+.dashboard .dash01 dl dd {width:100%; font-size:36px; font-weight:600; position:absolute; top:20px; font-family:'Roboto';}
+.dashboard .dash01 dl dt.devall {background:url('../images/admin/ic_dev_all.png') no-repeat 0 0;}
+.dashboard .dash01 dl dt.devuse {background:url('../images/admin/ic_dev_use.png') no-repeat 0 0;}
+.dashboard .dash01 dl dt.deving {background:url('../images/admin/ic_dev_ing.png') no-repeat 0 0;}
+
 .dashboard .dash_list {float:left; width:calc(50% - 20px); position:relative;}
 .dashboard .dash_list.right {float:right;} 
-.dashboard .dash_list .btn_more {position:absolute; top:0; right:0; }
-.dashboard .dash_box {padding:20px 0 48px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
-.dashboard .dash_list .dash_box {}
-.dashboard .dash01 dl {display:inline-block; width:calc(100% / 3 - 8px); text-align:center; position:relative;}
-.dashboard .dash01 dl dt {padding-top:76px; font-size:14px;}
-.dashboard .dash01 dl dd {width:100%; font-size:36px; font-weight:600; position:absolute; top:20px;}
+.dashboard .dash_list .btn_more {padding-right:30px; background:url('../images/common/ic_arrow_black.png') no-repeat right 0; font-size:16px; position:absolute; top:5px; right:0; }
+.dashboard .dash_list .dash_box {height:393px; padding:32px;}.dashboard .dash01 dl {display:inline-block; width:calc(100% / 3 - 4px); text-align:center; position:relative;}
+.dashboard .dash02 {border-bottom:solid 1px #cfcfcf;}
+.dashboard .dash02 dl {display:inline-block; text-align:center; position:relative; text-align:left; color:#222;}
+.dashboard .dash02 dl dt {margin-bottom:8px; font-size:16px;}
+.dashboard .dash02 dl dd {margin-bottom:16px; font-size:24px; font-weight:600; font-family:'Roboto';}
+.dashboard .dash02 dl:first-child:nth-last-child(2), 
+.dashboard .dash02 dl:first-child:nth-last-child(2) ~ dl {width:calc(50% - 4px);}
+.dashboard .list_set {padding-top:28px;}
+.dashboard .list_set .ti {margin-bottom:16px; font-size:16px; font-weight:600;}
+.dashboard .list_set .ti span {padding-left:5px; font-size:24px; font-family:'Roboto'; color:#ffa640; position:relative; top:2px;}
+.dashboard .list_set ul li a {display:block;}
+.dashboard .list_set ul li {padding:12px 90px 8px 0; font-size:16px; position:relative; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.dashboard .list_set ul li img {width:40px; height:40px; margin-right:10px; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15); vertical-align:middle; position:relative; top:-2px}
+.dashboard .list_set ul li .date {font-size:14px; font-family:'Roboto'; color:#666; position:absolute; right:0; top:calc(50% - 7px);}
