@@ -708,16 +708,17 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .notice_contents {font-size:16px; color:#666; width:100%;}
 .notice_contents img {max-width:100%;}
 /* 검색필터 */
-.filtergroup {padding:0 0 0 60px; margin-top:60px;}
+.filtergroup {padding:0 20px 0 60px; margin-top:60px;}
 .filtergroup table {width:100%; margin:0 auto;}
-.filtergroup table tr th {padding:6px 20px 6px 0; font-size:16px; font-weight:600;}
+.filtergroup table tr th {padding:6px 10px 6px 0; font-size:16px; font-weight:600; word-break:keep-all;}
 .filtergroup table tr td {padding:6px 10px 0 0;}
-.filtergroup table tr td .input.sel {width:86%;}
+.filtergroup table tr td .input.sel {width:85%;}
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
 .wbox.app_manage {padding:48px 0 60px; margin-bottom:80px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
 @media screen and (max-width:1420px){
+    .filtergroup {padding-left:30px;}
     .filtergroup table {width:100%;}
 }
 /* 검색결과 없음 */
