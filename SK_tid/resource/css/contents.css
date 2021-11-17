@@ -689,7 +689,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup .faqbox .input.sel {float:left; width:156px;}
 .board .optiongroup .faqbox .input.sel .sel_de {background-position:92% center;}
 .board .optiongroup .faqbox .input.sel + .search {margin-left:16px;}
-.board .optiongroup .faqbox .warning {clear:both; margin-left:calc(100% - 340px); padding-left:16px;}
+.board .optiongroup .faqbox .warning {clear:both; width:calc(100% - 172px); margin-left:172px; padding-left:16px;}
 .notice_title {padding-bottom:16px; border-bottom:solid 1px #222; position:relative; margin-bottom:32px;}
 .notice_title h3 {font-size:24px; font-weight:600; color:#222; vertical-align:top;}
 .notice_title .sub_box::after {display:block; content:''; clear:both;}
@@ -708,10 +708,11 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .notice_contents {font-size:16px; color:#666; width:100%;}
 .notice_contents img {max-width:100%;}
 /* 검색필터 */
-.filtergroup {padding:0; margin-top:60px;}
-.filtergroup table {width:90%; margin:0 auto;}
-.filtergroup table tr th {padding:6px 20px 6px; font-size:16px; font-weight:600;}
-.filtergroup table tr td {padding:6px 40px 0 0;}
+.filtergroup {padding:0 0 0 60px; margin-top:60px;}
+.filtergroup table {width:100%; margin:0 auto;}
+.filtergroup table tr th {padding:6px 20px 6px 0; font-size:16px; font-weight:600;}
+.filtergroup table tr td {padding:6px 10px 0 0;}
+.filtergroup table tr td .input.sel {width:86%;}
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
 .wbox.app_manage {padding:48px 0 60px; margin-bottom:80px;}
