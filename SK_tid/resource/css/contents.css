@@ -707,14 +707,17 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .notice_contents {font-size:16px; color:#666; width:100%;}
 .notice_contents img {max-width:100%;}
 /* 검색필터 */
-.filtergroup{padding:0 60px 0 0; margin-top:60px;}
-.filtergroup table {width:100%;}
-.filtergroup table tr th {padding:6px 20px 6px 60px; font-size:16px; font-weight:600;}
-.filtergroup table tr td {padding:6px 0;}
+.filtergroup {padding:0; margin-top:60px;}
+.filtergroup table {width:90%; margin:0 auto;}
+.filtergroup table tr th {padding:6px 20px 6px; font-size:16px; font-weight:600;}
+.filtergroup table tr td {padding:6px 40px 0 0;}
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc((100% - 352px) / 2);}
 .wbox.app_manage {padding:48px 0 60px; margin-bottom:80px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
+@media screen and (max-width:1420px){
+    .filtergroup table {width:100%;}
+}
 /* 검색결과 없음 */
 .no_result {margin-top:24px; padding-bottom:120px; border-top:2px solid #222;}
 .no_result .noterms {margin-top:160px;}
