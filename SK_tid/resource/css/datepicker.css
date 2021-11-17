@@ -32,6 +32,7 @@
 .mx-time {width:312px;}
 .mx-time-content {height:270px;padding-top:10px;}
 .mx-time-columns {display: block;}
+.mx-time-column {border:0;}
 .mx-time-column {height:auto; padding:12px;}
 .mx-time-column .mx-time-item {display:inline-block; width:32px; height:32px; margin:2px; line-height:32px; text-align:center; border-radius:50%; color:#222;}
 .mx-time-column .mx-time-item.active {background:#000; font-weight:400; color:#fff;}
