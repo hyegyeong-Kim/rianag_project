@@ -132,9 +132,10 @@ span.input button.timeplus {padding:0; font-size:14px; font-weight:500; color:#2
 .calendarset .bar {display:inline-block; margin:0 6px;}
 .calendarset span.input.cal {position:relative; padding:0 50px 0 16px; font-size:14px; display:inline-block; width:140px; border-radius:4px; border:solid 1px #cfcfcf; font-family:'Roboto'; }
 .calendarset span.input.cal button {background:url('../images/common/ic_calendar.png') no-repeat; width:24px; height:24px; overflow:hidden; text-indent:-9999px;}
+.calendarbtn {margin-top:12px;}
 .calendarbtn .btn + .btn {margin-left:4px;}
-.calendarbtn .btn.white {border:solid 1px #cfcfcf; color:#bfbfbf; height:28px; line-height:26px; margin-top:12px;}
-
+.calendarbtn .btn.white {border:solid 1px #cfcfcf; color:#bfbfbf; height:28px; line-height:26px;}
+.calendarbtn .btn.black {border:1px solid #222; line-height:26px;}
 /* 컬러피커 */
 .input.txt {}
 .input.txt .minicolors {position:static; width:100%;}
@@ -603,7 +604,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .app_title .app_type::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
 .app_title .app_date {font-size:14px; color:#aaa; position:absolute; top:23px; right:0;}
 .app_title .app_date p {display:inline-block; margin-left:10px;}
-.app_title .gtit {max-width:700px; margin:36px 0 0 -130px;}
+.app_title .gtit {max-width:700px; margin:36px 0 0 -130px; padding-bottom:20px;}
 
 .app_title .app_date span::before {content:''; display:inline-block; margin:0 6px 0 4px; width:1px; height:10px; background:#aaa;}
 .app_txtcont::after {display:block; content:''; clear:both;}
@@ -720,7 +721,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 .notice_board {padding:24px 60px; border-top:2px solid #222; border-bottom:1px solid #cfcfcf;}
 .notice_board table {width:100%;}
-.notice_board table th {padding:8px 16px 8px 0; font-weight:600; font-size:16px;}
+.notice_board table th {padding:8px 10px 8px 0; font-weight:600; font-size:16px;}
 .notice_board table td {padding:8px 8px 8px 16px; color:#666; font-size:16px;}
 /* 검색필터 */
 .filtergroup {padding:0 20px 0 60px; margin-top:60px;}
@@ -730,7 +731,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .filtergroup table tr td .input.sel {width:85%;}
 .filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc(50% - 226px);}
-.wbox.app_manage {padding:48px 0 60px; margin-bottom:40px;}
+.wbox.app_manage {padding:48px 0; margin-bottom:60px;}
+.wbox.app_manage + .board .optiongroup {margin-top:-20px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
 @media screen and (max-width:1420px){
     .filtergroup {padding:0 0 0 30px;}

@@ -96,8 +96,8 @@
                         <a href="#none" class="act">게시판 관리</a>
                         <ul class="depth2">
                             <li><a href="#none">다운로드 관리</a></li>
-                            <li><a href="#none" class="act2">공지사항 관리</a></li>
-                            <li><a href="#none">FAQ 관리</a></li>
+                            <li><a href="#none">공지사항 관리</a></li>
+                            <li><a href="#none" class="act2">FAQ 관리</a></li>
                             <li><a href="#none">문의사항 관리</a></li>
                             <li><a href="#none">유형 관리</a></li>
                         </ul>
@@ -118,76 +118,74 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>공지사항 등록</h2>
+                <h2><span class="mfont">FAQ</span> 상세</h2>
             </div>
             <div class="page_contents">
-                <hr class="hr_01">
-                <div class="regist_table">
+                <div class="notice_board">
                     <table>
                         <caption></caption>
-                        <colgroup><col style="width:186px"><col></colgroup>
+                        <colgroup><col style="width:9%"><col style="width:23%"><col style="width:9%"><col style="width:23%"><col style="width:9%"><col style="width:auto"></colgroup>
                         <tbody>
                             <tr>
                                 <th>
-                                    <span>공개</span>
+                                    <span>번호</span>
                                 </th>
-                                <td>
-                                    <span class="input sel">
-                                        <select name="" class="sel_de mfont">
-                                            <option value="">Y</option>
-                                            <option value="">N</option>
-                                        </select>
-                                    </span>
-                                </td>
+                                <td class="mfont">120</td>
+                                <th>
+                                    <span>조회수</span>
+                                </th>
+                                <td class="mfont">1,256</td>
+                                <th>
+                                    <span>작성자</span>
+                                </th>
+                                <td>고길동</td>
                             </tr>
                             <tr>
+                                <th>
+                                    <span>등록일</span>
+                                </th>
+                                <td class="mfont">2021.10.25</td>
+                                <th>
+                                    <span>공개</span>
+                                </th>
+                                <td class="mfont">Y</td>
                                 <th>
                                     <span>중요</span>
                                 </th>
-                                <td>
-                                    <span class="input sel">
-                                        <select name="" class="sel_de mfont">
-                                            <option value="">Y</option>
-                                            <option value="">N</option>
-                                        </select>
-                                    </span>
-                                </td>
+                                <td class="mfont">N</td>
                             </tr>
                             <tr>
-                                <th>
-                                    <span>제목</span>
-                                </th>
-                                <td>
-                                    <span class="input txt wfull">
-                                        <input type="text" placeholder="제목을 입력해주세요.">
-                                        <span class="bytes">0/100 bytes</span>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <span>내용</span>
-                                </th>
-                                <td colspan="2">
-                                    <div class="txtarea edit">
-                                        <div>
-                                            에디터영역
-                                        </div>
-                                        <textarea placeholder="내용을 입력해주세요."></textarea>
-                                        <span class="bytes">0/5000 bytes</span>
-                                    </div>
-                                </td>
+                                <th>유형</th>
+                                <td>인증/회원</td>
+                                <th></th>
+                                <td></td>
+                                <th></th>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="btn_wrap">
-                    <a href="#none" class="btn xlarge gray">목록</a>
-                    <a href="#none" class="btn xlarge black">등록</a>
-                    <!-- 게시물 수정했을때 노출 -->
-                    <!-- <a href="#none" class="btn xlarge black">저장</a> -->
-                    <!-- // 게시물 수정했을때 노출 -->
+                <!-- 공지사항 상세 -->
+                <div class="notice_title mt60">
+                    <h3>iOS App 심사시 주의 사항</h3>
                 </div>
+                <div class="notice_contents">
+                    iOS 앱등록 심사시 로그인 가능한 T아이디 계정을 같이 제공하는데<br>
+                    해외에서 심사를 하다보니 로그인을 못해서 심사 거부를 당하는 경우가 있습니다.<br>
+                    <br>
+                    심사 요청시 제공되는 T아이디의 설정 2개를 꼭 확인해주세요<br>
+                    <br>
+                    T아이디 App에 들어가서 (https://play.google.com/store/apps/details?id=com.sktelecom.tid&hl=ko)<br>
+                    보안설정/ 로그인설정  화면에서 
+                    <br><br>
+                    1.퀀텀 로그인 2단계 인증 ==> OFF 하기<br>
+                    2.해외 로그인 차단 ==> OFF 하기 
+                </div>
+                <div class="btn_wrap">
+                    <button class="btn xlarge gray">목록</button>
+                    <button class="btn xlarge black">수정</button>
+                </div>
+                <!-- 공지사항 상세 -->
             </div>
         </div>
     </div>
@@ -212,6 +210,9 @@
     <!-- E: footer -->
     
 </div>
+<script>
+
+</script>
 </body>
 </html>
 
