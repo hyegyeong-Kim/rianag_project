@@ -163,3 +163,13 @@ $(function(){
         $("#utility").addClass("hiddenlnb");
     }
 })
+
+// calendarbtn
+$(document).on("click",".calendarbtn .btn", function(){
+    if($(this).hasClass('black')){
+        $(this).removeClass('black').addClass('white')
+    }else{
+        $(this).addClass('black').removeClass('white')
+        $(this).siblings().removeClass('black').addClass('white')
+    }
+});
