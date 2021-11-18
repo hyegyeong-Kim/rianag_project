@@ -79,16 +79,34 @@
         <div id="lnb">
             <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
             <div class="lnb">
-                <div class="lnb_ti">NUGU</div>
                 <ul class="lnb_menu">
                     <li>
-                        <a href="#none">공지사항</a>
+                        <a href="#none">관리자홈</a>
                     </li>
                     <li>
-                        <a href="#none">FAQ</a>
+                        <a href="#none">회원관리</a>
                     </li>
                     <li>
-                        <a href="#none" class="act">1:1문의</a>
+                        <a href="#none">애플리케이션 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">사용자 약관동의 내역</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">게시판 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">다운로드 관리</a></li>
+                            <li><a href="#none" class="act2">공지사항 관리</a></li>
+                            <li><a href="#none">FAQ 관리</a></li>
+                            <li><a href="#none">문의사항 관리</a></li>
+                            <li><a href="#none">유형 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">문의 사항 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">관리자 설정</a>
                     </li>
                 </ul>
                 <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
@@ -100,12 +118,10 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>1:1문의 등록</h2>
+                <h2>공지사항 등록</h2>
             </div>
             <div class="page_contents">
-                <p class="gtit">1:1 문의를 등록 하신 후에는 <span class="f_blue">수정/삭제</span> 할 수 없습니다. 등록된 문의글에 관리자가 댓글을 달면 이메일 주소로 메일 알림이 제공됩니다.</p>
                 <hr class="hr_01">
-                <!-- 211116 modify -->
                 <div class="regist_table">
                     <table>
                         <caption></caption>
@@ -113,24 +129,26 @@
                         <tbody>
                             <tr>
                                 <th>
-                                    <span>작성자</span>
+                                    <span>공개</span>
                                 </th>
                                 <td>
                                     <span class="input sel">
                                         <select name="" class="sel_de mfont">
-                                            <option value="">NUGU</option>
+                                            <option value="">Y</option>
+                                            <option value="">N</option>
                                         </select>
                                     </span>
                                 </td>
                             </tr>
                             <tr>
                                 <th>
-                                    <span>유형</span>
+                                    <span>중요</span>
                                 </th>
                                 <td>
                                     <span class="input sel">
                                         <select name="" class="sel_de ">
-                                            <option value="">인증/회원</option>
+                                            <option value="">Y</option>
+                                            <option value="">N</option>
                                         </select>
                                     </span>
                                 </td>
@@ -140,7 +158,7 @@
                                     <span>제목</span>
                                 </th>
                                 <td>
-                                    <span class="input txt wfull"> <!-- 211118 modify class wfull추가 -->
+                                    <span class="input txt wfull">
                                         <input type="text" placeholder="제목을 입력해주세요.">
                                         <span class="bytes">0/100 bytes</span>
                                     </span>
@@ -151,30 +169,21 @@
                                     <span>내용</span>
                                 </th>
                                 <td colspan="2">
-                                    <div class="txtarea">
+                                    <div class="txtarea edit">
+                                        <div>
+                                            에디터영역
+                                        </div>
                                         <textarea placeholder="내용을 입력해주세요."></textarea>
                                         <span class="bytes">0/5000 bytes</span>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <th><span>이메일</span></th>
-                                <td>
-                                    <span class="input txt only">
-                                        <input type="text" class="mfont" placeholder="이메일 주소를 입력해주세요.">
-                                    </span>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
-                <!-- // 211116 modify -->
                 <div class="btn_wrap">
                     <a href="#none" class="btn xlarge gray">목록</a>
                     <a href="#none" class="btn xlarge black">등록</a>
-                    <!-- 공지사항 수정 -->
-                    <!-- <a href="#none" class="btn xlarge black">저장</a> -->
-                    <!-- // 공지사항 수정 -->
                 </div>
             </div>
         </div>
@@ -200,77 +209,6 @@
     <!-- E: footer -->
     
 </div>
-
-<!-- 211116 modify -->
-<!-- S: 팝업 / 1:1문의 등록 -->
-<div class="popup" id="notice_regi">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="popsub_tl2">
-                1:1 문의를 등록하시겠습니까?
-            </div>
-            <div class="txt_area">
-                등록 후 내용을 수정하실 수 없습니다.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large gray" onclick="hidePop('notice_regi');">취소</a>    
-                <a href="#none" class="btn large black" onclick="hidePop('notice_regi');">등록</a>  
-            </div>
-        </div>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- E: 팝업 / 1:1문의 등록 -->
-<!-- 211116 modify -->
-
-<!-- S: 팝업 / 제목입력 요청 팝업 -->
-<div class="popup" id="title_enter">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="popsub_tl2">
-                제목을 입력해주세요.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large black" onclick="hidePop('title_enter')">확인</a>    
-            </div>
-        </div>
-    </div>
-</div>
-<!-- E: 팝업 / 제목입력 요청 팝업 -->
-
-<!-- S: 팝업 / 내용입력 요청 팝업 -->
-<div class="popup" id="contents_enter">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="popsub_tl2">
-                내용을 입력해주세요.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large black" onclick="hidePop('contents_enter')">확인</a>    
-            </div>
-        </div>
-    </div>
-</div>
-<!-- E: 팝업 / 내용입력 요청 팝업 -->
-
-<!-- S: 팝업 / 이메일입력 요청 팝업 -->
-<div class="popup" id="email_enter">
-    <div class="inner_pop alert">
-        <div class="pop_con">
-            <div class="popsub_tl2">
-                이메일을 입력해주세요.
-            </div>
-            <div class="btn_wrap">
-                <a href="#none" class="btn large black" onclick="hidePop('email_enter')">확인</a>    
-            </div>
-        </div>
-    </div>
-</div>
-<!-- E: 팝업 / 이메일입력 요청 팝업 -->
-
-<script>
-
-</script>
 </body>
 </html>
 

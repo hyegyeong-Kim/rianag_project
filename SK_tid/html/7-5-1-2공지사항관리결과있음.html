@@ -98,13 +98,20 @@
                         <a href="#none">회원관리</a>
                     </li>
                     <li>
-                        <a href="#none" class="act">애플리케이션 관리</a>
+                        <a href="#none">애플리케이션 관리</a>
                     </li>
                     <li>
                         <a href="#none">사용자 약관동의 내역</a>
                     </li>
                     <li>
-                        <a href="#none">게시판 관리</a>
+                        <a href="#none" class="act">게시판 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">다운로드 관리</a></li>
+                            <li><a href="#none" class="act2">공지사항 관리</a></li>
+                            <li><a href="#none">FAQ 관리</a></li>
+                            <li><a href="#none">문의사항 관리</a></li>
+                            <li><a href="#none">유형 관리</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#none">문의 사항 관리</a>
@@ -122,11 +129,9 @@
         <div class="coantents">
             <!-- 페이지 타이틀 -->
             <div class="page_tit">
-                <h2>애플리케이션 관리</h2>
+                <h2>공지사항 관리</h2>
                 <div class="tit_right">
-                    <a href="#none" class="btn black large" onclick="showPop('bizapp_ask')">비즈니스 애플리케이션 요청 리스트</a>
-                    <!-- 요청있을때 -->
-                    <span class="newalarm">44</span>
+                    <a href="#none" class="btn black large">공지사항 등록</a>
                 </div>
             </div>
 
@@ -134,10 +139,10 @@
                 <div class="wbox app_manage">
                     <div class="filtergroup">
                         <table> 
-                            <colgroup><col style="width:auto;"><col style="width:22%;"><col style="width:auto;"><col style="width:22%;"><col style="width:13.5%;"><col style="width:23%;"></colgroup>
+                            <colgroup><col style="width:7%;"><col style="width:18%;"><col style="width:7%;"><col style="width:18%;"></colgroup>
                             <tbody>
                                 <tr>
-                                    <th><span>앱 타입</span></th>
+                                    <th><span>공개</span></th>
                                     <td>
                                         <span class="input sel">
                                             <select name="" class="sel_de ">
@@ -146,7 +151,7 @@
                                             </select>
                                         </span>
                                     </td>
-                                    <th><span>앱 상태</span></th>
+                                    <th><span>중요</span></th>
                                     <td>
                                         <span class="input sel">
                                             <select name="" class="sel_de ">
@@ -154,105 +159,108 @@
                                             </select>
                                         </span>
                                     </td>
-                                    <th><span>비즈 앱 상태</span></th>
-                                    <td>
-                                        <span class="input sel">
-                                            <select name="" id="select1" class="sel_de ">
-                                                <option value="">전체</option>
-                                            </select>
-                                        </span>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="search search_type01 mt40">
-                            <input type="text" placeholder="검색어를 입력하세요.">
-                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
-                            <a href="#none" class="btn_sch">검색하기</a>
+                        <div class="optionsearch">
+                            <span class="input sel">
+                                <select name="" class="sel_de">
+                                    <option value="">전체</option>
+                                    <option value="">제목+내용</option>
+                                </select>
+                            </span>
+                            <div class="search search_type01">
+                                <input type="text" placeholder="검색어를 입력하세요.">
+                                <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                                <a href="#none" class="btn_sch">검색하기</a>
+                            </div>    
                         </div>
                     </div>
                 </div>
                 <!-- S: Board Type -->
                 <div class="board">
+                    <!-- optiongroup -->
                     <div class="optiongroup">
-                        <div class="sorting radio mt10">
-                            <label>
-                                <input type="radio">
-                                <span>가나다순</span>
-                            </label>
-                            <label>
-                                <input type="radio">
-                                <span>최신등록 순</span>
-                            </label>
-                        </div>
+                        <p class="result_txt"><strong>‘공지’</strong> 검색 결과 <span class="f_yellow">5</span>개</p>
                     </div>
                     <!-- table -->
                     <table class="board_tbl">
                         <caption></caption>
                         <colgroup>
-                            <col style="width:25%"><col style="width:25%;"><col style="width:15%;"><col style="width:10%"><col style="width:15%"><col style="width:10%">
+                            <col style="width:10%"><col style="width:43%;"><col style="width:9%;"><col style="width:9%;"><col style="width:10%"><col style="width:15%"><col style="width:15%">
                         </colgroup>
                         <thead>
                             <tr>
+                                <th class="txtcenter mfont">
+                                    <span>No.</span>
+                                </th>
                                 <th>
-                                    <span>애플리케이션</span>
+                                    <span>제목</span>
                                 </th>
-                                <th>
-                                    <span>앱 ID</span>
-                                </th>
-                                <th class="txtcenter mfont">
-                                    <span>Type</span>
+                                <th class="txtcenter">
+                                    <span>공개</span>
                                 </th>
                                 <th class="txtcenter mfont">
-                                    <span>상태</span>
+                                    <span>중요</span>
                                 </th>
                                 <th class="txtcenter mfont">
-                                    <span>상용일시</span>
+                                    <span>조회수</span>
                                 </th>
                                 <th class="txtcenter mfont">
-                                    <span>비즈앱</span>
+                                    <span>등록일</span>
+                                </th>
+                                <th class="txtcenter mfont">
+                                    <span>마지막수정일</span>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- unit -->
                             <tr>
-                                <td class="mfont">APPLE</td>
-                                <td class="mfont">APLE</td>
-                                <td class="txtcenter">A</td>
-                                <td class="txtcenter">개발중</td>
-                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">19</td>
+                                <td>[안내] 채널 약관 신규등록, 변경 시 유의점  <span class="f_yellow">공지</span></td>
                                 <td class="txtcenter mfont">Y</td>
+                                <td class="txtcenter">Y</td>
+                                <td class="txtcenter mfont">1,540</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
                             </tr>
                             <!-- // unit -->
                             <tr>
-                                <td class="mfont">BANANANA</td>
-                                <td class="mfont">BAVA</td>
-                                <td class="txtcenter mfont">B</td>
-                                <td class="txtcenter">상용중</td>
-                                <td class="txtcenter mfont">2021/08/14</td>
-                                <td class="txtcenter mfont">N</td>
-                            </tr>
-                            <tr>
-                                <td class="mfont">APPLE</td>
-                                <td class="mfont">APLE</td>
-                                <td class="txtcenter">A</td>
-                                <td class="txtcenter">개발중</td>
-                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">18</td>
+                                <td>[안내] 채널 약관 신규등록, 변경 시 유의점 <span class="f_yellow">공지</span></td>
                                 <td class="txtcenter mfont">Y</td>
-                            </tr>
-                            <tr>
-                                <td class="mfont">BANANANA</td>
-                                <td class="mfont">BAVA</td>
-                                <td class="txtcenter mfont">B</td>
-                                <td class="txtcenter">상용중</td>
+                                <td class="txtcenter">Y</td>
+                                <td class="txtcenter mfont">20</td>
                                 <td class="txtcenter mfont">2021/08/14</td>
-                                <td class="txtcenter mfont">N</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
                             </tr>
                             <tr>
-                                <td colspan="6" class="empty">
-                                    <p class="noterms">조회 결과가 없습니다.</p>
-                                </td>
+                                <td class="txtcenter mfont">17</td>
+                                <td>[안내] 채널 약관 신규등록, 변경 시 유의점 <span class="f_yellow">공지</span></td>
+                                <td class="txtcenter mfont">Y</td>
+                                <td class="txtcenter">Y</td>
+                                <td class="txtcenter mfont">14</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">16</td>
+                                <td>[안내] [안내] 채널 약관 신규등록, 변경 시 유의점 <span class="f_yellow">공지</span></td>
+                                <td class="txtcenter mfont">Y</td>
+                                <td class="txtcenter">N</td>
+                                <td class="txtcenter mfont">955</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                            </tr>
+                            <tr>
+                                <td class="txtcenter mfont">15</td>
+                                <td>[안내] 채널 약관 신규등록, 변경 시 유의점 <span class="f_yellow">공지</span></td>
+                                <td class="txtcenter mfont">Y</td>
+                                <td class="txtcenter">Y</td>
+                                <td class="txtcenter mfont">9</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
+                                <td class="txtcenter mfont">2021/08/14</td>
                             </tr>
                             <!-- list 10개씩 노출 -->
                         </tbody>
@@ -298,83 +306,6 @@
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
-
-<!--  팝업 비즈니스 애플리케이션 요청 리스트 -->
-<div class="popup" id="bizapp_ask">
-    <div class="inner_pop w494">
-        <div class="popup_title">
-            <p>비즈니스 애플리케이션 요청 리스트</p>
-        </div>
-        <div class="pop_con">
-            <div  class="bizapplist">
-                <ul>
-                    <li>
-                        <div class="bizapp">
-                            <p class="appdate">2021.09.21</p>
-                            <a href="#none" class="btn black xsmall float_r">검토</a>
-                        </div>
-                        <dl>
-                            <dt>애플리케이션</dt>
-                            <dd>bananbananbanan</dd>
-                        </dl>
-                        <dl>
-                            <dt>앱ID</dt>
-                            <dd>ABCDE</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="bizapp">
-                            <p class="appdate">2021.09.21</p>
-                            <a href="#none" class="btn black xsmall float_r">검토</a>
-                        </div>
-                        <dl>
-                            <dt>애플리케이션</dt>
-                            <dd>bananbananbanan</dd>
-                        </dl>
-                        <dl>
-                            <dt>앱ID</dt>
-                            <dd>ABCDE</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="bizapp">
-                            <p class="appdate">2021.09.21</p>
-                            <a href="#none" class="btn black xsmall float_r">검토</a>
-                        </div>
-                        <dl>
-                            <dt>애플리케이션</dt>
-                            <dd>bananbananbananbananbananbananbananbananbanan</dd>
-                        </dl>
-                        <dl>
-                            <dt>앱ID</dt>
-                            <dd>ABCDE</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <div class="bizapp">
-                            <p class="appdate">2021.09.21</p>
-                            <a href="#none" class="btn black xsmall float_r">검토</a>
-                        </div>
-                        <dl>
-                            <dt>애플리케이션</dt>
-                            <dd>bananbananbanan</dd>
-                        </dl>
-                        <dl>
-                            <dt>앱ID</dt>
-                            <dd>ABCDE</dd>
-                        </dl>
-                    </li>
-                </ul>
-                <!-- 내역 없을때 -->
-                <p class="noterms">요청 내역이 없습니다.</p>
-                <!-- 내역 없을때 노출 -->
-            </div>
-        </div>
-        <a href="#none" class="btn_close" onclick="hidePop('bizapp_ask')">닫기</a>
-    </div>
-    <div class="dim"></div>
-</div>
-<!-- // 팝업 비즈니스 애플리케이션 요청 리스트 -->
 </body>
 </html>
 
