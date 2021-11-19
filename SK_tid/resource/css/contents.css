@@ -723,6 +723,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .notice_board table {width:100%;}
 .notice_board table th {padding:8px 10px 8px 0; font-weight:600; font-size:16px;}
 .notice_board table td {padding:8px 8px 8px 16px; color:#666; font-size:16px;}
+.notice_board + .filtergroup {margin-top:30px; padding-bottom:30px; border-bottom:solid 1px #cfcfcf;}
 /* 검색필터 */
 .filtergroup {padding:0 20px 0 60px; margin-top:60px;}
 .filtergroup table {width:100%; margin:0 auto;}
@@ -734,6 +735,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .wbox.app_manage {padding:48px 0; margin-bottom:60px;}
 .wbox.app_manage + .board .optiongroup {margin-top:-20px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
+
 @media screen and (max-width:1420px){
     .filtergroup {padding:0 0 0 30px;}
     .filtergroup table {width:100%;}
@@ -767,7 +769,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .comment_wrap .writer:first-child::before {display:none;}
 .comment_wrap .commentlist li {padding-bottom:20px; border-bottom:solid 1px #cfcfcf;}
 .comment_wrap .commentlist li .comment_unit {position:relative; padding:16px 175px 0 0;}
-.comment_wrap .commentlist li .comment_unit .comment_txt {font-size:14px; line-height:20px; color:#666; margin:12px 0 13px; word-break:break-word;}
+.comment_wrap .commentlist li .comment_unit .comment_txt {font-size:14px; line-height:20px; color:#666; margin:12px 0 13px; word-break:break-all;}
 .comment_wrap .commentlist li .comment_unit .comment_txt strong {color:#222;}
 .comment_wrap .commentlist li .comment_unit .comment_date p {display:inline-block; font-size:14px; line-height:20px; color:#666; position:relative; padding-right:8px; margin-right:4px;}
 .comment_wrap .commentlist li .comment_unit .comment_date p::before {content:''; display:block; width:1px; height:10px; background:#aaa; position:absolute; top:6px; right:0;}

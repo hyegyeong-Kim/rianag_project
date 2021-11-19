@@ -1,0 +1,359 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                    </div>
+                    <!--
+                    <div class="ongoing">
+                        <span class="use">상용중</span>
+                    </div>
+                    -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">관리자홈</a>
+                    </li>
+                    <li>
+                        <a href="#none">회원관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">애플리케이션 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">사용자 약관동의 내역</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">게시판 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">다운로드 관리</a></li>
+                            <li><a href="#none">공지사항 관리</a></li>
+                            <li><a href="#none">FAQ 관리</a></li>
+                            <li><a href="#none" class="act2">문의사항 관리</a></li>
+                            <li><a href="#none">유형 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">문의 사항 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">관리자 설정</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>문의사항 상세</h2>
+            </div>
+            <div class="page_contents">
+                <div class="notice_board">
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:9%"><col style="width:23%"><col style="width:9%"><col style="width:23%"><col style="width:9%"><col style="width:auto"></colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <span>번호</span>
+                                </th>
+                                <td class="mfont">120</td>
+                                <th>
+                                    <span>조회수</span>
+                                </th>
+                                <td class="mfont">1,256</td>
+                                <th>
+                                    <span>작성자</span>
+                                </th>
+                                <td>고길동</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>작성일</span>
+                                </th>
+                                <td class="mfont">2021.10.25</td>
+                                <th>
+                                    <span>유형</span>
+                                </th>
+                                <td>인증/회원</td>
+                                <th>
+                                    <span>애플리케이션</span>
+                                </th>
+                                <td>ABCDEABCDEABCDE(ABCDE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="filtergroup">
+                    <table> 
+                        <colgroup><col style="width:13%;"><col style="width:37%;"><col style="width:13%;"><col style="width:37%;"></colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>상태</span></th>
+                                <td>
+                                    <span class="input sel">
+                                        <select name="" class="sel_de ">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <th><span>담당자</span></th>
+                                <td>
+                                    <span class="input sel">
+                                        <select name="" class="sel_de ">
+                                            <option value="">전체</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 문의사항 상세 -->
+                <div class="notice_title mt60">
+                    <h3>인증방식별 회원가입 시 연락처(이메일, 휴대폰번호) 정보 유무</h3>
+                </div>
+                <div class="notice_contents">
+                    회원 가입 시 각 인증방식(휴대폰인증, 아이핀인증)에 따라 id_token에 아래 2개의 연락처 정보가 필수 or 선택 으로 오는지 궁금합니다.<br>
+                    <br>
+                    (tid 로그인한 사용자의 휴대폰번호/이메일주소가 필요한 케이스가 있어서 확인차 여쭙니다)<br>
+                    <br>
+                    필요한 연락처 항목<br>
+                    1. 휴대폰번호<br>
+                    2. 이메일주소<br>
+                    <br>
+                    *휴대폰인증 회원가입<br>
+                    1. 휴대폰번호 : 필수 or 선택<br>
+                    2. 이메일주소 : 필수 or 선택<br>
+                    <br>
+                    *아이핀인증 회원가입<br>
+                    1. 휴대폰번호 : 필수 or 선택 <br>
+                    2. 이메일주소 : 필수 or 선택 <br>
+                    <br>
+                    확인 부탁 드리겠습니다.<br>
+                    <br>
+                    *채널ID는 MBRS 입니다.<br>
+                </div>
+                <div class="btn_wrap">
+                    <button class="btn xlarge black">목록</button>
+                </div>
+                <!-- // 문의사항 상세 -->
+                <!-- S: comment -->
+                <div class="comment_wrap">
+                    <div class="com_title">
+                        <p>댓글 6개</p>
+                    </div>
+                    <ul class="commentlist">
+                        <!-- 기본댓글 set -->
+                        <li>
+                            <div class="comment_unit">
+                                <div>
+                                    <p class="writer">고길동</p>
+                                </div>
+                                <div class="comment_txt">
+                                    안녕하세요. 확인 후 회신 드리겠습니다. 감사합니다.
+                                </div>
+                                <div class="comment_date">
+                                    <p><span class="mfont">2021.10.02.09:50</span> (수정됨)</p>
+                                    <button>답글쓰기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- // 기본댓글 set -->
+                        <!-- 댓글 total set -->
+                        <li>
+                            <div class="comment_unit">
+                                <div>
+                                    <p class="writer">박찬주</p>
+                                </div>
+                                <div class="comment_txt">
+                                    해당 채널 등급 확인 부탁드립니다.스테이지 환경에서 해당 채널(FHYO) 등급이 신원정보등급이 아닌 개인정보등급으로 확인됩니다.
+                                </div>
+                                <div class="comment_date">
+                                    <p><span class="mfont">2021.10.02.09:50</span></p>
+                                    <button>답글쓰기</button>
+                                </div>
+                                <div class="editbox">
+                                    <button class="btn_edit">편집</button>
+                                    <button class="btn_del02 ml_12" onclick="showPop('comment_del')">지우기</button>
+                                </div>
+                            </div>
+                            <!-- 대댓글 set -->
+                            <div class="comment_depth2">
+                                <!-- 대댓글 리스트 -->
+                                <div class="dep2_list">
+                                    <div class="comment_unit">
+                                        <div>
+                                            <p class="writer">이학성</p>
+                                        </div>
+                                        <div class="comment_txt">
+                                            <strong>@박찬주</strong> 신원정보등급으로 수정하고 재테스트 했지만 CI값은 넘어오지 않고 있습니다. 확인 부탁드립니다. sub : CC6463B149D4E03A82B177D5BF771FC20210907111505 subs_id : dhbank name_vrfd : Y email_vrfd : Y mdn_vrfd : Y
+                                        </div>
+                                        <div class="comment_date">
+                                            <p><span class="mfont">2021.10.02.09:50</span> (수정됨)</p>
+                                            <button>답글쓰기</button>
+                                        </div>
+                                    </div>
+                                    <div class="comment_unit">
+                                        <div>
+                                            <p class="writer">조규형</p>
+                                        </div>
+                                        <div class="comment_txt">
+                                            <strong>@이학성</strong> 해당 채널 정보가 신원정보등급으로 조회 되어 ID_TOKEN에 CI가 정상 포함되어있어야 합니다.채널정보가 스테이징서버에 캐싱되어 있을 수 있어 갱신하였으며다시한번 시도 해보시고그래도 CI가 미포함되어 있다면 요청 전문(https://auth-stg.skt-id.co.kr....) 및 *전달받은 ID_TOKEN*을 첨부해주시면 추가 분석 해보도록 하겠습니다.감사합니다.
+                                        </div>
+                                        <div class="comment_date">
+                                            <p><span class="mfont">2021.10.02.09:50</span> (수정됨)</p>
+                                            <button>답글쓰기</button>
+                                        </div>
+                                    </div>
+                                    <div class="comment_unit">
+                                        <div>
+                                            <p class="writer">이학성</p>
+                                        </div>
+                                        <div class="comment_txt">
+                                            <strong>@조규형</strong> 재시도후 CI값 전달 되는 것 확인하였습니다.지원해 주셔서 감사합니다.
+                                        </div>
+                                        <div class="comment_date">
+                                            <p><span class="mfont">2021.10.02.09:50</span></p>
+                                            <button>답글쓰기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 대댓글 리스트 -->
+                                
+                            </div>
+                            <!-- // 대댓글 set -->
+                        </li>
+                    </ul>
+                    <!-- s: new comment -->
+                    <div class="new_comment">
+                        <p class="writer">박찬주</p>
+                        <textarea rows="1" class="comment_area" placeholder="댓글을 남겨 보세요"></textarea>
+                        <span class="bytes">0/5000 bytes</span>
+                        <div class="btn_box">
+                            <a href="#none" class="btn xsmall grayf1 regist">등록</a>
+                        </div>
+                    </div>
+                    <!-- e: new comment -->
+                </div>
+                <!-- E: comment -->
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 박정호  |  사업자등록번호 104-61-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+    
+</div>
+<script>
+     // 등록버튼 활성화
+    $("textarea.comment_area").on('keydown keyup', function () {
+        $(this).height(1).height( $(this).prop('scrollHeight'));
+        if($(this).val() == ''){
+            $(this).siblings(".btn_box").children(".regist").removeClass("black").addClass("grayf1")
+
+        }else{
+            $(this).siblings(".btn_box").children(".regist").removeClass("grayf1").addClass("black")
+
+        }
+    });
+    // 입력요청
+    $(".regist").on("click",function(){
+        if($(this).parent().siblings(".comment_area").val() == "" ){
+            $("#comment_enter").addClass("open");
+        }
+    });
+</script>
+</body>
+</html>
+
+
