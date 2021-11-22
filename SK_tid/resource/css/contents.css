@@ -273,6 +273,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody tr td.nothing .no_result {border-top:0; margin-top:0;}
 .board table tr td .board.inbox {border:solid 1px #cfcfcf;}
 .board .list_more {padding:60px 0 16px; background:url('../images/common/ic_eee.png') no-repeat center 20px; border-top:solid 1px #cfcfcf; text-align:center;}
+.board .databar li {position:relative; padding-left:8px;}
+.board .databar li::before {display:block; content:''; width:4px; height:1px; background:#222; position:absolute; top:10px; left:0;}
 .inbox.board {padding:0 32px 16px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
 .inbox.board table {border-top:0;}
 .inbox.board table tbody td {height:60px;}
@@ -724,6 +726,13 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .notice_board table th {padding:8px 10px 8px 0; font-weight:600; font-size:16px;}
 .notice_board table td {padding:8px 8px 8px 16px; color:#666; font-size:16px;}
 .notice_board + .filtergroup {margin-top:30px; padding-bottom:30px; border-bottom:solid 1px #cfcfcf;}
+.datacontents .notice_contents {padding:32px;}
+.datacontents .file { border-top:solid 1px #cfcfcf; padding:20px 32px 0;}
+.datacontents .file a {display:block; background:url('../images/admin/ic_folder.png') left center no-repeat; padding-left:30px; font-size:16px; line-height:24px; font-weight:500; margin-top:4px;}
+.datacontents .file a:first-child {margin-top:0;}
+@media screen and (max-width:1024px){
+    .notice_board {padding:24px;}
+}
 /* 검색필터 */
 .filtergroup {padding:0 20px 0 60px; margin-top:60px;}
 .filtergroup table {width:100%; margin:0 auto;}
@@ -735,7 +744,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .wbox.app_manage {padding:48px 0; margin-bottom:60px;}
 .wbox.app_manage + .board .optiongroup {margin-top:-20px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
-
 @media screen and (max-width:1420px){
     .filtergroup {padding:0 0 0 30px;}
     .filtergroup table {width:100%;}
