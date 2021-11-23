@@ -1,0 +1,315 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <!-- S: 로그인 전 -->
+                <!-- <a href="#none" class="btn_login">LOGIN</a> -->
+                <!-- E: 로그인 전 -->
+
+                <!-- S: 로그인 후 -->
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a> <!-- 새로운 알림이 있는경우 i 노출 -->
+                <div>
+                    
+                </div>
+                <!-- E: 로그인 후 -->
+
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <!-- 211102 modify -->
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                        <!-- <span class="use">상용중</span> -->
+                        <!-- <span class="stop">정지</span> -->
+                        <!-- <span class="end">종료</span> -->
+                        <!-- <span class="delete">삭제</span> -->
+                    </div>
+                    <!-- // 211102 modify -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">관리자홈</a>
+                    </li>
+                    <li>
+                        <a href="#none">회원관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">애플리케이션 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">사용자 약관동의 내역</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">게시판 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none" class="act2">자료실 관리</a></li>
+                            <li><a href="#none">공지사항 관리</a></li>
+                            <li><a href="#none">FAQ 관리</a></li>
+                            <li><a href="#none">문의사항 관리</a></li>
+                            <li><a href="#none">유형 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">문의 사항 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">관리자 설정</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>게시판관리 공통팝업</h2>
+            </div>
+
+            <div class="page_contents">
+                <button class="btn black large" onclick="showPop('noregist_notice')">중요공지등록 불가 팝업</button>
+                <button class="btn black large" onclick="showPop('noregist_faq')">중요 FAQ 변경 팝업</button>
+                <button class="btn black large" onclick="showPop('commentdelete')">댓글 삭제 확인 팝업</button>
+                <button class="btn black large" onclick="showPop('commenttext')">댓글 입력 확인 팝업</button>
+                <hr>
+                <strong>입력오류팝업</strong>
+                <br>
+                <br>
+                <button class="btn black large" onclick="showPop('blank_title')">입력 오류 팝업- 제목</button>
+                <button class="btn black large" onclick="showPop('blank_contents')">입력 오류 팝업- 내용</button>
+                <button class="btn black large" onclick="showPop('blank_version')">입력 오류 팝업- 버전</button>
+                <button class="btn black large" onclick="showPop('blank_file')">입력 오류 팝업- 파일</button>
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 유영상  |  사업자등록번호 104-81-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+<!-- S: 팝업 / 중요 공지등록 불가 팝업 -->
+<div class="popup" id="noregist_notice">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                이미 중요 공지가 5개 등록되어 있습니다.<br> 
+                일반 공지로 등록하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('noregist_notice')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('noregist_notice')">등록</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 중요 공지등록 불가 팝업  -->
+
+<!-- S: 팝업 / 중요 FAQ 변경 팝업 -->
+<div class="popup" id="noregist_faq">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                이미 중요 FAQ가 5개 등록되어 있습니다.<br> 
+                일반 FAQ로 등록하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('noregist_faq')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('noregist_faq')">등록</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 중요 FAQ 변경 팝업  -->
+
+<!-- S: 팝업 / 댓글 삭제 확인 팝업 -->
+<div class="popup" id="commentdelete">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                댓글을 삭제하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('commentdelete')">취소</a>
+                <a href="#none" class="btn large black" onclick="hidePop('commentdelete')">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 댓글 삭제 확인 팝업  -->
+
+<!-- S: 팝업 / 댓글 입력 확인 팝업 -->
+<div class="popup" id="commenttext">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                댓글을 입력해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('commenttext')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 댓글 입력 확인 팝업  -->
+
+<!-- S: 팝업 / 입력 오류 팝업 -->
+<!-- s: 팝업 / 제목 -->
+<div class="popup" id="blank_title">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                제목을 입력해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('blank_title')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 제목 -->
+<!-- s: 팝업 / 내용 -->
+<div class="popup" id="blank_contents">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                내용을 입력해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('blank_contents')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 내용 -->
+<!-- s: 팝업 / 버전 -->
+<div class="popup" id="blank_version">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                버전을 입력해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('blank_version')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 버전 -->
+<!-- s: 팝업 / 파일 -->
+<div class="popup" id="blank_file">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                파일을 첨부해주세요.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('blank_file')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 파일 -->
+<!-- E: 팝업 / 입력 오류 팝업  -->
+
+<script>
+    $("#file1").on('change',function(){
+        var fileName = $("#file1").val();
+        var fnames = $(this).parent().children(".filename");
+
+        fnames.val(fileName);
+        fnames.addClass("on");
+    });
+</script>
+</body>
+</html>
+
+
