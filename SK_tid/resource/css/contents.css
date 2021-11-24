@@ -166,7 +166,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .search.search_type01 input {width:100%; padding-right:30px; font-size:16px;}
 .search.search_type01 .btn_sch {position:absolute; top:0; right:0;}
 .search.search_type01 .btn_delete {display:none; position:absolute; top:5px; right:38px;}
-.optionsearch {margin:42px 0 0 calc(50% - 306px); width:572px;}
+.optionsearch {margin:32px 0 0 calc(50% - 306px); width:572px;}
 .optionsearch .input.sel {display:inline-block; border:0; border-radius:0; width:140px; height:40px; border-bottom:solid 2px #222; padding-bottom:10px;} 
 .optionsearch .input.sel .sel_de {padding:0 28px 0 0; height:39px; line-height:39px;}
 .optionsearch .input.sel + .search {display:inline-block; margin-left:16px;}
@@ -744,6 +744,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .wbox.app_manage {padding:48px 0; margin-bottom:60px;}
 .wbox.app_manage + .board .optiongroup {margin-top:-20px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
+.wbox.app_manage .sorting label {margin-right:32px;}
 @media screen and (max-width:1420px){
     .filtergroup {padding:0 0 0 30px;}
     .filtergroup table {width:100%;}
