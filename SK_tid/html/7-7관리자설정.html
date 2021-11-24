@@ -1,0 +1,492 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <!-- S: 로그인 전 -->
+                <!-- <a href="#none" class="btn_login">LOGIN</a> -->
+                <!-- E: 로그인 전 -->
+
+                <!-- S: 로그인 후 -->
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a> <!-- 새로운 알림이 있는경우 i 노출 -->
+                <div>
+                    
+                </div>
+                <!-- E: 로그인 후 -->
+
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <!-- 211102 modify -->
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                        <!-- <span class="use">상용중</span> -->
+                        <!-- <span class="stop">정지</span> -->
+                        <!-- <span class="end">종료</span> -->
+                        <!-- <span class="delete">삭제</span> -->
+                    </div>
+                    <!-- // 211102 modify -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">관리자홈</a>
+                    </li>
+                    <li>
+                        <a href="#none">회원관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">애플리케이션 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">사용자 약관동의 내역</a>
+                    </li>
+                    <li>
+                        <a href="#none">게시판 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">문의 사항 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">관리자 설정</a>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>관리자 설정</h2>
+                <div class="tit_right">
+                    <a href="#none" class="btn black large" onclick="showPop('admin_add')">관리자 추가</a>
+                </div>
+            </div>
+
+            <div class="page_contents">
+                <div class="wbox app_manage">
+                    <div class="sorting check txtcenter">
+                        <label><input type="checkbox" checked><span>슈퍼관리자</span></label>
+                        <label><input type="checkbox" checked><span>일반관리자</span></label>
+                        <label><input type="checkbox"><span>운영관리자</span></label>
+                    </div>
+                    <div class="optionsearch">
+                        <span class="input sel">
+                            <select name="" class="sel_de">
+                                <option value="">T아이디</option>
+                                <option value=""></option>
+                            </select>
+                        </span>
+                        <div class="search search_type01">
+                            <input type="text" placeholder="검색어를 입력하세요.">
+                            <button class="btn_delete" onclick="clearInput(this)">지우기</button>
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>    
+                    </div>
+                </div>
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- table -->
+                    <table class="board_tbl">
+                        <caption></caption>
+                        <colgroup>
+                            <col style="width:19%"><col style="width:12%;"><col style="width:19%;"><col style="width:19%;"><col style="width:10%;"><col style="width:9%"><col style="width:9%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>T아이디</span>
+                                </th>
+                                <th>
+                                    <span>이름</span>
+                                </th>
+                                <th>
+                                    <span>휴대폰번호</span>
+                                </th>
+                                <th>
+                                    <span>회사 및 담당</span>
+                                </th>
+                                <th>
+                                    <span>권한</span>
+                                </th>
+                                <th class="txtcenter">
+                                    <span>설정</span>
+                                </th>
+                                <th class="txtcenter">
+                                    <span>삭제</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- unit -->
+                            <tr>
+                                <td class="mfont">abcdefghi@sk.com</td>
+                                <td>김선경</td>
+                                <td class="mfont">01037373737</td>
+                                <td>SKT디자인</td>
+                                <td class="mfont">Owner</td>
+                                <td class="txtcenter">
+                                    <button class="btn_edit" onclick="showPop('admin_set')">설정</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <button onclick="showPop('admin_del')">                                                            
+                                        <i class="icon del_bk"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- // unit -->
+                            <tr>
+                                <td class="mfont">sungkung@sk.com</td>
+                                <td>김다니엘</td>
+                                <td class="mfont">01037373737</td>
+                                <td>SKT 기획</td>
+                                <td class="mfont">Member</td>
+                                <td class="txtcenter">
+                                    <button class="btn_edit" onclick="showPop('admin_set')">설정</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <button onclick="showPop('admin_del')">                                                            
+                                        <i class="icon del_bk"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mfont">sungkung@sk.com</td>
+                                <td>공희언</td>
+                                <td class="mfont">01037373737</td>
+                                <td>SKT 기획</td>
+                                <td class="mfont">Member</td>
+                                <td class="txtcenter">
+                                    <button class="btn_edit" onclick="showPop('admin_set')">설정</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <button onclick="showPop('admin_del')">                                                            
+                                        <i class="icon del_bk"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mfont">abcdefghi@sk.com</td>
+                                <td>김선경</td>
+                                <td class="mfont">01037373737</td>
+                                <td>SKT디자인</td>
+                                <td class="mfont">Owner</td>
+                                <td class="txtcenter">
+                                    <button class="btn_edit" onclick="showPop('admin_set')">설정</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <button onclick="showPop('admin_del')">                                                            
+                                        <i class="icon del_bk"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mfont">sungkung@sk.com</td>
+                                <td>김다니엘</td>
+                                <td class="mfont">01037373737</td>
+                                <td>SKT 기획</td>
+                                <td class="mfont">Member</td>
+                                <td class="txtcenter">
+                                    <button class="btn_edit" onclick="showPop('admin_set')">설정</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <button onclick="showPop('admin_del')">                                                            
+                                        <i class="icon del_bk"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="mfont">sungkung@sk.com</td>
+                                <td>공희언</td>
+                                <td class="mfont">01037373737</td>
+                                <td>SKT 기획</td>
+                                <td class="mfont">Member</td>
+                                <td class="txtcenter">
+                                    <button class="btn_edit" onclick="showPop('admin_set')">설정</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <button onclick="showPop('admin_del')">                                                            
+                                        <i class="icon del_bk"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- list 20개씩 노출 -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none" class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 유영상  |  사업자등록번호 104-81-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+<!-- S: 팝업 / 관리자 추가 -->
+<div class="popup" id="admin_add">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>관리자 추가</p>
+        </div>
+        <div class="pop_con">
+            <dl class="dl_input">
+                <dt>T아이디</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="T아이디를 입력해주세요.">
+                    </span>
+                </dd>
+                <dt>관리자명</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="관리자명을 입력해주세요.">
+                    </span>
+                </dd>
+                <dt>휴대폰번호</dt>
+                <dd>
+                    <span class="input txt type_03">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </span>
+                </dd>
+                <dt>관리자명</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="회사 및 담당을 입력해주세요.">
+                    </span>
+                </dd>
+                <dt>관리자 권한</dt>
+                <dd>
+                    <span class="input sel">
+                        <select name="" class="sel_de ">
+                            <option value="">전체</option>
+                        </select>
+                    </span>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('admin_add')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('admin_add'); showPop('ad_compl');">관리자 추가</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 관리자 추가 -->
+
+<!-- S: 팝업 / 관리자 설정 -->
+<div class="popup" id="admin_set">
+    <div class="inner_pop mini w494">
+        <div class="popup_title">
+            <p>관리자 설정</p>
+        </div>
+        <div class="pop_con">
+            <dl class="dl_input">
+                <dt>T아이디</dt>
+                <dd>
+                    <span class="input txt disabled">
+                        <input type="text" placeholder="" value="abcdefg@sk.com" disabled>
+                    </span>
+                </dd>
+                <dt>관리자명</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="관리자명을 입력해주세요."  value="공희언">
+                    </span>
+                </dd>
+                <dt>휴대폰번호</dt>
+                <dd>
+                    <span class="input txt type_03">
+                        <input type="text" value="010">
+                        <input type="text" value="1234">
+                        <input type="text" value="4567">
+                    </span>
+                </dd>
+                <dt>회사 및 담당</dt>
+                <dd>
+                    <span class="input txt">
+                        <input type="text" placeholder="회사 및 담당을 입력해주세요."  value="SK플래닛 디자이너">
+                    </span>
+                </dd>
+                <dt>관리자 권한</dt>
+                <dd>
+                    <span class="input sel">
+                        <select name="" class="sel_de ">
+                            <option value="">운영관리자</option>
+                        </select>
+                    </span>
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('admin_set')">취소</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('admin_set'); showPop('ad_modify');">수정</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 관리자 설정 -->
+<!-- s: 팝업 / 관리자 추가 완료 -->
+<div class="popup" id="ad_compl">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                관리자 추가되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('ad_compl')">닫기</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 관리자 추가 완료 -->
+<!-- s: 팝업 / 관리자 수정 -->
+<div class="popup" id="ad_modify">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                수정되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('ad_modify')">닫기</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 관리자 수정 -->
+<!-- s: 팝업 / 관리자 삭제 -->
+<div class="popup" id="admin_del">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                % 사용자 아이디%의 <br>
+                관리자 권한을 삭제 하시겠습니까?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('admin_del')">유지</a>
+                <a href="#none" class="btn large black" onclick="hidePop('admin_del'); showPop('ad_delcompl')">삭제</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 관리자 삭제 -->
+<!-- s: 팝업 / 관리자 삭제 완료 -->
+<div class="popup" id="ad_delcompl">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                권한이 삭제되었습니다.
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('ad_delcompl')">닫기</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 관리자 추가 완료 -->
+</body>
+</html>
+
+
