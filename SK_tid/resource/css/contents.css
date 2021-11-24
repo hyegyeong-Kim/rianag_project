@@ -248,7 +248,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup {min-height:48px;}
 .board .optiongroup::after {content:''; display:block; clear:both;}
 .board .optiongroup .sorting {float:left;transform: translateY(50%);}
-.board .optiongroup .sorting label {margin-right:32px;}
+.board .optiongroup .sorting label {margin-right:40px;}
 .board .optiongroup .search {float:right; position:relative;}
 .board .optiongroup .search .btn_delete {display:none; position:absolute; top:calc(50% - 8px); right:50px;}
 .board .optiongroup + table {margin-top:24px;}
@@ -915,7 +915,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .dashboard .list_set {padding-top:28px;}
 .dashboard .list_set .ti {margin-bottom:16px; font-size:16px; font-weight:600;}
 .dashboard .list_set .ti span {padding-left:5px; font-size:24px; font-family:'Roboto'; color:#ffa640; position:relative; top:2px;}
-.dashboard .list_set ul li a {display:block;}
-.dashboard .list_set ul li {padding:12px 90px 8px 0; font-size:16px; position:relative; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.dashboard .list_set ul li {padding:12px 90px 8px 0; font-size:16px; position:relative;}
+.dashboard .list_set ul li a {display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .dashboard .list_set ul li img {width:40px; height:40px; margin-right:10px; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15); vertical-align:middle; position:relative; top:-2px}
 .dashboard .list_set ul li .date {font-size:14px; font-family:'Roboto'; color:#666; position:absolute; right:0; top:calc(50% - 7px);}
