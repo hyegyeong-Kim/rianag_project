@@ -248,7 +248,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup {min-height:48px;}
 .board .optiongroup::after {content:''; display:block; clear:both;}
 .board .optiongroup .sorting {float:left;transform: translateY(50%);}
-.board .optiongroup .sorting label {margin-right:40px;}
+.board .optiongroup .sorting label {margin-right:32px;}
 .board .optiongroup .search {float:right; position:relative;}
 .board .optiongroup .search .btn_delete {display:none; position:absolute; top:calc(50% - 8px); right:50px;}
 .board .optiongroup + table {margin-top:24px;}
