@@ -175,7 +175,6 @@ $(document).on("click",".calendarbtn .btn", function(){
 });
 
 $(document).on("click",".comment_unit .editbox .btn_edit", function(){
-    if($(this).parents('.comment_unit').hasClass('active'))
     $(this).parents('.comment_unit').hide()
     $(this).parents().siblings('.modi').show()
 });
