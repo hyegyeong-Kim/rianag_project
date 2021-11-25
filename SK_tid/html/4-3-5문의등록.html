@@ -151,10 +151,15 @@
                                     <span>내용</span>
                                 </th>
                                 <td colspan="2">
-                                    <div class="txtarea">
+                                    <!-- 211125 modify -->
+                                    <div class="txtarea edit">
+                                        <div class="editarea">
+                                            에디터영역
+                                        </div>
                                         <textarea placeholder="내용을 입력해주세요."></textarea>
                                         <span class="bytes">0/5000 bytes</span>
                                     </div>
+                                    <!-- // 211125 modify -->
                                 </td>
                             </tr>
                             <tr>
@@ -201,15 +206,14 @@
     
 </div>
 
+<!-- 211125 modify -->
 <!-- 211116 modify -->
 <!-- S: 팝업 / 1:1문의 등록 -->
 <div class="popup" id="notice_regi">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div class="popsub_tl2">
-                1:1 문의를 등록하시겠습니까?
-            </div>
             <div class="txt_area">
+                1:1 문의를 등록하시겠습니까?<br>
                 등록 후 내용을 수정하실 수 없습니다.
             </div>
             <div class="btn_wrap">
@@ -227,7 +231,7 @@
 <div class="popup" id="title_enter">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div class="popsub_tl2">
+            <div class="txt_area">
                 제목을 입력해주세요.
             </div>
             <div class="btn_wrap">
@@ -242,7 +246,7 @@
 <div class="popup" id="contents_enter">
     <div class="inner_pop alert">
         <div class="pop_con">
-            <div class="popsub_tl2">
+            <div class="txt_area">
                 내용을 입력해주세요.
             </div>
             <div class="btn_wrap">
@@ -267,7 +271,7 @@
     </div>
 </div>
 <!-- E: 팝업 / 이메일입력 요청 팝업 -->
-
+<!-- // 211125 modify -->
 <script>
 
 </script>

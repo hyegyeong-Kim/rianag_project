@@ -173,3 +173,8 @@ $(document).on("click",".calendarbtn .btn", function(){
         $(this).siblings().removeClass('black').addClass('white')
     }
 });
+
+$(document).on("click",".comment_unit .editbox .btn_edit", function(){
+    $(this).parents('.comment_unit').hide()
+    $(this).parents().siblings('.modi').show()
+});
