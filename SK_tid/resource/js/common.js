@@ -174,7 +174,27 @@ $(document).on("click",".calendarbtn .btn", function(){
     }
 });
 
-$(document).on("click",".comment_unit .editbox .btn_edit", function(){
-    $(this).parents('.comment_unit').hide()
-    $(this).parents().siblings('.modi').show()
+function txtboxauto(){
+    $('.comment_area').on( 'keyup', function (e){
+        $(this).css('height', 'auto' );
+        $(this).height( this.scrollHeight + 5 );
+    });
+    $('.comment_area').keyup();
+}
+
+// 댓글수정
+$(document).on("click",".basic_comment .editbox .btn_edit", function(){
+    
+    if($(this).parents('.basic_comment').hasClass('active')){
+        $(this).parents('.basic_comment').removeClass('active')
+        $(this).parents().next('.modibox').hide()
+    }else{
+        $(this).parents('.basic_comment').hide().addClass('active')
+        $(this).parents().next('.modibox').show()
+    }
+    txtboxauto();
+});
+$(document).on("click",".btn_box .cancel", function(){
+    $(this).parents('.modibox').hide()
+    $(this).parents().siblings('.basic_comment').show().removeClass('active')
 });
