@@ -198,3 +198,13 @@ $(document).on("click",".btn_box .cancel", function(){
     $(this).parents('.modibox').hide()
     $(this).parents().siblings('.basic_comment').show().removeClass('active')
 });
+
+// 답글쓰기
+$(document).on("click",".comment_unit .btn_reply", function(){
+    $(this).parents().next('.reply').addClass('open').show()
+    txtboxauto();
+});
+$(document).on("click",".reply .btn_box .cancel", function(){
+    $(this).parents('.reply').removeClass('open').hide()
+    txtboxauto();
+});
