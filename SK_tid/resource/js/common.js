@@ -185,12 +185,10 @@ function txtboxauto(){
 // 댓글수정
 $(document).on("click",".basic_comment .editbox .btn_edit", function(){
     
-    if($(this).parents('.basic_comment').hasClass('active')){
-        $(this).parents('.basic_comment').removeClass('active')
-        $(this).parents().next('.modibox').hide()
+    if($(this).parents('.basic_comment').hasClass('hidden')){
+        $(this).parents('.basic_comment').removeClass('hidden')
     }else{
-        $(this).parents('.basic_comment').hide().addClass('active')
-        $(this).parents().next('.modibox').show()
+        $(this).parents('.basic_comment').addClass('hidden')
     }
     txtboxauto();
 });
@@ -201,10 +199,11 @@ $(document).on("click",".btn_box .cancel", function(){
 
 // 답글쓰기
 $(document).on("click",".comment_unit .btn_reply", function(){
-    $(this).parents().next('.reply').addClass('open').show()
+    $(this).parents().next('.reply').show()
+    $(this).parents().siblings('.comment_depth2').children('.reply').show()
     txtboxauto();
 });
 $(document).on("click",".reply .btn_box .cancel", function(){
-    $(this).parents('.reply').removeClass('open').hide()
+    $(this).parents('.reply').hide()
     txtboxauto();
 });
