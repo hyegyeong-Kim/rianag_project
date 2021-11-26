@@ -1,7 +1,7 @@
 $(function(){
     /* 스크롤 막기 */
     function scrollOff(){
-        $("#container").on('scroll touchmove mousewheel', function(e){
+        $("#container").on("scroll touchmove mousewheel", function(e){
             e.preventDefault();
             e.stopPropagation(); 
             return false;
@@ -9,7 +9,7 @@ $(function(){
     };
     
     function scrollOn(){
-        $("#container").off('scroll touchmove mousewheel')
+        $("#container").off("scroll touchmove mousewheel")
     }
 
     $(window).resize(function(){
@@ -35,7 +35,7 @@ $(function(){
         
     })
     $("#btn_gotop").click(function(){
-        $('html, body').animate({scrollTop:0}, 'slow');
+        $("html, body").animate({scrollTop:0}, "slow");
     });
     
     /* mylink */
@@ -115,7 +115,7 @@ $(function(){
         }
     });
 
-    //$('.colorchart').minicolors();
+    //$(".colorchart").minicolors();
 
     /* tab_type01 */
     if($(".tab_type01").length){
@@ -143,15 +143,15 @@ function allHide(){
 
 //  검색값 클리어
  var clearInput = function(obj) {
-    obj.parentNode.querySelector('input').value = "";
-    obj.style.display = 'none';
+    obj.parentNode.querySelector("input").value = "";
+    obj.style.display = "none";
 }
 $(function(){
-    $('.search input').on('input', function(){
-        if($('.search input').val() ==''){
-            $(this).siblings('.btn_delete').css("display","none");
+    $(".search input").on("input", function(){
+        if($(".search input").val() ==""){
+            $(this).siblings(".btn_delete").css("display","none");
         }else{
-            $(this).siblings('.btn_delete').css("display","block");
+            $(this).siblings(".btn_delete").css("display","block");
             
         }
     });
@@ -166,44 +166,43 @@ $(function(){
 
 // calendarbtn
 $(document).on("click",".calendarbtn .btn", function(){
-    if($(this).hasClass('black')){
-        $(this).removeClass('black').addClass('white')
+    if($(this).hasClass("black")){
+        $(this).removeClass("black").addClass("white")
     }else{
-        $(this).addClass('black').removeClass('white')
-        $(this).siblings().removeClass('black').addClass('white')
+        $(this).addClass("black").removeClass("white")
+        $(this).siblings().removeClass("black").addClass("white")
     }
 });
 
 function txtboxauto(){
-    $('.comment_area').on( 'keyup', function (e){
-        $(this).css('height', 'auto' );
-        $(this).height( this.scrollHeight + 5 );
+    $(".comment_area").on( "keyup", function (e){
+        $(this).height( this.scrollHeight);
     });
-    $('.comment_area').keyup();
+    $(".comment_area").keyup();
 }
 
 // 댓글수정
 $(document).on("click",".basic_comment .editbox .btn_edit", function(){
     
-    if($(this).parents('.basic_comment').hasClass('hidden')){
-        $(this).parents('.basic_comment').removeClass('hidden')
+    if($(this).parents(".basic_comment").hasClass("hidden")){
+        $(this).parents(".basic_comment").removeClass("hidden")
     }else{
-        $(this).parents('.basic_comment').addClass('hidden')
+        $(this).parents(".basic_comment").addClass("hidden")
     }
     txtboxauto();
 });
 $(document).on("click",".btn_box .cancel", function(){
-    $(this).parents('.modibox').hide()
-    $(this).parents().siblings('.basic_comment').show().removeClass('active')
+    //$(this).parents(".modibox").addClass("hidden");
+    $(this).parents().siblings(".basic_comment").removeClass("hidden")
 });
 
 // 답글쓰기
 $(document).on("click",".comment_unit .btn_reply", function(){
-    $(this).parents().next('.reply').show()
-    $(this).parents().siblings('.comment_depth2').children('.reply').show()
+    $(this).parents(".comment_unit").next(".reply").addClass("open")
+    $(this).parents().siblings(".comment_depth2").children(".reply").addClass("open")
     txtboxauto();
 });
 $(document).on("click",".reply .btn_box .cancel", function(){
-    $(this).parents('.reply').hide()
+    $(this).parents(".reply").removeClass("open")
     txtboxauto();
 });
