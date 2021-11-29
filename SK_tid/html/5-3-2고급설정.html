@@ -231,6 +231,10 @@
                             <ul class="listtxt">
                                 <li>애플리케이션 그룹설정을 위해서는 그룹에 참여하는 모든 파트너 애플리케이션은 비즈니스 애플리케이션으로 전환이 필요합니다.</li>
                                 <li>그룹을 생성하면 그룹에 참여한 모든 애플리케이션에 공통 그룹 코드와 시크릿이 발급됩니다.</li>
+                                <li>연동 중 : 개발이 완료 된 상태로 상용 배포된 상태입니다.</li>
+                                <li>개발 중 : 파트너 참여 후, 개발 진행 중인 상태 입니다.</li>
+                                <li>승인 대기 : 애플리케이션에서 참여 요청을 보내온 상태로 그룹 오너의 승인이 필요한 상태 입니다.</li>
+                                <li>초대 중 : 그룹 오너가 애플리케이션 오너에게 참여 요청을 보낸 상태입니다.</li>       
                             </ul>
                         </div>    
                     </div>
@@ -295,17 +299,7 @@
                                 <th><span>앱 ID</span></th>
                                 <th class="txtcenter">
                                     <span>상태</span>
-                                    <!-- 211103 modify -->
-                                    <div class="tooltip_wrap">
-                                        <button class="tooltip">?</button>
-                                        <div class="tipbox right">
-                                            <p><strong>연동 중 :</strong> 개발이 완료 된 상태로 상용 배포된 상태입니다.</p>
-                                            <p><strong>개발 중 :</strong> 파트너 참여 후, 개발 진행 중인 상태 입니다.</p>
-                                            <p><strong>승인 대기 :</strong> 애플리케이션에서 참여 요청을 보내온 상태로 그룹 오너의 승인이 필요한 상태 입니다.</p>
-                                            <p><strong>초대 중 :</strong> 그룹 오너가 애플리케이션 오너에게 참여 요청을 보낸 상태입니다.</p>
-                                        </div>    
-                                    </div>
-                                    <!-- // 211103 modify -->
+                                    <!-- 211129 tooltip_wrap 삭제 -->
                                 </th>
                                 <th class="txtcenter"><span>삭제</span></th>                                                 
                             </tr>
@@ -822,7 +816,7 @@
 
 <!-- S: 팝업 / 비즈니스 애플리케이션 검토 -->
 <!-- 211103 modify -->
-<div class="popup open" id="bizapp_check">
+<div class="popup" id="bizapp_check">
     <div class="inner_pop mini w494">
         <div class="popup_title">
             <p>비즈니스 애플리케이션 검토</p>
