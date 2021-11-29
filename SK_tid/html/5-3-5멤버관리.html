@@ -168,7 +168,7 @@
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th><span>T아이디</span></th>
+                                        <th><span>멤버</span></th>
                                         <th><span>권한</span></th>
                                         <th class="txtcenter"><span>삭제</span></th>
                                     </tr>
@@ -176,7 +176,10 @@
                                 <tbody>
                                     <tr>
                                         <td> 
-                                            <span class="mfont">sungkung@sk.com 관리자가 오너 삭제</span>
+                                            <p class="meminfo">
+                                                <span class="mfont">susssg@sk.com 관리자가 오너 삭제</span>
+                                                <span>공희언</span>
+                                            </p>
                                         </td>
                                         <td class="mfont">Owner</td>
                                         <td class="txtcenter">
@@ -185,7 +188,10 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span class="mfont">susssg@sk.com 멤버본인이 삭제</span>
+                                            <p class="meminfo">
+                                                <span class="mfont">susssg@sk.com 멤버본인이 삭제</span>
+                                                <span>공희언</span>
+                                            </p>
                                         </td>
                                         <td class="mfont">Member</td>
                                         <td class="txtcenter">
@@ -194,7 +200,10 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span class="mfont">susssg@sk.com 오너 및 관리자가 삭제</span>
+                                            <p class="meminfo">
+                                                <span class="mfont">susssg@sk.com 오너 및 관리자가 삭제</span>
+                                                <span>공희언</span>
+                                            </p>
                                         </td>
                                         <td class="mfont">Member</td>
                                         <td class="txtcenter">
@@ -203,7 +212,10 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span class="mfont">susssg@sk.com 오너가 본인 삭제</span>
+                                            <p class="meminfo">
+                                                <span class="mfont">sungkung@sk.com오너가 본인 삭제</span>
+                                                <span>김선경</span>
+                                            </p>
                                         </td>
                                         <td class="mfont">Member</td>
                                         <td class="txtcenter">
@@ -212,8 +224,11 @@
                                     </tr>
                                     <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                         <td>
-                                            <span class="mfont">sungkung@sk.com</span>
-                                            <span class="lab mid blue">초대중</span>
+                                            <p class="meminfo">
+                                                <span class="mfont">sungkung@sk.com</span>
+                                                <span>김선경</span>
+                                            </p>
+                                            <span class="btn xsmall graybf ml_12">초대중</span>
                                             <a href="#none" class="btn blue xsmall ml_8">다시 초대하기</a>
                                         </td>
                                         <td class="mfont">Member</td>
@@ -308,6 +323,7 @@
 
                         <!-- S: Board Type -->
                         <div class="board inbox mt60">
+                            <!-- 211129 modify -->
                             <!-- 211103 modify -->
                             <table>
                                 <colgroup>
@@ -322,7 +338,12 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="#none" class="mfont" onclick="showPop('invite')">sungkung@sk.com</a>
+                                            <a href="#none" onclick="showPop('invite')">
+                                                <p class="meminfo">
+                                                    <span class="mfont">sungkung@sk.com</span>
+                                                    <span>공희언</span>
+                                                </p>    
+                                            </a>
                                         </td>
                                         <td class="txtcenter">
                                             <button onclick="showPop('tester_del')"><i class="icon del_bk"></i></button>
@@ -330,8 +351,13 @@
                                     </tr>
                                     <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                         <td>
-                                            <a href="#none" class="mfont">sungkung@sk.com</a>
-                                            <span class="lab blue mid">초대중</span>
+                                            <a href="#none">
+                                                <p class="meminfo">
+                                                    <span class="mfont">sungkung@sk.com</span>
+                                                    <span>김선경</span>
+                                                </p> 
+                                            </a>
+                                            <span class="btn xsmall graybf ml_12">초대중</span>
                                         </td>
                                         <td class="txtcenter">
                                             <button><i class="icon del_bk" onclick="showPop('tester_del')"></i></button>
@@ -340,6 +366,7 @@
                                 </tbody>
                             </table>
                             <!-- // 211103 modify -->
+                            <!-- // 211129 modify -->
                         </div>
                         <!-- E:  -->  
                     </div>

@@ -220,14 +220,15 @@
                     </p>
                 </div>
                 <!-- // 미사용 노출 -->
-
+                
+                <!-- 211129 modify -->
                 <!-- 애플리케이션 그룹 설정 -->
                 <div class="h3_wrap">
                     <h3>애플리케이션 그룹 설정</h3>
                     <div class="tooltip_wrap">
                         <button class="tooltip">?</button>
                         <div class="tipbox">
-                            <p>애플리케이션 그룹은 여러개의 애플리케이션을 하나의 그룹으로 묶어 동일한 1인의 회원으로 관리가 필요할 때 사용할 수 있습니다.</p>
+                            <p><strong>애플리케이션 그룹은 여러개의 애플리케이션을 하나의 그룹으로 묶어 동일한 1인의 회원으로 관리가 필요할 때 사용할 수 있습니다.</strong></p>
                             <ul class="listtxt">
                                 <li>애플리케이션 그룹설정을 위해서는 그룹에 참여하는 모든 파트너 애플리케이션은 비즈니스 애플리케이션으로 전환이 필요합니다.</li>
                                 <li>그룹을 생성하면 그룹에 참여한 모든 애플리케이션에 공통 그룹 코드와 시크릿이 발급됩니다.</li>
@@ -245,9 +246,10 @@
                         <dt>그룹 ID</dt>
                         <dd>ALDN</dd>
                     </dl>
-                    <button class="btn black default distri" onclick="showPop('del_grppop')">그룹삭제</button> <!-- 슈퍼 관리자에게 노출 -->
+                    <button class="btn black default distri" onclick="showPop('del_grppop')">그룹삭제</button> 
                     <!-- 211102 modify -->
-                    <button class="btn black default distri" onclick="showPop('group_exit')">그룹 나가기</button>
+                    <!-- 애플리케이션 오너에게 노출 -->
+                    <!-- <button class="btn black default distri" onclick="showPop('group_exit')">그룹 나가기</button> --> 
                     <!-- // 211102 modify -->
                 </div>
                 <div class="regist_table">
@@ -298,7 +300,7 @@
                                 <th><span>애플리케이션 이름</span></th>
                                 <th><span>앱 ID</span></th>
                                 <th class="txtcenter">
-                                    <span>상태</span>
+                                    <span>앱 상태</span>
                                     <!-- 211129 tooltip_wrap 삭제 -->
                                 </th>
                                 <th class="txtcenter"><span>삭제</span></th>                                                 
@@ -314,7 +316,7 @@
                                 </td>
                                 <td class="mfont">IRMA</td><!-- 211103 modify -->
                                 <td class="txtcenter">
-                                    <span class="state compl">연동 중</span>
+                                    <span class="lab mid blue">연동 중</span>
                                 </td>
                                 <td class="txtcenter"></td>
                             </tr>
@@ -325,7 +327,7 @@
                                     <button class="btn xsmall blue ml_12" onclick="showPop('approved_pop')">참여 승인 요청</button>
                                 </td>
                                 <td class="txtcenter">
-                                    <span class="state ready">승인 대기</span>
+                                    <span class="lab mid">개발 중</span>
                                 </td>
                                 <td class="txtcenter">
                                     <button onclick="showPop('del_ptnr')">                                                            
@@ -336,18 +338,23 @@
                             <tr>
                                 <td>Black widow</td>
                                 <td class="mfont">CTAM</td><!-- 211103 modify -->
-                                <td class="txtcenter"></td>
+                                <td class="txtcenter">
+                                    <span class="lab mid gray">정지</span>
+                                </td>
                                 <td class="txtcenter">
                                     <button onclick="showPop('del_ptnr')">                                                            
                                         <i class="icon del_bk"></i>
                                     </button>
                                 </td>
                             </tr>
-                            <tr class="pending">
+                            <tr>
                                 <td>Captain America</td>
-                                <td class="mfont">BLWD</td><!-- 211103 modify -->
+                                <td class="mfont">
+                                    BLWD
+                                    <span class="btn xsmall graybf ml_12">초대 중</span>
+                                </td><!-- 211103 modify -->
                                 <td class="txtcenter">
-                                    <span class="state before">초대 중</span>
+                                    <span class="lab mid gray">종료</span>
                                 </td>
                                 <td class="txtcenter">
                                     <button onclick="showPop('del_ptnr')">                                                            
@@ -357,9 +364,12 @@
                             </tr>
                             <tr class="lastbor"><!-- 마지막 border 가 있는 테이블 인 경우 마지막 tr에 class명 lastbor 추가 -->
                                 <td>hulk</td>
-                                <td class="mfont">CTAM</td><!-- 211103 modify -->
+                                <td class="mfont">
+                                    CTAM
+                                    <span class="btn xsmall grayf1 ml_12">승인 대기</span>
+                                </td><!-- 211103 modify -->
                                 <td class="txtcenter">
-                                    <span class="state before">개발 중</span>
+                                    <span class="lab mid gray">삭제</span>
                                 </td>
                                 <td class="txtcenter">
                                     <button onclick="showPop('del_ptnr')">                                                            
@@ -377,6 +387,147 @@
                 <!-- 그룹설정 미사용 시 노출 -->
                 <p class="noterms">미사용</p>
                 <!-- // 애플리케이션 그룹 설정 -->
+                
+
+                <!-- 애플리케이션 그룹 설정 -그룹 파트너, 애플리케이션 멤버일때 화면 -->
+                <div class="h3_wrap">
+                    <h3>애플리케이션 그룹 설정</h3>
+                    <div class="tooltip_wrap">
+                        <button class="tooltip">?</button>
+                        <div class="tipbox">
+                            <p><strong>애플리케이션 그룹은 여러개의 애플리케이션을 하나의 그룹으로 묶어 동일한 1인의 회원으로 관리가 필요할 때 사용할 수 있습니다.</strong></p>
+                            <ul class="listtxt">
+                                <li>애플리케이션 그룹설정을 위해서는 그룹에 참여하는 모든 파트너 애플리케이션은 비즈니스 애플리케이션으로 전환이 필요합니다.</li>
+                                <li>그룹을 생성하면 그룹에 참여한 모든 애플리케이션에 공통 그룹 코드와 시크릿이 발급됩니다.</li>
+                                <li>연동 중 : 개발이 완료 된 상태로 상용 배포된 상태입니다.</li>
+                                <li>개발 중 : 파트너 참여 후, 개발 진행 중인 상태 입니다.</li>
+                                <li>승인 대기 : 애플리케이션에서 참여 요청을 보내온 상태로 그룹 오너의 승인이 필요한 상태 입니다.</li>
+                                <li>초대 중 : 그룹 오너가 애플리케이션 오너에게 참여 요청을 보낸 상태입니다.</li>       
+                            </ul>
+                        </div>    
+                    </div>
+                </div>
+                <div class="groupid_box">
+                    <p class="grp_name mfont">AvengersGROUPAvengersGROUPAvengersGROUPAvengersGROUPAvengers</p>
+                    <dl>
+                        <dt>그룹 ID</dt>
+                        <dd>ALDN</dd>
+                    </dl>
+                    <!-- <button class="btn black default distri" onclick="showPop('del_grppop')">그룹삭제</button>  -->
+                    <!-- 211102 modify -->
+                    <!-- 애플리케이션 오너에게 노출 -->
+                    <button class="btn black default distri" onclick="showPop('group_exit')">그룹 나가기</button> 
+                    <!-- // 211102 modify -->
+                </div>
+                <div class="regist_table">
+                    <table>
+                        <caption></caption>
+                        <colgroup><col style="width:186px"><col></colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <span class="mfont">Group ID</span><!-- 211103 modify -->
+                                </th>
+                                <td>
+                                    <!-- 211103 modify -->
+                                    <span class="input txt">
+                                        <input type="text" id="grpcode" class="mfont" placeholder="Group Code">
+                                        <button class="btn_copy" id="copy_grpcode">id복사</button>
+                                    </span>
+                                    <!-- // 211103 modify -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="mfont">Group Secret</span><!-- 211103 modify -->
+                                </th>
+                                <td>
+                                    <span class="input txt password">
+                                        <input type="password" id="password" class="mfont" placeholder="*******">
+                                        <button class="btn small black" onclick="showPop('re_gpsecret')">재발급</button>
+                                        <button class="btn_viewon" id="showPassword" value="show">
+                                            Secret Kye보기
+                                        </button>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="titbox">
+                    <h4>그룹 파트너 정보</h4>
+                </div>
+                <div class="board inbox">
+                    <table>
+                        <colgroup>
+                            <col style="width:auto"><col style="width:30%;"><col style="width:200px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th><span>애플리케이션 이름</span></th>
+                                <th><span>앱 ID</span></th>
+                                <th class="txtcenter">
+                                    <span>앱 상태</span>
+                                    <!-- 211129 tooltip_wrap 삭제 -->
+                                </th>                                      
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="markplus"><!-- 오너마크 추가시 class markplus -->
+                                    <p>
+                                        ironman_ironman_ironman_ironman_ironman_ironman_ironman_ironm
+                                    </p>
+                                    <span class="owner"><i class="icon ic_owner"></i>Owner</span>
+                                </td>
+                                <td class="mfont">IRMA</td><!-- 211103 modify -->
+                                <td class="txtcenter">
+                                    <span class="lab mid blue">연동 중</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Thor</td>
+                                <td class="mfont"><!-- 211103 modify -->
+                                    THOR
+                                    <button class="btn xsmall blue ml_12" onclick="showPop('approved_pop')">참여 승인 요청</button>
+                                </td>
+                                <td class="txtcenter">
+                                    <span class="lab mid">개발 중</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Black widow</td>
+                                <td class="mfont">CTAM</td><!-- 211103 modify -->
+                                <td class="txtcenter">
+                                    <span class="lab mid gray">정지</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Captain America</td>
+                                <td class="mfont">
+                                    BLWD
+                                    <span class="btn xsmall graybf ml_12">초대 중</span>
+                                </td><!-- 211103 modify -->
+                                <td class="txtcenter">
+                                    <span class="lab mid gray">종료</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>hulk</td>
+                                <td class="mfont">
+                                    CTAM
+                                    <span class="btn xsmall grayf1 ml_12">승인 대기</span>
+                                </td><!-- 211103 modify -->
+                                <td class="txtcenter">
+                                    <span class="lab mid gray">삭제</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 애플리케이션 그룹 설정-그룹 파트너, 애플리케이션 멤버일때 화면 -->
+                <!-- // 211129 modify -->
+
             </div>
         </div>
     </div>

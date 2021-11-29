@@ -121,6 +121,7 @@
                 <h2>플랫폼 설정</h2>
             </div>
             <div class="page_contents">
+                <!-- 211129 modify -->
                 <div class="tab_type01">
                     <ul class="tab01 lieng">
                         <li>
@@ -133,7 +134,6 @@
                             <a href="#tab_03">iOS</a>
                         </li>
                     </ul>
-
                     <!-- S: web -->
                     <div id="tab_01">
                         <div class="regist_table">
@@ -147,7 +147,6 @@
                                     <td>
                                         <span class="input txt">
                                             <input type="text" id="clinetID" class="mfont" placeholder="http://www.siteurl.com">
-                                            <button class="btn_add_b">셀 추가</button>
                                         </span>
                                         <p class="warning">정확한 URL을 입력해주세요.</p>
                                     </td>
@@ -181,45 +180,48 @@
                                 <colgroup><col style="width:186px"><col></colgroup>
                                 <tr>
                                     <th>
-                                        <span>패키지명</span>
-                                    </th>
-                                    <td>
-                                        <span class="input txt only">
-                                            <input type="text" id="clinetID" placeholder="" value="NUGU">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
                                         <span>마켓 URL</span>
                                     </th>
                                     <td>
-                                        <span class="input sel">
-                                            <select name="" class="sel_de">
-                                                <option value="">마켓 선택</option>
-                                                <option value="">마켓 선택1</option>
-                                                <option value="">서마켓 선택2</option>
-                                            </select>    
+                                        <span class="input txt">
+                                            <input type="text" id="clinetID" placeholder="(필수) 구글 플레이 마켓 URL을 입력해주세요.">
+                                            <span class="icon playstore">플레이 스토어</span>
                                         </span>
                                         <span class="input txt">
-                                            <input type="text" id="clinetID" placeholder="앱을 다운로드할 수 있는 마켓 URL을 입력해주세요.">
-                                            <button class="btn_add_b">셀 추가</button>
+                                            <input type="text" id="clinetID" placeholder="원스토어 마켓 URL을 입력해주세요.">
+                                            <span class="icon onestore">원 스토어 마켓</span>
                                         </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>
-                                        <span>키 해시</span>
+                                        <span>패키지명/키 해시</span>
                                     </th>
                                     <td>
-                                        <span class="input txt">
-                                            <input type="text" id="clinetID" placeholder="" value="dsafjkqasdrDKFJ1231SDkwef">
-                                            <button class="btn_remove_b">셀 삭제</button>
-                                        </span>
-                                        <span class="input txt">
-                                            <input type="text" id="clinetID" placeholder="" value="DJkjiofoeqk3149df99098143">
-                                            <button class="btn_add_b">셀 추가</button>
-                                        </span><!-- 마지막 입력창인경우 셀 추가 버튼 아닌경우 셀삭제 버튼 -->
+                                        <div class="packset">
+                                            <span class="input txt">
+                                                <input type="text" id="clinetID" placeholder ="패키지명을 입력해주세요.">
+                                            </span>
+                                            <span class="input txt">
+                                                <input type="text" id="clinetID" placeholder="키 해시 값을 입력해주세요.">
+                                            </span>
+                                            <div class="cellbox">
+                                                <!-- <button class="btn_remove_b">셀 삭제</button> -->
+                                                <button class="btn_add_b">셀 추가</button>                                                    
+                                            </div>
+                                        </div>
+                                        <div class="packset">
+                                            <span class="input txt">
+                                                <input type="text" id="clinetID" placeholder="" value="dsafjkqasdrDKFJ1231SDkwef">
+                                            </span>
+                                            <span class="input txt">
+                                                <input type="text" id="clinetID" placeholder="" value="DJkjiofoeqk3149df99098143">
+                                            </span>
+                                            <div class="cellbox">
+                                                <button class="btn_remove_b">셀 삭제</button>
+                                                <!-- <button class="btn_add_b">셀 추가</button>                                                     -->
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -257,7 +259,6 @@
                                     <td>
                                         <span class="input txt">
                                             <input type="text" id="clinetID" class="mfont" placeholder="앱을 다운로드할 수 있는 마켓 URL을 입력해주세요."> <!-- 211103 modify -->
-                                            <button class="btn_add_b">셀 추가</button>
                                         </span>
                                     </td>
                                 </tr>
@@ -271,6 +272,7 @@
                     </div>
                     <!-- E: iOS -->
                 </div>       
+                <!-- 211129 modify -->
             </div>
         </div>
     </div>
