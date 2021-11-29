@@ -24,12 +24,14 @@ button:disabled {cursor:default;}
 .btn.blue {background:#1b6491; color:#fff;}
 .btn.yellow {background:#ffa640; color:#fff;}
 .btn.white {background:#fff; color:#666; border:solid 2px #aaa;}
+.btn.graybf {border: 1px solid #bfbfbf; color:#bfbfbf;}
 .btn.default {height:40px; line-height:40px; padding:0 24px; font-size:16px;}
 .btn.xlarge {min-width:180px; height:60px; line-height:60px; padding:0 36px; font-size:16px;}
 .btn.large {min-width:130px; height:52px; line-height:52px; padding:0 36px; font-size:16px;}
 .btn.xsmall {min-width:50px; height:28px; line-height:28px; padding:0 12px; font-size:12px;}
 .btn.small {min-width:50px; height:32px; line-height:32px; padding:0 16px; font-size:13px;}
 .btn.xlarge.white {line-height:56px;}
+.btn.xsmall.graybf {line-height:26px;}
 .btn_sch {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_search.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_view {display:inline-block; width:24px; height:24px;background:url('../images/common/ic_view.png') no-repeat 0 0; text-indent:-9999px; overflow:hidden;}
 .btn_accordion {display:inline-block; width:24px; height:24px; background:url('../images/common/ic_accordion.png') no-repeat; text-indent:-9999px; overflow:hidden; transition:all .5s;}
@@ -53,9 +55,14 @@ button:disabled {cursor:default;}
 .icon.ic_owner {background:url('../images/common/ic_owner.png') no-repeat; width:12px; height:12px; margin-right:2px;}
 .icon.ic_refresh {background:url('../images/common/ic_refresh.png') no-repeat;}
 .icon.ic_allview {background:url('../images/common/ic_arrow_black.png') no-repeat;}
+.icon.playstore {background:url('../images/myapp/ic_google.png') no-repeat;}
+.icon.onestore {background:url('../images/myapp/ic_onestore.png') no-repeat;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
 .btn.w370 {width:370px}
+.packset {width:460px; position:relative; margin-top:20px;}
+.packset .cellbox {position:absolute; right:-40px; top:50%; transform:translateY(-50%);}
+
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}
 .btn_wrap .btn + .btn {margin-left:8px;}
@@ -115,7 +122,8 @@ span.input.disabled, .disabled span.input {background:#f1f1f1;}
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden; cursor:pointer;}
 span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
-
+span.input .icon.playstore {position:absolute; right:0; top:50%; transform:translateY(-50%);}
+span.input .icon.onestore {position:absolute; right:0; top:50%; transform:translateY(-50%);}
 .dateset {display:inline-block;}
 .dateset span.input + .input {margin-top:0;}
 span.input.date {display:inline-block; width:140px; padding-right:35px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
@@ -193,9 +201,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .lab {display:inline-block; border-radius:4px;}
 * + .lab { margin-left:8px;}
 .lab.big {border:solid 2px #222; font-size:16px; line-height:32px; height:36px; padding:0 12px; font-weight:600; min-width:53px;}
-.lab.mid {border:solid 1px #222; font-size:13px; line-height:29px; height:31px; font-weight:400; padding:0 8px;}
+.lab.mid {border:solid 1px #222; font-size:13px; line-height:29px; height:31px; font-weight:400; padding:0 8px; min-width:68px; text-align:center;}
 .lab.mini {border:solid 1px #222; font-size:12px; line-height:22px; height:24px; font-weight:400; padding:0 8px;}
 .lab.blue {border-color:#1485cb; color:#1485cb;}
+.lab.gray {background:#f1f1f1; color:#bfbfbf; border:none;}
 
 /* device 이미지 */
 .device li {display:inline-block; margin:0 8px; vertical-align:middle;}
@@ -271,7 +280,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody td.empty {padding:160px 0 50px; border:0;}
 .board table tbody td.empty .noterms {margin-top:0;}
 .board table tbody td.txtinert {color:#bfbfbf;}
-.board table tbody tr.pending td {color:#bfbfbf;}
 .board table tbody tr.imprt td {background:#f6f6f6;}
 .board table tbody tr.imprt td {font-weight:600;}
 .board table tbody tr td .clamp3 {display:-webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:3; overflow:hidden;  }
@@ -305,6 +313,11 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board .ac_state dt {display:inline-block; font-weight:600; font-size:14px; position:relative; padding-right:8px; margin:0 4px 16px 0;}
 .inbox.board .ac_state dt::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:6px; right:0;}
 .inbox.board .ac_state dd {display:inline-block; font-family:'Roboto'; color:#666;}
+.inbox.board .meminfo {display:inline-block;}
+.inbox.board .meminfo span {display:inline-block; padding-right:8px; margin-right:4px; position:relative;}
+.inbox.board .meminfo span:last-child {margin-right:0; padding-right:0;}
+.inbox.board .meminfo span:last-child::before {display:none;}
+.inbox.board .meminfo span::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:4px; right:0;}
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 .board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 .paging {margin-top:48px; text-align:center;}
@@ -409,7 +422,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .regist_table span.input.txt {width:460px;}
 .regist_table span.input.txt.wfull {width:100%;}
 .regist_table .postregist .sorting.radio {padding:12px 0;}
-.regist_table .postregist .sorting.radio label {margin-right:60px;}
+.regist_table .postregist .sorting.radio label {margin-right:40px;}
 .regist_table .postregist .sorting.radio label:last-child {margin-right:0;}
 .regist_table span.input.sel {width:460px; padding: 0 0;border-radius:4px;}
 .regist_table .has_switch .txton, 
@@ -789,6 +802,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .comment_wrap .commenttl .writer:first-child::before {display:none;}
 .comment_wrap .commentlist li .comment_unit  {padding:16px 0 20px; border-bottom:solid 1px #cfcfcf;}
 .comment_wrap .commentlist li .comment_unit .basic_comment { padding:0 175px 0 0; position:relative;}
+.comment_wrap .commentlist li .comment_unit .basic_comment .commenttl .lab {min-width:37px;}
 .comment_wrap .commentlist li .comment_unit .basic_comment.hidden {display:none;}
 .comment_wrap .commentlist li .comment_unit .basic_comment.hidden + .modibox {display: block;}
 .comment_wrap .commentlist li .basic_comment .comment_txt {font-size:14px; line-height:20px; color:#666; margin:12px 0 13px; word-break:break-all;}
