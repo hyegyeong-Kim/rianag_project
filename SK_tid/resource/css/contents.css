@@ -60,8 +60,8 @@ button:disabled {cursor:default;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
 .btn.w370 {width:370px}
-.packset {width:460px; position:relative; margin-top:20px;}
-.packset .cellbox {position:absolute; right:-40px; top:50%; transform:translateY(-50%);}
+.packset {width:500px; position:relative; margin-top:20px;}
+.packset .cellbox {position:absolute; right:0; top:50%; transform:translateY(-50%);}
 
 /* 버튼정렬 */
 .btn_wrap {text-align:center; margin-top:80px;}

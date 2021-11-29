@@ -155,11 +155,21 @@
                                     <th>
                                         <span class="mfont">Callback URL</span><!-- 211103 modify -->
                                     </th>
-                                    <td>
-                                        <span class="input txt">
-                                            <input type="text" id="clinetID" class="mfont" placeholder="로그인 후 이동할 페이지의 URL을 입력해주세요."><!-- 211103 modify -->
-                                            <button class="btn_add_b">셀 추가</button>
-                                        </span>
+                                    <td class="cellarea">
+                                        <div id="problem_list">
+                                            <span class="input txt" id="">
+                                                <input type="text" id="clinetID" class="mfont" placeholder="로그인 후 이동할 페이지의 URL을 입력해주세요."><!-- 211103 modify -->
+                                                <button class="btn_add_b" onclick="addForm();">셀 추가</button>
+                                            </span>
+                                        </div>
+
+                                        <!-- Callback URL 추가 셀 샘플 -->
+                                        <div id="list_file_tag" style="display:none;"> 
+                                            <span class="input txt">
+                                                <input type="text" class="mfont" placeholder="로그인 후 이동할 페이지의 URL을 입력해주세요.">
+                                                <button class="btn_remove_b" onclick="delForm(this)">셀 제거</button>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -184,11 +194,11 @@
                                     </th>
                                     <td>
                                         <span class="input txt">
-                                            <input type="text" id="clinetID" placeholder="(필수) 구글 플레이 마켓 URL을 입력해주세요.">
+                                            <input type="text" id="clinetIDa" placeholder="(필수) 구글 플레이 마켓 URL을 입력해주세요.">
                                             <span class="icon playstore">플레이 스토어</span>
                                         </span>
                                         <span class="input txt">
-                                            <input type="text" id="clinetID" placeholder="원스토어 마켓 URL을 입력해주세요.">
+                                            <input type="text" id="clinetIDaa" placeholder="원스토어 마켓 URL을 입력해주세요.">
                                             <span class="icon onestore">원 스토어 마켓</span>
                                         </span>
                                     </td>
@@ -198,28 +208,28 @@
                                         <span>패키지명/키 해시</span>
                                     </th>
                                     <td>
-                                        <div class="packset">
-                                            <span class="input txt">
-                                                <input type="text" id="clinetID" placeholder ="패키지명을 입력해주세요.">
-                                            </span>
-                                            <span class="input txt">
-                                                <input type="text" id="clinetID" placeholder="키 해시 값을 입력해주세요.">
-                                            </span>
-                                            <div class="cellbox">
-                                                <!-- <button class="btn_remove_b">셀 삭제</button> -->
-                                                <button class="btn_add_b">셀 추가</button>                                                    
+                                        <div id="problem_list_and">
+                                            <div class="packset">
+                                                <span class="input txt">
+                                                    <input type="text" id="clinetIDa1" placeholder ="패키지명을 입력해주세요.">
+                                                </span>
+                                                <span class="input txt">
+                                                    <input type="text" id="clinetIDa2" placeholder="키 해시 값을 입력해주세요.">
+                                                </span>
+                                                <button class="btn_add_b cellbox" onclick="addFormAnd();">셀 추가</button>
                                             </div>
                                         </div>
-                                        <div class="packset">
-                                            <span class="input txt">
-                                                <input type="text" id="clinetID" placeholder="" value="dsafjkqasdrDKFJ1231SDkwef">
-                                            </span>
-                                            <span class="input txt">
-                                                <input type="text" id="clinetID" placeholder="" value="DJkjiofoeqk3149df99098143">
-                                            </span>
-                                            <div class="cellbox">
-                                                <button class="btn_remove_b">셀 삭제</button>
-                                                <!-- <button class="btn_add_b">셀 추가</button>                                                     -->
+
+                                        <!-- Callback URL 추가 셀 샘플 -->
+                                        <div id="list_file_tag_and" style="display:none;"> 
+                                            <div class="packset">
+                                                <span class="input txt">
+                                                    <input type="text" id="clinetIDa1" placeholder ="패키지명을 입력해주세요.">
+                                                </span>
+                                                <span class="input txt">
+                                                    <input type="text" id="clinetIDa2" placeholder="키 해시 값을 입력해주세요.">
+                                                </span>
+                                                <button class="btn_remove_b cellbox" onclick="delForm(this);">셀 삭제</button>
                                             </div>
                                         </div>
                                     </td>
@@ -246,10 +256,20 @@
                                         <span>번들 ID</span>
                                     </th>
                                     <td>
-                                        <span class="input txt">
-                                            <input type="text" id="clinetID" class="mfont" placeholder="iOS앱의 번들 ID를 입력해주세요. 예) com.tid.dev"> <!-- 211103 modify -->
-                                            <button class="btn_add_b">셀 추가</button>
-                                        </span>
+                                        <div id="problem_list_ios">
+                                            <span class="input txt" id="">
+                                                <input type="text" id="clinetID4" class="mfont" placeholder="로그인 후 이동할 페이지의 URL을 입력해주세요."><!-- 211103 modify -->
+                                                <button class="btn_add_b" onclick="addFormIos();">셀 추가</button>
+                                            </span>
+                                        </div>
+
+                                        <!-- Callback URL 추가 셀 샘플 -->
+                                        <div id="list_file_tag_ios" style="display:none;"> 
+                                            <span class="input txt">
+                                                <input type="text" class="mfont" placeholder="로그인 후 이동할 페이지의 URL을 입력해주세요.">
+                                                <button class="btn_remove_b" onclick="delForm(this)">셀 제거</button>
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -314,10 +334,26 @@
     <div class="dim"></div>
 </div>
 <!-- E: 팝업 / 애플리케이션을 복구 팝업 -->
-<script type="text/javascript">
-    
-    
-    </script>
+<script>
+    function addForm() {
+        $('#problem_list').append($('#list_file_tag').html());
+        //check_click();
+    }
+    function addFormAnd() {
+        $('#problem_list_and').append($('#list_file_tag_and').html());
+        //check_click();
+    }
+    function addFormIos() {
+        $('#problem_list_ios').append($('#list_file_tag_ios').html());
+        //check_click();
+    }
+    function delForm(obj){
+        var div = $(obj).parent();
+        //console.log(div);
+        //라인 삭제
+        div.remove();
+    }
+</script>
 </body>
 </html>
 
