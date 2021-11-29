@@ -183,7 +183,7 @@ function txtboxauto(){
 
 // 댓글수정
 $(document).on("click",".basic_comment .editbox .btn_edit", function(){
-    
+    $(".reply").removeClass("open");
     if($(this).parents(".basic_comment").hasClass("hidden")){
         $(this).parents(".basic_comment").removeClass("hidden")
     }else{
@@ -192,13 +192,13 @@ $(document).on("click",".basic_comment .editbox .btn_edit", function(){
     txtboxauto();
 });
 $(document).on("click",".btn_box .cancel", function(){
-    //$(this).parents(".modibox").addClass("hidden");
     $(this).parents().siblings(".basic_comment").removeClass("hidden")
 });
 
 // 답글쓰기
 $(document).on("click",".comment_unit .btn_reply", function(){
-    $(this).parents(".comment_unit").next(".reply").addClass("open")
+    $(".reply").removeClass("open");
+    $(this).parents(".basic_comment").siblings(".reply").addClass("open")
     $(this).parents().siblings(".comment_depth2").children(".reply").addClass("open")
     txtboxauto();
 });
