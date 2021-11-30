@@ -57,6 +57,7 @@ button:disabled {cursor:default;}
 .icon.ic_allview {background:url('../images/common/ic_arrow_black.png') no-repeat;}
 .icon.playstore {background:url('../images/myapp/ic_google.png') no-repeat;}
 .icon.onestore {background:url('../images/myapp/ic_onestore.png') no-repeat;}
+.icon.download {background:url('../images/common/ic_download.png') no-repeat; margin-right:0; text-indent:-9999px; overflow:hidden;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
 .btn.w370 {width:370px}
@@ -230,6 +231,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_tit .tit_right .newalarm {display:block; border-radius:50%; width:36px; height:36px; font-weight:600; line-height:37px; color:#fff; font-family:'Roboto'; text-align:center; background:#ffa640; position:absolute; top:-18px; right:4px;}
 .page_tit.titborder {border-bottom:2px solid #222; padding-bottom:20px; margin-bottom:32px;}
 .page_tit span.numcount {display:inline-block; text-align:center; font-weight:600; height:40px; line-height:40px; font-size:32px; background:#222; color:#fff; font-family:'Roboto'; padding:0 18px; border-radius:25px;}
+.page_tit .subtxt {font-size:16px; color:#666; line-height:24px; margin-top:8px;}
 .page_contents .h3_wrap {padding-bottom:16px; margin-top:80px; margin-bottom:32px; border-bottom:solid 2px #222; position:relative;}
 .page_contents .h3_wrap:first-of-type {margin-top:0;}
 .page_contents .h3_wrap h3 {display:inline-block; margin-right:12px; font-size:24px; font-weight:600; color:#222; vertical-align:middle;}
@@ -289,7 +291,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board table tbody tr td.nothing .no_result {border-top:0; margin-top:0;}
 .board table tr td .board.inbox {border:solid 1px #cfcfcf;}
 .board .list_more {padding:60px 0 16px; background:url('../images/common/ic_eee.png') no-repeat center 20px; border-top:solid 1px #cfcfcf; text-align:center;}
-.board .databar li {position:relative; padding-left:8px;}
+.board .databar li {position:relative; padding-left:8px; margin-top:2px;}
 .board .databar li::before {display:block; content:''; width:4px; height:1px; background:#222; position:absolute; top:10px; left:0;}
 .inbox.board {padding:0 32px 16px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15)}
 .inbox.board table {border-top:0;}
@@ -318,6 +320,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board .meminfo span:last-child {margin-right:0; padding-right:0;}
 .inbox.board .meminfo span:last-child::before {display:none;}
 .inbox.board .meminfo span::before {display:block; content:''; width:1px; height:10px; background:#aaa; position:absolute; top:4px; right:0;}
+.inbox.board.sdktbl {min-height:450px; margin-top:32px;}
+.inbox.board.sdktbl .empty {padding:120px 0;}
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 .board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 .paging {margin-top:48px; text-align:center;}
@@ -380,6 +384,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .term_info div[class^="bx_"] .cnt_box {float:right; width:72%;}
 .title_box p {display:inline-block; font-size:24px; line-height:32px; font-weight:600;}
 .title_box::after {display:block; content:''; clear:both;}
+.title_box .subtxt {color:#666; font-size:16px; line-height:24px; margin-top:12px;}
 .term_info .bx_group .cnt_box::after {display:block; content:''; clear:both;}
 .term_info .bx_group .cnt_box ul {display:inline-block; text-align:left;}
 .term_info .bx_group .cnt_box ul li {font-size:16px; line-height:26px; color:#666666;}
@@ -953,3 +958,16 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .dashboard .list_set ul li a {display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .dashboard .list_set ul li img {width:40px; height:40px; margin-right:10px; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0, 0, 0, 0.15); vertical-align:middle; position:relative; top:-2px}
 .dashboard .list_set ul li .date {font-size:14px; font-family:'Roboto'; color:#666; position:absolute; right:0; top:calc(50% - 7px);}
+
+.uxguide {}
+.uxguide .guidelist {margin-bottom:140px;}
+.uxguide .guidelist li a {display:inline-block; font-size:16px; font-weight:500; color:#1485cb; background:url('../images/common/ic_arrow_blue.png') right center no-repeat; padding-right:26px;}
+.uxguide .uxtl_wrap {padding-bottom:12px; border-bottom:solid 2px #222; margin-bottom:24px;}
+.uxguide .uxtl_wrap .uxtitle {font-size:28px; font-weight:600; line-height:41px; color:#222;}
+.uxguide .uxtl_wrap .uxtitle span {display:inline-block; margin-right:4px; font-size:30px; color:#ffa640; font-family:'Roboto';}
+.uxguide .imgwrap {overflow:hidden; overflow-x:auto; margin-top:40px;}
+.uxguide .imgwrap .imgscroll {width:1070px; margin:0 -20px;}
+.uxguide .imgwrap .imgscroll div { margin:0 auto; padding:10px 20px;}
+/* .uxguide .imgwrap .imgscroll.type img {} */
+.uxguide .imgwrap .imgscroll img {max-width:100%; margin-right:16px; box-shadow:2px 2px 8px 5px rgba(0,0,0,0.06); border-radius:4px;}
+.uxguide .imgwrap .imgscroll img:last-child {margin-right:0;}
