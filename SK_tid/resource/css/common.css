@@ -256,7 +256,7 @@ px {margin-left:48px; margin-right:-10px;}
 .popup .inner_pop.w494 {width:494px;}
 .popup .inner_pop.w960 {width:960px; position:fixed;}
 .popup .inner_pop.mini {position:fixed;}
-.popup .inner_pop.mini .pop_con {max-height:667px;}
+.popup .inner_pop.mini .pop_con {max-height:668px;}
 .pop_con::-webkit-scrollbar {width:5px; background-color: #ddd; border-radius: 5px;}
 .pop_con::-webkit-scrollbar-thumb {background: #999; border-radius: 5px;}
 .popup .inner_pop.w375 .pop_con {padding:24px 20px; }
