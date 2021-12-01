@@ -8,7 +8,7 @@
 
 .desc {font-size:14px; line-height:22px; color:#666666;  margin-top:8px; letter-spacing: -.8px;}
 .desc_02 {font-size:12px; line-height:20px; color:#666;}
-
+.desc.ty03 {font-size:16px; line-height:24px; color:#222;}
 /* hr */
 .hr_01 {height:2px; border:0; background:#222; margin:20px 0;}
 
@@ -962,14 +962,22 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide {}
 .uxguide .guidelist {margin-bottom:140px;}
 .uxguide .guidelist li a {display:inline-block; font-size:16px; font-weight:500; color:#1485cb; background:url('../images/common/ic_arrow_blue.png') right center no-repeat; padding-right:26px;}
-.uxguide .uxtl_wrap {padding-bottom:12px; border-bottom:solid 2px #222; margin-bottom:24px;}
+.uxguide .uxtl_wrap {padding-bottom:12px; border-bottom:solid 2px #222; margin-bottom:24px; padding-top:256px;}
+.uxguide > div:nth-of-type(1) .uxtl_wrap {padding-top:0;}
 .uxguide .uxtl_wrap .uxtitle {font-size:28px; font-weight:600; line-height:41px; color:#222;}
 .uxguide .uxtl_wrap .uxtitle span {display:inline-block; margin-right:4px; font-size:30px; color:#ffa640; font-family:'Roboto';}
-.uxguide .imgwrap {overflow:hidden; overflow-x:auto; margin-top:40px;}
-.uxguide .imgwrap .imgscroll {}
-.uxguide .imgwrap .imgscroll ul {width:1080px; margin:0 auto;}
-.uxguide .imgwrap .imgscroll ul::after {display:block; content:''; clear:both;}
-.uxguide .imgwrap .imgscroll ul li {float:left; margin-right:20px;}
-.uxguide .imgwrap .imgscroll ul li:last-child {margin-right:0;}
-/* .uxguide .imgwrap .imgscroll.type img {} */
-.uxguide .imgwrap .imgscroll img {max-width:100%; box-shadow:2px 2px 8px 5px rgba(0,0,0,0.06); border-radius:4px;}
+.uxguide .imgwrap {overflow:hidden; overflow-x:auto; margin-top:60px;}
+.uxguide .imgwrap::-webkit-scrollbar {}
+.uxguide .imgwrap .imgscroll {width:1070px;  margin:0 auto;}
+.uxguide .imgwrap .imgscroll .imgbx {display:inline-block; margin-right:6px; padding:10px 5px; vertical-align:top;}
+.uxguide .imgwrap .imgscroll .imgbx img + img {margin-top:20px;}
+.uxguide .imgwrap .imgscroll .imgbx:last-child {margin-right:0;}
+.uxguide .imgwrap .imgscroll .imgbx img {display:block; max-width:100%; box-shadow:2px 2px 8px 2px rgba(0,0,0,0.06); border-radius:4px;}
+.uxguide .imgwrap .uxtext {color:#222; font-size:14px; margin-top:8px; letter-spacing:-.8px;line-height:24px;}
+.uxguide .imgwrap .uxtext span {color:#666;}
+.uxguide .dont {padding-top:6px; border-top:solid 4px #fc2a2a; margin-top:20px; color:#fc2a2a; font-weight:600; font-family:'Roboto';}
+.uxguide .do {padding-top:6px; border-top:solid 4px #4caf50; margin-top:20px; color:#4caf50; font-weight:600; font-family:'Roboto';}
+.uxguide .uxbox {margin-top:210px;}
+.uxguide .uxbox .imgwrap {margin-top:40px;}
+.uxguide .link {display:block; margin-top:20px;}
+.uxguide .link a {margin-left:4px; color:#1485cb; font-family:'Roboto';}
