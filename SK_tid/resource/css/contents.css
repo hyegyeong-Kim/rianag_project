@@ -966,8 +966,10 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide .uxtl_wrap .uxtitle {font-size:28px; font-weight:600; line-height:41px; color:#222;}
 .uxguide .uxtl_wrap .uxtitle span {display:inline-block; margin-right:4px; font-size:30px; color:#ffa640; font-family:'Roboto';}
 .uxguide .imgwrap {overflow:hidden; overflow-x:auto; margin-top:40px;}
-.uxguide .imgwrap .imgscroll {width:1070px; margin:0 -20px;}
-.uxguide .imgwrap .imgscroll div { margin:0 auto; padding:10px 20px;}
+.uxguide .imgwrap .imgscroll {}
+.uxguide .imgwrap .imgscroll ul {width:1080px; margin:0 auto;}
+.uxguide .imgwrap .imgscroll ul::after {display:block; content:''; clear:both;}
+.uxguide .imgwrap .imgscroll ul li {float:left; margin-right:20px;}
+.uxguide .imgwrap .imgscroll ul li:last-child {margin-right:0;}
 /* .uxguide .imgwrap .imgscroll.type img {} */
-.uxguide .imgwrap .imgscroll img {max-width:100%; margin-right:16px; box-shadow:2px 2px 8px 5px rgba(0,0,0,0.06); border-radius:4px;}
-.uxguide .imgwrap .imgscroll img:last-child {margin-right:0;}
+.uxguide .imgwrap .imgscroll img {max-width:100%; box-shadow:2px 2px 8px 5px rgba(0,0,0,0.06); border-radius:4px;}
