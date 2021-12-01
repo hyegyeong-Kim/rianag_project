@@ -960,6 +960,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .dashboard .list_set ul li .date {font-size:14px; font-family:'Roboto'; color:#666; position:absolute; right:0; top:calc(50% - 7px);}
 
 .uxguide {}
+.uxguide .guidelist li + li {padding-top:4px;}
 .uxguide .guidelist li a {display:inline-block; font-size:16px; font-weight:500; color:#1485cb; background:url('../images/common/ic_arrow_blue.png') right center no-repeat; padding-right:26px;}
 .uxguide .uxtl_wrap {padding-bottom:12px; border-bottom:solid 2px #222; margin-bottom:24px; padding-top:256px;}
 .uxguide > div:nth-of-type(1) .uxtl_wrap {padding-top:160px;}
