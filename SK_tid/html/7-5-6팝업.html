@@ -137,6 +137,7 @@
                 <button class="btn black large" onclick="showPop('noregist_faq')">중요 FAQ 변경 팝업</button>
                 <button class="btn black large" onclick="showPop('commentdelete')">댓글 삭제 확인 팝업</button>
                 <button class="btn black large" onclick="showPop('commenttext')">댓글 입력 확인 팝업</button>
+                <button class="btn black large" onclick="showPop('filesize')">파일 사이즈 제한</button>
                 <hr>
                 <strong>입력오류팝업</strong>
                 <br>
@@ -300,6 +301,24 @@
 <!-- e: 팝업 / 파일 -->
 <!-- E: 팝업 / 입력 오류 팝업  -->
 
+<!-- 211206 modify 팝업추가 -->
+<!-- s: 팝업 / 파일 사이즈 제한 -->
+<div class="popup" id="filesize">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                파일이 너무 커서 첨부할 수 없습니다.<br>
+                <span>제한: 100MB</span>
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large black" onclick="hidePop('filesize')">확인</a>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- e: 팝업 / 파일 사이즈 제한 -->
+<!-- // 211206 modify 팝업추가 -->
 <script>
     $("#file1").on('change',function(){
         var fileName = $("#file1").val();

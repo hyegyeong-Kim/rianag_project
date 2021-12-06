@@ -54,6 +54,7 @@
                 회원정보와 정보가 같아야 인증번호를 받을 수 있습니다.
             </p>
             <div class="regist_form">
+                <!-- 211203 modify -->
                 <table>
                     <caption></caption>
                     <colgroup><col style="width:460px"></colgroup>
@@ -72,6 +73,7 @@
                                     <!-- <button class="btn xsmall gray">재발송</button> --> 
                                 </span>
                                 <p class="warning">올바른 이메일 주소를 입력해주세요.</p>
+                                <p class="warning f_blue">인증번호가 발송되었습니다.</p>
                             </td>    
                         </tr>
                         <tr>
@@ -81,17 +83,19 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="input txt">
-                                    <input type="text" class="mfont" placeholder="인증번호를 입력해주세요.">
+                                <!-- 이메일 인증시 class명 disable 제거하여 활성화 -->
+                                <span class="input txt triplebtn disable">
+                                    <input type="text" class="mfont" placeholder="인증번호를 입력해주세요." disabled>
+                                    <span class="clock">29:55</span>
                                     <button class="timeplus">시간 연장</button>
                                     <button class="btn xsmall gray focus">확인</button>
                                 </span>
-                                <p class="warning">남은 시간 02:55</p>
                                 <p class="warning">인증 번호 입력시간이 초과 되었습니다. 인증 번호를 재발송 해주세요.</p>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <!-- // 211203 modify -->
                 <div class="btn_wrap">
                     <a href="#none" class="btn xlarge gray">취소</a>
                     <a href="#none" class="btn xlarge black" onclick="showPop('dormant_acc')">휴면 해제</a>
@@ -119,6 +123,7 @@
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
+
 <!-- S: 팝업 / 휴면 해제 -->
 <div class="popup" id="dormant_acc">
     <div class="inner_pop alert">
@@ -135,6 +140,7 @@
     <div class="dim"></div>
 </div>
 <!-- E: 팝업 / 휴면 해제 -->
+
 <script>
     // 등록버튼 활성화
     $(".input input").on('keydown keyup', function () {

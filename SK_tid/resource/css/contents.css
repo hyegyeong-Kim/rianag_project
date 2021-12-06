@@ -60,12 +60,12 @@ button:disabled {cursor:default;}
 .icon.download {background:url('../images/common/ic_download.png') no-repeat; margin-right:0; text-indent:-9999px; overflow:hidden;}
 .mark_lang {display:inline-block; font-size:13px; line-height:18px; color:#666666; height:22px; padding:2px 6px; border:1px solid #666666; border-radius:5px;}
 .btn.w148 {min-width:148px}
-.btn.w370 {width:370px}
+.btn.w370 {width:368px}
 .packset {width:500px; position:relative; margin-top:20px;}
 .packset .cellbox {position:absolute; right:0; top:50%; transform:translateY(-50%);}
 
 /* 버튼정렬 */
-.btn_wrap {text-align:center; margin-top:80px;}
+.btn_wrap {text-align:center; margin-top:60px;}
 .btn_wrap .btn + .btn {margin-left:8px;}
 
 .btn_w148 .btn {min-width:148px;}
@@ -113,6 +113,7 @@ span.input button.btn {height:28px; font-size:12px; padding:0 12px; line-height:
 span.input.txt {width:100%; padding:0 100px 0 16px; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
 span.input.txt.only {padding-right:16px;}
 span.input.txt.twobtn {padding-right:140px;}
+span.input.txt.triplebtn {padding-right:180px;}
 span.input.txt.wfull {width:100%;}
 span.input.txt .bytes {font-size:12px; color:#999; position:absolute; top:50%; right:16px; transform: translateY(-50%); font-family:'Roboto';}
 span.input.txt .bytes em { font-family:'Roboto';}
@@ -120,6 +121,9 @@ span.input.txt .bytes em { font-family:'Roboto';}
 .direct_input.show {display:block;}
 span.input.disabled, .disabled span.input {background:#f1f1f1;}
 .disabled button:disabled {opacity: .3; cursor:default;}
+span.input.disable {background:#f1f1f1; border-color:#e0e0e0; color:#bfbfbf;}
+span.input.disable button {display:none;}
+span.input.disable span.clock {display:none;}
 span.input.txt .filename.on {color:#222;}
 span.input.txt .file_btn {display:block; width:24px; height:24px; background:url('../images/common/ic_upload.png') no-repeat center center; text-indent:-9999px; position:absolute; top:calc(50% - 12px); right:16px; overflow:hidden; cursor:pointer;}
 span.input.sel {width:100%; padding:0 0; border:solid 1px #cfcfcf; border-radius:4px; position:relative;}
@@ -138,6 +142,7 @@ span.input.type_03 input {display:inline-block; width:calc((100% - 18px)/3); mar
 span.input.type_03 input:first-child {margin-left:0;}
 span.input.type_03 input:last-child {margin-right:0;}
 span.input button.timeplus {padding:0; font-size:14px; font-weight:500; color:#222; right:75px; border-bottom:solid 2px #222;}
+span.input span.clock {display:inline-block; font-size:14px; color:#666; font-family:'Roboto'; font-weight:500; position:absolute; right:140px; top:50%; transform:translateY(-50%);}
 .calendarset {display:inline-block;}
 .calendarset + .btn {margin-left:12px;}
 .calendarset .bar {display:inline-block; margin:0 6px;}
@@ -159,7 +164,7 @@ span.input button.timeplus {padding:0; font-size:14px; font-weight:500; color:#2
 /* select 박스 */
 .select_form {display:block; height:24px;}
 .select_form select {display:block; font-size:16px; line-height:24px; background:url('../images/common/ic_sorting_L.png') right center no-repeat; padding-right:28px;}
-select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; background:url('../images/common/ic_sel_down.png') 97% center no-repeat; padding:0 28px 0 16px; font-size:14px;}
+select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; background:url('../images/common/ic_sel_down.png') calc(100% - 16px) center no-repeat; padding:0 28px 0 16px; font-size:14px;}
 
 /* switch button */
 .switch_btn {display:inline-block; vertical-align:middle;}
@@ -181,6 +186,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .optionsearch .input.sel {display:inline-block; border:0; border-radius:0; width:140px; height:40px; border-bottom:solid 2px #222; padding-bottom:10px;} 
 .optionsearch .input.sel .sel_de {padding:0 28px 0 0; height:39px; line-height:39px;}
 .optionsearch .input.sel + .search {display:inline-block; margin-left:16px;}
+.optionsearch .input.sel .sel_de {background-position:right;}
 
 .myapp_search {display:block; margin:0 auto 80px; width:460px; position:relative; padding:0 0 12px 0; border:0; border-radius:0; border-bottom:4px solid #000000;}
 .myapp_search .btn_delete {top:8px;}
@@ -555,6 +561,18 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
     .popup .inner_pop.w960 {width:760px; transition:ease .5s;}
 }
 
+/* 텍스트입력시 드롭박스 */
+.dropset {position:relative;}
+.dropset .input {z-index:1; background:#fff;}
+.dropset .droplist.on {display:block;}
+.dropset .droplist {display:none; position:absolute; top:46px; left:0; z-index:1; width:100%; max-height:200px; overflow:hidden; overflow-y:auto; background:#fff; border:solid 1px #cfcfcf;}
+.dropset .droplist li{text-align:left;}
+.dropset .droplist li a {display:block; font-size:14px; line-height:40px; color:#222;  padding:0 15px;}
+.dropset .droplist li a span {color:#ffa640;}
+.dropset .droplist li a:hover {background:#000; color:#fff;}
+.dropset .droplist li p {font-size:14px; padding:10px 16px; color:#cfcfcf;}
+.clearall {display:none; width:100%; height:100%; position:fixed; top:0; left:0;}
+
 /* 개별약관편집 */
 .txt_reagree {display:inline-block; margin-left:33px;}
 .txt_reagree span.tit {display:inline-block; font-size:16px; line-height:24px;}
@@ -728,7 +746,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup .faqbox {float:right;}
 .board .optiongroup .faqbox::after {display:block; content:''; clear:both;}
 .board .optiongroup .faqbox .input.sel {float:left; width:156px;}
-.board .optiongroup .faqbox .input.sel .sel_de {background-position:92% center;}
 .board .optiongroup .faqbox .input.sel + .search {margin-left:16px;}
 .board .optiongroup .faqbox .warning {clear:both; width:calc(100% - 172px); margin-left:172px; padding-left:16px;}
 .notice_title {padding-bottom:16px; border-bottom:solid 1px #222; position:relative; margin-bottom:32px;}
@@ -767,7 +784,6 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .filtergroup table tr th {padding:6px 10px 6px 0; font-size:16px; font-weight:600; word-break:keep-all;}
 .filtergroup table tr td {padding:6px 10px 0 0;}
 .filtergroup table tr td .input.sel {width:85%;}
-.filtergroup table tr td .input.sel .sel_de {background-position:95% center;}
 .filtergroup .search_type01 {margin-left:calc(50% - 226px);}
 .filtergroup .optionsearch {margin:32px 0 0 calc(50% - 306px);}
 .wbox.app_manage {padding:48px 0; margin-bottom:60px;}
@@ -871,14 +887,14 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .common_page .overimg {background:url('../images/common/img_over.png') center top no-repeat; padding-top:200px;}
 .common_page .errorimg {background:url('../images/common/img_err.png') center top no-repeat; padding-top:195px;}
 .common_page .exitimg {background:url('../images/common/img_exit.png') center top no-repeat; padding-top:220px;}
-.common_page .comtxt + .regist_form {margin-top:60px;}
+.common_page .comtxt + .regist_form {margin-top:30px;}
 .common_page .comtxt + .btn_wrap {margin-top:60px;}
 .common_page .btn_wrap .emailchg {display:block; margin:0 auto 16px}
 .common_page .btn_wrap .emailchg + .warning {margin:-13px 0 16px;}
 .common_page .btn_wrap .btnset div {display:inline-block;}
 .common_page .btn_wrap .btnset div .btn + .desc_02 {margin-top:4px;}
 .common_page .regist_form .btn_wrap {margin-top:60px;}
-.common_page .approve_tbl {margin:80px auto 0; max-width:780px;}
+.common_page .approve_tbl {margin:60px auto 0; max-width:780px;}
 .common_page .approve_tbl .regist_table tr td {font-size:16px; color:#666;}
 .common_page .approve_tbl .regist_table .approve_terms li {margin-top:12px;}
 .common_page .approve_tbl .regist_table .approve_terms li span {display:block; float:left; width:88%;}
@@ -968,7 +984,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide .uxtl_wrap .uxtitle span {display:inline-block; margin-right:4px; font-size:30px; color:#ffa640; font-family:'Roboto';}
 .uxguide .imgwrap {overflow:hidden; overflow-x:auto; margin-top:60px;}
 .uxguide .imgwrap::-webkit-scrollbar {}
-.uxguide .imgwrap .imgscroll {width:1070px;  margin:0 auto;}
+.uxguide .imgwrap .imgscroll {width:1070px;  margin:0 auto; padding-bottom:24px;}
 .uxguide .imgwrap .imgscroll .imgbx {display:inline-block; margin-right:6px; padding:10px 5px; vertical-align:top;}
 .uxguide .imgwrap .imgscroll .imgbx img + img {margin-top:20px;}
 .uxguide .imgwrap .imgscroll .imgbx:last-child {margin-right:0;}

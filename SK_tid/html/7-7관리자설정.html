@@ -333,16 +333,33 @@
         </div>
         <div class="pop_con">
             <table class="pop_tbl txt_area"> <!-- 211103 modify -->
-                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <colgroup><col style="width:34%;"><col style="width:auto;"></colgroup>
                 <tbody>
                     <tr>
                         <th>
                             <span>T아이디</span>
                         </th>
                         <td>
-                            <span class="input txt only">
-                                <input type="text" placeholder="T아이디를 입력해주세요.">
-                            </span>
+                            <!-- 211206 modify -->
+                            <div class="dropset">
+                                <span class="input txt only">
+                                    <input type="text" placeholder="T아이디를 입력해주세요.">
+                                </span>
+                                <ul class="droplist">
+                                    <li><a href="#none"><span>ab</span> 22weewwww@skt.com</a></li>
+                                    <li><a href="#none"><span>ab</span>22weewwww@skt.com</a></li>
+                                    <li><a href="#none"><span>ab</span>22weewwww@skt.com</a></li>
+                                    <li><a href="#none"><span>ab</span>22weewwww@skt.com</a></li>
+                                    <li><a href="#none"><span>ab</span>22weewwww@skt.com</a></li>
+                                    <li><a href="#none"><span>ab</span>22weewwww@sktsss.com</a></li>
+                                    <!-- 검색결과 없을때 -->
+                                    <li>
+                                        <p>T아이디 Developers 가입 이력이 없습니다. 가입 후 추가 해주세요</p>
+                                    </li>
+                                    <!-- // 검색결과 없을때 -->
+                                </ul>
+                            </div>
+                            <!-- // 211206 modify -->
                         </td>  
                     </tr>
                     <tr>
@@ -405,6 +422,7 @@
                 <a href="#none" class="btn large gray" onclick="hidePop('admin_add')">취소</a>   
                 <a href="#none" class="btn large black" onclick="hidePop('admin_add'); showPop('ad_compl');">관리자 추가</a>    
             </div>
+            <div class="clearall" onclick="clearInput(this)"></div>
         </div>
     </div>
     <div class="dim"></div>
@@ -421,7 +439,7 @@
         </div>
         <div class="pop_con">
             <table class="pop_tbl txt_area">
-                <colgroup><col style="width:38%;"><col style="width:auto;"></colgroup>
+                <colgroup><col style="width:34%;"><col style="width:auto;"></colgroup>
                 <tbody>
                     <tr>
                         <th>
@@ -562,6 +580,24 @@
     <div class="dim"></div>
 </div>
 <!-- e: 팝업 / 관리자 추가 완료 -->
+
+<script>
+    $(function(){
+        $(".dropset .input input").on("keydown keyup", function(){
+            if($(".dropset .input input").val() == ""){
+                $(".droplist").removeClass("on")
+                $(".clearall").hide();
+            }else{
+                $(".droplist").addClass("on")
+                $(".clearall").show();
+            }
+        });
+        $(".clearall, .droplist li a" ).on("click",function(){
+            $(".droplist").removeClass("on");
+            $(".clearall").css("display","none");
+        });
+    });
+</script>
 </body>
 </html>
 
