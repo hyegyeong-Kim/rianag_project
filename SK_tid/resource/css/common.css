@@ -163,7 +163,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .location span {padding-right:25px;background:url('../images/common/ic_location.png') no-repeat right center;}
 .location span:last-child {background:none;}
 .location strong {color:#fff; font-weight:normal;}
-.userinfo {float:right; padding: 20px 0;}
+.userinfo {float:right; padding: 18px 0 16px;}
 .userinfo > * {display:inline-block; vertical-align:middle;}
 .userinfo .infotit {font-family:'Roboto'; color:#fff;}
 .userinfo .infotit span {display:inline-block; vertical-align:middle;}
@@ -189,7 +189,7 @@ px {margin-left:48px; margin-right:-10px;}
 #container::after {content:''; display:block; clear:both;}
 #container a.btn_lnbopen {display:none;}
 
-.lnb {width:290px; height:calc(100% - 160px); background:#fff; border:solid 1px #cfcfcf; border-width:0 1px; position:absolute; overflow: auto;}
+.lnb {width:290px; background:#fff; border:solid 1px #cfcfcf; border-width:0 1px; position:fixed; top:160px; bottom:0; overflow: auto;}
 .lnb_in {position:relative; z-index:1;}
 .lnb_ti {padding:35px 32px; border-bottom:solid 1px #cfcfcf; font-size:26px; font-weight:600; color:#222; word-break: break-word;}
 .lnb_menu {margin-top:10px;}
@@ -222,7 +222,7 @@ px {margin-left:48px; margin-right:-10px;}
 }
 
 /*footer*/
-#footer {height:242px; padding: 60px 0; background:#f8f8f8; color:#999;}
+#footer {height:242px; padding: 60px 0; background:#f8f8f8; color:#999; position:relative; z-index:1;}
 #footer .inner {max-width:1420px; position:relative}
 #footer .f_link a {display:inline-block; margin-right:20px; font-weight:600;}
 #footer .address {margin-top:48px;}

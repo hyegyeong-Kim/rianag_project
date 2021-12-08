@@ -66,6 +66,21 @@ $(function(){
 
     /* LNB */
     /* */
+    
+    $(window).scroll(function() {
+        var lnbbtm = $(document).scrollTop() - ($(document).height() - $(window).height()) + 242;
+        
+        if(lnbbtm > 0){
+            $(".lnb").stop().animate(
+                {"bottom":lnbbtm  + "px"}, 200
+            );
+        } else {
+            $(".lnb").stop().animate(
+                {"bottom":0}, 200
+            );
+        }
+    });
+
     $(".lnb_menu > li > a").click(function(){
         $(".lnb_menu a").removeClass();
         $(this).addClass("act");
