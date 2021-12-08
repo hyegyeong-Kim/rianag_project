@@ -72,11 +72,11 @@ $(function(){
         
         if(lnbbtm > 0){
             $(".lnb").stop().animate(
-                {"bottom":lnbbtm  + "px"}, 200
+                {"bottom":lnbbtm  + "px"}
             );
         } else {
             $(".lnb").stop().animate(
-                {"bottom":0}, 200
+                {"bottom":0}
             );
         }
     });
