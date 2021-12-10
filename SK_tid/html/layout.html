@@ -40,9 +40,40 @@
                     </div>
                 </div>
                 <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a> <!-- 새로운 알림이 있는경우 i 노출 -->
-                <div>
-                    
-                </div>
+                <!-- 알림창 -->
+                <ul class="alarmview">
+                    <li>
+                        <div>
+                            <p class="tl">중요 공지 등록 안내</p>
+                            <p class="date">2021.10.01</p>
+                            <a href="#none" class="altxt">%그룹이름% 참여 승인 되었습니다.</a>
+                            <button class="btn_confirm">확인</button>
+                        </div>
+                        <a href="#none" class="btn_close" onclick="delAlarm(this)">닫기</a>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="tl">중요 공지 등록 안내</p>
+                            <p class="date">2021.10.01</p>
+                            <a href="#none" class="altxt">
+                                %애플리케이션이름%  비즈니스 애플리케이션 승인 요청을
+                                확인해주세요.
+                            </a>
+                            <button class="btn_confirm">확인</button>
+                        </div>
+                        <a href="#none" class="btn_close" onclick="delAlarm(this)">닫기</a>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="tl">중요 공지 등록 안내</p>
+                            <p class="date">2021.10.01</p>
+                            <a href="#none" class="altxt">%그룹이름% 참여 승인 되었습니다.</a>
+                            <button class="btn_confirm">확인</button>
+                        </div>
+                        <a href="#none" class="btn_close" onclick="delAlarm(this)">닫기</a>
+                    </li>
+                </ul>
+                <!-- 알림창 -->
                 <!-- E: 로그인 후 -->
 
                 <!-- 1024 미만사이즈 에서 노출 -->
@@ -330,7 +361,6 @@
     
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
-    
 </div>
 </body>
 </html>

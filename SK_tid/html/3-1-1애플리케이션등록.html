@@ -87,20 +87,18 @@
                         <ul class="depth2">
                             <li>
                                 <a href="#none" class="act2">T아이디 적용하기</a>
-                                <ul class="depth3">
-                                    <li><a href="#none">애플리케이션 등록</a></li>
-                                    <li><a href="#none">애플리케이션 관리</a></li>
-                                    <li><a href="#none">기본 설정</a></li>
-                                    <li><a href="#none">고급 설정</a></li>
-                                    <li><a href="#none">플랫폼 설정</a></li>
-                                    <li><a href="#none">동의 항목 설정</a></li>
-                                    <li><a href="#none">멤버 관리</a></li>
-                                    <li><a href="#none">통계</a></li>
+                                <ul class="nav_menu">
+                                    <li><a href="#none" onclick="scrollMove('1')" class="act3" >애플리케이션 등록</a></li>
+                                    <li><a href="#none" onclick="scrollMove('2')" >애플리케이션 관리</a></li>
+                                    <li><a href="#none" onclick="scrollMove('3')">기본 설정</a></li>
+                                    <li><a href="#none" onclick="scrollMove('4')">고급 설정</a></li>
+                                    <li><a href="#none" onclick="scrollMove('5')">플랫폼 설정</a></li>
+                                    <li><a href="#none" onclick="scrollMove('6')">동의 항목 설정</a></li>
+                                    <li><a href="#none" onclick="scrollMove('7')">멤버 관리</a></li>
+                                    <li><a href="#none" onclick="scrollMove('8')" >통계</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#none">Android</a></li>
-                            <li><a href="#none">iOS</a></li>
-                            <li><a href="#none">UX</a></li>
+                            <li><a href="#none">T아이디 약관</a></li>
                         </ul>
                     </li>
                     <li>
@@ -655,6 +653,12 @@
     <button id="btn_gotop">맨위로 이동</button>
     <!-- E: footer -->
 </div>
+<script>
+    function scrollMove(seq){
+        var offset = $("#app" + seq).offset();
+        $('html, body').scrollTop(offset.top - 200);
+    }
+</script>
 </body>
 </html>
 

@@ -47,6 +47,20 @@ $(function(){
             $(".h_gnb .menu").removeClass("on");
         }
     });
+    /* 알림창 */
+    $(".alarm").click(function(){
+        if ($(this).hasClass("on")){
+            $(this).removeClass("on");
+        } else {
+            $(this).addClass("on");
+        }
+    });
+
+    /* 알림창 삭제기능 */
+    function delAlarm(obj){
+        var div = $(obj).parent();
+        div.remove();
+    }
 
     /* 1024미만 GNB 보기 */
     $(".btn_menuopen").click(function(){
@@ -57,12 +71,7 @@ $(function(){
             $(".mylink").removeClass("on");
         }
     });
-
-    /* 진행률 */
-    $(document).ready(function(){
-        $(".size").css("width", $(".size").text());
-    });
-
+    
 
     /* LNB */
     /* */
@@ -86,11 +95,16 @@ $(function(){
         $(this).addClass("act");
         $(this).siblings(".depth2").children().eq(0).children("a").addClass("act2")
     });
-    $(".depth2 a").click(function(){
-        $(".depth2 a").removeClass();
+    $(".depth2 > li > a").click(function(){
+        $(".depth2 > li > a").removeClass();
         $(this).addClass("act2")
     });
-    
+
+    $(".nav_menu > li > a").click(function(){
+        $(".nav_menu > li > a").removeClass();
+        $(this).addClass("act3")
+    });
+
     $(".btn_lnbopen").click(function(){
         scrollOff();
         $(".lnb").addClass("open");
@@ -221,3 +235,4 @@ $(document).on("click",".reply .btn_box .cancel", function(){
     $(this).parents(".reply").removeClass("open")
     txtboxauto();
 });
+

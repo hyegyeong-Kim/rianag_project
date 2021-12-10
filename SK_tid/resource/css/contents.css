@@ -980,10 +980,11 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide .guidelist li a {display:inline-block; font-size:16px; font-weight:500; color:#1485cb; background:url('../images/common/ic_arrow_blue.png') right center no-repeat; padding-right:26px;}
 .uxguide .uxtl_wrap {padding-bottom:16px; border-bottom:solid 2px #222; margin:200px 0 24px; position:relative;}
 .uxguide .uxtl_wrap.mtnarrow {margin-top:136px;}
+.uxguide .mt120 {margin-top:120px !important; }
 .uxguide .uxtl_wrap .tit_right {position:absolute; right:0; top:0;}
 .uxguide > div:nth-of-type(1) .uxtl_wrap {margin-top:80px;}
 .uxguide .uxtl_wrap + p {margin-bottom:60px;}
-.uxguide .uxtl_wrap + p + .imgwrap {margin-top:60px;}
+/* .uxguide .uxtl_wrap + p + .imgwrap {margin-top:60px;} */
 .uxguide .uxtl_wrap + p + .dot {margin-top:0;}
 .uxguide h3 {font-size:32px; line-height:41px; color:#222; font-weight:600;}
 .uxguide h3 span {display:inline-block; margin-right:4px; font-size:34px; font-family:'Roboto';}
@@ -991,21 +992,21 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide h4.dot::before {width:6px; height:6px; top:14px; background:#222;}
 .uxguide h4 + p {margin-top:8px;}
 .uxguide h4 + .imgwrap {margin-top:40px;}
-.uxguide h4 + p + .imgwrap {margin-top:40px;}
+.uxguide p + .imgwrap {margin-top:40px;}
 .uxguide h4.dot + p {margin:16px 0 24px;}
 .uxguide h4.dot + p + .imgwrap {margin-top:32px;}
 .uxguide h4.dot + p + .graybox {margin-top:32px;}
 .uxguide h4.dot + ul {margin-top:24px;}
 .uxguide ul + .imgwrap {margin-top:24px;}
-.uxguide .imgwrap + .graybox {margin-top:24px;}
-.uxguide .imgwrap + p {margin-top:24px;}
 .uxguide p {font-size:16px; color:#222;}
 .uxguide p + .graybox {margin-top:24px;}
+.uxguide .imgwrap + .graybox {margin-top:24px;}
+.uxguide .imgwrap + p {margin-top:24px;}
 .uxguide .procedure .number_order {margin-top:96px;}
 .uxguide .procedure .number_order:first-child,
 .uxguide .procedure .imgwrap:first-child {margin-top:0;}
 .uxguide .procedure .imgwrap {margin-top:96px;}
-
+.uxguide .graybox + .imgwrap  {margin-top:24px;}
 .uxguide .dont {padding-top:6px; border-top:solid 4px #fc2a2a; margin-top:20px; color:#fc2a2a; font-weight:600; font-family:'Roboto';}
 .uxguide .do {padding-top:6px; border-top:solid 4px #4caf50; margin-top:20px; color:#4caf50; font-weight:600; font-family:'Roboto';}
 
@@ -1018,13 +1019,9 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide .imgwrap .imgscroll .imgbx img {display:block; max-width:100%; box-shadow:2px 2px 8px 2px rgba(0,0,0,0.06); border-radius:4px;}
 .uxguide .imgwrap .uxtext {color:#222; font-size:14px; margin-top:8px; letter-spacing:-.8px;line-height:24px;}
 .uxguide .imgwrap .uxtext span {color:#666;}
-
 .uxguide .dot {position:relative; padding-left:12px;}
 .uxguide .dot::before {content:''; display:inline-block; position:absolute; border-radius:1px; left:0;}
 .uxguide .link {display:inline-block; margin-left:4px; color:#1485cb; border-bottom:solid #1485cb 1px;}
-
-.uxguide .uxbox {margin-top:96px;}
-.uxguide .uxbox p + .imgwrap {margin-top:40px;}
 
 .uxguide .number_order {padding-left:26px; position:relative;}
 .uxguide .number_order span {position:absolute; top:3px; left:0; display:block; color:#fff; width:20px; height:20px; font-size:14px; line-height:20px; background:#000; border-radius:10px; text-align:center; font-family:'Roboto';}

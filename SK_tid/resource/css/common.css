@@ -138,11 +138,23 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .h_gnb .myemail > .minibox {width:200px; padding:10px 30px; margin-top:10px; right:0;}
 .h_gnb .myemail > .minibox li {margin:20px 0;}
 .h_gnb a.alarm {margin-left:20px;vertical-align:middle;}
+.h_gnb a.alarm.on + .alarmview {display:block;} 
 .h_gnb a.alarm span {display:block; width:24px; height:24px; background:url('../images/common/ic_alarm.png') no-repeat right center; text-indent:-9999px; position:relative; overflow:hidden;}
 .h_gnb a.alarm span i.new {display:block;width:8px; height:8px; border-radius:50%; background:#ffa640 ; text-indent:-9999px; position:absolute; top:0; right:0; overflow:hidden;}
 .h_gnb a.btn_menuopen {display:none;}
 .h_gnb a.btn_login {display:inline-block; width:80px; height:38px; line-height:38px; margin-top:-10px; background:#1b6491; border-radius:50px; letter-spacing:-.8px; text-align:center; font-size:14px; color:#fff;} 
 
+.h_gnb .alarmview {display:none; width:530px; padding:32px; max-height:400px; position:absolute; background:#fff; box-shadow:0px 0px 5px 0px rgba(0, 0, 0, .2); border-radius:8px; top:40px; right:0; overflow:hidden; overflow-y:auto} 
+.h_gnb .alarmview li {width:100%; position:relative;}
+.h_gnb .alarmview li + li {padding-top:32px; border-top:solid 1px #cfcfcf; margin-top:20px;}
+.h_gnb .alarmview li div p {display:inline-block; font-size:14px; line-height:20px;}
+.h_gnb .alarmview li div .tl {font-weight:600; width:78%; position:relative;}
+.h_gnb .alarmview li div .tl::before {content:''; display:block; width:6px; height:6px; background:#222; border-radius:6px; position:absolute; top:7px; left:-10px;}
+.h_gnb .alarmview li div .date {color:#666; font-family:'Roboto'; margin:0 20px 0 8px;}
+.h_gnb .alarmview li div .altxt {display:inline-block; width:83%; font-size:16px; line-height:24px; color:#666; margin-top:16px;}
+.h_gnb .alarmview li div .btn_confirm {padding:0; font-size:16px; font-weight:600; color:#1b6491; margin-left:40px; margin-top:16px;}
+.h_gnb .alarmview li .btn_close {position:absolute; top:36px; right:0; text-indent:-9999px; overflow:hidden; background:url('../images/common/ic_delgray.png') no-repeat; width:20px; height:20px;}
+.h_gnb .alarmview li:first-child .btn_close {top:4px;}
 @media (max-width: 1023px) {
     #top {height:72px; padding:20px 24px;}
     .h_gnb {padding-right:42px;}
@@ -176,7 +188,6 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .userinfo .ongoing span.stop {background:url('../images/common/ic_stop_w.png') no-repeat;}
 .userinfo .ongoing span.end {background:url('../images/common/ic_end_w.png') no-repeat;}
 .userinfo .ongoing span.delete {background:url('../images/common/ic_devdel_w.png') no-repeat;}
-px {margin-left:48px; margin-right:-10px;}
 @media screen and (max-width: 1023px) {
     #utility {top:72px;}
     .location {margin-left:56px;}
@@ -201,6 +212,13 @@ px {margin-left:48px; margin-right:-10px;}
 .lnb_menu li a.act + .depth2 {display:block;}
 .lnb_menu li a.act2 {padding:16px 48px; background:#000; color:#fff;}
 .lnb .btn_lnbclose {display:none;}
+.lnb_menu li a.act2 + .nav_menu {display:block;} 
+.lnb_menu li .nav_menu {display:none; margin:22px 0 22px 48px; position:relative;}
+.lnb_menu li .nav_menu::after {content:''; display:block; width:2px; height:100%; background:#e5e5e5; position:absolute; left:0; top:0;}
+.lnb_menu li .nav_menu li {margin-top:16px;}
+.lnb_menu li .nav_menu li a {padding:2px 0 2px 18px; position:relative; z-index:1;}
+.lnb_menu li .nav_menu li a.act3 {background:none; color:#222;}
+.lnb_menu li .nav_menu li a.act3::after {content:''; display:block; width:2px; height:100%; background:#222; position:absolute; top:0; left:0;}
 
 .coantents {width:calc(100% - 290px); margin-left:290px; padding:80px 0 160px 60px; background:#fff; position:relative;}
 .coantents::after {content:''; display:block; clear:both;}
