@@ -57,10 +57,13 @@ $(function(){
     });
 
     /* 알림창 삭제기능 */
-    function delAlarm(obj){
-        var div = $(obj).parent();
-        div.remove();
-    }
+    $(".alarmview li .btn_close").click(function(){
+        $(this).parent().remove();
+        var _length = $(".alarmview li").length;
+        if (_length <= 0) {
+            $(".alarm").removeClass("on");
+        }
+    });
 
     /* 1024미만 GNB 보기 */
     $(".btn_menuopen").click(function(){
@@ -170,7 +173,7 @@ function allHide(){
     $(".popup").removeClass("open");
 };
 
-//  검색값 클리어
+/* 검색값 클리어 */
  var clearInput = function(obj) {
     obj.parentNode.querySelector("input").value = "";
     obj.style.display = "none";
@@ -193,7 +196,7 @@ $(function(){
     }
 })
 
-// calendarbtn
+/* calendarbtn */
 $(document).on("click",".calendarbtn .btn", function(){
     if($(this).hasClass("black")){
         $(this).removeClass("black").addClass("white")
@@ -210,7 +213,7 @@ function txtboxauto(){
     $(".comment_area").keyup();
 }
 
-// 댓글수정
+/* 댓글수정 */
 $(document).on("click",".basic_comment .editbox .btn_edit", function(){
     $(".reply").removeClass("open");
     if($(this).parents(".basic_comment").hasClass("hidden")){
@@ -224,7 +227,7 @@ $(document).on("click",".btn_box .cancel", function(){
     $(this).parents().siblings(".basic_comment").removeClass("hidden")
 });
 
-// 답글쓰기
+/* 답글쓰기 */
 $(document).on("click",".comment_unit .btn_reply", function(){
     $(".reply").removeClass("open");
     $(this).parents(".basic_comment").siblings(".reply").addClass("open")
@@ -236,3 +239,54 @@ $(document).on("click",".reply .btn_box .cancel", function(){
     txtboxauto();
 });
 
+/* 애플리케이션등록 */
+function scrollMove(seq){
+    var offset = $("#app" + seq).offset();
+    $('html, body').scrollTop(offset.top - 200);
+}
+$(window).scroll(function(){
+    var _scrolltop = $(window).scrollTop(); 
+    _app1 = $("#app1").offset().top - 250;
+    _app2 = $("#app2").offset().top - 250;
+    _app3 = $("#app3").offset().top - 250;
+    _app4 = $("#app4").offset().top - 250;
+    _app5 = $("#app5").offset().top - 250;
+    _app6 = $("#app6").offset().top - 250;
+    _app7 = $("#app7").offset().top - 250;
+    _navOn = $(".nav_menu li a");
+
+    if(_scrolltop >= _app1 && _scrolltop < _app2){
+        _navOn.removeClass("act3");
+        _navOn.eq(0).addClass("act3");
+    }
+    if(_scrolltop >= _app2 && _scrolltop < _app3){
+        _navOn.removeClass("act3");
+        _navOn.eq(1).addClass("act3");
+        
+    }
+    if(_scrolltop >= _app3 && _scrolltop < _app4){
+        _navOn.removeClass("act3");
+        _navOn.eq(2).addClass("act3");
+        
+    }
+    if(_scrolltop >= _app4 && _scrolltop < _app5){
+        _navOn.removeClass("act3");
+        _navOn.eq(3).addClass("act3");
+        
+    }
+    if(_scrolltop >= _app5 && _scrolltop < _app6){
+        _navOn.removeClass("act3");
+        _navOn.eq(4).addClass("act3");
+        
+    }
+    if(_scrolltop >= _app6 && _scrolltop < _app7){
+        
+        _navOn.removeClass("act3");
+        _navOn.eq(5).addClass("act3");
+    }
+    if(_scrolltop >= _app7){
+        _navOn.removeClass("act3");
+        _navOn.eq(6).addClass("act3");
+        
+    }
+})

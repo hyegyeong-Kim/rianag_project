@@ -145,6 +145,8 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .h_gnb a.btn_login {display:inline-block; width:80px; height:38px; line-height:38px; margin-top:-10px; background:#1b6491; border-radius:50px; letter-spacing:-.8px; text-align:center; font-size:14px; color:#fff;} 
 
 .h_gnb .alarmview {display:none; width:530px; padding:32px; max-height:400px; position:absolute; background:#fff; box-shadow:0px 0px 5px 0px rgba(0, 0, 0, .2); border-radius:8px; top:40px; right:0; overflow:hidden; overflow-y:auto} 
+.h_gnb .alarmview::-webkit-scrollbar {width:5px; background-color: #ddd; border-radius: 5px;}
+.h_gnb .alarmview::-webkit-scrollbar-thumb {background: #999; border-radius: 5px;}
 .h_gnb .alarmview li {width:100%; position:relative;}
 .h_gnb .alarmview li + li {padding-top:32px; border-top:solid 1px #cfcfcf; margin-top:20px;}
 .h_gnb .alarmview li div p {display:inline-block; font-size:14px; line-height:20px;}
@@ -254,9 +256,9 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 }
 
 /* popup 공통 */
-.popup {display:none;}
+.popup {display:none;}/* 개발전달 시 삭제 */
 .popup.open {display:block; width:100%; height:100%; position:absolute; top:0; left:0; z-index: 100;}
-.popup .inner_pop {width:760px; border-radius:12px; position:relative; top:50%; left:50%; transform:translate(-50%, -50%); z-index:99999; overflow: auto;}
+.popup .inner_pop {width:760px; border-radius:12px; position:relative; top:50%; left:50%; transform:translate(-50%, -50%); /* top:50%; left:50%; transform:translate(-50%, -50%); 개발전달 시 삭제 */ z-index:99999; overflow: auto;}
 .popup .inner_pop .popup_title {height:64px; line-height:64px; background:#000000; text-align:center; border-radius:12px 12px 0 0;}
 .popup .inner_pop .popup_title p {display:inline-block; color:#ffffff; font-size:20px; line-height:33px;}
 .popup .inner_pop .pop_con {max-height: 850px; padding:48px 40px; background:#ffffff; overflow:auto; letter-spacing: -.8px;}
