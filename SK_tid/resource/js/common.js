@@ -239,7 +239,7 @@ $(document).on("click",".reply .btn_box .cancel", function(){
     txtboxauto();
 });
 
-/* 네비게이션 매뉴 */
+/* 네비게이션 메뉴 */
 function scrollMove(seq){
     var offset = $("#app" + seq).offset();
     $('html, body').scrollTop(offset.top - 200);
@@ -255,30 +255,8 @@ $(window).scroll(function(){
     _app7 = $("#app7").offset().top - 250;
     _navOn = $(".nav_menu li a");
 
-    var _eq;
+    var _eq = (_scrolltop < _app2) ? 0 : (_scrolltop < _app3) ? 1 : (_scrolltop < _app4) ? 2 : (_scrolltop < _app5) ? 3 : (_scrolltop < _app6) ? 4 : (_scrolltop < _app7) ? 5 : (_scrolltop >= _app7) ? 6 : false;
+
     _navOn.removeClass("act3");
-
-    if(_scrolltop >= _app1 && _scrolltop < _app2){
-        _eq = 0;
-    }
-    else if(_scrolltop >= _app2 && _scrolltop < _app3){
-        _eq = 1;
-    }
-    else if(_scrolltop >= _app3 && _scrolltop < _app4){
-        _eq = 2;
-    }
-    else if(_scrolltop >= _app4 && _scrolltop < _app5){
-        _eq = 3;
-    }
-    else if(_scrolltop >= _app5 && _scrolltop < _app6){
-        _eq = 4;
-    }
-    else if(_scrolltop >= _app6 && _scrolltop < _app7){
-        _eq = 5;
-    }
-    else if(_scrolltop >= _app7){
-        _eq = 6;
-    }
-
     _navOn.eq(_eq).addClass("act3");
 })
