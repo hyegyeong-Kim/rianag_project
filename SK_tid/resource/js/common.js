@@ -239,7 +239,7 @@ $(document).on("click",".reply .btn_box .cancel", function(){
     txtboxauto();
 });
 
-/* 애플리케이션등록 */
+/* 네비게이션 매뉴 */
 function scrollMove(seq){
     var offset = $("#app" + seq).offset();
     $('html, body').scrollTop(offset.top - 200);
@@ -255,38 +255,30 @@ $(window).scroll(function(){
     _app7 = $("#app7").offset().top - 250;
     _navOn = $(".nav_menu li a");
 
+    var _eq;
+    _navOn.removeClass("act3");
+
     if(_scrolltop >= _app1 && _scrolltop < _app2){
-        _navOn.removeClass("act3");
-        _navOn.eq(0).addClass("act3");
+        _eq = 0;
     }
-    if(_scrolltop >= _app2 && _scrolltop < _app3){
-        _navOn.removeClass("act3");
-        _navOn.eq(1).addClass("act3");
-        
+    else if(_scrolltop >= _app2 && _scrolltop < _app3){
+        _eq = 1;
     }
-    if(_scrolltop >= _app3 && _scrolltop < _app4){
-        _navOn.removeClass("act3");
-        _navOn.eq(2).addClass("act3");
-        
+    else if(_scrolltop >= _app3 && _scrolltop < _app4){
+        _eq = 2;
     }
-    if(_scrolltop >= _app4 && _scrolltop < _app5){
-        _navOn.removeClass("act3");
-        _navOn.eq(3).addClass("act3");
-        
+    else if(_scrolltop >= _app4 && _scrolltop < _app5){
+        _eq = 3;
     }
-    if(_scrolltop >= _app5 && _scrolltop < _app6){
-        _navOn.removeClass("act3");
-        _navOn.eq(4).addClass("act3");
-        
+    else if(_scrolltop >= _app5 && _scrolltop < _app6){
+        _eq = 4;
     }
-    if(_scrolltop >= _app6 && _scrolltop < _app7){
-        
-        _navOn.removeClass("act3");
-        _navOn.eq(5).addClass("act3");
+    else if(_scrolltop >= _app6 && _scrolltop < _app7){
+        _eq = 5;
     }
-    if(_scrolltop >= _app7){
-        _navOn.removeClass("act3");
-        _navOn.eq(6).addClass("act3");
-        
+    else if(_scrolltop >= _app7){
+        _eq = 6;
     }
+
+    _navOn.eq(_eq).addClass("act3");
 })
