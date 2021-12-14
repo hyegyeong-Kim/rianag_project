@@ -44,7 +44,7 @@ $(function(){
             $(this).removeClass("on");
         } else {
             $(this).addClass("on");
-            $(".h_gnb .menu").removeClass("on");
+            $(".menu, .alarm").removeClass("on");
         }
     });
     /* 알림창 */
@@ -53,6 +53,7 @@ $(function(){
             $(this).removeClass("on");
         } else {
             $(this).addClass("on");
+            $(".menu, .mylink").removeClass("on");
         }
     });
 
@@ -71,7 +72,7 @@ $(function(){
             $(".h_gnb .menu").removeClass("on");
         } else {
             $(".h_gnb .menu").addClass("on");
-            $(".mylink").removeClass("on");
+            $(".mylink, .alarm").removeClass("on");
         }
     });
     
@@ -83,11 +84,11 @@ $(function(){
         var lnbbtm = $(document).scrollTop() - ($(document).height() - $(window).height()) + 242;
         
         if(lnbbtm > 0){
-            $(".lnb").stop().animate(
+            $(".lnb").css(
                 {"bottom":lnbbtm  + "px"}
             );
         } else {
-            $(".lnb").stop().animate(
+            $(".lnb").css(
                 {"bottom":0}
             );
         }
@@ -109,14 +110,14 @@ $(function(){
     });
 
     $(".btn_lnbopen").click(function(){
-        scrollOff();
+        //scrollOff();
         $(".lnb").addClass("open");
     });
     $(".btn_lnbclose").click(function(){
-        scrollOn();
+        //scrollOn();
         $(".lnb").removeClass("open");
     });
-
+    
     /* switch_btn */
     $(".switch_btn input").click(function(){
         if($(this).is(":checked")){

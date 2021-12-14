@@ -235,7 +235,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 @media screen and (max-width: 1023px) {
     #container {padding-top:144px;}
     #container a.btn_lnbopen {display:block; width:24px; height:24px; background:url('../images/common/ic_LNB.png') no-repeat right center; text-indent:-9999px; overflow:hidden; position:fixed; top:97px; left:24px; z-index:10;}
-    .lnb {display:none; height:auto; padding-bottom:50px; position:fixed; left:0; z-index:11; overflow:inherit;}
+    .lnb {display:none; height:auto; top:144px; left:0; z-index:11;}
     .lnb.open {display:block;}
     .lnb.open + .dim {display:block; top:144px;}
     .lnb .btn_lnbclose {display:block; width:24px; height:24px; background:#000 url('../images/common/ic_close.png') no-repeat right center; text-indent:-9999px; overflow:hidden; position:absolute; top:-47px; left:20px; z-index:10;}
