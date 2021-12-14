@@ -1,0 +1,634 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/common.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <!-- S: 로그인 전 -->
+                <!-- <a href="#none" class="btn_login">LOGIN</a> -->
+                <!-- E: 로그인 전 -->
+
+                <!-- S: 로그인 후 -->
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a> <!-- 새로운 알림이 있는경우 i 노출 -->
+                <div>
+                    
+                </div>
+                <!-- E: 로그인 후 -->
+
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <!-- 211102 modify -->
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                        <!-- <span class="use">상용중</span> -->
+                        <!-- <span class="stop">정지</span> -->
+                        <!-- <span class="end">종료</span> -->
+                        <!-- <span class="delete">삭제</span> -->
+                    </div>
+                    <!-- // 211102 modify -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">개요</a>
+                    </li>
+                    <li>
+                        <a href="#none">기본 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">앱 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">약관 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">개별약관 목록</a></li>
+                            <li><a href="#none">개별약관 History</a></li>
+                            <li><a href="#none">그룹 설정</a></li>
+                            <li><a href="#none">사용자 동의 내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">멤버 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">테스트 계정 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">통계</a>
+                        <ul class="depth2">
+                            <li><a href="#none">사용자 통계</a></li>
+                            <li><a href="#none" class="act2">약관 동의 통계</a></li>
+                            <li><a href="#none">동의자 추출</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <!-- 페이지 타이틀 -->
+            <div class="page_tit">
+                <h2>약관 동의 통계</h2>
+                <div class="tit_right refresh">
+                    <button class="icon ic_refresh">새로고침</button>
+                    <span>기준 일시 변경</span>
+                    <span class="date">2021.10.29.00:30</span>
+                </div>
+            </div>
+
+            <div class="page_contents">
+                <!-- S: Board Type -->
+                <div class="board">
+                    <!-- optiongroup -->
+                    <div class="optiongroup">
+                        <div class="sorting check">
+                            <label><input type="checkbox" checked><span>모두선택</span></label>
+                            <label><input type="checkbox"><span>필수</span></label>
+                            <label><input type="checkbox"><span>선택</span></label>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="제목 검색">
+                            <a href="#none" class="btn_sch">검색하기</a>
+                        </div>
+                    </div>
+                    <!-- S: 211103 modify table 하위태그들 class추가, span추가, col 값 변경 -->
+                    <!-- table -->
+                    <table class="board_tbl">
+                        <caption></caption>
+                        <colgroup><col style="width:85px"><col style="width:20%"><col style="width:20%; min-width:230px;"><col style="width:20%"><col style="width:20%"><col style="width:85px"></colgroup>
+                        <thead>
+                            <tr>
+                                <th class="txtcenter">
+                                    <span class="mfont">No.</span>
+                                </th>
+                                <th>
+                                    <p><span>약관 코드</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <p><span>약관 제목<em class="mfont">(Default)</em></span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <p><span>동의자 수</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th class="txtcenter">
+                                    <p><span>전체 대비 동의 비율</span> <button class="btn_sort">정렬하기</button></p>
+                                </th>
+                                <th>
+                                    <span class="blind">상세리스트 보기</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- s: unit -->
+                            <!-- alist_tit -->
+                            <tr class="alist_tit">
+                                <td class="mfont txtcenter">01</td>
+                                <td class="mfont">DISCOUNT_TMEM</td>
+                                <td>T멤버십 할인을 위한 동의</td>
+                                <td class="mfont">2,486</td>
+                                <td class="txtcenter mfont">33.8%</td>
+                                <td class="txtcenter">
+                                    <button class="btn_accordion">내역 보기</button>
+                                </td>
+                            </tr>
+                            <!-- // alist_tit -->
+                            <!-- alist_contents -->
+                            <tr class="alist_contents">
+                                <td colspan="6">
+                                    <!-- inbox -->
+                                    <div class="board inbox">
+                                        <table class="tb_simple">
+                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <span>기준</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>하위 기준</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>동의자 수</span>
+                                                          
+                                                    </th>
+                                                    <th>
+                                                        <span>비율</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="4" class="pd0">
+                                                        <table class="indata">
+                                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                                            <tr>
+                                                                <td rowspan="3" class="ti"><span>성별</span></td>
+                                                                <td class="mfont">Female</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">male</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">Unknown</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="pd0">
+                                                        <table class="indata">
+                                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                                            <tr>
+                                                                <td rowspan="11" class="ti"><span>연령</span></td>
+                                                                <td class="mfont">0 - 13</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">14 - 19</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">20 - 29</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">30 - 39</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">40 - 49</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">50 - 59</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">60 - 69</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">70 - 79</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">80 - 89</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">90 -</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">Unknown</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- inbox -->
+                                </td>
+                            </tr>
+                            <!-- // alist_contents -->
+                            <!-- e: unit -->
+
+                            <!-- s: unit -->
+                            <!-- alist_tit -->
+                            <tr class="alist_tit">
+                                <td class="mfont txtcenter">01</td>
+                                <td class="mfont">SELLERBRIDGE</td>
+                                <td>판매중개서비스 약관</td>
+                                <td class="mfont">52,486</td>
+                                <td class="txtcenter mfont">48.5%</td>
+                                <td class="txtcenter">
+                                    <button class="btn_accordion">내역 보기</button>
+                                </td>
+                            </tr>
+                            <!-- // alist_tit -->
+                            <!-- alist_contents -->
+                            <tr class="alist_contents">
+                                <td colspan="6">
+                                    <!-- inbox -->
+                                    <div class="board inbox">
+                                        <table class="tb_simple">
+                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <span>기준</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>하위 기준</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>동의자 수</span>
+                                                          
+                                                    </th>
+                                                    <th>
+                                                        <span>비율</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="4" class="pd0">
+                                                        <table class="indata">
+                                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                                            <tr>
+                                                                <td rowspan="3" class="ti"><span>성별</span></td>
+                                                                <td class="mfont">Female</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">male</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">Unknown</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="pd0">
+                                                        <table class="indata">
+                                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                                            <tr>
+                                                                <td rowspan="11" class="ti"><span>연령</span></td>
+                                                                <td class="mfont">0 - 13</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">14 - 19</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">20 - 29</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">30 - 39</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">40 - 49</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">50 - 59</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">60 - 69</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">70 - 79</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">80 - 89</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">90 -</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">Unknown</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- inbox -->
+                                </td>
+                            </tr>
+                            <!-- // alist_contents -->
+                            <!-- e: unit -->
+                            <!-- s: unit -->
+                            <!-- alist_tit -->
+                            <tr class="alist_tit">
+                                <td class="mfont txtcenter">01</td>
+                                <td class="mfont">SELLERBRIDGE</td>
+                                <td>판매중개서비스 약관</td>
+                                <td class="mfont">52,486</td>
+                                <td class="txtcenter mfont">48.5%</td>
+                                <td class="txtcenter">
+                                    <button class="btn_accordion">내역 보기</button>
+                                </td>
+                            </tr>
+                            <!-- // alist_tit -->
+                            <!-- alist_contents -->
+                            <tr class="alist_contents">
+                                <td colspan="6">
+                                    <!-- inbox -->
+                                    <div class="board inbox">
+                                        <table class="tb_simple">
+                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <span>기준</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>하위 기준</span>
+                                                    </th>
+                                                    <th>
+                                                        <span>동의자 수</span>
+                                                          
+                                                    </th>
+                                                    <th>
+                                                        <span>비율</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="4" class="pd0">
+                                                        <table class="indata">
+                                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                                            <tr>
+                                                                <td rowspan="3" class="ti"><span>성별</span></td>
+                                                                <td class="mfont">Female</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">male</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">Unknown</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="pd0">
+                                                        <table class="indata">
+                                                            <colgroup><col style="width:30%;"><col style="width:25%;"><col style="width:auto;"><col style="width:auto"></colgroup>
+                                                            <tr>
+                                                                <td rowspan="11" class="ti"><span>연령</span></td>
+                                                                <td class="mfont">0 - 13</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">14 - 19</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">20 - 29</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">30 - 39</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">40 - 49</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">50 - 59</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">60 - 69</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">70 - 79</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">80 - 89</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">90 -</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mfont">Unknown</td>
+                                                                <td class="mfont">400,000</td>
+                                                                <td class="mfont">22%</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- inbox -->
+                                </td>
+                            </tr>
+                            <!-- // alist_contents -->
+                            <!-- e: unit -->
+
+                            <!-- list 10개씩 노출 -->
+                        </tbody>
+                    </table>
+                    <div class="paging">
+                        <a href="#none" class="btn_arr prev"></a>
+                        <span>
+                            <a href="#none"class="on">1</a>
+                            <a href="#none">2</a>
+                            <a href="#none">3</a>
+                            <a href="#none">4</a>
+                            <a href="#none">5</a>
+                            <a href="#none">6</a>
+                            <a href="#none">7</a>
+                            <a href="#none">8</a>
+                            <a href="#none">9</a>
+                            <a href="#none">10</a>
+                        </span>
+                        <a href="#none" class="btn_arr next"></a>
+                        <!-- paging 10개씩 노출 -->
+                    </div>
+                </div>
+                <!-- E: Board Type -->
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 유영상  |  사업자등록번호 104-81-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+</div>
+</body>
+</html>
+
+

@@ -106,6 +106,7 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .txtleft {text-align:left !important;}
 .txtright {text-align:right !important;} 
 .txtcenter {text-align:center !important;}
+.vtop {vertical-align:top;}
 
 /* color */
 .c_grey {color:#bfbfbf;}

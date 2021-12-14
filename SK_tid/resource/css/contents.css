@@ -273,7 +273,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .optiongroup {min-height:48px;}
 .board .optiongroup::after {content:''; display:block; clear:both;}
 .board .optiongroup .sorting {float:left;transform: translateY(50%);}
-.board .optiongroup .sorting label {margin-right:40px;}
+.board .optiongroup .sorting label {margin-right:20px;}
 .board .optiongroup .search {float:right; position:relative;}
 .board .optiongroup .search .btn_delete {display:none; position:absolute; top:calc(50% - 8px); right:50px;}
 .board .optiongroup + table {margin-top:24px;}
@@ -330,6 +330,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board.sdktbl .empty {padding:120px 0;}
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 .board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
+.board table tbody td.pd0 {padding:0;}
 .paging {margin-top:48px; text-align:center;}
 .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
 .paging span {display:inline-block; margin:0 18px;}
@@ -1044,3 +1045,11 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .uxguide .guidetable td .dot {color:#666;}
 .uxguide .guidetable td .dot::before {width:4px; height:4px; background:#666; top:11px; left:0;}
 .uxguide .guidetable td .gray {color:#666;}
+
+/* 약관동의통계 */
+.tit_right.refresh .icon {margin-right:4px;}
+.tit_right.refresh .date {display:inline-block; margin-left:16px; font-family:'Roboto' !important; color:#666;}
+.inbox.board table.indata {margin:16px 0;}
+.inbox.board table.indata td {height:36px; padding:0 16px;}
+.inbox.board table.indata td.ti {padding:10px 16px; vertical-align:top;}
+.inbox.board table.indata td.ti span {display:block; height:100%; border-right:solid 1px #ddd;}

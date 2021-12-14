@@ -244,19 +244,23 @@ function scrollMove(seq){
     var offset = $("#app" + seq).offset();
     $('html, body').scrollTop(offset.top - 200);
 }
-$(window).scroll(function(){
-    var _scrolltop = $(window).scrollTop(); 
-    _app1 = $("#app1").offset().top - 250;
-    _app2 = $("#app2").offset().top - 250;
-    _app3 = $("#app3").offset().top - 250;
-    _app4 = $("#app4").offset().top - 250;
-    _app5 = $("#app5").offset().top - 250;
-    _app6 = $("#app6").offset().top - 250;
-    _app7 = $("#app7").offset().top - 250;
-    _navOn = $(".nav_menu li a");
-
-    var _eq = (_scrolltop < _app2) ? 0 : (_scrolltop < _app3) ? 1 : (_scrolltop < _app4) ? 2 : (_scrolltop < _app5) ? 3 : (_scrolltop < _app6) ? 4 : (_scrolltop < _app7) ? 5 : (_scrolltop >= _app7) ? 6 : false;
-
-    _navOn.removeClass("act3");
-    _navOn.eq(_eq).addClass("act3");
+$(function(){
+    if($(".uxguide").length > 0){
+        $(window).scroll(function(){
+            var _scrolltop = $(window).scrollTop(); 
+            _app1 = $("#app1").offset().top - 250;
+            _app2 = $("#app2").offset().top - 250;
+            _app3 = $("#app3").offset().top - 250;
+            _app4 = $("#app4").offset().top - 250;
+            _app5 = $("#app5").offset().top - 250;
+            _app6 = $("#app6").offset().top - 250;
+            _app7 = $("#app7").offset().top - 250;
+            _navOn = $(".nav_menu li a");
+        
+            var _eq = (_scrolltop < _app2) ? 0 : (_scrolltop < _app3) ? 1 : (_scrolltop < _app4) ? 2 : (_scrolltop < _app5) ? 3 : (_scrolltop < _app6) ? 4 : (_scrolltop < _app7) ? 5 : (_scrolltop >= _app7) ? 6 : false;
+        
+            _navOn.removeClass("act3");
+            _navOn.eq(_eq).addClass("act3");
+        })
+    }
 })
