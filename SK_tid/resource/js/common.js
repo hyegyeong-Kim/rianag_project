@@ -81,7 +81,7 @@ $(function(){
     /* */
     
     $(window).scroll(function() {
-        var lnbbtm = $(document).scrollTop() - ($(document).height() - $(window).height()) + 242;
+        var lnbbtm = $(document).scrollTop() - ($(document).height() - $(window).height()) + 142;
         
         if(lnbbtm > 0){
             $(".lnb").css(

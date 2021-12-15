@@ -75,19 +75,23 @@ textarea::placeholder {color:#bfbfbf; font-weight:350; font-family:'NotoSansKR';
 textarea:focus {outline:none;}
 
 /* input sorting */
-.sorting label {display:inline-block; margin-right:15px; font-size:16px; letter-spacing:-.8px; color:#222; vertical-align:top;}
-.sorting.check label {padding-left:35px; position:relative;}
+.sorting label {display:inline-block; font-size:16px; letter-spacing:-.8px; color:#222; vertical-align:top;}
+.sorting label span {display:inline-block; padding-left:11px;}
+.sorting label span.notxt {width:0; height:0; padding:0; font-size:0; overflow:hidden; }
+.sorting.check label {padding-left:24px; position:relative;}
 .sorting.check label input[type="checkbox"] {visibility:hidden; width:0;}
 .sorting.check label span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_checkoff.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
 .sorting.check label input:checked + span::after {background:#fff url('../images/common/ic_checkon.png') no-repeat 0 0}
 
-.sorting.radio label {padding-left:35px; position:relative;}
-.sorting.radio label input[type="radio"] {visibility:hidden; width:0;}
+.sorting.radio label {padding-left:24px; position:relative;}
+.sorting.radio label input[type="radio"] {visibility:hidden; width:0; position:absolute;}
 .sorting.radio label span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_radiooff.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
 .sorting.radio label input:checked + span::after {background:#fff url('../images/common/ic_radioon.png') no-repeat 0 0}
 .sorting.radio label input:disabled + span::after {content:''; display:inline-block; width:24px; height:24px; background:#fff url('../images/common/ic_radiooff_dis.png') no-repeat 0 0; position:absolute; top:0; left:0; vertical-align:middle;}
 .sorting.radio label input:checked:disabled + span::after {background:#fff url('../images/common/ic_radioon_dis.png') no-repeat 0 0}
 .sorting.radio label input:disabled + span {color:#bfbfbf;}
+
+.vline {display:inline-block; width:100%; border-right:solid 1px #cfcfcf;}
 
 /* 라디오 */
 .radiobox {display:inline-block; border:1px solid #cfcfcf; border-radius:5px; overflow:hidden;}
@@ -237,7 +241,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .page_tit.titborder {border-bottom:2px solid #222; padding-bottom:20px; margin-bottom:32px;}
 .page_tit span.numcount {display:inline-block; text-align:center; font-weight:600; height:40px; line-height:40px; font-size:32px; background:#222; color:#fff; font-family:'Roboto'; padding:0 18px; border-radius:25px;}
 .page_tit .subtxt {font-size:16px; color:#666; line-height:24px; margin-top:8px;}
-.page_tit p {font-size:16px; color:#222; margin-top:8px;}
+.page_tit p {font-size:16px; color:#666; margin-top:4px;}
 .page_contents .h3_wrap {padding-bottom:16px; margin-top:80px; margin-bottom:32px; border-bottom:solid 2px #222; position:relative;}
 .page_contents .h3_wrap:first-of-type {margin-top:0;}
 .page_contents .h3_wrap h3 {display:inline-block; margin-right:12px; font-size:24px; font-weight:600; color:#222; vertical-align:middle;}
@@ -310,7 +314,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board table .markplus {position:relative; padding-right:80px;}
 .inbox.board table .markplus .owner {position:absolute; top:16px; right:16px; font-family:'roboto';}
 .inbox.board .list_setting tr td {height:68px;}
-.inbox.board .list_setting tr td .sorting.radio label {padding-left:30px; margin-right:36px;}
+.inbox.board .list_setting tr td .sorting.radio label {margin-right:36px;}
 .inbox.board .intext {padding-top:24px;}
 .inbox.board .intext::after {content:''; display:block; clear:both;}
 .inbox.board .intext p.intit{float:left; font-size:16px; color:#1b6491; font-weight:600;}
@@ -331,6 +335,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .board .btn_wrap .pxtxt {margin-top:10px; font-size:14px; color: #1485cb;}
 .board .term_loca {display:inline-block; margin-left:8px; color:#1b6491; font-size:14px; line-height:21px; font-weight:600;}
 .board table tbody td.pd0 {padding:0;}
+.board table tbody td.txtcenter {padding:16px 0;}
+.board table thead th.txtcenter .tooltip_wrap {margin-right:-15px;}
 .paging {margin-top:48px; text-align:center;}
 .paging a  {display:inline-block; vertical-align:middle; font-family:'Roboto' !important;}
 .paging span {display:inline-block; margin:0 18px;}
@@ -454,7 +460,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tooltip_wrap .tipbox p {font-size:14px; line-height:22px;}
 .tooltip_wrap .tipbox p + p {margin-top:12px;}
 .tooltip_wrap .tipbox .tiptl {font-size:16px; font-weight:600;}
-.tooltip_wrap .tipbox .tiptxt {font-size:14px; line-height:22px; font-weight:400; margin-top:20px;}
+.tooltip_wrap .tipbox .tiptl + .tiptxt {margin-top:20px;}
+.tooltip_wrap .tipbox .tiptxt {font-size:14px; line-height:22px; font-weight:400; letter-spacing:-.8px;}
 .tooltip_wrap .tipbox .tiptxt dd {color:#666; margin-top:12px;}
 .tooltip_wrap .tipbox.tipbg01 {background:#fff url('../images/myapp/tooltip_bg01.png') center bottom no-repeat; padding-bottom:288px;}
 .tooltip_wrap .tipbox.tipbg02 {background:#fff url('../images/myapp/tooltip_bg02.png') center bottom no-repeat; padding-bottom:288px;}
@@ -663,13 +670,14 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 
 /* 애플리케이션 설정확인 popup */
+.confirmation {text-align:center;}
 .confirmation_state {height:180px; padding-top:96px; font-size:24px; font-weight:600;}
 .confirmation_state > p {margin-top:4px; font-size:16px; font-weight:normal;}
 .confirmation_state.ongoing {background:url('../images/common/img_circle.png') no-repeat center 0; background-size:72px 72px;}
 .confirmation_state.success {background:url('../images/common/ic_complete.png') no-repeat center 0; background-size:72px 72px;}
 .confirmation_state.fail {background:url('../images/common/ic_fail.png') no-repeat center 0; background-size:72px 72px;}
 .confirmation_state.success > p {color:#ffa640;}
-.confirmation_state.failt > p {color:#fc2a2a;}
+.confirmation_state.fail > p {color:#fc2a2a;}
 .confirmation_list {margin-left:72px; margin-bottom:20px; text-align:left;}
 .confirmation_list li {margin:8px 0; padding-left:32px; color:#bfbfbf;}
 .confirmation_list li.succ {background:url('../images/common/ic_complete_ss.png') no-repeat left center; color:#666;}
@@ -1053,3 +1061,12 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .inbox.board table.indata td {height:36px; padding:0 16px;}
 .inbox.board table.indata td.ti {padding:10px 16px; vertical-align:top;}
 .inbox.board table.indata td.ti span {display:block; height:100%; border-right:solid 1px #ddd;}
+
+/* 동의자목록 팝업 */
+.assentient_list {max-height:150px; margin-bottom:32px; padding:16px 20px; background:#f8f8f8; border:solid 1px #cfcfcf; border-width:1px 0; overflow:auto;}
+.assentient_list::-webkit-scrollbar {width:8px; background-color: #ddd;}
+.assentient_list::-webkit-scrollbar-thumb {background: #999; border-radius: 2px;}
+.assentient_list dt, .assentient_list dd {font-size:14px; text-align:left;}
+.assentient_list dt {margin-bottom:4px; font-weight:600; color:#222;}
+.assentient_list dd {position:relative; padding-left:12px; font-size:14px; color:#666;}
+.assentient_list dd::before {content:''; display:block; width:4px; height:4px; background:#666; border-radius:1px; position:absolute; top:9px; left:0;}
