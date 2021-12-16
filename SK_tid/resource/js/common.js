@@ -79,19 +79,19 @@ $(function(){
 
     /* LNB */
     /* */
-    
-    $(window).scroll(function() {
+    function lnb_btm(){
         var lnbbtm = $(document).scrollTop() - ($(document).height() - $(window).height()) + 142;
-        
         if(lnbbtm > 0){
-            $(".lnb").css(
-                {"bottom":lnbbtm  + "px"}
-            );
+            $(".lnb").css({"bottom":lnbbtm  + "px"});
         } else {
-            $(".lnb").css(
-                {"bottom":0}
-            );
+            $(".lnb").css({"bottom":0});
         }
+    };
+    $(window).resize(function(){
+        lnb_btm();
+    });
+    $(window).scroll(function() {
+        lnb_btm();
     });
 
     $(".lnb_menu > li > a").click(function(){
@@ -107,15 +107,18 @@ $(function(){
     $(".nav_menu > li > a").click(function(){
         $(".nav_menu > li > a").removeClass();
         $(this).addClass("act3")
+        $(".lnb").removeClass("open");
     });
 
     $(".btn_lnbopen").click(function(){
         //scrollOff();
         $(".lnb").addClass("open");
+        $("#utility").addClass("nobor");
     });
     $(".btn_lnbclose").click(function(){
         //scrollOn();
         $(".lnb").removeClass("open");
+        $("#utility").removeClass("nobor");
     });
     
     /* switch_btn */
