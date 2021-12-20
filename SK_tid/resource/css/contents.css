@@ -155,6 +155,10 @@ span.input span.clock {display:inline-block; font-size:14px; color:#666; font-fa
 .calendarbtn .btn + .btn {margin-left:4px;}
 .calendarbtn .btn.white {border:solid 1px #cfcfcf; color:#bfbfbf; height:28px; line-height:26px;}
 .calendarbtn .btn.black {border:1px solid #222; line-height:26px;}
+
+@media screen and (max-width: 1420px) {
+    .unfixed span.input.date {width:110px;}
+}
 /* 컬러피커 */
 .input.txt {}
 .input.txt .minicolors {position:static; width:100%;}
@@ -802,9 +806,11 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .wbox.app_manage + .board .optiongroup {margin-top:-20px;}
 .wbox.app_manage .filtergroup {margin-top:0;}
 .wbox.app_manage .sorting label {margin-right:32px;}
+.filtergroup table tr td.detesize {width:330px;}
 @media screen and (max-width:1420px){
     .filtergroup {padding:0 0 0 30px;}
     .filtergroup table {width:100%;}
+    .filtergroup table tr td.detesize {width:280px;}
 }
 /* 검색결과 없음 */
 .no_result {margin-top:24px; padding-bottom:120px; border-top:2px solid #222;}
@@ -1073,3 +1079,15 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .assentient_list dt {margin-bottom:4px; font-weight:600; color:#222;}
 .assentient_list dd {position:relative; padding-left:12px; font-size:14px; color:#666;}
 .assentient_list dd::before {content:''; display:block; width:4px; height:4px; background:#666; border-radius:1px; position:absolute; top:9px; left:0;}
+
+
+/* 통계 */
+.txt_statistics {min-height:80px; font-size:16px;}
+.txt_statistics span {display:inline-block; font-size:14px; color:#666;}
+
+.chart_legend {margin-bottom:20px;}
+.chart_legend li {display:inline-block}
+.chart_legend .legend_bul {display:inline-block; width:20px; height:20px; margin-right:10px; border-radius:4px; vertical-align:middle;}
+.chart_legend .legend_txt {display:inline-block; margin-right:28px; font-size:14px;  vertical-align:middle; position:relative; top:-1px;}
+#legend-container2.chart_legend li {margin-bottom:10px;}
+#legend-container2.chart_legend .legend_txt {width:58px; margin-right:12px; font-family:'Roboto' !important; top:1px; font-weight:500;}

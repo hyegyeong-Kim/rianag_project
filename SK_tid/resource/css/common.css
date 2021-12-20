@@ -294,4 +294,3 @@ select {-webkit-appearance: none; -moz-appearance: none; appearance: none; }
 @media screen and (max-height: 800px) {
     .popup .inner_pop {top:32px; transform:translate(-50%, 0);}
 }
-

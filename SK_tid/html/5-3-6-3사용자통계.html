@@ -1,0 +1,457 @@
+<!Doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/contents.css">
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/jquery-ui.js"></script>
+    <script src="../resource/js/common.js"></script>
+    
+    <script src="../resource/js/chart.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- S: header -->
+    <div id="header">
+        <!-- S: top -->
+        <div id="top">
+            <h1 class="h_logo"><img src="../resource/images/common/top_logo.png" alt="T아이디 Developers"></h1>
+            <div class="h_gnb">
+                <ul class="menu">
+                    <li><a href="#none">소개</a></li>
+                    <li><a href="#none">문서</a></li>
+                    <li><a href="#none" class="act">지원</a></li>
+                    <li><a href="#none">내 애플리케이션</a></li>
+                </ul>
+                <div class="myemail">
+                    <a href="#none" class="mylink">sungkung@sk.com</a>
+                    <div class="minibox">
+                        <ul>
+                            <li><a href="#none">로그아웃</a></li>
+                            <li><a href="#none">내정보</a></li>
+                            <li><a href="#none">사이트 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#none" class="alarm"><span>알림<i class="new">새로운 알림</i></span></a><!-- 새로운 알림이 있는경우 span 노출 -->
+                <!-- 1024 미만사이즈 에서 노출 -->
+                <a href="#none" class="btn_menuopen">메뉴보기</a>
+            </div>
+        </div>
+        <!-- E: top -->
+        
+        <!-- S: utility -->
+        <div id="utility">
+            <div class="inner">
+                <div class="location">
+                    <span>내앱</span>
+                    <strong>테스트 계정 설정</strong>
+                </div>
+                <div class="userinfo">
+                    <div class="infotit">
+                        <span class="it1">NUGU</span>
+                        <span class="it2">ALDN</span>
+                    </div>
+                    <div class="ongoing">
+                        <span class="dev">개발중</span>
+                    </div>
+                    <!--
+                    <div class="ongoing">
+                        <span class="use">상용중</span>
+                    </div>
+                    -->
+                    <ul class="device">
+                        <li><span class="ic ic_web">web</span></li>
+                        <li><span class="ic ic_ios">ios</span></li>
+                        <li><span class="ic ic_and">android</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: utility -->
+    </div>
+    <!-- E: header -->
+
+    <!-- S: container -->
+    <div id="container" class="inner">
+        <!-- S: lnb -->
+        <div id="lnb">
+            <a href="#none" class="btn_lnbopen">lnb메뉴보기</a>
+            <div class="lnb">
+                <div class="lnb_ti">NUGU</div>
+                <ul class="lnb_menu">
+                    <li>
+                        <a href="#none">개요</a>
+                    </li>
+                    <li>
+                        <a href="#none">기본 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">앱 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none">약관 관리</a>
+                        <ul class="depth2">
+                            <li><a href="#none">개별약관 목록</a></li>
+                            <li><a href="#none">개별약관 History</a></li>
+                            <li><a href="#none">그룹 설정</a></li>
+                            <li><a href="#none">사용자 동의 내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#none">멤버 관리</a>
+                    </li>
+                    <li>
+                        <a href="#none">테스트 계정 설정</a>
+                    </li>
+                    <li>
+                        <a href="#none" class="act">통계</a>
+                        <ul class="depth2">
+                            <li><a href="#none" class="act2">사용자 통계</a></li>
+                            <li><a href="#none">약관 동의 통계</a></li>
+                            <li><a href="#none">동의자 추출</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#none" class="btn_lnbclose">lnb메뉴닫기</a>
+            </div>
+            <div class="dim"></div>
+        </div>
+        <!-- E: lnb -->
+        
+        <div class="coantents">
+            <div class="page_tit">
+                <h2>플랫폼 설정</h2>
+            </div>
+            <div class="page_contents">
+                <div class="tab_type01">
+                    <ul class="tab01">
+                        <li>
+                            <a href="#tab_01" class="on">가입/탈퇴자 수</a>
+                        </li>
+                        <li>
+                            <a href="#tab_02" class="mfont">LV</a>
+                        </li>
+                    </ul>
+                    <!-- S: web -->
+                    <div id="tab_01">
+                        <p class="txt_statistics">
+                            1년 내 가입/탈퇴자 수와 현재까지 누적 가입자 수를 확인할 수 있습니다.
+                        </p>
+                        <div class="wbox app_manage">
+                            <div class="filtergroup">
+                                <table> 
+                                    <colgroup><col style="width:90px;"><col style="width:auto;"><col style="width:120px;"></colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><span>조회 기간</span></th>
+                                            <td>
+                                                <div class="dateset">
+                                                    <span class="input date">
+                                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
+                                                        <button class="btn_date">날짜</button>
+                                                    </span>
+                                                    <span class="input date">
+                                                        <input type="text" placeholder="00:00" class="mfont">
+                                                        <button class="btn_date">시간</button>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="btn black default">조회</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="legend-container" class="chart_legend"></div>
+                            <canvas id="chartMem"></canvas>
+                        </div>
+                        
+                        
+                        <div class="btn_wrap">
+                            <a href="#none" class="btn xlarge black">다운로드</a>
+                        </div>
+                    </div>
+                    <!-- E: web -->
+
+                    <!-- S: Android -->
+                    <div id="tab_02">
+                        <p class="txt_statistics">
+                            1년 내 가입/탈퇴자 수와 현재까지 누적 가입자 수를 확인할 수 있습니다.
+                            <span>LV: 로그인에 성공한 사용자 수. 조회 기간 중 계정 고유 ID값으로 여러번 로그인 하더라도 LV는 1건으로 집계 됨.</span>
+                        </p>
+                        <div class="wbox app_manage">
+                            <div class="filtergroup">
+                                <table> 
+                                    <colgroup><col style="width:90px;"><col style=""><col style="width:90px;"><col style="width:auto;"><col style="width:120px;"></colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><span>조회 기간</span></th>`
+                                            <td class="detesize">
+                                                <div class="dateset unfixed">
+                                                    <span class="input date">
+                                                        <input type="text" placeholder="YY.MM.DD" class="mfont">
+                                                        <button class="btn_date">날짜</button>
+                                                    </span>
+                                                    <span class="input date">
+                                                        <input type="text" placeholder="00:00" class="mfont">
+                                                        <button class="btn_date">시간</button>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <th><span>조회 기간</span></th>
+                                            <td>
+                                                <span class="input sel">
+                                                    <select name="" id="select1" class="sel_de ">
+                                                        <option value="">연령별</option>
+                                                    </select>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <button class="btn black default">조회</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="legend-container2" class="chart_legend"></div>
+                            <canvas id="chartUv"></canvas>
+                        </div>
+
+                        <div class="btn_wrap">
+                            <a href="#none" class="btn xlarge black">다운로드</a>
+                        </div>
+                    </div>
+                    <!-- E: Android -->
+                </div>       
+            </div>
+        </div>
+    </div>
+    <!-- E: container -->
+
+    <!-- S: footer -->
+    <div id="footer">
+        <div class="inner">
+            <div class="f_link">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+            </div>
+            <div class="address">
+                SK텔레콤  |  서울특별시 중구 을지로65(을지로2가)<br>
+                대표이사 유영상  |  사업자등록번호 104-81-37225     
+            </div>
+            <div class="copy">© SK Telecom All Rights Reserved.</div>
+        </div>
+    </div>
+    
+    <button id="btn_gotop">맨위로 이동</button>
+    <!-- E: footer -->
+    
+</div>
+
+<!-- S: 팝업 / 애플리케이션을 복구 팝업 -->
+<div class="popup" id="platform_del">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                %플랫폼종류%플랫폼을 삭제할까요?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('platform_del')">플랫폼 유지</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('platform_del');">플랫폼 삭제</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 애플리케이션을 복구 팝업 -->
+<script>
+    function addForm() {
+        $('#problem_list').append($('#list_file_tag').html());
+        //check_click();
+    }
+    function addFormAnd() {
+        $('#problem_list_and').append($('#list_file_tag_and').html());
+        //check_click();
+    }
+    function addFormIos() {
+        $('#problem_list_ios').append($('#list_file_tag_ios').html());
+        //check_click();
+    }
+    function delForm(obj){
+        var div = $(obj).parent();
+        //console.log(div);
+        //라인 삭제
+        div.remove();
+    }
+</script>
+
+<!-- 통계 그래프 데이터 -->
+<script>
+    // 가입/탈퇴자수
+    const labels = [
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    ];
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: '일자별 가입자 수',
+            backgroundColor: '#72b3f5',
+            borderColor: '#72b3f5',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        },
+        {
+            label: '일자별 탈퇴자 수',
+            backgroundColor: '#f879b0',
+            borderColor: '#f879b0',
+            data: [9, 17, 5, 3, 29, 50, 60],
+        },
+        {
+            label: '일자별 누적 가입자 수',
+            backgroundColor: '#f8af5c',
+            borderColor: '#f8af5c',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        }],
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container'
+                },
+                legend: {
+                    display: false
+                }
+            }
+            
+        },
+        plugins: [htmlLegendPlugin],
+    };
+  
+    const myChart = new Chart(
+      document.getElementById('chartMem'),
+      config
+    );
+
+    // LV
+    const labels2 = [
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    '2021.11.25',
+    ];
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: '0 - 13',
+            backgroundColor: '#72b3f5',
+            borderColor: '#72b3f5',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        },
+        {
+            label: '14 - 19',
+            backgroundColor: '#f879b0',
+            borderColor: '#f879b0',
+            data: [9, 17, 5, 3, 29, 50, 60],
+        },
+        {
+            label: '20 - 29',
+            backgroundColor: '#f8af5c',
+            borderColor: '#f8af5c',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        },
+        {
+            label: '30 - 39',
+            backgroundColor: '#6de281',
+            borderColor: '#6de281',
+            data: [1, 11, 22, 33, 44, 55, 58],
+        },
+        {
+            label: '40 - 49',
+            backgroundColor: '#ee5050',
+            borderColor: '#ee5050',
+            data: [2, 12, 30, 15, 22, 37, 20],
+        },
+        {
+            label: '50 - 59',
+            backgroundColor: '#9f5cf8',
+            borderColor: '#9f5cf8',
+            data: [50, 20, 19, 5, 33, 42, 23],
+        },
+        {
+            label: '60 - 69',
+            backgroundColor: '#ff21ae',
+            borderColor: '#ff21ae',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        },
+        {
+            label: '70 - 79',
+            backgroundColor: '#bfbfbf',
+            borderColor: '#bfbfbf',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        },
+        {
+            label: '80 - 89',
+            backgroundColor: '#48ebeb',
+            borderColor: '#48ebeb',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        },
+        {
+            label: '90 -',
+            backgroundColor: '#ff3636',
+            borderColor: '#ff3636',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        },
+        {
+            label: 'Unknown',
+            backgroundColor: '#222',
+            borderColor: '#222',
+            data: [5, 30, 5, 28, 45, 37, 55],
+        }],
+    };
+
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container2'
+                },
+                legend: {
+                    display: false
+                }
+            }
+            
+        },
+        plugins: [htmlLegendPlugin],
+    };
+    
+    const myChart2 = new Chart(
+        document.getElementById('chartUv'),
+        config2
+    );
+</script>
+</body>
+</html>
+
+
