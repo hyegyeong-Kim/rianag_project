@@ -1085,9 +1085,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .txt_statistics {min-height:80px; font-size:16px;}
 .txt_statistics span {display:inline-block; font-size:14px; color:#666;}
 
-.chart_legend {margin-bottom:20px; padding:0 200px; text-align:center;}
-.chart_legend li {display:inline-block; text-align:left;}
+.chart_legend {margin-bottom:20px; padding:0 160px 0 200px; text-align:center;}
+.chart_legend li {display:inline-block; margin-bottom:10px; text-align:left;}
 .chart_legend .legend_bul {display:inline-block; width:20px; height:20px; margin-right:10px; border-radius:4px; vertical-align:middle;}
-.chart_legend .legend_txt {display:inline-block; margin-right:28px; font-size:14px;  vertical-align:middle; position:relative; top:-1px;}
-#legend-container2.chart_legend li {margin-bottom:10px;}
-#legend-container2.chart_legend .legend_txt {margin-right:32px; font-family:'Roboto' !important; top:1px; font-weight:500;}
+.chart_legend .legend_txt {display:inline-block; min-width:59px; margin-right:18px; font-size:14px;  vertical-align:middle; position:relative; top:-1px;}

@@ -305,7 +305,6 @@ const htmlLegendPlugin = {
         li.onclick = () => {
             const {type} = chart.config;
             if (type === 'pie' || type === 'doughnut') {
-                // Pie and doughnut charts only have a single dataset and visibility is per item
                 chart.toggleDataVisibility(item.index);
             } else {
                 chart.setDatasetVisibility(item.datasetIndex, !chart.isDatasetVisible(item.datasetIndex));
