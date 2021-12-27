@@ -460,7 +460,7 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 
 /* 툴팁 */
 .tooltip_wrap {display:inline-block; position:relative; text-align:left;}
-.tooltip_wrap .tooltip {display:inline-block; font-size:9px; width:16px; height:16px; background:url('../images/common/ic_question.png') no-repeat; text-indent:-9999px; overflow:hidden;}
+.tooltip_wrap .tooltip {display:inline-block; font-size:9px; width:16px; height:18px; background:url('../images/common/ic_question.png') no-repeat; text-indent:-9999px; overflow:hidden;}
 .tooltip_wrap .tipbox {display:none;position:absolute; top:30px; left:0; width:252px; padding:20px; background:#ffffff; border-radius:8px; box-shadow:2px 2px 8px 0 rgba(0,0,0,0.08); z-index:1; font-weight:400;}
 .tooltip_wrap .tipbox.right {left:-100px;}
 .tooltip_wrap .tipbox.open {display:block;}
@@ -476,6 +476,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .tooltip_wrap .listtxt li:nth-child(1) {margin-top:16px;}
 .tooltip_wrap .listtxt li {position:relative; padding-left:10px; font-size:14px; line-height:22px; color:#666; margin-top:12px;}
 .tooltip_wrap .listtxt li::before {display:block; content:''; width:3px; height:3px; border-radius:3px; background:#666; position:absolute; left:0; top:11px;}
+.tooltip_wrap .listtxt.top0 li:nth-child(1) {margin-top:0;}
+.tooltip_wrap .type2 {width:296px;}
 .regist_table .tooltip_wrap {vertical-align:top; top:12px;}
 .board thead .tooltip_wrap {top:3px;}
 .regist_table .th_type + .tooltip_wrap {top:0px;}
@@ -528,8 +530,8 @@ select.sel_de {display:block; width:100%; font-size:16px; line-height:24px; back
 .mobile_box {width:360px; height:650px; border:6px solid #b5b5b5; border-radius:10px; margin:0 auto;}
 .mobile_box .btn_wrap {margin-top:40px;}
 .mobile_box .btn_wrap .check {text-align:left; margin-bottom:20px;}
-.mo_logo {padding:12px 0; border-bottom:1px solid #eeeeee;}
-.mo_logo div {text-indent:-9999px; width:106px; height:100%; background:url('../images/terms/nugu_logo.png') no-repeat; margin:0 auto;}
+.mo_logo {padding:17px 0 7px; border-bottom:1px solid #eeeeee; text-align:center;}
+.mo_logo img {height:32px;}
 .mo_inner {width:346px; height:calc(100% - 50px); padding:40px 18px 24px; overflow: auto;}
 .mo_inner::-webkit-scrollbar {width:3px; background-color: #ddd; border-radius: 2px;}
 .mo_inner::-webkit-scrollbar-thumb {background: #999; border-radius: 2px;}

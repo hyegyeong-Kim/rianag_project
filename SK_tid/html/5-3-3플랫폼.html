@@ -239,7 +239,7 @@
                         
                         <div class="btn_wrap">
                             <a href="#none" class="btn xlarge white" onclick="showPop('platform_del')">삭제</a>
-                            <a href="#none" class="btn xlarge gray">취소</a>
+                            <a href="#none" class="btn xlarge gray" onclick="showPop('platform_unmodi')">취소</a><!-- 211224 modify -->
                             <a href="#none" class="btn xlarge black">수정사항 저장</a>
                         </div>
                     </div>
@@ -334,6 +334,24 @@
     <div class="dim"></div>
 </div>
 <!-- E: 팝업 / 애플리케이션을 복구 팝업 -->
+
+<!-- 211224 추가 -->
+<!-- S: 팝업 / 취소 팝업 -->
+<div class="popup" id="platform_unmodi">
+    <div class="inner_pop alert">
+        <div class="pop_con">
+            <div class="txt_area">
+                내용을 수정하지 않고 이전 내용을 유지할까요?
+            </div>
+            <div class="btn_wrap">
+                <a href="#none" class="btn large gray" onclick="hidePop('platform_unmodi')">수정 계속</a>   
+                <a href="#none" class="btn large black" onclick="hidePop('platform_unmodi');">이전내용 유지</a>    
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+<!-- E: 팝업 / 취소 팝업 -->
 <script>
     function addForm() {
         $('#problem_list').append($('#list_file_tag').html());
